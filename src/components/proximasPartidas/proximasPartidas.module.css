@@ -1,0 +1,5 @@
+.proximasPartidas ul li{
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 45% 40% 1fr;
+}

@@ -1,0 +1,16 @@
+.ranking li{
+    display: flex;
+    flex-direction: column;
+}
+.ranking li > div{
+    border: solid 1px black;
+}
+.ranking li > div:nth-child(1){
+    display: grid;
+    grid-template-columns: 15% 15% 25% 1fr 10%;
+    height: 80px;
+}
+.ranking li > ul{
+    height: 100px;
+    width: 100%;
+}
