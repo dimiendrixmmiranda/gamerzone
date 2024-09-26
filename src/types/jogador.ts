@@ -1,4 +1,4 @@
-type Jogador = {
+export type Jogador = {
     nick: string,
     nome: string,
     idade: number,

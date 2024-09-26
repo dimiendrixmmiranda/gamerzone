@@ -1,3 +1,4 @@
+import { Time } from "@/types/time"
 import listaDeJogadores from "./jogadores"
 
 const listaDeTimes: Time[] = []
