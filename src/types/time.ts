@@ -1,6 +1,4 @@
-import { Jogador } from "./jogador"
-
-export type Time = {
+interface Time {
     nome: string
     listaJogadores: Jogador[]
 }
