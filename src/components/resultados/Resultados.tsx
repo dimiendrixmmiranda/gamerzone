@@ -17,9 +17,9 @@ export default function Resultados() {
                                 </div>
                                 <div className="w-full flex flex-col gap-1">
                                     <div className="flex w-full mt-1 justify-center">
-                                        <h4 className="bg-black text-white py-1 px-2 font-bold">{jogo.placar.time1}</h4>
+                                        <h4 className={`bg-black text-white py-1 px-2 font-bold rounded-md ${jogo.placar.time1 > jogo.placar.time2 ? 'bg-green-600' : 'bg-red-600'}`} style={{ boxShadow: '0 0 2px 1px black' }}>{jogo.placar.time1}</h4>
                                         <span className="px-2">x</span>
-                                        <h4 className="bg-black text-white py-1 px-2 font-bold">{jogo.placar.time2}</h4>
+                                        <h4 className={`bg-black text-white py-1 px-2 font-bold rounded-md ${jogo.placar.time2 > jogo.placar.time1 ? 'bg-green-600' : 'bg-red-600'}`} style={{ boxShadow: '0 0 2px 1px black' }}>{jogo.placar.time2}</h4>
                                     </div>
                                     <div className="flex overflow-hidden justify-center items-center">
                                         <h3 className="overflow-x-scroll whitespace-nowrap font-bold text-sm text-center">{jogo.competicao}</h3>
@@ -29,8 +29,8 @@ export default function Resultados() {
                                             jogo.placar.mapas.map((mapa, i) => {
                                                 return (
                                                     <div key={i} className="flex flex-col justify-center items-center flex-1 w-full">
-                                                        <div className="h-4 w-full flex justify-center items-center rounded-sm" style={{backgroundImage: 'url(https://files.bo3.gg/uploads/news/24598/title_image/960x480-05cf99ea4c4631e5435da58aa71e975d.webp)', backgroundPosition: 'center', backgroundSize:'cover', border: 'solid 1px black'}}>
-                                                            <p className="text-[.6em] leading-3 font-bold" style={{textShadow: '1px 1px 2px black'}}>{mapa.placar}</p>
+                                                        <div className="h-4 w-full flex justify-center items-center rounded-sm" style={{ backgroundImage: 'url(https://files.bo3.gg/uploads/news/24598/title_image/960x480-05cf99ea4c4631e5435da58aa71e975d.webp)', backgroundPosition: 'center', backgroundSize: 'cover', border: 'solid 1px black' }}>
+                                                            <p className="text-[.7em] bg-black leading-3 px-[2px]" style={{textShadow: '1px 1px 2px black'}}>{mapa.placar}</p>
                                                         </div>
                                                         <p className="leading-3 font-bold text-[.6em]">{mapa.nome}</p>
                                                     </div>

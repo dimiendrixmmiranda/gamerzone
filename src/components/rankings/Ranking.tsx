@@ -43,14 +43,14 @@ export default function Ranking() {
                                     <IoIosArrowDropdownCircle />
                                 </div>
                             </div>
-                            <ul className={`w-full h-[67px] lg:h-[90px] xl:h-[120px] ${openIndexes.includes(index) ? 'flex' : 'hidden'}`}>
+                            <ul className={`w-full h-[67px] ${openIndexes.includes(index) ? 'flex' : 'hidden'}`}>
                                 {
                                     listaDeTimes[0].listaJogadores.map((jogador, index) => {
                                         return (
-                                            <li key={index} className='flex-1 bg-white flex flex-col items-center text-black' style={{border: 'solid 1px black'}}>
-                                                <img src={jogador.imagem} alt={jogador.nome} className='w-[80%] mx-auto'/>
-                                                <h2 className=' font-bold text-[.9em]'>{jogador.nick}</h2>
-                                                <span className='text-[.6em] leading-3'>{jogador.posicao}</span>
+                                            <li key={index} className='flex-1' style={{ border: 'solid 1px black' }}>
+                                                <img src={jogador.imagem} alt={jogador.nome} className='h-full mx-auto' />
+                                                <h2 className=' font-bold text-[.7em] justify-self-center md:text-[.9em]'>{jogador.nick}</h2>
+                                                <span className='text-[.5em] leading-3 font-semibold justify-self-center'>{jogador.posicao}</span>
                                             </li>
                                         )
                                     })

@@ -11,6 +11,22 @@
     height: 80px;
 }
 .ranking li > ul{
-    height: 100px;
+    height: 70px;
     width: 100%;
+}
+.ranking li > ul li{
+    display: grid;
+    grid-template-rows: 40px 15px 15px;
+    background-color: white;
+    color: black;
+}
+
+@media screen and (min-width: 768px) {
+    .ranking li > ul{
+        height: 100px;
+    }
+    .ranking li > ul li{
+        display: grid;
+        grid-template-rows: 60px 20px 20px;
+    }
 }

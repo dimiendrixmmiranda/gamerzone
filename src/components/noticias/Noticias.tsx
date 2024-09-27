@@ -58,25 +58,25 @@ export default function Noticias() {
         <div className="w-full mt-4 px-1 md:pl-4 flex flex-col">
             <div className="w-full flex justify-around gap-1">
                 <button
-                    className={botaoSelecionado('Geral')}
+                    className={`${botaoSelecionado('Geral')} lg:gap-2`}
                     onClick={() => setSelecionarBotao('Geral')}
                 >
                     <IoGameController />Geral
                 </button>
                 <button
-                    className={botaoSelecionado('CS2')}
+                    className={`${botaoSelecionado('CS2')} lg:gap-2`}
                     onClick={() => setSelecionarBotao('CS2')}
                 >
                     <SiCounterstrike />CS2
                 </button>
                 <button
-                    className={botaoSelecionado('Valorant')}
+                    className={`${botaoSelecionado('Valorant')} lg:gap-3`}
                     onClick={() => setSelecionarBotao('Valorant')}
                 >
                     <SiValorant />Valorant
                 </button>
                 <button
-                    className={botaoSelecionado('LoL')}
+                    className={`${botaoSelecionado('LoL')} lg:gap-3`}
                     onClick={() => setSelecionarBotao('LoL')}
                 >
                     <SiLeagueoflegends />LoL
@@ -86,10 +86,13 @@ export default function Noticias() {
                 <ul className="flex flex-col items-center gap-3 md:gap-5">
                     {selecionarNoticias.slice(first, first + rows).map((noticia, index) => {
                         return (
-                            <li key={index} className="h-36 w-full flex p-2 gap-1 pb-6 max-w-[540px] md:max-w-none sm:h-44 md:h-48 lg:h-52 lg:p-3 lg:gap-2 xl:h-60 xl:pb-8 overflow-hidden" style={{ borderBottom: 'solid 2px var(--cor-principal)' }}>
+                            <li key={index} className="h-36 w-full flex p-2 gap-1 pb-6 max-w-[540px] md:max-w-none sm:h-44 md:h-52 lg:h-48 lg:p-3 lg:gap-2 xl:h-60 xl:pb-8 overflow-hidden" style={{ borderBottom: 'solid 2px var(--cor-principal)' }}>
                                 <Link href={`/noticias/${createSlugWithId(noticia.tituloNoticia, noticia.id)}`} className="flex gap-2">
-                                    <div className="h-full w-[45%] overflow-hidden" style={{ boxShadow: '0 0 1px 1px var(--cor-principal)' }}>
+                                    <div className="h-full w-[45%] overflow-hidden relative" style={{ boxShadow: '0 0 1px 1px var(--cor-principal)' }}>
                                         <img src={noticia.thumbnail} alt="" className="w-full h-full object-cover" />
+                                        <div className="rounded-full overflow-hidden w-5 h-5 z-10 top-1 left-1 absolute lg:w-8 lg:h-8">
+                                            <img src={noticia.logoNoticia} alt={noticia.gameNoticia} className="w-full h-full object-cover" />
+                                        </div>
                                     </div>
                                     <div className="h-full w-[55%] text-[--cor-principal] px-1 flex flex-col gap-1 -mt-1 lg:px-2">
                                         <h2 className="font-black text-[.8em] leading-4 md:text-xl md:leading-6 xl:text-2xl xl:leading-7">{noticia.tituloNoticia}</h2>

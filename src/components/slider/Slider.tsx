@@ -35,7 +35,7 @@ export default function Slider() {
     }, []);
 
     return (
-        <div className={`bg-gray-900`}>
+        <div className={`bg-gray-900 md:w-[80%] md:mx-auto md:my-5`} style={{ boxShadow: '2px 2px 3px black' }}>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -56,13 +56,16 @@ export default function Slider() {
                         return (
                             <SwiperSlide key={index}>
                                 <Link href={`/noticias/${createSlugWithId(noticia.tituloNoticia, noticia.id)}`} className='relative flex justify-center items-center'>
-                                    <div className='w-full'>
+                                    <div className='w-full relative'>
                                         <img
                                             src={noticia.thumbnail}
                                             alt={`Imagem ${index}`}
                                             className='w-full h-full object-cover slider-img'
-                                            style={{ height: `${alturaSlider}px`, objectFit: 'cover' }}
+                                            style={{ height: `${alturaSlider}px` }}
                                         />
+                                        <div className='w-8 h-8 rounded-full absolute top-2 left-2 overflow-hidden'>
+                                            <img src={noticia.logoNoticia} alt={noticia.gameNoticia} className='w-full h-full'/>
+                                        </div>
                                     </div>
                                     <h2 className='absolute left-[50%] bottom-8 max-w-[95%] w-full text-center font-black leading-5p-1 sm:text-lg sm:leading-5 md:text-3xl lg:p-2 lg:bottom-10 xl:bottom-16 xl:max-w-[80%] xl:text-4xl' style={{ transform: 'translate(-50%)', textShadow: '2px 2px 4px black' }}>{noticia.tituloNoticia}</h2>
                                 </Link>

@@ -1,6 +1,6 @@
-const noticias: { tituloNoticia: string, descricaoNoticia: string, autor: string, data: string, thumbnail: string, gameNoticia: string, id: number, conteudoDaMateria: { titulo: string, conteudo: string[] } }[] = []
+const noticias: { tituloNoticia: string, descricaoNoticia: string, autor: string, data: string, thumbnail: string, gameNoticia: string, logoNoticia: string, id: number, conteudoDaMateria: { titulo: string, conteudo: string[] } }[] = []
 
-function adicionarNoticia(tituloNoticia: string, descricaoNoticia: string, autor: string, data: string, thumbnail: string, gameNoticia: string, id: number, conteudoDaMateria: { titulo: string, conteudo: string[] }) {
+function adicionarNoticia(tituloNoticia: string, descricaoNoticia: string, autor: string, data: string, thumbnail: string, gameNoticia: string, logoNoticia:string, id: number, conteudoDaMateria: { titulo: string, conteudo: string[] }) {
     const noticia = {
         tituloNoticia,
         descricaoNoticia,
@@ -8,6 +8,7 @@ function adicionarNoticia(tituloNoticia: string, descricaoNoticia: string, autor
         data,
         thumbnail,
         gameNoticia,
+        logoNoticia,
         id,
         conteudoDaMateria
     }
@@ -21,6 +22,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     './coldzera-redcanids.png',
     'cs2',
+    './cs2.png',
     1,
     {
         titulo: 'O Jogo',
@@ -43,6 +45,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/08/11165131/G2-NiKo-IEM-Cologne-2024.jpg',
     'cs2',
+    './cs2.png',
     2,
     {
         titulo: 'O Jogo',
@@ -65,6 +68,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2021/07/09094246/Ninjas-in-Pyjamas-THREAT-Bootcamp-2021.jpg',
     'cs2',
+    './cs2.png',
     3,
     {
         titulo: 'O Jogo',
@@ -87,6 +91,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/09/21105400/gabe-newell-valve-e-steam.jpg',
     'cs2',
+    './cs2.png',
     4,
     {
         titulo: 'O Jogo',
@@ -109,6 +114,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2023/05/14111932/heroic.jpg',
     'cs2',
+    './cs2.png',
     5,
     {
         titulo: 'O Jogo',
@@ -131,6 +137,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.valorantzone.gg/news/2024/05/02150850/vanguard-valorant.jpg',
     'valorant',
+    './valorant.png',
     6,
     {
         titulo: 'O Jogo',
@@ -153,6 +160,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://cdn-62cb22a2c1ac1835ecef9f37.closte.com/wp-content/uploads/2024/09/54012257519_3c360a0225_o.jpg',
     'lol',
+    './lol.png',
     7,
     {
         titulo: 'O Jogo',
@@ -175,6 +183,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.valorantzone.gg/news/2024/08/30134324/edg-champions-2024.jpg',
     'valorant',
+    './valorant.png',
     8,
     {
         titulo: 'O Jogo',
@@ -197,6 +206,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://cdn-62cb22a2c1ac1835ecef9f37.closte.com/wp-content/uploads/2024/09/461039086_1063727995161452_8683828653629242163_n.jpg',
     'valorant',
+    './valorant.png',
     9,
     {
         titulo: 'O Jogo',
@@ -219,6 +229,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2022/07/10002417/Rafael-Veiga-6762.jpg',
     'cs2',
+    './cs2.png',
     10,
     {
         titulo: 'O Jogo',
@@ -241,6 +252,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/04/03182530/Fluxo-Lucaozy-BLAST.tv-Paris-Major-2023.jpeg',
     'cs2',
+    './cs2.png',
     11,
     {
         titulo: 'O Jogo',
@@ -263,6 +275,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/01/06105234/Astralis-Buzz-IEM-Dallas-2023.jpg',
     'cs2',
+    './cs2.png',
     12,
     {
         titulo: 'O Jogo',
@@ -285,6 +298,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
     'cs2',
+    './cs2.png',
     13,
     {
         titulo: 'O Jogo',

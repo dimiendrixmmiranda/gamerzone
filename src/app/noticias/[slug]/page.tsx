@@ -32,7 +32,7 @@ export default function NoticiaPage() {
                 <div className='flex flex-col gap-2 w-fit max-w-[700px] bg-white p-2 rounded-md mt-4 lg:p-4 xl:max-w-[900px] lg:gap-4'>
                     <h1 className='text-xl font-black leading-6  lg:text-3xl'>{noticiaFiltrada.tituloNoticia}</h1>
                     <h2 className='text-md font-semibold leading-5 lg:text-lg'>{noticiaFiltrada.descricaoNoticia}</h2>
-                    <img src={noticiaFiltrada.thumbnail} alt="" className='max-w-[600px] w-full self-center' />
+                    <img src={noticiaFiltrada.thumbnail} alt="" className='max-w-[600px] w-full self-center min-h-fit' />
                     <ul className='flex flex-col gap-2 leading-5 mt-2'>
                         {noticiaFiltrada.conteudoDaMateria.conteudo.map((paragrafo, i) => {
                             return (
