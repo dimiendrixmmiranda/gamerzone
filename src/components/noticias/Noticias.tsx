@@ -6,6 +6,13 @@ import { Paginator } from 'primereact/paginator';
 import noticias from "@/data/noticias";
 import { createSlugWithId } from "@/utils/createSlug";
 
+type PaginatorEvent = {
+    first: number;
+    rows: number;
+    page: number;
+    pageCount: number;
+};
+
 export default function Noticias() {
     const [selecionarBotao, setSelecionarBotao] = useState('Geral');
     const [first, setFirst] = useState(0);
@@ -19,7 +26,7 @@ export default function Noticias() {
         minhasNoticias.filter(noticia => noticia.gameNoticia.toLowerCase() === selecionarBotao.toLowerCase())
 
 
-    const onPageChange = (event: any) => {
+    const onPageChange = (event: PaginatorEvent) => {
         setFirst(event.first);
         setRows(event.rows);
     };
