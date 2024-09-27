@@ -1,18 +1,28 @@
-import { Time } from "@/types/time"
 import listaDeJogadores from "./jogadores"
-
+interface Time {
+    nome: string
+    listaJogadores: {
+        nick: string,
+        nome: string,
+        idade: number,
+        nacionalidade: string,
+        imagem: string,
+        timeAtual: string,
+        posicao: string
+    }[]
+}
 const listaDeTimes: Time[] = []
 
-function adicionarTime(time: Time){
+function adicionarTime(time: Time) {
     return listaDeTimes.push(time)
 }
 
 adicionarTime({
-    nome:'Vitality',
+    nome: 'Vitality',
     listaJogadores: []
 })
 adicionarTime({
-    nome:'Faze Clan',
+    nome: 'Faze Clan',
     listaJogadores: []
 })
 
