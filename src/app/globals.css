@@ -16,7 +16,17 @@
   --preto-claro: #1D1D1B;
   --verde-claro: #6BFF36;
   --cinza: #52524e;
-
+  --preto-skins: #201E1F;
+  --dourado: #F1BE5E;
+  --azul-escuro: #171D25;
+  
+  --cinza-steam: #5d5d66;
+  --azul-claro-steam: #5E98D9;
+  --azul-steam: #4B69FF;
+  --roxo-steam: #7048bb;
+  --rosa-steam: #b30ec5;
+  --vermelho-steam: #FF0000;
+  --laranja-steam: #f09e2b;
 }
 
 @media (prefers-color-scheme: dark) {
