@@ -94,7 +94,10 @@ body {
   scale: 1.05;
   transition: .4s ease;
 }
-
+.p-dialog-header, .p-dialog-content{
+  background-color: var(--preto-skins)!important;
+  color: white;
+}
 @media screen and (min-width: 1024px) {
   .container {
     display: grid;

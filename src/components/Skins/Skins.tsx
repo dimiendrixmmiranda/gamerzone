@@ -82,23 +82,23 @@ export default function Skins() {
             <ul className="w-[95%] mx-auto mt-6 flex flex-wrap justify-center gap-4 p-2 py-4 bg-[--preto-skins]">
                 {
                     selecionarSkins.map((skin, index) => (
-                        <li key={index} onClick={() => handleSkinClick(skin)}>
-                            <div className="px-4 py-2 max-w-[320px] rounded-lg" style={{ backgroundColor: `var(${identificarRaridade(skin.raridade)})`, textShadow: '1px 1px 2px black', boxShadow: '1px 1px 2px black' }}>
+                        <li className="cursor-pointer" key={index} onClick={() => handleSkinClick(skin)}>
+                            <div className="px-4 py-2 max-w-[320px] rounded-lg lg:max-w-[350px]" style={{ backgroundColor: `var(${identificarRaridade(skin.raridade)})`, textShadow: '1px 1px 2px black', boxShadow: '1px 1px 2px black' }}>
                                 <div className="h-[185px] flex justify-center items-center">
                                     <img src={skin.urlImg} alt={skin.nome} />
                                 </div>
                                 <h2 className="text-center font-bold text-2xl">{skin.nome}</h2>
-                                <div className="flex" style={{ display: 'grid', gridTemplateColumns: '45% 65%' }}>
+                                <div className="flex mt-2" style={{ display: 'grid', gridTemplateColumns: '45% 65%' }}>
                                     <p style={{ gridColumn: '1/3' }}>Pode ser StatTrack? <strong>{skin.statTrack ? 'Sim' : 'Não'}</strong></p>
                                     <p className="whitespace-nowrap">Souvenir? <strong>{skin.souvenir ? 'Sim' : 'Não'}</strong></p>
                                     <p className="whitespace-nowrap">Raridade: <strong>{skin.raridade}</strong></p>
                                 </div>
-                                <div className="gap-1" style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}>
+                                <div className="gap-1 mt-2" style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}>
                                     <h2 className="uppercase font-black text-center text-2xl" style={{ gridColumn: '1/3' }}>Operação:</h2>
                                     <h3 className="self-center justify-self-center text-center font-bold text-xl leading-6">{skin.operacao.nome}</h3>
-                                    <img className="p-2" src={skin.operacao.urlImg} alt={skin.operacao.nome} />
+                                    <img className="w-[100px] self-center justify-self-center" src={skin.operacao.urlImg} alt={skin.operacao.nome} />
                                 </div>
-                                <button className="bg-[--azul-escuro] w-full py-1 text-xl font-bold flex justify-center items-center gap-2 rounded-md">
+                                <button className="bg-[--azul-escuro] w-full py-1 text-xl font-bold flex justify-center items-center gap-2 rounded-md mt-2">
                                     Inspecionar no Jogo <FaSteam />
                                 </button>
                             </div>
@@ -114,7 +114,7 @@ export default function Skins() {
                 {selecionarSkin && (
                     <div>
                         <img src={selecionarSkin.urlImg} alt={selecionarSkin.nome} />
-                        {/* Adicione mais informações sobre a skin aqui, se necessário */}
+                        <h2 className="text-center text-xl lg:text-4xl">{selecionarSkin.nome}</h2>
                     </div>
                 )}
             </Dialog>
