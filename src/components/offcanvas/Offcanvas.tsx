@@ -48,7 +48,7 @@ export default function Offcanvas() {
                         </Link>
                     </li>
                     <li className="px-2 py-1 rounded-md flex">
-                        <Link href={'/'} className="flex justify-center items-center text-xl font-bold gap-1 lg:text-lg">
+                        <Link href={'/menus/skins'} className="flex justify-center items-center text-xl font-bold gap-1 lg:text-lg">
                             <GiPistolGun className="text-xl" />
                             <p>Skins</p>
                         </Link>

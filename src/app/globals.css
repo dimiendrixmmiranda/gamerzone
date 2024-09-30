@@ -17,6 +17,7 @@
   --verde-claro: #6BFF36;
   --cinza: #52524e;
   --preto-skins: #201E1F;
+  --preto-skins-claro: #3d3b3c;
   --dourado: #F1BE5E;
   --azul-escuro: #171D25;
   
@@ -98,6 +99,8 @@ body {
   background-color: var(--preto-skins)!important;
   color: white;
 }
+
+
 @media screen and (min-width: 1024px) {
   .container {
     display: grid;

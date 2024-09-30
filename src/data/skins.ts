@@ -578,4 +578,134 @@ export const skinsGerais = [
         urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s1542.png?id=30e1048e09ac4165f53c1e5040f3e9c5',
         inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
     },
+    {
+        nome: "Glock-18 | Block-18",
+        tipo: 'glock',
+        raridade: 'Roxo',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Kilowatt Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_kilowatt_collection.png?id=260c1ee8e19b5556d7accdecbaff1075'
+        },
+        urlImg: 'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf1P_HcjZ97s6_l4u0mvj6N6nYl2Vu5Mx2gv2Pp9jxjAa3r0JtZz-icNTAcAI9aQrU-wW-yenmhJG8tZiaynRk63YgtmGdwUJc6eYXpA/512fx384f',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Twilight Galaxy",
+        tipo: 'glock',
+        raridade: 'Rosa',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Chop Shop Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_chop_shop_collection.png?id=538383ba49aca9277d7fef0919e8a5e9'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s598.png?id=fb5fc8654c406095f80ef922206b6eea',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Water Elemental",
+        tipo: 'glock',
+        raridade: 'Rosa',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Breakout Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_breakout_collection.png?id=e1fdea5b765a4f2ab3d710a61eafaee2'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s404.png?id=19426b9f917da938d94d79755dbe5dec',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Vogue",
+        tipo: 'glock',
+        raridade: 'Rosa',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Fracture Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_fracture_collection.png?id=8868f2eb987391723e26c70947602978'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s1282.png?id=c0b5cef410d07fc2517be98e4a97083b',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Snack Attack",
+        tipo: 'glock',
+        raridade: 'Rosa',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Operation Riptide Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_operation_riptide_collection.png?id=d180397ab57070cb2e0f2a3af1c824d3'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s1466.png?id=852c2654b841568bacf03719cea454a5',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Gamma Doppler",
+        tipo: 'glock',
+        raridade: 'Vermelha',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The 2021 Train Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_2021_train_collection.png?id=064643cde27910fc7f654e71a5f46b81'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s1432.png?id=5a1ead039f4b2f33ae2cf1b2463c4c89',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Wasteland Rebel",
+        tipo: 'glock',
+        raridade: 'Vermelha',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Gamma Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_gamma_collection.png?id=52313c5707530972296af03967c58563'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s753.png?id=d0157bfa50d2211bcd840b0f8ba79b10',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Bullet Queen",
+        tipo: 'glock',
+        raridade: 'Vermelha',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Prisma 2 Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_prisma_2_collection.png?id=9a25b69e2903738a289a4fe806b770d0'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s1267.png?id=d7ebf5326af00c1d7cbc781071686ed5',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "Glock-18 | Neo-Noir",
+        tipo: 'glock',
+        raridade: 'Vermelha',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Operation Broken Fang Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_operation_broken_fang_collection.png?id=d330333aa36c612b7eedf5bdf7d945ac'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s1302.png?id=ea211634a85610829a295e85cc8abd61',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
+    {
+        nome: "CZ75-Auto | Victoria",
+        tipo: 'cz75',
+        raridade: 'Vermelha',
+        statTrack: true,
+        souvenir: false,
+        operacao: {
+            nome: 'The Arms Deal 3 Collection',
+            urlImg: 'https://stash.clash.gg/img/collections/256x198/the_arms_deal_3_collection.png?id=a385fca054ea75e32157cf5828ba0d9e'
+        },
+        urlImg: 'https://stash.clash.gg/storage/img/skin_sideview/s262.png?id=7d9f84a8149d5d89c2760efa94dd4675',
+        inspecionar: 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20M566709534595485113A7014431141D434635316065339174'
+    },
 ]
