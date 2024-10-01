@@ -1,33 +1,27 @@
-export const menu = [
+export const menu: {nome: string, link: string, icone: string}[] = [
     {
-        menu: {
-            nome: 'Resultados',
-            link: '/resultados'
-        },
+        nome: 'Resultados',
+        link: '/resultados',
+        icone: '<MdScoreboard className="text-xl"/>',
     },
     {
-        menu: {
-            nome: 'Campeonatos',
-            link: '/campeonatos'
-        },
+        nome: 'Campeonatos',
+        link: '/campeonatos',
+        icone: '<GiChampions className="text-xl" />',
     },
     {
-        menu: {
-            nome: 'CFG dos PRO',
-            link: '/cfgPro'
-        },
+        nome: 'CFG dos PRO',
+        link: '/menus/cfgPro',
+        icone: '<FaGear className="text-xl" />',
     },
     {
-        menu: {
-            nome: 'Rankings',
-            link: '/campeonatos'
-        },
+        nome: 'Rankings',
+        link: '/campeonatos',
+        icone: '<PiRankingFill className="text-xl" />',
     },
     {
-        menu: {
-            nome: 'Skins',
-            link: '/menus/skins'
-        },
+        nome: 'Skins',
+        link: '/menus/skins',
+        icone: '<GiPistolGun className="text-xl" />',
     },
-    
-]
+];
