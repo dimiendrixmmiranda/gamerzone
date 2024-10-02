@@ -6,33 +6,32 @@
 @media screen and (min-width: 768px){
     .cfgPro{
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 45% 1fr;
         column-gap: 2em;
     }
     .cfgProImagem{
         grid-row: 1/3;
     }
-    .cfgProMira{
+    .cfgViewmodel{
         grid-column: 1/3;
         grid-template-columns: 1fr auto!important;
+    }
+    .cfgProCodigoMira{
+        grid-column: 1/3;
     }
 }
 @media screen and (min-width: 1440px){
     .cfgPro{
-        grid-template-columns: auto 1fr 1fr;
+        grid-template-columns: auto 40% 30%;
     }
     .cfgProImagem{
-        margin-right: 1em;
+        grid-row: 1/4;
     }
-    .cfgProImagem{
-        grid-row: 1/5;
-    }
-    .cfgProMira{
+    .cfgViewmodel{
         grid-column: 2/4;
-        grid-row: 2/3;
+        grid-template-columns: 1fr auto!important;
     }
     .cfgProCodigoMira{
-        grid-row: 3/4;
         grid-column: 2/4;
     }
 }

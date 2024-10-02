@@ -1,23 +1,20 @@
-'use client'
+'use client';
 import { skins, skinsGerais } from "@/data/skins";
 import Pagina from "../template/Pagina";
 import Grupo from "./Grupo";
 import style from './style.module.css';
 import { FaSteam } from "react-icons/fa";
-import { FaCircleArrowUp } from "react-icons/fa6";
-import { useState } from "react";
+import { FaCircleArrowUp, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { useState, useRef } from "react";
 import { Dialog } from 'primereact/dialog';
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
-
 import Link from "next/link";
 
 type Skin = {
     nome: string;
     tipo: string;
     raridade: string;
-    statTrack: boolean; // Mudei para boolean, assumindo que deveria ser um booleano
-    souvenir: boolean; // Mudei para boolean
+    statTrack: boolean;
+    souvenir: boolean;
     operacao: {
         nome: string;
         urlImg: string;
@@ -29,6 +26,7 @@ export default function Skins() {
     const [selecionarBotao, setSelecionarBotao] = useState('Geral');
     const [visible, setVisible] = useState(false);
     const [selecionarSkin, setselecionarSkin] = useState<Skin | null>(null);
+    const scrollContainerRef = useRef<HTMLUListElement>(null);    
 
     function identificarRaridade(raridade: string): string {
         let valorRetornado = '';
@@ -70,10 +68,23 @@ export default function Skins() {
         setVisible(true);
     };
 
+    const scrollLeft = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+    };
+
     return (
         <Pagina>
             <div className="relative">
-                <ul id="topo" className={`overflow-scroll overflow-y-hidden whitespace-nowrap pb-2 px-2 mt-4 w-[98%] mx-auto ${style.containerCardMenu} xl:w-[85%]`}>
+                {/* Referencia o ul usando scrollContainerRef */}
+                <ul ref={scrollContainerRef} id="topo" className={`overflow-scroll overflow-y-hidden whitespace-nowrap pb-2 px-2 mt-4 w-[98%] mx-auto ${style.containerCardMenu} xl:w-[85%]`}>
                     {skins.map((grupo, index) => (
                         <Grupo
                             itensDoGrupo={grupo.itensDoGrupo}
@@ -83,9 +94,22 @@ export default function Skins() {
                         />
                     ))}
                 </ul>
-                <button className="absolute top-[50%] left-2 bg-black text-xl p-1 rounded-full text-[--dourado] xl:left-14 xl:p-2 xl:top-[45%]"><FaArrowLeft /></button>
-                <button className="absolute top-[50%] right-2 bg-black text-xl p-1 rounded-full text-[--dourado] xl:right-14 xl:p-2 xl:top-[45%]"><FaArrowRight /></button>
+                
+                <button 
+                    onClick={scrollLeft} 
+                    className="absolute top-[50%] left-2 bg-black text-xl p-1 rounded-full text-[--dourado] xl:left-14 xl:p-2 xl:top-[45%]"
+                >
+                    <FaArrowLeft />
+                </button>
+                
+                <button 
+                    onClick={scrollRight} 
+                    className="absolute top-[50%] right-2 bg-black text-xl p-1 rounded-full text-[--dourado] xl:right-14 xl:p-2 xl:top-[45%]"
+                >
+                    <FaArrowRight />
+                </button>
             </div>
+
             <ul className="w-[95%] mx-auto mt-6 flex flex-wrap justify-center gap-4 p-2 py-4 bg-[--preto-skins] xl:w-[85%]">
                 {
                     selecionarSkins.map((skin, index) => (
@@ -113,6 +137,7 @@ export default function Skins() {
                     ))
                 }
             </ul>
+
             <Dialog
                 visible={visible}
                 className="w-[95%] max-w-[400px] xl:max-w-[700px]"
@@ -128,5 +153,5 @@ export default function Skins() {
 
             <Link href={'#topo'} className="fixed bottom-4 right-6 bg-black text-4xl rounded-full z-20" style={{ boxShadow: '0 0 3px 2px black' }}><FaCircleArrowUp /></Link>
         </Pagina>
-    )
+    );
 }
