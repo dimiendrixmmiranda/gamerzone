@@ -52,17 +52,17 @@ export default function Cabecalho() {
                     })
                 }
             </ul>
-            <ul className="hidden lg:flex justify-center items-center gap-1 mr-2 ml-6 xl:gap-2 xl:ml-10">
-                <li className="text-xl xl:text-2xl">
+            <ul className="hidden lg:flex justify-center items-center gap-1 mr-2 ml-6 xl:gap-2 xl:ml-10 redes-sociais">
+                <li className="text-xl xl:text-2xl relative" data-social="Facebook">
                     <Link href={'/'}><FaFacebookSquare /></Link>
                 </li>
-                <li className="text-xl xl:text-2xl">
+                <li className="text-xl xl:text-2xl relative" data-social="Instagram">
                     <Link href={'/'}><FaSquareInstagram /></Link>
                 </li>
-                <li className="text-xl xl:text-2xl">
+                <li className="text-xl xl:text-2xl relative" data-social="Tiktok">
                     <Link href={'/'}><AiFillTikTok /></Link>
                 </li>
-                <li className="text-xl xl:text-2xl">
+                <li className="text-xl xl:text-2xl relative" data-social="Twitter">
                     <Link href={'/'}><FaXTwitter /></Link>
                 </li>
             </ul>

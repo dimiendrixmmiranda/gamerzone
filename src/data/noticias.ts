@@ -22,7 +22,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     './coldzera-redcanids.png',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     1,
     {
         titulo: 'O Jogo',
@@ -45,7 +45,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/08/11165131/G2-NiKo-IEM-Cologne-2024.jpg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     2,
     {
         titulo: 'O Jogo',
@@ -68,7 +68,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2021/07/09094246/Ninjas-in-Pyjamas-THREAT-Bootcamp-2021.jpg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     3,
     {
         titulo: 'O Jogo',
@@ -91,7 +91,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/09/21105400/gabe-newell-valve-e-steam.jpg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     4,
     {
         titulo: 'O Jogo',
@@ -114,7 +114,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2023/05/14111932/heroic.jpg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     5,
     {
         titulo: 'O Jogo',
@@ -229,7 +229,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2022/07/10002417/Rafael-Veiga-6762.jpg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     10,
     {
         titulo: 'O Jogo',
@@ -252,7 +252,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/04/03182530/Fluxo-Lucaozy-BLAST.tv-Paris-Major-2023.jpeg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     11,
     {
         titulo: 'O Jogo',
@@ -275,7 +275,7 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/01/06105234/Astralis-Buzz-IEM-Dallas-2023.jpg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     12,
     {
         titulo: 'O Jogo',
@@ -298,8 +298,146 @@ adicionarNoticia(
     '12/09/24 - 14:20',
     'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
     'cs2',
-    './cs2.png',
+    '/cs2.png',
     13,
+    {
+        titulo: 'O Jogo',
+        conteudo: [
+            'A RED Canids conquistou sua primeira vitória na ESL Pro League Season 20. Na tarde dessa quinta-feira (12), o esquadrão brasileiro de Marcelo "coldzera" David derrotou a ENCE por 2-1 e mandou o time polonês para o Last Chance Stage.',
+            'O duelo começou na Ancient, mapa de escolha da ENCE, mas que desde o início foi completamente dominado pelo time brasileiro. Com um verdadeiro paredão na defesa, a RED Canids anotou seis pontos seguidos e fechou o half em 9-3.',
+            'Na troca de lados, a vitória no pistol praticamente sacramentou a vitória da matilha, que pouco precisou fazer para fechar o mapa em 13-3 e anotar o 1-0 na série.',
+            'Já na Vertigo, foi a vez da ENCE devolver o atropelo sofrido no mapa passado e controlar todas as ações da primeira metade. Com uma aula de Paavo "podi" Heiskanen, o time europeu devolveu "na mesma moeda" e fechou o placar em 9-3.',
+            'Apesar dos esforços por parte da RED Canids em anotar três pontos consecutivos, o mapa ficou mesmo com a ENCE, que fechou em 13-6 e empatou a série em 1-1.',
+            'Tudo então se resumiu a Anubis, onde o time brasileiro voltou a tomar as rédeas do mapa desde o começo, anotando um bom lado contraterrorista para abrir 6-1 no placar e fechar a primeira etapa com 7-5 no marcador.',
+            'Na troca de lados, a vitória no forçado após a derrota no round pistol facilitou, e muito, a vida da RED Canids, que logo abriu 10-6 no placar. Sem dar chances a ENCE, a matilha logo fechou o mapa em 13-8 e finalizou o 2-0 na série.',
+            'Agora, a RED Canids enfrentará a FURIA pelas semifinais lower do grupo D, enquanto a derrotada ENCE terá de duelar contra a ATOX no Last Chance Stage.'
+        ]
+    }
+)
+adicionarNoticia(
+    'Sensação do Major de Copenhagen, ECSTATIC acerta com ex-MAD Lions',
+    'Atleta chega para substituir Tauson, que deve rumar à GamerLegion',
+    'Dimi Martins',
+    '12/09/24 - 14:20',
+    'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
+    'cs2',
+    '/cs2.png',
+    14,
+    {
+        titulo: 'O Jogo',
+        conteudo: [
+            'A RED Canids conquistou sua primeira vitória na ESL Pro League Season 20. Na tarde dessa quinta-feira (12), o esquadrão brasileiro de Marcelo "coldzera" David derrotou a ENCE por 2-1 e mandou o time polonês para o Last Chance Stage.',
+            'O duelo começou na Ancient, mapa de escolha da ENCE, mas que desde o início foi completamente dominado pelo time brasileiro. Com um verdadeiro paredão na defesa, a RED Canids anotou seis pontos seguidos e fechou o half em 9-3.',
+            'Na troca de lados, a vitória no pistol praticamente sacramentou a vitória da matilha, que pouco precisou fazer para fechar o mapa em 13-3 e anotar o 1-0 na série.',
+            'Já na Vertigo, foi a vez da ENCE devolver o atropelo sofrido no mapa passado e controlar todas as ações da primeira metade. Com uma aula de Paavo "podi" Heiskanen, o time europeu devolveu "na mesma moeda" e fechou o placar em 9-3.',
+            'Apesar dos esforços por parte da RED Canids em anotar três pontos consecutivos, o mapa ficou mesmo com a ENCE, que fechou em 13-6 e empatou a série em 1-1.',
+            'Tudo então se resumiu a Anubis, onde o time brasileiro voltou a tomar as rédeas do mapa desde o começo, anotando um bom lado contraterrorista para abrir 6-1 no placar e fechar a primeira etapa com 7-5 no marcador.',
+            'Na troca de lados, a vitória no forçado após a derrota no round pistol facilitou, e muito, a vida da RED Canids, que logo abriu 10-6 no placar. Sem dar chances a ENCE, a matilha logo fechou o mapa em 13-8 e finalizou o 2-0 na série.',
+            'Agora, a RED Canids enfrentará a FURIA pelas semifinais lower do grupo D, enquanto a derrotada ENCE terá de duelar contra a ATOX no Last Chance Stage.'
+        ]
+    }
+)
+adicionarNoticia(
+    'Sensação do Major de Copenhagen, ECSTATIC acerta com ex-MAD Lions',
+    'Atleta chega para substituir Tauson, que deve rumar à GamerLegion',
+    'Dimi Martins',
+    '12/09/24 - 14:20',
+    'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
+    'cs2',
+    '/cs2.png',
+    15,
+    {
+        titulo: 'O Jogo',
+        conteudo: [
+            'A RED Canids conquistou sua primeira vitória na ESL Pro League Season 20. Na tarde dessa quinta-feira (12), o esquadrão brasileiro de Marcelo "coldzera" David derrotou a ENCE por 2-1 e mandou o time polonês para o Last Chance Stage.',
+            'O duelo começou na Ancient, mapa de escolha da ENCE, mas que desde o início foi completamente dominado pelo time brasileiro. Com um verdadeiro paredão na defesa, a RED Canids anotou seis pontos seguidos e fechou o half em 9-3.',
+            'Na troca de lados, a vitória no pistol praticamente sacramentou a vitória da matilha, que pouco precisou fazer para fechar o mapa em 13-3 e anotar o 1-0 na série.',
+            'Já na Vertigo, foi a vez da ENCE devolver o atropelo sofrido no mapa passado e controlar todas as ações da primeira metade. Com uma aula de Paavo "podi" Heiskanen, o time europeu devolveu "na mesma moeda" e fechou o placar em 9-3.',
+            'Apesar dos esforços por parte da RED Canids em anotar três pontos consecutivos, o mapa ficou mesmo com a ENCE, que fechou em 13-6 e empatou a série em 1-1.',
+            'Tudo então se resumiu a Anubis, onde o time brasileiro voltou a tomar as rédeas do mapa desde o começo, anotando um bom lado contraterrorista para abrir 6-1 no placar e fechar a primeira etapa com 7-5 no marcador.',
+            'Na troca de lados, a vitória no forçado após a derrota no round pistol facilitou, e muito, a vida da RED Canids, que logo abriu 10-6 no placar. Sem dar chances a ENCE, a matilha logo fechou o mapa em 13-8 e finalizou o 2-0 na série.',
+            'Agora, a RED Canids enfrentará a FURIA pelas semifinais lower do grupo D, enquanto a derrotada ENCE terá de duelar contra a ATOX no Last Chance Stage.'
+        ]
+    }
+)
+adicionarNoticia(
+    'Sensação do Major de Copenhagen, ECSTATIC acerta com ex-MAD Lions',
+    'Atleta chega para substituir Tauson, que deve rumar à GamerLegion',
+    'Dimi Martins',
+    '12/09/24 - 14:20',
+    'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
+    'cs2',
+    '/cs2.png',
+    16,
+    {
+        titulo: 'O Jogo',
+        conteudo: [
+            'A RED Canids conquistou sua primeira vitória na ESL Pro League Season 20. Na tarde dessa quinta-feira (12), o esquadrão brasileiro de Marcelo "coldzera" David derrotou a ENCE por 2-1 e mandou o time polonês para o Last Chance Stage.',
+            'O duelo começou na Ancient, mapa de escolha da ENCE, mas que desde o início foi completamente dominado pelo time brasileiro. Com um verdadeiro paredão na defesa, a RED Canids anotou seis pontos seguidos e fechou o half em 9-3.',
+            'Na troca de lados, a vitória no pistol praticamente sacramentou a vitória da matilha, que pouco precisou fazer para fechar o mapa em 13-3 e anotar o 1-0 na série.',
+            'Já na Vertigo, foi a vez da ENCE devolver o atropelo sofrido no mapa passado e controlar todas as ações da primeira metade. Com uma aula de Paavo "podi" Heiskanen, o time europeu devolveu "na mesma moeda" e fechou o placar em 9-3.',
+            'Apesar dos esforços por parte da RED Canids em anotar três pontos consecutivos, o mapa ficou mesmo com a ENCE, que fechou em 13-6 e empatou a série em 1-1.',
+            'Tudo então se resumiu a Anubis, onde o time brasileiro voltou a tomar as rédeas do mapa desde o começo, anotando um bom lado contraterrorista para abrir 6-1 no placar e fechar a primeira etapa com 7-5 no marcador.',
+            'Na troca de lados, a vitória no forçado após a derrota no round pistol facilitou, e muito, a vida da RED Canids, que logo abriu 10-6 no placar. Sem dar chances a ENCE, a matilha logo fechou o mapa em 13-8 e finalizou o 2-0 na série.',
+            'Agora, a RED Canids enfrentará a FURIA pelas semifinais lower do grupo D, enquanto a derrotada ENCE terá de duelar contra a ATOX no Last Chance Stage.'
+        ]
+    }
+)
+adicionarNoticia(
+    'Sensação do Major de Copenhagen, ECSTATIC acerta com ex-MAD Lions',
+    'Atleta chega para substituir Tauson, que deve rumar à GamerLegion',
+    'Dimi Martins',
+    '12/09/24 - 14:20',
+    'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
+    'cs2',
+    '/cs2.png',
+    17,
+    {
+        titulo: 'O Jogo',
+        conteudo: [
+            'A RED Canids conquistou sua primeira vitória na ESL Pro League Season 20. Na tarde dessa quinta-feira (12), o esquadrão brasileiro de Marcelo "coldzera" David derrotou a ENCE por 2-1 e mandou o time polonês para o Last Chance Stage.',
+            'O duelo começou na Ancient, mapa de escolha da ENCE, mas que desde o início foi completamente dominado pelo time brasileiro. Com um verdadeiro paredão na defesa, a RED Canids anotou seis pontos seguidos e fechou o half em 9-3.',
+            'Na troca de lados, a vitória no pistol praticamente sacramentou a vitória da matilha, que pouco precisou fazer para fechar o mapa em 13-3 e anotar o 1-0 na série.',
+            'Já na Vertigo, foi a vez da ENCE devolver o atropelo sofrido no mapa passado e controlar todas as ações da primeira metade. Com uma aula de Paavo "podi" Heiskanen, o time europeu devolveu "na mesma moeda" e fechou o placar em 9-3.',
+            'Apesar dos esforços por parte da RED Canids em anotar três pontos consecutivos, o mapa ficou mesmo com a ENCE, que fechou em 13-6 e empatou a série em 1-1.',
+            'Tudo então se resumiu a Anubis, onde o time brasileiro voltou a tomar as rédeas do mapa desde o começo, anotando um bom lado contraterrorista para abrir 6-1 no placar e fechar a primeira etapa com 7-5 no marcador.',
+            'Na troca de lados, a vitória no forçado após a derrota no round pistol facilitou, e muito, a vida da RED Canids, que logo abriu 10-6 no placar. Sem dar chances a ENCE, a matilha logo fechou o mapa em 13-8 e finalizou o 2-0 na série.',
+            'Agora, a RED Canids enfrentará a FURIA pelas semifinais lower do grupo D, enquanto a derrotada ENCE terá de duelar contra a ATOX no Last Chance Stage.'
+        ]
+    }
+)
+adicionarNoticia(
+    'Sensação do Major de Copenhagen, ECSTATIC acerta com ex-MAD Lions',
+    'Atleta chega para substituir Tauson, que deve rumar à GamerLegion',
+    'Dimi Martins',
+    '12/09/24 - 14:20',
+    'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
+    'cs2',
+    '/cs2.png',
+    18,
+    {
+        titulo: 'O Jogo',
+        conteudo: [
+            'A RED Canids conquistou sua primeira vitória na ESL Pro League Season 20. Na tarde dessa quinta-feira (12), o esquadrão brasileiro de Marcelo "coldzera" David derrotou a ENCE por 2-1 e mandou o time polonês para o Last Chance Stage.',
+            'O duelo começou na Ancient, mapa de escolha da ENCE, mas que desde o início foi completamente dominado pelo time brasileiro. Com um verdadeiro paredão na defesa, a RED Canids anotou seis pontos seguidos e fechou o half em 9-3.',
+            'Na troca de lados, a vitória no pistol praticamente sacramentou a vitória da matilha, que pouco precisou fazer para fechar o mapa em 13-3 e anotar o 1-0 na série.',
+            'Já na Vertigo, foi a vez da ENCE devolver o atropelo sofrido no mapa passado e controlar todas as ações da primeira metade. Com uma aula de Paavo "podi" Heiskanen, o time europeu devolveu "na mesma moeda" e fechou o placar em 9-3.',
+            'Apesar dos esforços por parte da RED Canids em anotar três pontos consecutivos, o mapa ficou mesmo com a ENCE, que fechou em 13-6 e empatou a série em 1-1.',
+            'Tudo então se resumiu a Anubis, onde o time brasileiro voltou a tomar as rédeas do mapa desde o começo, anotando um bom lado contraterrorista para abrir 6-1 no placar e fechar a primeira etapa com 7-5 no marcador.',
+            'Na troca de lados, a vitória no forçado após a derrota no round pistol facilitou, e muito, a vida da RED Canids, que logo abriu 10-6 no placar. Sem dar chances a ENCE, a matilha logo fechou o mapa em 13-8 e finalizou o 2-0 na série.',
+            'Agora, a RED Canids enfrentará a FURIA pelas semifinais lower do grupo D, enquanto a derrotada ENCE terá de duelar contra a ATOX no Last Chance Stage.'
+        ]
+    }
+)
+adicionarNoticia(
+    'Sensação do Major de Copenhagen, ECSTATIC acerta com ex-MAD Lions',
+    'Atleta chega para substituir Tauson, que deve rumar à GamerLegion',
+    'Dimi Martins',
+    '12/09/24 - 14:20',
+    'https://static.draft5.gg/news/2024/09/23110101/Preasy-TMB-PGL-Major-Copenhagen-2024-European-RMR-B.jpg',
+    'cs2',
+    '/cs2.png',
+    19,
     {
         titulo: 'O Jogo',
         conteudo: [

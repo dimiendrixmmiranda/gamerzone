@@ -9,66 +9,69 @@ import style from './rodape.module.css'
 export default function Rodape() {
     return (
         <footer className={`w-full bg-[--cor-principal] mt-10 xl:pt-3 ${style.rodape}`}>
-            <div className="flex justify-center items-center p-2">
-                <div className="flex">
-                    <img src="./logo-gamer-zone.png" alt="" className="w-[80px]" />
-                    <img src="./texto-gamer-zone.png" alt="" className="w-[140px] -ml-2" />
+            <div className="p-2 pb-4 flex flex-col justify-center gap-4 xl:justify-center">
+                <div className="flex h-[100px]">
+                    <img src="/logo-gamer-zone.png" alt="Logo" className="h-full" />
+                    <img src="/texto-gamer-zone.png" alt="texto" className="h-full" />
                 </div>
-            </div>
-            <div className="flex flex-wrap gap-3 justify-center mt-2 px-2">
-                <div className="w-45% flex flex-col gap-1 md:flex-1">
-                    <h3 className="uppercase font-bold">Links</h3>
-                    <ul className="flex flex-col">
-                        <li className="text-sm leading-4">
-                            <Link href={'/'}>Sobre Nós</Link>
-                        </li>
-                        <li className="text-sm leading-4">
-                            <Link href={'/'}>Avisos Importantes</Link>
-                        </li>
-                        <li className="text-sm leading-4">
-                            <Link href={'/'}>Termos de Uso</Link>
-                        </li>
-                        <li className="text-sm leading-4">
-                            <Link href={'/'}>Política de Privacidade</Link>
-                        </li>
-                        <li className="text-sm leading-4">
-                            <Link href={'/'}>Trabalhe com a gente</Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="w-45% flex flex-col gap-1 md:flex-1">
-                    <h3 className="uppercase font-bold">Redes Sociais</h3>
-                    <ul className="flex">
-                        <li className="text-xl xl:text-2xl">
+                <div className="flex flex-col uppercase font-semibold self-center">
+                    <h2 className="text-center">Nos encontre nas Redes Sociais</h2>
+                    <ul className="redes-sociais flex h-[40px] justify-center items-center">
+                        <li className="text-3xl flex-1 relative flex justify-center items-center" data-social="Facebook">
                             <Link href={'/'}><FaFacebookSquare /></Link>
                         </li>
-                        <li className="text-xl xl:text-2xl">
+                        <li className="text-3xl flex-1 relative flex justify-center items-center" data-social="Instagram">
                             <Link href={'/'}><FaSquareInstagram /></Link>
                         </li>
-                        <li className="text-xl xl:text-2xl">
+                        <li className="text-3xl flex-1 relative flex justify-center items-center" data-social="Tiktok">
                             <Link href={'/'}><AiFillTikTok /></Link>
                         </li>
-                        <li className="text-xl xl:text-2xl">
+                        <li className="text-3xl flex-1 relative flex justify-center items-center" data-social="Twitter">
                             <Link href={'/'}><FaXTwitter /></Link>
                         </li>
                     </ul>
                 </div>
-                <div className="w-45% flex flex-col gap-1 md:flex-1">
+                <div className="flex flex-col gap-2">
                     <h3 className="uppercase font-bold">Links para Contato</h3>
-                    <ul className="flex flex-col">
+                    <ul className="flex flex-col gap-2">
                         <li className="text-sm leading-4">
-                            <Link href={'mailto:dimiendrixmmiranda@gmail.com'}>Imprensa: dimiendrixmmiranda@gmail.com</Link>
+                            <Link href={'mailto:dimiendrixmmiranda@gmail.com'} className="hover:text-zinc-500">Imprensa: dimiendrixmmiranda@gmail.com</Link>
                         </li>
                         <li className="text-sm leading-4">
-                            <Link href={'mailto:dimiendrixmmiranda@gmail.com'}>Contato: dimiendrixmmiranda@gmail.com</Link>
+                            <Link href={'mailto:dimiendrixmmiranda@gmail.com'} className="hover:text-zinc-500">Contato: dimiendrixmmiranda@gmail.com</Link>
                         </li>
                         <li className="text-sm leading-4">
-                            <Link href={'mailto:dimiendrixmmiranda@gmail.com'}>Comercial: dimiendrixmmiranda@gmail.com</Link>
+                            <Link href={'mailto:dimiendrixmmiranda@gmail.com'} className="hover:text-zinc-500">Comercial: dimiendrixmmiranda@gmail.com</Link>
                         </li>
                     </ul>
                 </div>
+                <div className="flex flex-col gap-2">
+                    <h3 className="uppercase font-bold">Endereço</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li className="leading-3">Avenida Paraná, 2989</li>
+                        <li className="leading-3">Joaquim Távora - PR</li>
+                        <li className="leading-3">86455000</li>
+                        <li className="leading-3">Brasil</li>
+                    </ul>
+                </div>
             </div>
-            <h2 className="text-center bg-black leading-5 font-black uppercase p-2 mt-4">Desenvolvido por Dimi Endrix Martins Miranda</h2>
+            <div className="bg-black flex flex-col md:flex-row md:gap-3 md:justify-center">
+                <h2 className="text-center leading-5 font-black uppercase py-2 md:text-xl">Desenvolvido por Dimi Endrix Martins Miranda</h2>
+                <ul className="flex justify-center items-center md:gap-4">
+                    <li className="text-2xl flex-1 relative flex justify-center items-center" data-social="Facebook">
+                        <Link href={'/'}><FaFacebookSquare /></Link>
+                    </li>
+                    <li className="text-2xl flex-1 relative flex justify-center items-center" data-social="Instagram">
+                        <Link href={'/'}><FaSquareInstagram /></Link>
+                    </li>
+                    <li className="text-2xl flex-1 relative flex justify-center items-center" data-social="Tiktok">
+                        <Link href={'/'}><AiFillTikTok /></Link>
+                    </li>
+                    <li className="text-2xl flex-1 relative flex justify-center items-center" data-social="Twitter">
+                        <Link href={'/'}><FaXTwitter /></Link>
+                    </li>
+                </ul>
+            </div>
         </footer>
     )
 }

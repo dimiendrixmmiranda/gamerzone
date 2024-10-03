@@ -1,5 +1,6 @@
+'use client';
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoGameController } from "react-icons/io5";
 import { SiCounterstrike, SiValorant, SiLeagueoflegends } from "react-icons/si";
 import { Paginator } from 'primereact/paginator';
@@ -18,7 +19,26 @@ export default function Noticias() {
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(8);
 
-    const minhasNoticias = noticias.slice(5)
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        // Define a largura da janela assim que o componente é montado
+        setWindowWidth(window.innerWidth);
+
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Limpeza do evento na desmontagem do componente
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const qtdeNoticias = windowWidth <= 1024 ? 5 : 9
+    const minhasNoticias = noticias.slice(qtdeNoticias)
 
     const selecionarNoticias = selecionarBotao.toLowerCase() === 'geral' ?
         minhasNoticias
@@ -55,7 +75,7 @@ export default function Noticias() {
     };
 
     return (
-        <div className="w-full mt-4 px-1 md:pl-4 flex flex-col">
+        <div className="w-full px-1 md:pl-4 flex flex-col">
             <div className="w-full flex justify-around gap-1">
                 <button
                     className={`${botaoSelecionado('Geral')} lg:gap-2`}

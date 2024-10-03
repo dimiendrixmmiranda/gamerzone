@@ -35,7 +35,7 @@ export default function Slider() {
     }, []);
 
     return (
-        <div className={`bg-gray-900 md:w-[80%] md:mx-auto md:my-5`} style={{ boxShadow: '2px 2px 3px black' }}>
+        <div className={`bg-gray-900 mb-6 md:w-[80%] md:mx-auto md:my-5 lg:hidden`} style={{ boxShadow: '2px 2px 3px black' }}>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}

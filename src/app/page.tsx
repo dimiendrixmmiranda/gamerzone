@@ -6,11 +6,13 @@ import ProximasPartidas from "@/components/proximasPartidas/ProximasPartidas";
 import Ranking from "@/components/rankings/Ranking";
 import Resultados from "@/components/resultados/Resultados";
 import Slider from "@/components/slider/Slider";
+import SliderPersonalizado from "@/components/sliderPersonalizado/SliderPersonalizado";
 import Pagina from "@/components/template/Pagina";
 
 export default function Home() {
 	return (
 		<Pagina>
+			<SliderPersonalizado></SliderPersonalizado>
 			<Slider></Slider>
 			<div className="min-w-[95%] mx-auto container">
 				<div>

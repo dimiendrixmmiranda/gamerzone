@@ -1,0 +1,10 @@
+.sliderPersonalizado{
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 1em;
+}
+
+.sliderPersonalizado a:hover div{
+    transition: .6s ease;
+    bottom: 25px;
+}

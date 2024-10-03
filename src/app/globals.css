@@ -28,6 +28,7 @@
   --rosa-steam: #b30ec5;
   --vermelho-steam: #FF0000;
   --laranja-steam: #f09e2b;
+  --azul-botao: #1230AE
 }
 
 @media (prefers-color-scheme: dark) {
@@ -98,6 +99,46 @@ body {
 .p-dialog-header, .p-dialog-content{
   background-color: var(--preto-skins)!important;
   color: white;
+}
+
+.redes-sociais li:hover{
+  margin-bottom: 10px;
+  transition: .6s ease;
+}
+
+.redes-sociais li::after{
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--azul-escuro);
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
+}
+.redes-sociais li::before{
+  content: attr(data-social);
+  width: fit-content;
+  line-height: 16px;
+  height: fit-content;
+  padding: .2em .5em;
+  border-radius: 6px;
+  background-color: var(--azul-escuro);
+  position: absolute;
+  top: -22px;
+  font-size: .5em!important;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  display: none;
+}
+
+.redes-sociais li:hover::after,
+.redes-sociais li:hover::before{
+  display: block;
 }
 
 

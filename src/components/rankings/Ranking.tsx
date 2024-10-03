@@ -8,8 +8,6 @@ import listaDeTimes from '@/data/times';
 export default function Ranking() {
     const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
-    console.log(listaDeTimes)
-
     const toggleOpen = (index: number) => {
         if (openIndexes.includes(index)) {
             setOpenIndexes(openIndexes.filter(i => i !== index)); // Fechar
