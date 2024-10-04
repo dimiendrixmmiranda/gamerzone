@@ -60,7 +60,57 @@ export const skins = [
         ]
     },
     {
-        nomeDoGrupo: 'Intermediárias',
+        nomeDoGrupo: 'SMGs',
+        itensDoGrupo: [
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+        ]
+    },
+    {
+        nomeDoGrupo: 'Shotguns',
+        itensDoGrupo: [
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+        ]
+    },
+    {
+        nomeDoGrupo: 'Machineguns',
         itensDoGrupo: [
             {
                 urlArma: '/skinsDefault/glock.png',
@@ -86,6 +136,56 @@ export const skins = [
     },
     {
         nomeDoGrupo: 'Rifles',
+        itensDoGrupo: [
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+        ]
+    },
+    {
+        nomeDoGrupo: 'Facas',
+        itensDoGrupo: [
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+            {
+                urlArma: '/skinsDefault/glock.png',
+                tipo: 'glock',
+                nomeArma: 'Glock-18'
+            },
+        ]
+    },
+    {
+        nomeDoGrupo: 'Luvas',
         itensDoGrupo: [
             {
                 urlArma: '/skinsDefault/glock.png',

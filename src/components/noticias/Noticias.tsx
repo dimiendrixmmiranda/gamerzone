@@ -17,7 +17,7 @@ type PaginatorEvent = {
 export default function Noticias() {
     const [selecionarBotao, setSelecionarBotao] = useState('Geral');
     const [first, setFirst] = useState(0);
-    const [rows, setRows] = useState(8);
+    const [rows, setRows] = useState(9);
 
     const [windowWidth, setWindowWidth] = useState(0);
 

@@ -1,6 +1,6 @@
 'use client'
 import Colunas from "@/components/colunas/Colunas";
-import CraqueDaSemana from "@/components/craqueSemana/CraqueDaSemana";
+import Craque from "@/components/craque/craque";
 import Noticias from "@/components/noticias/Noticias";
 import ProximasPartidas from "@/components/proximasPartidas/ProximasPartidas";
 import Ranking from "@/components/rankings/Ranking";
@@ -15,6 +15,7 @@ export default function Home() {
 			<SliderPersonalizado></SliderPersonalizado>
 			<Slider></Slider>
 			<div className="min-w-[95%] mx-auto container">
+				<Craque></Craque>
 				<div>
 					<Noticias></Noticias>
 				</div>
@@ -22,9 +23,8 @@ export default function Home() {
 					<ProximasPartidas></ProximasPartidas>
 					<Resultados></Resultados>
 					<Ranking></Ranking>
+					<Colunas></Colunas>
 				</div>
-				<CraqueDaSemana></CraqueDaSemana>
-				<Colunas></Colunas>
 			</div>
 		</Pagina>
 	);

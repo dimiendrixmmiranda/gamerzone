@@ -37,7 +37,6 @@ export default function Page() {
         viewmodel != null ? setViewmodel(viewmodel) : ''
         copiarViewModel()
     }
-
     return (
         <Pagina>
             <h2 id="topo" className="text-white bg-black p-2 max-w-[95%] mx-auto uppercase leading-6 my-3 font-black text-center text-2xl lg:max-w-[1250px]">Miras dos Principais Jogadores de CS2 do momento:</h2>

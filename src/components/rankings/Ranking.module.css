@@ -8,7 +8,7 @@
 .ranking li > div:nth-child(1){
     display: grid;
     grid-template-columns: 15% 15% 25% 1fr 10%;
-    height: 80px;
+    height: 70px;
 }
 .ranking li > ul{
     height: 70px;
