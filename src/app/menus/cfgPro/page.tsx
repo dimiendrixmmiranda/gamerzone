@@ -1,45 +1,44 @@
 'use client';
 
 import Pagina from "@/components/template/Pagina";
-import listaDeJogadores from "@/data/jogadores";
-import Link from "next/link";
-import styles from './styles.module.css'
-import { FaCopy } from "react-icons/fa";
-import { useState } from "react";
-import { Jogador } from "@/types/Jogador";
-import { FaRegArrowAltCircleUp, FaRegArrowAltCircleLeft } from "react-icons/fa";
+// import Link from "next/link";
+// import { useState } from "react";
+// import { FaRegArrowAltCircleUp, FaRegArrowAltCircleLeft } from "react-icons/fa";
+// import { listaDeJogadores } from "@/core";
+// import Jogador from "@/core/jogadores/jogadores";
 
 export default function Page() {
-    const [jogadorSelecionado, setJogadorSelecionado] = useState<Jogador | null>(null)
-    const [codigoMira, setCodigoMira] = useState('')
-    const [viewmodel, setViewmodel] = useState('')
+    // const [jogadorSelecionado, setJogadorSelecionado] = useState<Jogador | null>(null)
+    // const [codigoMira, setCodigoMira] = useState('')
+    // const [viewmodel, setViewmodel] = useState('')
 
-    const copiarCodigoMira = () => {
-        navigator.clipboard.writeText(codigoMira).then(() => {
-            alert('Mira copiada com Sucesso!');
-        }).catch(err => {
-            console.error('Erro ao copiar o texto: ', err);
-        });
-    };
-    const copiarViewModel = () => {
-        navigator.clipboard.writeText(viewmodel).then(() => {
-            alert('Viewmodel copiado com sucesso');
-        }).catch(err => {
-            console.error('Erro ao copiar o texto: ', err);
-        });
-    };
+    // const copiarCodigoMira = () => {
+    //     navigator.clipboard.writeText(codigoMira).then(() => {
+    //         alert('Mira copiada com Sucesso!');
+    //     }).catch(err => {
+    //         console.error('Erro ao copiar o texto: ', err);
+    //     });
+    // };
+    // const copiarViewModel = () => {
+    //     navigator.clipboard.writeText(viewmodel).then(() => {
+    //         alert('Viewmodel copiado com sucesso');
+    //     }).catch(err => {
+    //         console.error('Erro ao copiar o texto: ', err);
+    //     });
+    // };
 
-    const copiarMira = (mira: string | null) => {
-        mira != null ? setCodigoMira(mira) : ''
-        copiarCodigoMira()
-    }
-    const copiarCodigoViewmodel = (viewmodel: string | null) => {
-        viewmodel != null ? setViewmodel(viewmodel) : ''
-        copiarViewModel()
-    }
+    // const copiarMira = (mira: string | null) => {
+    //     mira != null ? setCodigoMira(mira) : ''
+    //     copiarCodigoMira()
+    // }
+    // const copiarCodigoViewmodel = (viewmodel: string | null) => {
+    //     viewmodel != null ? setViewmodel(viewmodel) : ''
+    //     copiarViewModel()
+    // }
     return (
         <Pagina>
-            <h2 id="topo" className="text-white bg-black p-2 max-w-[95%] mx-auto uppercase leading-6 my-3 font-black text-center text-2xl lg:max-w-[1250px]">Miras dos Principais Jogadores de CS2 do momento:</h2>
+            <h2>Hello Wolrd</h2>
+            {/* <h2 id="topo" className="text-white bg-black p-2 max-w-[95%] mx-auto uppercase leading-6 my-3 font-black text-center text-2xl lg:max-w-[1250px]">Miras dos Principais Jogadores de CS2 do momento:</h2>
             <ul className="flex flex-wrap justify-center p-2 gap-4">
                 {listaDeJogadores.map((jogador, index) => {
                     return (
@@ -53,15 +52,15 @@ export default function Page() {
                                         <h2 className="text-center text-2xl font-bold">{jogador.nick}</h2>
                                     </div>
                                     <div className="absolute top-2 right-3">
-                                        <img src={jogador.logoTimeAtual} alt={jogador.timeAtual} className=" w-10 h-10" />
+                                        <img src={jogador.imagem} alt={jogador.nome} className=" w-10 h-10" />
                                     </div>
                                 </div>
                             </Link>
                         </li>
                     )
                 })}
-            </ul>
-            {
+            </ul> */}
+            {/* {
                 jogadorSelecionado != null ? (
                     <div id="detalhes" className={`w-[95%] max-w-[1000px] mx-auto bg-[--preto-skins] mt-10 p-3 gap-3 mb-6 xl:max-w-[1250px] ${styles.cfgPro}`}>
                         <div className={`flex justify-center items-center ${styles.cfgProImagem}`}>
@@ -152,16 +151,16 @@ export default function Page() {
                         </div>
                     </div>
                 ) : ('')
-            }
+            } */}
 
-            <div className="flex gap-4 mx-auto mt-2 xl:max-w-[1250px] xl:justify-end">
+            {/* <div className="flex gap-4 mx-auto mt-2 xl:max-w-[1250px] xl:justify-end">
                 <Link href={'#topo'} className="flex justify-center items-center gap-1 bg-[--azul] px-2 py-1 text-bold rounded-md xl:text-xl">
                     Voltar ao topo <FaRegArrowAltCircleUp />
                 </Link>
                 <Link href={'/'} className="flex justify-center items-center gap-1 bg-[--azul] px-2 py-1 text-bold rounded-md xl:text-xl">
                     Voltar <FaRegArrowAltCircleLeft />
                 </Link>
-            </div>
+            </div> */}
         </Pagina>
     )
 }

@@ -36,8 +36,8 @@ export default function Offcanvas() {
     }
 
     return (
-        <div className="card relative md:hidden">
-            <Sidebar visible={visibleRight} position="right" onHide={() => setVisibleRight(false)}>
+        <div className="card relative md:hidden offcanvas">
+            <Sidebar className='offcanvas' visible={visibleRight} position="right" onHide={() => setVisibleRight(false)}>
                 <h2 className='w-full text-3xl font-black text-center absolute' style={{ top: '2%', left: '50%', transform: 'translate(-50%, 0%)' }}>Menu</h2>
                 <ul className='flex flex-col'>
                     {

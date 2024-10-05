@@ -127,7 +127,7 @@ export default function Noticias() {
                     })}
                 </ul>
             </div>
-            <div className="card max-w-[540px] mx-auto w-full md:max-w-none">
+            <div className="card max-w-[540px] mx-auto w-full md:max-w-none paginacao">
                 <Paginator first={first} rows={rows} totalRecords={noticias.length} onPageChange={onPageChange} className="w-full mt-3" />
             </div>
         </div>

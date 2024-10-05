@@ -20,7 +20,7 @@
   --preto-skins-claro: #3d3b3c;
   --dourado: #F1BE5E;
   --azul-escuro: #171D25;
-  
+
   --cinza-steam: #5d5d66;
   --azul-claro-steam: #5E98D9;
   --azul-steam: #4B69FF;
@@ -62,54 +62,26 @@ body {
   background-color: var(--cor-principal);
 }
 
-.craqueSemana form {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: center;
-  align-items: center;
-  gap: .5em;
-}
-
-.craqueSemana input {
-  appearance: none;
-  width: 50px;
-  height: 25px;
-  background-color: var(--laranja);
-  border-radius: 6px;
-  border: solid 1px black;
-  cursor: pointer;
-}
-
-.craqueSemana input:checked {
-  background-image: url(../../public/ak47.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: red;
-}
-
-.craqueSemana form button{
-  grid-column: 1/4;
-}
-
-.slider-img:hover{
+.slider-img:hover {
   scale: 1.05;
   transition: .4s ease;
 }
-.p-dialog-header, .p-dialog-content{
-  background-color: var(--preto-skins)!important;
+
+.p-dialog-header,
+.p-dialog-content {
+  background-color: var(--preto-skins) !important;
   color: white;
 }
 
-.redes-sociais li:hover{
+.redes-sociais li:hover {
   margin-bottom: 10px;
   transition: .6s ease;
 }
 
-.redes-sociais li::after{
+.redes-sociais li::after {
   content: '';
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid var(--azul-escuro);
@@ -119,7 +91,8 @@ body {
   transform: translate(-50%);
   display: none;
 }
-.redes-sociais li::before{
+
+.redes-sociais li::before {
   content: attr(data-social);
   width: fit-content;
   line-height: 16px;
@@ -129,7 +102,7 @@ body {
   background-color: var(--azul-escuro);
   position: absolute;
   top: -22px;
-  font-size: .5em!important;
+  font-size: .5em !important;
   left: 50%;
   transform: translate(-50%);
   text-align: center;
@@ -137,11 +110,11 @@ body {
 }
 
 .redes-sociais li:hover::after,
-.redes-sociais li:hover::before{
+.redes-sociais li:hover::before {
   display: block;
 }
 
-input[type="radio"]{
+input[type="radio"] {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -151,10 +124,87 @@ input[type="radio"]{
   appearance: none;
   cursor: pointer;
 }
-input[type="radio"]:checked{
+
+input[type="radio"]:checked {
   border: solid 3px green;
 }
 
+/* draggable */
+.p-component {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--azul);
+}
+
+.p-component .p-orderlist-controls {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px !important;
+  flex-direction: row;
+}
+
+.p-component .p-orderlist-controls button {
+  position: relative;
+  height: fit-content;
+  flex-grow: 1;
+}
+
+.p-component .p-orderlist-controls button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-component .p-orderlist-list-container {
+  height: 100%;
+}
+
+.p-component .p-orderlist-list-container .p-orderlist-list {
+  max-height: 220px;
+  overflow-y: scroll;
+}
+
+.p-component .p-orderlist-list-container .p-orderlist-list li {
+  padding: 2px 16px;
+}
+
+.modulo{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.paginacao .p-component{
+  flex-direction: row;
+}
+
+.offcanvas{
+  height: 100%!important;
+  background-color: var(--cor-principal);
+  color: white;
+}
+.offcanvas button{
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .modulo {
+    display: grid;
+    grid-template-columns: 60% 38%;
+    justify-content: center;
+  }
+  .p-component .p-orderlist-list-container .p-orderlist-list {
+    max-height: fit-content;
+    overflow-y: scroll;
+  }
+  .p-component .p-orderlist-list-container {
+    height: 330px;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   .container {
@@ -162,15 +212,16 @@ input[type="radio"]:checked{
     grid-template-columns: 58% 40%;
     gap: 1em;
   }
-  .craqueSemana{
+
+  .craque {
     grid-column: 1/3;
   }
-  .craqueSemana form {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, auto);
+  .modulo {
+    grid-column: 1/3;
+    grid-template-columns: 65% 30%;
   }
-  .craqueSemana form button{
-    grid-column: 1/8;
+  .p-component .p-orderlist-list-container {
+    height: 390px;
   }
 }
 
@@ -180,7 +231,21 @@ input[type="radio"]:checked{
     grid-template-columns: 65% 35%;
     gap: 1em;
   }
-  .craque{
-    grid-column: 1/3;
+
+  .p-component .p-orderlist-list-container {
+    height: 460px;
+  }
+  
+}
+@media screen and (min-width: 1440px) {
+  .p-component .p-orderlist-list-container .p-orderlist-list {
+    max-height: 230px;
+    overflow-y: scroll;
+  }
+  .p-component .p-orderlist-list-container {
+    height: 230px;
+  }
+  .modulo{
+    margin-right: 2.7em;
   }
 }
