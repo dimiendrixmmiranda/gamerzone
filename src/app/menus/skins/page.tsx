@@ -1,4 +1,4 @@
-import Skins from "@/components/Skins/Skins";
+import Skins from "@/components/skins/Skins";
 
 export default function Page(){
     return (

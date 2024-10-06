@@ -8,7 +8,7 @@ import style from './rodape.module.css'
 
 export default function Rodape() {
     return (
-        <footer className={`w-full bg-[--cor-principal] mt-10 xl:pt-3 ${style.rodape}`}>
+        <footer className={`w-full bg-[--cor-principal] ${style.rodape}`}>
             <div className="p-2 pb-4 flex flex-col justify-center gap-4 xl:justify-center">
                 <div className="flex h-[100px]">
                     <img src="/logo-gamer-zone.png" alt="Logo" className="h-full" />

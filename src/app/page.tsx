@@ -23,13 +23,12 @@ export default function Home() {
 				<div>
 					<Noticias></Noticias>
 				</div>
-				<div className="mt-6 w-[95%] max-w-[500px] mx-auto flex flex-col gap-6 lg:max-w-[420px]">
+				<div className="mt-6 w-[95%] max-w-[500px] mx-auto flex flex-col gap-6 mb-8 lg:max-w-[420px]">
 					<ProximasPartidas></ProximasPartidas>
 					<Resultados></Resultados>
 					<Ranking></Ranking>
 					<Colunas></Colunas>
 				</div>
-				
 			</div>
 		</Pagina>
 	);

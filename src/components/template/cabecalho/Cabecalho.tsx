@@ -33,7 +33,7 @@ export default function Cabecalho() {
     }
 
     return (
-        <header className="bg-[--cor-principal] flex p-1 md:p-2">
+        <header className="bg-[--cor-principal] flex p-1 md:p-2" id="topo">
             <Link href={'/'} className="flex h-16 flex-1 md:flex-0 md:w-fit">
                 <img src="../../logo-gamer-zone.png" alt="Logo Gamer Zone" className="h-full" />
                 <img src="../../texto-gamer-zone.png" alt="Texto Gamer Zone" className="h-full -mx-1" />

@@ -1,4 +1,4 @@
-import { Jogador } from "@/types/Jogador"
+import Jogador from "../jogadores/jogadores"
 
 export default interface Time {
     id: number

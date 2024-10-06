@@ -3,4 +3,6 @@ export default interface Coluna {
     nome: string
     imagem: string
     tituloColuna: string 
+    autor: string
+    conteudo: string[]
 }

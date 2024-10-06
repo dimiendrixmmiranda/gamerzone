@@ -4,11 +4,11 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { useState, useEffect } from 'react';
 
 import Link from 'next/link';
-import noticias from '@/data/noticias';
-import { createSlugWithId } from '@/utils/createSlug';
+import { listaDeNoticias } from '@/core';
+import { createSlugWithId } from '@/utils/createSlugWithId';
 
 export default function Slider() {
-    const minhasNoticias = noticias.slice(0, 5)
+    const minhasNoticias = listaDeNoticias.slice(0, 5)
 
     const [alturaSlider, setAlturaSlider] = useState(280);
 
@@ -55,7 +55,7 @@ export default function Slider() {
                     minhasNoticias.map((noticia, index) => {
                         return (
                             <SwiperSlide key={index}>
-                                <Link href={`/noticias/${createSlugWithId(noticia.tituloNoticia, noticia.id)}`} className='relative flex justify-center items-center'>
+                                <Link href={`/noticias/${createSlugWithId(noticia.titulo, noticia.id)}`} className='relative flex justify-center items-center'>
                                     <div className='w-full relative'>
                                         <img
                                             src={noticia.thumbnail}
@@ -64,10 +64,10 @@ export default function Slider() {
                                             style={{ height: `${alturaSlider}px` }}
                                         />
                                         <div className='w-8 h-8 rounded-full absolute top-2 left-2 overflow-hidden'>
-                                            <img src={noticia.logoNoticia} alt={noticia.gameNoticia} className='w-full h-full'/>
+                                            <img src={noticia.tagLogo} alt={noticia.tag} className='w-full h-full'/>
                                         </div>
                                     </div>
-                                    <h2 className='absolute left-[50%] bottom-8 max-w-[95%] w-full text-center font-black leading-5p-1 sm:text-lg sm:leading-5 md:text-3xl lg:p-2 lg:bottom-10 xl:bottom-16 xl:max-w-[80%] xl:text-4xl' style={{ transform: 'translate(-50%)', textShadow: '2px 2px 4px black' }}>{noticia.tituloNoticia}</h2>
+                                    <h2 className='absolute left-[50%] bottom-8 max-w-[95%] w-full text-center font-black leading-5p-1 sm:text-lg sm:leading-5 md:text-3xl lg:p-2 lg:bottom-10 xl:bottom-16 xl:max-w-[80%] xl:text-4xl' style={{ transform: 'translate(-50%)', textShadow: '2px 2px 4px black' }}>{noticia.titulo}</h2>
                                 </Link>
                             </SwiperSlide>
                         )
