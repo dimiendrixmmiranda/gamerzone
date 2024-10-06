@@ -22,7 +22,7 @@ type Skin = {
     urlImg: string;
 };
 
-export default function Skins() {
+export default function SkinsCS2() {
     const [selecionarBotao, setSelecionarBotao] = useState('Geral');
     const [visible, setVisible] = useState(false);
     const [selecionarSkin, setselecionarSkin] = useState<Skin | null>(null);

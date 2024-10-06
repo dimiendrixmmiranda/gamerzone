@@ -1,7 +1,7 @@
-import Skins from "@/components/skins/Skins";
+import SkinsCS2 from "@/components/skins/Skins";
 
 export default function Page(){
     return (
-        <Skins></Skins>
+        <SkinsCS2></SkinsCS2>
     )
 }
