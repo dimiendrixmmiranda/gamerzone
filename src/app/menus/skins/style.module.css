@@ -1,0 +1,18 @@
+.cardMenu:hover{
+    scale: 1.05;
+    transition: .4s ease;
+}
+
+.containerCardMenu::-webkit-scrollbar{
+    height: 3px;
+}
+.containerCardMenu::-webkit-scrollbar-track{
+    background-color: black;
+}
+.containerCardMenu::-webkit-scrollbar-thumb{
+    background-color: var(--dourado);
+}
+.containerCardMenu h3{
+    position: relative;
+    padding-left: .5em;
+}

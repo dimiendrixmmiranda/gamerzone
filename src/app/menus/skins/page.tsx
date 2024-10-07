@@ -8,7 +8,7 @@ import { Dialog } from 'primereact/dialog';
 import Link from "next/link";
 import { skins, skinsGerais } from "data/skins";
 import Pagina from 'components/template/Pagina';
-import Grupo from 'components/skins/Grupo';
+import Grupo from './Grupo';
 
 type Skin = {
     nome: string;
