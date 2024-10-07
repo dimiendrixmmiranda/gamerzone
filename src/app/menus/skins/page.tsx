@@ -4,27 +4,15 @@ import { FaCircleArrowUp, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useState, useRef } from "react";
 import { Dialog } from 'primereact/dialog';
 import Link from "next/link";
-import { skins, skinsGerais } from "data/skins";
 import Pagina from 'components/template/Pagina';
 import Image from 'next/image';
-
-type Skin = {
-    nome: string;
-    tipo: string;
-    raridade: string;
-    statTrack: boolean;
-    souvenir: boolean;
-    operacao: {
-        nome: string;
-        urlImg: string;
-    };
-    urlImg: string;
-};
+import { listaDeSkinsCS2, listaDeSkinsDefaultCS2 } from "core";
+import CardSkin from "core/skins/cardSkin";
 
 export default function SkinsCS2() {
     const [selecionarBotao, setSelecionarBotao] = useState('Geral');
     const [visible, setVisible] = useState(false);
-    const [selecionarSkin, setselecionarSkin] = useState<Skin | null>(null);
+    const [selecionarSkin, setselecionarSkin] = useState<CardSkin | null>(null);
     const scrollContainerRef = useRef<HTMLUListElement>(null);
 
     function identificarRaridade(raridade: string): string {
@@ -59,10 +47,10 @@ export default function SkinsCS2() {
     }
 
     const selecionarSkins = selecionarBotao.toLowerCase() === 'geral' ?
-        skinsGerais :
-        skinsGerais.filter(skin => skin.tipo.toLowerCase() === selecionarBotao.toLowerCase());
+        listaDeSkinsCS2 :
+        listaDeSkinsCS2.filter(skin => skin.tipo.toLowerCase() === selecionarBotao.toLowerCase());
 
-    const handleSkinClick = (skin: Skin) => {
+    const handleSkinClick = (skin: CardSkin) => {
         setselecionarSkin(skin);
         setVisible(true);
     };
@@ -83,23 +71,23 @@ export default function SkinsCS2() {
         <Pagina>
             <div className="relative">
                 <ul ref={scrollContainerRef} id="topo" className={`overflow-scroll overflow-y-hidden whitespace-nowrap pb-2 px-2 mt-4 w-[98%] mx-auto containerCardMenu xl:w-[85%]`}>
-                    {skins.map((grupo, index) => (
+                    {listaDeSkinsDefaultCS2.map((grupo, index) => (
                         <div className="inline-block" key={index}>
-                            <h3 className="text-black font-black text-xl uppercase ml-1 mb-2">{grupo.nomeDoGrupo}</h3>
+                            <h3 className="text-black font-black text-xl uppercase ml-1 mb-2">{grupo.grupo}</h3>
                             <ul className="whitespace-nowrap flex items-center">
-                                {grupo.itensDoGrupo.map((card, index) => {
+                                {grupo.itens.map((card, index) => {
                                     return (
-                                        <li key={index} className={`w-36 h-[115px] bg-[--preto-skins] inline-block cursor-pointer mr-2 cardMenu`} onClick={() => setSelecionarBotao(card.tipo)}>
+                                        <li key={index} className={`w-36 h-[115px] bg-[--preto-skins] inline-block cursor-pointer mr-2 cardMenu`} onClick={() => setSelecionarBotao(card.categoria)}>
                                             <div className="w-full h-full" style={{ display: 'grid', gridTemplateRows: '1fr 25px' }}>
                                                 <div className="relative h-[55px] self-center">
                                                     <Image
-                                                        src={card.urlArma}
-                                                        alt={card.nomeArma}
+                                                        src={card.imagem}
+                                                        alt={card.nome}
                                                         layout="fill"
                                                         objectFit="contain"
                                                     />
                                                 </div>
-                                                <h2 className="font-bold text-center">{card.nomeArma}</h2>
+                                                <h2 className="font-bold text-center">{card.nome}</h2>
                                             </div>
                                         </li>
                                     )
@@ -130,7 +118,7 @@ export default function SkinsCS2() {
                         <li className="cursor-pointer" key={index} onClick={() => handleSkinClick(skin)}>
                             <div className="px-4 py-2 max-w-[320px] h-fit rounded-lg md:h-[500px] lg:max-w-[360px] xl:h-[470px]" style={{ backgroundColor: `var(--preto-skins-claro)`, textShadow: '1px 1px 2px black', boxShadow: '1px 1px 2px black', border: `solid 4px var(${identificarRaridade(skin.raridade)})`, display: 'grid', gridTemplateRows: '185px 1fr auto auto 40px' }}>
                                 <div className="h-[185px] flex justify-center items-center">
-                                    <img src={skin.urlImg} alt={skin.nome} className="w-[75%]" />
+                                    <img src={skin.img} alt={skin.nome} className="w-[75%]" />
                                 </div>
                                 <h2 className="text-center font-bold text-2xl">{skin.nome}</h2>
                                 <div className="flex mt-2" style={{ display: 'grid', gridTemplateColumns: '45% 65%' }}>
@@ -141,7 +129,7 @@ export default function SkinsCS2() {
                                 <div className="gap-2 my-3" style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}>
                                     <h2 className="uppercase font-black text-center text-2xl" style={{ gridColumn: '1/3' }}>Operação:</h2>
                                     <h3 className="self-center justify-self-center text-center font-bold text-xl leading-6">{skin.operacao.nome}</h3>
-                                    <img className="w-[80px] self-center justify-self-center" src={skin.operacao.urlImg} alt={skin.operacao.nome} />
+                                    <img className="w-[80px] self-center justify-self-center" src={skin.operacao.img} alt={skin.operacao.nome} />
                                 </div>
                                 <Link href={'https://stash.clash.gg/weapon/USP-S'} className="bg-[--azul-escuro] w-full py-1 text-xl font-bold flex justify-center items-center gap-2 rounded-md relative z-10 mt-auto">
                                     Inspecionar no Jogo <FaSteam />
@@ -159,7 +147,7 @@ export default function SkinsCS2() {
             >
                 {selecionarSkin && (
                     <div>
-                        <img src={selecionarSkin.urlImg} alt={selecionarSkin.nome} />
+                        <img src={selecionarSkin.img} alt={selecionarSkin.nome} />
                         <h2 className="text-center text-xl lg:text-4xl">{selecionarSkin.nome}</h2>
                     </div>
                 )}

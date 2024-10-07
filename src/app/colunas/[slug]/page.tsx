@@ -1,5 +1,4 @@
 'use client'
-
 import BotaoAncora from "components/botaoAncora/BotaoAncora";
 import Pagina from "components/template/Pagina";
 import { listaColunas } from "core";
