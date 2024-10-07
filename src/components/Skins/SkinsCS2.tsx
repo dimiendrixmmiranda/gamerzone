@@ -1,4 +1,5 @@
 'use client';
+
 import { skins, skinsGerais } from "@/data/skins";
 import Pagina from "../template/Pagina";
 import Grupo from "./Grupo";
