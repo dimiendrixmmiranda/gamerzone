@@ -1,167 +1,232 @@
 'use client';
 
+import BotaoAncora from "components/botaoAncora/BotaoAncora";
 import Pagina from "components/template/Pagina";
-
-// import Link from "next/link";
-// import { useState } from "react";
-// import { FaRegArrowAltCircleUp, FaRegArrowAltCircleLeft } from "react-icons/fa";
-// import { listaDeJogadores } from "@/core";
-// import Jogador from "@/core/jogadores/jogadores";
+import { listaDeJogadores } from "core";
+import Jogador from "core/jogadores/jogadores";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { IoCopy } from "react-icons/io5";
+import { FaArrowLeft, FaArrowUp } from "react-icons/fa";
 
 export default function Page() {
-    // const [jogadorSelecionado, setJogadorSelecionado] = useState<Jogador | null>(null)
-    // const [codigoMira, setCodigoMira] = useState('')
-    // const [viewmodel, setViewmodel] = useState('')
+    const [jogador, setJogador] = useState<Jogador | null>(null);
+    const [copiado, setCopiado] = useState<string | null>(null); // Estado que indica qual item foi copiado
 
-    // const copiarCodigoMira = () => {
-    //     navigator.clipboard.writeText(codigoMira).then(() => {
-    //         alert('Mira copiada com Sucesso!');
-    //     }).catch(err => {
-    //         console.error('Erro ao copiar o texto: ', err);
-    //     });
-    // };
-    // const copiarViewModel = () => {
-    //     navigator.clipboard.writeText(viewmodel).then(() => {
-    //         alert('Viewmodel copiado com sucesso');
-    //     }).catch(err => {
-    //         console.error('Erro ao copiar o texto: ', err);
-    //     });
-    // };
+    const copiar = async (item: string, tipo: string) => {
+        try {
+            await navigator.clipboard.writeText(item);
+            setCopiado(tipo); // Identifica qual item foi copiado
+            setTimeout(() => setCopiado(null), 2000); // Remove feedback após 2 segundos
+        } catch (err) {
+            console.error("Erro ao copiar para a área de transferência: ", err);
+        }
+    };
 
-    // const copiarMira = (mira: string | null) => {
-    //     mira != null ? setCodigoMira(mira) : ''
-    //     copiarCodigoMira()
-    // }
-    // const copiarCodigoViewmodel = (viewmodel: string | null) => {
-    //     viewmodel != null ? setViewmodel(viewmodel) : ''
-    //     copiarViewModel()
-    // }
     return (
         <Pagina>
-            <h2>Hello Wolrd</h2>
-            {/* <h2 id="topo" className="text-white bg-black p-2 max-w-[95%] mx-auto uppercase leading-6 my-3 font-black text-center text-2xl lg:max-w-[1250px]">Miras dos Principais Jogadores de CS2 do momento:</h2>
-            <ul className="flex flex-wrap justify-center p-2 gap-4">
-                {listaDeJogadores.map((jogador, index) => {
-                    return (
-                        <li key={index} onClick={() => setJogadorSelecionado(jogador)}>
-                            <Link href={'#detalhes'}>
-                                <div className="w-[300px] h-[350px] mx-auto bg-[--preto-skins] p-3 relative flex flex-col gap-3">
-                                    <div className="w-full max-h-[276px] overflow-hidden">
-                                        <img src={jogador.imagem} alt={jogador.nome} className="w-full" />
-                                    </div>
-                                    <div className="bg-black">
-                                        <h2 className="text-center text-2xl font-bold">{jogador.nick}</h2>
-                                    </div>
-                                    <div className="absolute top-2 right-3">
-                                        <img src={jogador.imagem} alt={jogador.nome} className=" w-10 h-10" />
-                                    </div>
+            <div className="min-h-[100vh] bg-[--preto-skins]">
+                <div className="max-w-[95%] mx-auto flex flex-col gap-5 py-4">
+                    <h2 className="font-black uppercase text-lg text-center leading-6 md:text-2xl lg:text-3xl">
+                        Configurações dos principais jogadores de CS2 da Atualidade!
+                    </h2>
+                    <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                        {listaDeJogadores.map(jogador => {
+                            return (
+                                <li key={jogador.id} className="w-full h-[200px] bg-black max-w-[190px] 
+                                justify-self-center flex flex-col hover:scale-[1.05] transition-all md:max-w-[230px] md:h-[270px]" onClick={() => setJogador(jogador)}>
+                                    <Link href={'#informacoes'} className="flex flex-col w-full h-full">
+                                        <div className="relative w-full h-[80%]">
+                                            <Image src={jogador.imagem} alt={jogador.nome} fill className="object-cover" />
+                                        </div>
+                                        <div className="flex flex-col justify-center items-center my-auto gap-[2px]">
+                                            <h2 className="leading-4 text-xl font-bold">{jogador.nick}</h2>
+                                            <h4 className="leading-4 text-sm font-medium">{jogador.posicao}</h4>
+                                        </div>
+                                    </Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+
+                    {jogador && (
+                        <div className="w-full bg-zinc-900 cfgproJogador" id="informacoes">
+                            <div className="relative w-full h-[300px] max-w-[320px] mx-auto md:h-[210px] lg:max-w-full lg:h-[340px] xl:h-[240px]">
+                                <Image src={jogador?.imagem} alt={jogador?.nome} fill className="object-cover" />
+                            </div>
+                            <div className="bg-zinc-700 p-2">
+                                <h3 className="uppercase text-xl font-bold">Mouse:</h3>
+                                <ul>
+                                    <li className="flex gap-1">
+                                        <p>Modelo:</p>
+                                        <p>{jogador.mouse.modelo}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Dpi:</p>
+                                        <p>{jogador.mouse.dpi}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Sensibilidade:</p>
+                                        <p>{jogador.mouse.Sensitivity}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Sensibilidade do Zoom:</p>
+                                        <p>{jogador.mouse.Zoom_Sensitivity}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Sensibilidade do Windows:</p>
+                                        <p>{jogador.mouse.Windows_Sensitivity}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>eDPI:</p>
+                                        <p>{jogador.mouse.eDPI}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>HZ:</p>
+                                        <p>{jogador.mouse.hz}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="bg-zinc-700 p-2">
+                                <h3 className="uppercase text-xl font-bold">Mira</h3>
+                                <div>
+                                    <p>{jogador.mira}</p>
+                                    <button
+                                        className="flex bg-[--azul] w-full justify-center items-center gap-2 py-1 uppercase font-bold"
+                                        onClick={() => copiar(jogador.mira, 'mira')}
+                                    >
+                                        {copiado === 'mira' ? "Copiado!" : "Copiar"} <IoCopy />
+                                    </button>
                                 </div>
-                            </Link>
-                        </li>
-                    )
-                })}
-            </ul> */}
-            {/* {
-                jogadorSelecionado != null ? (
-                    <div id="detalhes" className={`w-[95%] max-w-[1000px] mx-auto bg-[--preto-skins] mt-10 p-3 gap-3 mb-6 xl:max-w-[1250px] ${styles.cfgPro}`}>
-                        <div className={`flex justify-center items-center ${styles.cfgProImagem}`}>
-                            <div className="relative max-w-[325px] w-full">
-                                <img src={jogadorSelecionado.imagem} alt={jogadorSelecionado.nome} className="max-w-[325px] w-full" />
-                                <img className="w-10 absolute top-0 right-0" src={jogadorSelecionado.logoTimeAtual} alt={jogadorSelecionado.timeAtual} />
-                                <h2 className="text-2xl font-bold text-center absolute bottom-0 left-[50%] bg-black w-full py-1" style={{ transform: 'translate(-50%)' }}>{jogadorSelecionado.nick}</h2>
+                            </div>
+                            <div className="bg-zinc-700 p-2">
+                                <h3 className="uppercase text-xl font-bold">Viewmodel</h3>
+                                <ul>
+                                    <li className="flex gap-1">
+                                        <p>FOV:</p>
+                                        <p>{jogador.viewmodel.fov}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Offset x:</p>
+                                        <p>{jogador.viewmodel.offsetX}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Offset y:</p>
+                                        <p>{jogador.viewmodel.offsetY}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Offset z:</p>
+                                        <p>{jogador.viewmodel.offsetZ}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Presetpos:</p>
+                                        <p>{jogador.viewmodel.presetpos}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <button
+                                            className="flex bg-[--azul] w-full justify-center items-center gap-2 py-1 uppercase font-bold"
+                                            onClick={() => copiar(jogador.viewmodel.codigo, 'viewmodel')}
+                                        >
+                                            {copiado === 'viewmodel' ? "Copiado!" : "Copiar"} <IoCopy />
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="bg-zinc-700 p-2">
+                                <h3 className="uppercase text-xl font-bold">Configurações de Vídeo Avançado</h3>
+                                <ul>
+                                    <li className="flex gap-1">
+                                        <p>Resolução:</p>
+                                        <p>{jogador.video.resolucao}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Brilho:</p>
+                                        <p>{jogador.video.Brightness}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Modo de Exibicao:</p>
+                                        <p>{jogador.video.Display_Mode}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Proporção da Tela:</p>
+                                        <p>{jogador.video.aspectRatio}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Modo de escala:</p>
+                                        <p>{jogador.video.scalingMode}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="bg-zinc-700 p-2">
+                                <h2 className="uppercase text-xl font-bold">Configurações de Video Avançadas:</h2>
+                                <ul>
+                                    <li className="flex gap-1">
+                                        <p>Aumentar Contraste do Jogador:</p>
+                                        <p>{jogador.videoAvancado.Boost_Player_Contrast}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>V-Sync:</p>
+                                        <p>{jogador.videoAvancado.V_Sync}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>NVIDIA Reflex Low Latency:</p>
+                                        <p>{jogador.videoAvancado.NVIDIA_Reflex_Low_Latency}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>NVIDIA G-Sync:</p>
+                                        <p>{jogador.videoAvancado.NVIDIA_G_Sync}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>FPS Máximo:</p>
+                                        <p>{jogador.videoAvancado.Maximum_FPS_In_Game}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Modo Anti-Aliasing de Multiamostragem:</p>
+                                        <p>{jogador.videoAvancado.Multisampling_Anti_Aliasing_Mode}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Qualidade de Sombra:</p>
+                                        <p>{jogador.videoAvancado.Global_Shadow_Quality}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Detalhe de Textura do Modelo:</p>
+                                        <p>{jogador.videoAvancado.Model_Texture_Detail}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Modo de filtragem da Textura:</p>
+                                        <p>{jogador.videoAvancado.Texture_Filtering_Mode}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Detalhes do Shader:</p>
+                                        <p>{jogador.videoAvancado.Shader_Detail}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Detalhes da partícula:</p>
+                                        <p>{jogador.videoAvancado.Particle_Detail}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>Oclusão Ambiente:</p>
+                                        <p>{jogador.videoAvancado.Ambient_Occlusion}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>High Dynamic Range:</p>
+                                        <p>{jogador.videoAvancado.High_Dynamic_Range}</p>
+                                    </li>
+                                    <li className="flex gap-1">
+                                        <p>FidelityFX Super Resolution:</p>
+                                        <p>{jogador.videoAvancado.FidelityFX_Super_Resolution}</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div className={styles.cfgProEquipamentos}>
-                            <h2 className="uppercase font-bold text-xl xl:text-2xl">Equipamentos</h2>
-                            <ul className="text-lg flex flex-col gap-1">
-                                <li className="flex gap-2">
-                                    <p>Monitor:</p>
-                                    <p>{jogadorSelecionado.equipamentos?.monitor != null ? jogadorSelecionado.equipamentos?.monitor : 'Indefinido'}</p>
-                                </li>
-                                <li className="flex gap-2">
-                                    <p>Mouse:</p>
-                                    <p>{jogadorSelecionado.equipamentos?.mouse != null ? jogadorSelecionado.equipamentos?.mouse : 'Indefinido'}</p>
-                                </li>
-                                <li className="flex gap-2">
-                                    <p>Teclado:</p>
-                                    <p>{jogadorSelecionado.equipamentos?.teclado != null ? jogadorSelecionado.equipamentos?.teclado : 'Indefinido'}</p>
-                                </li>
-                                <li className="flex gap-2">
-                                    <p>Fone:</p>
-                                    <p>{jogadorSelecionado.equipamentos?.fone != null ? jogadorSelecionado.equipamentos?.fone : 'Indefinido'}</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className={styles.cfgProMouse}>
-                            <h2 className="uppercase font-bold text-xl xl:text-2xl">Mouse</h2>
-                            <ul className="text-lg">
-                                <li className="flex gap-2">
-                                    <p>DPI:</p>
-                                    <p>{jogadorSelecionado.mouse?.dpi}</p>
-                                </li>
-                                <li className="flex gap-2">
-                                    <p>Sensibilidade:</p>
-                                    <p>{jogadorSelecionado.mouse?.sensibilidade}</p>
-                                </li>
-                                <li className="flex gap-2">
-                                    <p>eDPI:</p>
-                                    <p>{jogadorSelecionado.mouse?.edpi}</p>
-                                </li>
-                                <li className="flex gap-2">
-                                    <p>Zoom Sensitive:</p>
-                                    <p>{jogadorSelecionado.mouse?.zoom_sensitivity_ratio_mouse}</p>
-                                </li>
-                                <li className="flex gap-2">
-                                    <p>Sensibilidade do Windows:</p>
-                                    <p>{jogadorSelecionado.mouse?.sensibilidade_no_Windows}</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className={`relative ${styles.cfgViewmodel}`} style={{ display: 'grid', gridTemplateColumns: '80% 1fr' }}>
-                            <h2 className="uppercase font-bold text-xl xl:text-2xl" style={{ gridColumn: '1/3' }}>Viewmodel</h2>
-                            <ul className="text-lg flex flex-wrap gap-2" style={{ gridColumn: '1/2' }}>
-                                <li className="flex">
-                                    <p>Fov:</p>
-                                    <p>{jogadorSelecionado.viewmodel.fov}</p>
-                                </li>
-                                <li className="flex">
-                                    <p>OffSet X:</p>
-                                    <p>{jogadorSelecionado.viewmodel.offsetx}</p>
-                                </li>
-                                <li className="flex">
-                                    <p>OffSet Y:</p>
-                                    <p>{jogadorSelecionado.viewmodel.offsety}</p>
-                                </li>
-                                <li className="flex">
-                                    <p>OffSet Z:</p>
-                                    <p>{jogadorSelecionado.viewmodel.offsetz}</p>
-                                </li>
-                                <li className="flex">
-                                    <p>Prosetpos:</p>
-                                    <p>{jogadorSelecionado.viewmodel.prosetpos}</p>
-                                </li>
-                            </ul>
-                            <button className="flex justify-center items-center flex-wrap gap-1 bg-[--azul] rounded-md w-fit h-fit py-1 px-2" onClick={() => copiarCodigoViewmodel(jogadorSelecionado.viewmodel.codigo)}>Copiar <FaCopy /></button>
-                        </div>
-                        <div className={`flex justify-between items-center ${styles.cfgProCodigoMira}`}>
-                            <p className="text-xl flex gap-2" >
-                                <strong className="uppercase font-bold">Código da mira:</strong>
-                                <span>{jogadorSelecionado.codigoMira}</span>
-                            </p>
-                            <button className="flex justify-center items-center gap-1 bg-[--azul] py-1 px-2 rounded-md" onClick={() => copiarMira(jogadorSelecionado.codigoMira)}>Copiar <FaCopy /></button>
-                        </div>
+                    )}
+                    <div className='flex justify-around md:justify-end md:gap-4 xl:mr-4'>
+                        <BotaoAncora href='/' icone={<FaArrowLeft />} texto='Voltar'></BotaoAncora>
+                        <BotaoAncora href='#topo' icone={<FaArrowUp />} texto='Voltar Ao topo'></BotaoAncora>
                     </div>
-                ) : ('')
-            } */}
-
-            {/* <div className="flex gap-4 mx-auto mt-2 xl:max-w-[1250px] xl:justify-end">
-                <Link href={'#topo'} className="flex justify-center items-center gap-1 bg-[--azul] px-2 py-1 text-bold rounded-md xl:text-xl">
-                    Voltar ao topo <FaRegArrowAltCircleUp />
-                </Link>
-                <Link href={'/'} className="flex justify-center items-center gap-1 bg-[--azul] px-2 py-1 text-bold rounded-md xl:text-xl">
-                    Voltar <FaRegArrowAltCircleLeft />
-                </Link>
-            </div> */}
+                </div>
+            </div>
         </Pagina>
-    )
+    );
 }

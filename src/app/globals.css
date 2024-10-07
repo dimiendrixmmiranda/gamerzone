@@ -183,6 +183,7 @@ input[type="radio"]:checked {
 
 .paginacao .p-component{
   flex-direction: row;
+  color: white;
 }
 
 .offcanvas{
@@ -213,6 +214,14 @@ input[type="radio"]:checked {
   padding-left: .5em;
 }
 
+
+.cfgproJogador{
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 @media screen and (min-width: 768px) {
   .modulo {
     display: grid;
@@ -225,6 +234,11 @@ input[type="radio"]:checked {
   }
   .p-component .p-orderlist-list-container {
     height: 330px;
+  }
+
+  .cfgproJogador{
+    display: grid;
+    grid-template-columns: 40% 1fr;
   }
 }
 
@@ -258,15 +272,19 @@ input[type="radio"]:checked {
   .p-component .p-orderlist-list-container {
     height: 460px;
   }
-  
+  .cfgproJogador{
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr;
+    padding: 1.2em;
+  }
 }
 @media screen and (min-width: 1440px) {
   .p-component .p-orderlist-list-container .p-orderlist-list {
-    max-height: 230px;
+    max-height: 210px;
     overflow-y: scroll;
   }
   .p-component .p-orderlist-list-container {
-    height: 230px;
+    height: 210px;
   }
   .modulo{
     margin-right: 2.7em;

@@ -75,7 +75,7 @@ export default function Noticias() {
 
     return (
         <div className="w-full px-1 md:pl-4 flex flex-col">
-            <div className="w-full flex justify-around gap-1">
+            <div className="w-full flex justify-around gap-1 lg:ml-2">
                 <button
                     className={`${botaoSelecionado('Geral')} lg:gap-2`}
                     onClick={() => setSelecionarBotao('Geral')}

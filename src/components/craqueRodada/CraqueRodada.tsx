@@ -9,7 +9,7 @@ export default function CraqueRodada() {
                 {
                     listaDeCraquesSemanal[0].jogadores.map((jogador) => {
                         return (
-                            <fieldset key={jogador.id} className="bg-zinc-600 h-[100px] max-w-[80px] w-full p-1 flex flex-col gap-1 relative md:max-w-[130px] md:h-[180px] lg:max-w-[160px] lg:h-[200px] xl:max-w-[160px] xl:h-[220px]">
+                            <fieldset key={jogador.id} className="bg-zinc-600 h-[100px] max-w-[80px] w-full p-1 flex flex-col gap-1 relative md:max-w-[130px] md:h-[180px] lg:max-w-[160px] lg:h-[200px] xl:max-w-[160px] xl:h-[200px]">
                                 <div className="w-full h-[85%] bg-orange-400 relative">
                                     <Image src={jogador.imagem} fill alt={jogador.nome} className="w-full h-full object-cover"></Image>
                                 </div>
