@@ -1,4 +1,4 @@
-import { adicionarElemento } from "@/utils/adicionarElemento";
+import { adicionarElemento } from "utils/adicionarElemento";
 import Jogador from "../jogadores/jogadores";
 
 export const listaDeJogadores: Jogador[] = []

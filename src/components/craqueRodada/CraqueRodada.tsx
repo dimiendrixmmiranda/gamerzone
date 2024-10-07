@@ -1,4 +1,4 @@
-import { listaDeCraquesSemanal } from "@/core";
+import { listaDeCraquesSemanal } from "core";
 import Image from "next/image";
 
 export default function CraqueRodada() {

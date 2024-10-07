@@ -1,8 +1,9 @@
 'use client'
-import BotaoAncora from "@/components/botaoAncora/BotaoAncora";
-import Pagina from "@/components/template/Pagina";
-import { listaColunas } from "@/core";
-import Coluna from "@/core/colunas/coluna";
+
+import BotaoAncora from "components/botaoAncora/BotaoAncora";
+import Pagina from "components/template/Pagina";
+import { listaColunas } from "core";
+import Coluna from "core/colunas/coluna";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowUp } from "react-icons/fa";

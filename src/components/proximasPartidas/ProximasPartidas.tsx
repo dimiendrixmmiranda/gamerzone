@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MdOutlineLiveTv } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
 import style from './proximasPartidas.module.css'
-import proximosJogos from "@/data/proximasPartidas";
+import proximasPartidas from "data/proximasPartidas";
 
 export default function ProximasPartidas() {
     return (
@@ -10,7 +10,7 @@ export default function ProximasPartidas() {
             <h2 className="flex justify-center items-center bg-[--preto-claro] p-2 font-bold text-xl lg:text-2xl">Próximas Partidas</h2>
             <ul className="flex flex-col">
                 {
-                    proximosJogos.map((jogo, index) => {
+                    proximasPartidas.map((jogo, index) => {
                         return (
                             <li key={index} className="px-2 py-1 h-[90px] bg-[--cinza-medio]" style={{ borderBottom: 'solid 2px black' }}>
                                 <div className="flex gap-[2px] justify-center items-center overflow-hidden" style={{ display: 'grid', gridTemplateColumns: '1fr 20px 1fr' }}>

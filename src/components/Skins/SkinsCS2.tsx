@@ -1,6 +1,5 @@
 'use client';
 
-import { skins, skinsGerais } from "@/data/skins";
 import Pagina from "../template/Pagina";
 import Grupo from "./Grupo";
 import style from './style.module.css';
@@ -9,6 +8,7 @@ import { FaCircleArrowUp, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useState, useRef } from "react";
 import { Dialog } from 'primereact/dialog';
 import Link from "next/link";
+import { skins, skinsGerais } from "data/skins";
 
 type Skin = {
     nome: string;

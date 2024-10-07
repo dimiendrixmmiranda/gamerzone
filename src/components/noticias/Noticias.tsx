@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { IoGameController } from "react-icons/io5";
 import { SiCounterstrike, SiValorant, SiLeagueoflegends } from "react-icons/si";
 import { Paginator } from 'primereact/paginator';
-import { listaDeNoticias } from "@/core";
 import Card from "../card/Card";
+import { listaDeNoticias } from "core";
 
 type PaginatorEvent = {
     first: number;

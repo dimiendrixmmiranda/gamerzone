@@ -1,4 +1,4 @@
-import { adicionarElemento } from "@/utils/adicionarElemento";
+import { adicionarElemento } from "utils/adicionarElemento";
 import Craque from "../craque/craque";
 import { listaDeJogadores } from "./listaDeJogadores";
 

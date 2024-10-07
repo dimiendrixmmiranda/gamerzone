@@ -1,10 +1,10 @@
 
 'use client'
-import BotaoAncora from '@/components/botaoAncora/BotaoAncora';
-import Card from '@/components/card/Card';
-import Pagina from '@/components/template/Pagina';
-import { listaDeNoticias } from '@/core';
-import Noticia from '@/core/noticias/noticia';
+import BotaoAncora from 'components/botaoAncora/BotaoAncora';
+import Card from 'components/card/Card';
+import Pagina from 'components/template/Pagina';
+import { listaDeNoticias } from 'core';
+import Noticia from 'core/noticias/noticia';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FaArrowLeft,FaArrowUp  } from "react-icons/fa";

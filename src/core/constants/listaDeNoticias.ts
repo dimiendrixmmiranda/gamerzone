@@ -1,4 +1,4 @@
-import { adicionarElemento } from "@/utils/adicionarElemento";
+import { adicionarElemento } from "utils/adicionarElemento";
 import Noticia from "../noticias/noticia";
 
 export const listaDeNoticias: Noticia[] = []

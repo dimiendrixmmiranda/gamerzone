@@ -5,13 +5,13 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { AiFillTikTok } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import styles from './Cabecalho.module.css'
-import { menu } from "@/constants/constantes";
 import React from 'react';
 import { MdScoreboard } from "react-icons/md";
 import { GiChampions } from "react-icons/gi";
 import { FaGear } from "react-icons/fa6";
 import { PiRankingFill } from "react-icons/pi";
 import { GiPistolGun } from "react-icons/gi";
+import { menu } from "constants/constantes";
 
 export default function Cabecalho() {
 

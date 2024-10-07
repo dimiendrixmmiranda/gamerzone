@@ -1,7 +1,7 @@
 // Card.tsx
-import Noticia from "@/core/noticias/noticia"; // Importe a interface ou tipo Noticia
-import { createSlugWithId } from "@/utils/createSlugWithId";
+import Noticia from "core/noticias/noticia";
 import Link from "next/link";
+import { createSlugWithId } from "utils/createSlugWithId";
 
 interface CardProps {
     noticia: Noticia

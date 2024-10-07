@@ -1,4 +1,4 @@
-import { adicionarElemento } from "@/utils/adicionarElemento";
+import { adicionarElemento } from "utils/adicionarElemento";
 import Coluna from "../colunas/coluna";
 
 export const listaColunas: Coluna[] = []

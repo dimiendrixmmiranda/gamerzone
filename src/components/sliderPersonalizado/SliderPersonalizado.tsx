@@ -4,8 +4,8 @@ import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import styles from './slider.module.css'
 import Image from "next/image";
-import { listaDeNoticias } from "@/core";
-import { createSlugWithId } from "@/utils/createSlugWithId";
+import { listaDeNoticias } from "core";
+import { createSlugWithId } from "utils/createSlugWithId";
 
 export default function SliderPersonalizado() {
     const [slideAtual, setSlideAtual] = useState(0)

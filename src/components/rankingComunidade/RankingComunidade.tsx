@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { OrderList } from 'primereact/orderlist';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
-import { listaDeTimes } from '@/core';
 import Image from 'next/image';
-import Time from '@/core/times/times';
+import { listaDeTimes } from 'core';
+import Time from 'core/times/times';
 
 export default function RankingComunidade() {
     const [items, setItems] = useState(listaDeTimes);

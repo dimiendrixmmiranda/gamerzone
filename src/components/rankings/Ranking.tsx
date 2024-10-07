@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import styles from './Ranking.module.css'
-import { listaDeTimes } from '@/core';
+import { listaDeTimes } from 'core';
 
 export default function Ranking() {
     const [openIndexes, setOpenIndexes] = useState<number[]>([]);

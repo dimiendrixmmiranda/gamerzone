@@ -1,4 +1,4 @@
-import { adicionarElemento } from "@/utils/adicionarElemento";
+import { adicionarElemento } from "utils/adicionarElemento";
 import Time from "../times/times";
 
 export const listaDeTimes: Time[] = []

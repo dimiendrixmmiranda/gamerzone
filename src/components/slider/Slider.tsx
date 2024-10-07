@@ -4,8 +4,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { useState, useEffect } from 'react';
 
 import Link from 'next/link';
-import { listaDeNoticias } from '@/core';
-import { createSlugWithId } from '@/utils/createSlugWithId';
+import { listaDeNoticias } from 'core';
+import { createSlugWithId } from 'utils/createSlugWithId';
 
 export default function Slider() {
     const minhasNoticias = listaDeNoticias.slice(0, 5)

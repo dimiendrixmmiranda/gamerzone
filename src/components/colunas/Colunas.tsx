@@ -1,7 +1,8 @@
-import { listaColunas } from "@/core/constants/listaColunas";
-import { createSlugWithId } from "@/utils/createSlugWithId";
+
+import { listaColunas } from "core";
 import Image from "next/image";
 import Link from "next/link";
+import { createSlugWithId } from "utils/createSlugWithId";
 
 export default function Colunas() {
 

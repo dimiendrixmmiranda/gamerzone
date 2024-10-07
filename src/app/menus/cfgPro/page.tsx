@@ -1,6 +1,7 @@
 'use client';
 
-import Pagina from "@/components/template/Pagina";
+import Pagina from "components/template/Pagina";
+
 // import Link from "next/link";
 // import { useState } from "react";
 // import { FaRegArrowAltCircleUp, FaRegArrowAltCircleLeft } from "react-icons/fa";

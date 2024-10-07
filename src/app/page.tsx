@@ -1,14 +1,15 @@
 'use client'
-import Colunas from "@/components/colunas/Colunas";
-import CraqueRodada from "@/components/craqueRodada/CraqueRodada";
-import Noticias from "@/components/noticias/Noticias";
-import ProximasPartidas from "@/components/proximasPartidas/ProximasPartidas";
-import RankingComunidade from "@/components/rankingComunidade/RankingComunidade";
-import Ranking from "@/components/rankings/Ranking";
-import Resultados from "@/components/resultados/Resultados";
-import Slider from "@/components/slider/Slider";
-import SliderPersonalizado from "@/components/sliderPersonalizado/SliderPersonalizado";
-import Pagina from "@/components/template/Pagina";
+
+import Colunas from "components/colunas/Colunas";
+import CraqueRodada from "components/craqueRodada/CraqueRodada";
+import Noticias from "components/noticias/Noticias";
+import ProximasPartidas from "components/proximasPartidas/ProximasPartidas";
+import RankingComunidade from "components/rankingComunidade/RankingComunidade";
+import Ranking from "components/rankings/Ranking";
+import Resultados from "components/resultados/Resultados";
+import Slider from "components/slider/Slider";
+import SliderPersonalizado from "components/sliderPersonalizado/SliderPersonalizado";
+import Pagina from "components/template/Pagina";
 
 export default function Home() {
 	return (

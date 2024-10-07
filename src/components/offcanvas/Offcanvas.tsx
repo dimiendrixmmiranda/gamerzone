@@ -13,7 +13,7 @@ import { FaGear } from "react-icons/fa6";
 import { PiRankingFill } from "react-icons/pi";
 import { GiPistolGun } from "react-icons/gi";
 import Link from 'next/link';
-import { menu } from '@/constants/constantes';
+import { menu } from 'constants/constantes';
 
 export default function Offcanvas() {
     const [visibleRight, setVisibleRight] = useState(false);

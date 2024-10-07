@@ -1,4 +1,4 @@
-import jogosConcluidos from "@/data/jogosConcluidos";
+import jogosConcluidos from "data/jogosConcluidos";
 import Link from "next/link";
 import { MdScoreboard } from "react-icons/md";
 
