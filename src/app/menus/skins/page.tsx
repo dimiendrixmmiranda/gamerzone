@@ -1,6 +1,4 @@
 'use client';
-
-import style from '../../../components/skins/style.module.css';
 import { FaSteam } from "react-icons/fa";
 import { FaCircleArrowUp, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useState, useRef } from "react";
@@ -8,7 +6,7 @@ import { Dialog } from 'primereact/dialog';
 import Link from "next/link";
 import { skins, skinsGerais } from "data/skins";
 import Pagina from 'components/template/Pagina';
-import Grupo from './Grupo';
+import Image from 'next/image';
 
 type Skin = {
     nome: string;
@@ -27,7 +25,7 @@ export default function SkinsCS2() {
     const [selecionarBotao, setSelecionarBotao] = useState('Geral');
     const [visible, setVisible] = useState(false);
     const [selecionarSkin, setselecionarSkin] = useState<Skin | null>(null);
-    const scrollContainerRef = useRef<HTMLUListElement>(null);    
+    const scrollContainerRef = useRef<HTMLUListElement>(null);
 
     function identificarRaridade(raridade: string): string {
         let valorRetornado = '';
@@ -84,27 +82,42 @@ export default function SkinsCS2() {
     return (
         <Pagina>
             <div className="relative">
-                {/* Referencia o ul usando scrollContainerRef */}
-                <ul ref={scrollContainerRef} id="topo" className={`overflow-scroll overflow-y-hidden whitespace-nowrap pb-2 px-2 mt-4 w-[98%] mx-auto ${style.containerCardMenu} xl:w-[85%]`}>
+                <ul ref={scrollContainerRef} id="topo" className={`overflow-scroll overflow-y-hidden whitespace-nowrap pb-2 px-2 mt-4 w-[98%] mx-auto containerCardMenu xl:w-[85%]`}>
                     {skins.map((grupo, index) => (
-                        <Grupo
-                            itensDoGrupo={grupo.itensDoGrupo}
-                            nomeDoGrupo={grupo.nomeDoGrupo}
-                            key={index}
-                            click={(nome: string) => setSelecionarBotao(nome)}
-                        />
+                        <div className="inline-block" key={index}>
+                            <h3 className="text-black font-black text-xl uppercase ml-1 mb-2">{grupo.nomeDoGrupo}</h3>
+                            <ul className="whitespace-nowrap flex items-center">
+                                {grupo.itensDoGrupo.map((card, index) => {
+                                    return (
+                                        <li key={index} className={`w-36 h-[115px] bg-[--preto-skins] inline-block cursor-pointer mr-2 cardMenu`} onClick={() => setSelecionarBotao(card.tipo)}>
+                                            <div className="w-full h-full" style={{ display: 'grid', gridTemplateRows: '1fr 25px' }}>
+                                                <div className="relative h-[55px] self-center">
+                                                    <Image
+                                                        src={card.urlArma}
+                                                        alt={card.nomeArma}
+                                                        layout="fill"
+                                                        objectFit="contain"
+                                                    />
+                                                </div>
+                                                <h2 className="font-bold text-center">{card.nomeArma}</h2>
+                                            </div>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
                     ))}
                 </ul>
-                
-                <button 
-                    onClick={scrollLeft} 
+
+                <button
+                    onClick={scrollLeft}
                     className="absolute top-[50%] left-2 bg-black text-xl p-1 rounded-full text-[--dourado] xl:left-14 xl:p-2 xl:top-[45%]"
                 >
                     <FaArrowLeft />
                 </button>
-                
-                <button 
-                    onClick={scrollRight} 
+
+                <button
+                    onClick={scrollRight}
                     className="absolute top-[50%] right-2 bg-black text-xl p-1 rounded-full text-[--dourado] xl:right-14 xl:p-2 xl:top-[45%]"
                 >
                     <FaArrowRight />
