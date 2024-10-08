@@ -10,6 +10,7 @@ import Resultados from "components/resultados/Resultados";
 import Slider from "components/slider/Slider";
 import SliderPersonalizado from "components/sliderPersonalizado/SliderPersonalizado";
 import Pagina from "components/template/Pagina";
+import TimeFavorito from "components/timeFavorito/TimeFavorito";
 
 export default function Home() {
 	return (
@@ -17,14 +18,16 @@ export default function Home() {
 			<SliderPersonalizado></SliderPersonalizado>
 			<Slider></Slider>
 			<div className="min-w-[95%] mx-auto container">
-				<div className="max-w-[95%] gap-6 mx-auto w-full modulo mb-5">
+				<div className="max-w-[95%] gap-6 mx-auto w-full mb-5 modulo">
 					<CraqueRodada></CraqueRodada>
 					<RankingComunidade></RankingComunidade>
+					<TimeFavorito style="md:hidden"></TimeFavorito>
 				</div>
 				<div>
 					<Noticias></Noticias>
 				</div>
 				<div className="mt-6 w-[95%] max-w-[500px] mx-auto flex flex-col gap-6 mb-8 lg:max-w-[420px]">
+					<TimeFavorito style="md:flex -mt-5"></TimeFavorito>
 					<ProximasPartidas></ProximasPartidas>
 					<Resultados></Resultados>
 					<Ranking></Ranking>
