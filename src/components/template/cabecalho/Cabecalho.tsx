@@ -19,11 +19,24 @@ export default function Cabecalho() {
                 {
                     listaMenu.map((item, i) => {
                         return (
-                            <li key={i} className="px-2 py-1 rounded-md flex justify-center items-center cursor-pointer hover:bg-white hover:text-[--cor-principal]" style={{ transition: '.5s ease' }}>
+                            <li key={i} className="px-2 py-1 flex justify-center items-center cursor-pointer relative hover:bg-white hover:text-[--cor-principal]" style={{ transition: '.5s ease' }}>
                                 <Link href={item.titulo.link} className="flex justify-center items-center text-sm font-bold gap-1 lg:text-lg">
                                     {item.titulo.icone}
                                     <p>{item.titulo.texto}</p>
                                 </Link>
+                                <ul className="absolute w-full h-fit top-[100%] left-0 hidden z-10">
+                                    {
+                                        item.subtititulo.map((subitem, i) => {
+                                            return (
+                                                <li key={i} className="px-2 py-1 bg-[--cor-principal] text-white xl:py-2">
+                                                    <Link href={subitem.subtitulo.link} className="flex justify-center items-center text-sm font-bold gap-1 text-center">
+                                                        <p>{subitem.subtitulo.nome}</p>
+                                                    </Link>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
                             </li>
                         )
                     })

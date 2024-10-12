@@ -1,0 +1,13 @@
+.timeFavorito{
+    background-color: #0E185F;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+    position: relative;
+}
+
+@media screen and (min-width: 1024px){
+    .timeFavorito{
+        margin-top: -24px;
+    }
+}

@@ -9,4 +9,5 @@ export default interface Noticia {
     tag: string,
     tagLogo: string,
     id: number,
+    time: string
 }

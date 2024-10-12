@@ -1,8 +1,21 @@
-.menu li a ul{
+.menu li a ul {
     background-color: red;
     display: none;
 }
 
-.redes-sociais{
-    background-color: orange!important;
+.redes-sociais {
+    background-color: orange !important;
+}
+
+.menu > li {
+    border-radius: 6px 6px 0 0;
+}
+
+.menu li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li:hover ul li:hover {
+    background-color: #3243c7;
 }

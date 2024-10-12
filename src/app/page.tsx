@@ -21,13 +21,13 @@ export default function Home() {
 				<div className="max-w-[95%] gap-6 mx-auto w-full mb-5 modulo">
 					<CraqueRodada></CraqueRodada>
 					<RankingComunidade></RankingComunidade>
-					<TimeFavorito style="md:hidden"></TimeFavorito>
+					<TimeFavorito display="flex md:hidden"></TimeFavorito>
 				</div>
 				<div>
 					<Noticias></Noticias>
 				</div>
 				<div className="mt-6 w-[95%] max-w-[500px] mx-auto flex flex-col gap-6 mb-8 lg:max-w-[420px]">
-					<TimeFavorito style="md:flex -mt-5"></TimeFavorito>
+					<TimeFavorito display="hidden md:flex"></TimeFavorito>
 					<ProximasPartidas></ProximasPartidas>
 					<Resultados></Resultados>
 					<Ranking></Ranking>

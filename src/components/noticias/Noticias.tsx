@@ -16,7 +16,7 @@ type PaginatorEvent = {
 export default function Noticias() {
     const [selecionarBotao, setSelecionarBotao] = useState('Geral');
     const [first, setFirst] = useState(0);
-    const [rows, setRows] = useState(10);
+    const [rows, setRows] = useState(11);
 
     const [windowWidth, setWindowWidth] = useState(0);
 
@@ -74,7 +74,7 @@ export default function Noticias() {
     };
 
     return (
-        <div className="w-full px-1 md:pl-4 flex flex-col">
+        <div className="w-full px-1 md:pl-4 flex flex-col mb-5">
             <div className="w-full flex justify-around gap-1 lg:ml-2">
                 <button
                     className={`${botaoSelecionado('Geral')} lg:gap-2`}
@@ -105,7 +105,7 @@ export default function Noticias() {
                 <ul className="flex flex-col items-center gap-3 md:gap-5">
                     {selecionarNoticias.slice(first, first + rows).map((noticia) => {
                         return (
-                            <Card key={noticia.id} noticia={noticia}></Card>
+                            <Card key={noticia.id} noticia={noticia} estilo="h-36 w-full flex p-2 gap-1 pb-6 max-w-[540px] text-[--cor-principal] md:max-w-none sm:h-44 md:h-52 lg:h-48 lg:p-3 lg:gap-2 xl:h-60 xl:pb-8 overflow-hidden`" estiloTitulo="font-black text-[.8em] leading-4 md:text-xl md:leading-6 xl:text-2xl xl:leading-7" estiloSubtitulo="flex-1 text-[.5em] leading-3 flex-1 font-semibold sm:text-[.8em] sm:leading-4 md:text-[1em] md:leading-5 md:mt-1 xl:text-[1.2em] xl:leading-6" estiloTagLogo="rounded-full overflow-hidden w-5 h-5 z-10 top-1 left-1 absolute lg:w-8 lg:h-8" cor="var(--cor-principal)"></Card>
                         )
                     })}
                 </ul>

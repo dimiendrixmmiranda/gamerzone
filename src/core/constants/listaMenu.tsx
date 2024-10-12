@@ -70,7 +70,7 @@ export const listaMenu: Menu[] = [
             {
                 subtitulo: {
                     nome: 'CS2',
-                    link: '/'
+                    link: '/menus/cfgPro/cs2'
                 }
             },
             {
@@ -130,7 +130,7 @@ export const listaMenu: Menu[] = [
             {
                 subtitulo: {
                     nome: 'CS2',
-                    link: '/'
+                    link: '/menus/skins/cs2'
                 }
             },
             {
