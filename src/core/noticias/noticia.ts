@@ -1,4 +1,6 @@
 export default interface Noticia {
+    game: string
+    gameLogo: string
     titulo: string,
     descricao: string,
     conteudoDaMateria: string[]
@@ -6,8 +8,6 @@ export default interface Noticia {
     data: string,
     hora: string
     thumbnail: string,
-    tag: string,
-    tagLogo: string,
     id: number,
-    time: string
+    time: string[]
 }

@@ -20,7 +20,7 @@ export default function TimeFavorito({ display }: TimeFavoritoProps) {
     const [visibleBtnVoltar, setVisibleBtnVoltar] = useState('hidden')
 
     function selecionarNoticiaTime(time: Time) {
-        const noticias = listaDeNoticias.filter(t => t.time.toLowerCase().trim() === time.nome.toLocaleLowerCase().trim()).slice(0, 3)
+        const noticias = listaDeNoticias.filter(t => t.time[0].toLowerCase().trim() === time.nome.toLocaleLowerCase().trim()).slice(0, 3)
         setNoticiaSelecionadas(noticias)
         setVisibleTimeSelecionado('hidden')
         setVisibleNoticiaSelecionado('flex')

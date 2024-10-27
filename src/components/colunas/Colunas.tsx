@@ -9,7 +9,7 @@ export default function Colunas() {
     const colunasFiltradas = listaColunas.slice(0, 4)
 
     return (
-        <div className="mx-auto w-full mt-6 text-black xl:-mt-2 border border-black">
+        <div className="mx-auto w-full mt-6 text-black xl:-mt-2 border border-black h-fit">
             <h3 className="uppercase font-black text-xl pl-4 pb-3 bg-[--cor-principal] text-white py-1">Colunas</h3>
             <ul className="flex flex-col">
 

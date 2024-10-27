@@ -11,9 +11,9 @@ export default function SliderPersonalizado() {
     const [slideAtual, setSlideAtual] = useState(0)
     const noticiasSlider = listaDeNoticias.slice(0, 9)
     const grupoDeNoticias = [
-        noticiasSlider.slice(0, 3),  // Pega os 3 primeiros itens
-        noticiasSlider.slice(3, 6),  // Pega os 3 primeiros itens
-        noticiasSlider.slice(6, 9),  // Pega os 3 primeiros itens
+        noticiasSlider.slice(0, 3),
+        noticiasSlider.slice(3, 6),
+        noticiasSlider.slice(6, 9),
     ];
 
     const totalSlides = grupoDeNoticias.length
@@ -25,8 +25,9 @@ export default function SliderPersonalizado() {
     const handleAnteriorSlide = () => {
         setSlideAtual((prev) => (prev < 1 ? prev = (totalSlides - 1) : prev - 1));
     };
+
     return (
-        <div className="h-[450px] w-[90%] mx-auto relative my-6 overflow-hidden hidden lg:block xl:w-[85%] xl:h-[530px]">
+        <div className="h-[450px] w-[95%] mx-auto relative my-6 overflow-hidden hidden lg:block xl:h-[560px]">
             <div
                 className="flex transition-transform duration-500 h-full"
                 style={{ transform: `translateX(-${(slideAtual * 100)}%)` }}
@@ -41,12 +42,12 @@ export default function SliderPersonalizado() {
                                             <Link key={j} href={`/noticias/${createSlugWithId(noticia.titulo, noticia.id)}`} className={`relative overflow-hidden rounded-md ${j <= 0 ? 'row-start-1 row-end-3' : ''}`} style={{boxShadow: '0 0 2px 1px black'}}>
                                                 <Image src={noticia.thumbnail} fill alt={'Imagem do Produto'} className="object-cover w-full"></Image>
                                                 <div className="absolute w-full max-w-[95%] left-[50%] bottom-3" style={{transform: 'translate(-50%)', textShadow: '2px 2px 3px black'}}>
-                                                    <h2 className="font-bold text-2xl">{noticia.titulo}</h2>
+                                                    <h2 className="font-bold text-xl xl:text-2xl">{noticia.titulo}</h2>
                                                     <p className="border-t border-zinc-800 mt-4 pt-2">
                                                         Por {noticia.autor}, {noticia.data}
                                                     </p>
                                                 </div>
-                                                <img src={noticia.tagLogo} alt={noticia.tagLogo} className="w-6 absolute top-2 right-2 rounded-full" />
+                                                <img src={noticia.gameLogo} alt={noticia.game} className="w-8 absolute top-2 left-2 rounded-full" />
                                             </Link>
                                         )
                                     })

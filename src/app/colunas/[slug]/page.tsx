@@ -1,24 +1,16 @@
 'use client'
 import BotaoAncora from "components/botaoAncora/BotaoAncora";
 import Pagina from "components/template/Pagina";
-import { listaColunas } from "core";
-import Coluna from "core/colunas/coluna";
+import { useSlugColuna } from "data/hooks/useSlugColuna";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowUp } from "react-icons/fa";
 
 export default function Page() {
+    
     const params = useParams();
     const slug = typeof params.slug === 'string' ? params.slug : params.slug?.[0];
-    const [coluna, setColuna] = useState<Coluna | null>(null)
 
-    useEffect(() => {
-        if (slug) {
-            const colunaId = slug?.split('-')[0];
-            const colunaEncontrada = listaColunas.find(n => n.id === Number(colunaId));
-            colunaEncontrada != null ? setColuna(colunaEncontrada) : null
-        }
-    }, [slug]);
+    const {coluna} = useSlugColuna({ slug: slug.toString() });
 
     return (
         <Pagina>

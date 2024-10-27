@@ -19,7 +19,7 @@ export default function Card({ noticia, estilo, estiloSubtitulo, estiloTitulo, e
                 <div className="h-full w-[45%] overflow-hidden relative" style={{ borderBottom: 'solid 2px var(--cor-principal)' }}>
                     <img src={noticia.thumbnail} alt={noticia.titulo} className="w-full h-full object-cover" />
                     <div className={estiloTagLogo}>
-                        <img src={noticia.tagLogo} alt={noticia.tag} className="w-full h-full object-cover" />
+                        <img src={noticia.gameLogo} alt={noticia.game} className="w-full h-full object-cover" />
                     </div>
                 </div>
                 <div className="h-full w-[55%] px-1 flex flex-col gap-1 -mt-1 lg:px-2">

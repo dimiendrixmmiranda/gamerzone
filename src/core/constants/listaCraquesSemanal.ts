@@ -12,5 +12,6 @@ adicionarElemento(listaDeCraquesSemanal, {
         listaDeJogadores.find(jogador => jogador.nick.toLowerCase() === 'huNter'.toLowerCase()),
         listaDeJogadores.find(jogador => jogador.nick.toLowerCase() === 'm0NESY'.toLowerCase()),
         listaDeJogadores.find(jogador => jogador.nick.toLowerCase() === 'malbs'.toLowerCase()),
+        listaDeJogadores.find(jogador => jogador.nick.toLowerCase() === 'niko'.toLowerCase()),
     ]
 })

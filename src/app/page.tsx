@@ -17,16 +17,13 @@ export default function Home() {
 		<Pagina>
 			<SliderPersonalizado></SliderPersonalizado>
 			<Slider></Slider>
-			<div className="min-w-[95%] mx-auto container">
-				<div className="max-w-[95%] gap-6 mx-auto w-full mb-5 modulo">
+			<div className="max-w-[95%] mx-auto flex flex-col">
+				<div className="containerCraqueRanking">
 					<CraqueRodada></CraqueRodada>
 					<RankingComunidade></RankingComunidade>
-					<TimeFavorito display="flex md:hidden"></TimeFavorito>
 				</div>
-				<div>
+				<div className="containerAside">
 					<Noticias></Noticias>
-				</div>
-				<div className="mt-6 w-[95%] max-w-[500px] mx-auto flex flex-col gap-6 mb-8 lg:max-w-[420px]">
 					<TimeFavorito display="hidden md:flex"></TimeFavorito>
 					<ProximasPartidas></ProximasPartidas>
 					<Resultados></Resultados>

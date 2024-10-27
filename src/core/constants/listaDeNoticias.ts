@@ -6,484 +6,378 @@ export const listaDeNoticias: Noticia[] = []
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 1,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'Natus Vincere',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "Gen.G anuncia contratação de foxy9",
+        descricao: "Jogador chega após passar duas temporadas vestindo a camisa da DRX",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
-        id: 2,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'Natus Vincere',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
-        id: 3,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'Natus Vincere',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
-        id: 4,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
-        id: 5,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
-        id: 6,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
-        id: 7,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
-        id: 8,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
-)
-adicionarElemento(
-    listaDeNoticias,
-    {
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
         id: 9,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
-        conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+        time: ['gen-g', 'drx']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 10,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "Less revela motivos da escolha pela Vitality: “criaram uma equipe muito legal”",
+        descricao: "Jogador brasileiro fala pela primeira vez como atleta da Vitality e demonstra empolgação com novo projeto",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 8,
+        time: ['vitality']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 11,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "Evil Geniuses comunica saída de apoth",
+        descricao: "Jogador permaneceu na organização por quase três anos",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 7,
+        time: ['eg']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 12,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "MIBR fecha acordo com Leviatán para contratação de aspas, aponta site",
+        descricao: "Negociação entre MIBR e aspas está em andamento após aval da organização argentina",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 6,
+        time: ['mibr', 'leviatan']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 13,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "FalleN tem maior tempo médio de inimigos cegos por rodada em 2024",
+        descricao: "Astro da FURIA está à frente de nomes como Jame, apEX e device",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 5,
+        time: ['furia']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 14,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "Sharks e ODDIK farão grande final do CBCS Invitational 2024",
+        descricao: " Durante a tarde e noite desse sábado (26), a dupla desbancou Fluxo e inSanitY, respectivamente, para sacramentar suas vagas finalíssima da competição.",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 4,
+        time: ['sharks', 'oddik']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 15,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "Legacy luta até o fim, mas perde para Monte e é eliminada da ESL Challenger Katowice 2024",
+        descricao: "Time brasileiro sofreu 'apagão' no terceiro mapa e foi atropelado pelos poloneses",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 3,
+        time: ['legacy', 'monte']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 16,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "Imperial perde pra The Mongolz e está eliminada da Thunderpick World Championship 2024",
+        descricao: "Confronto entre brasileiros e chineses foi bastante disputado.",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 2,
+        time: ['imperial', 'the-mongolz']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 17,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "paiN perde para B8 na semifinal e se despede da ESL Challenger Katowice 2024",
+        descricao: "Confronto entre brasileiros e ucranianos foi bastante disputado.",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 3,
+        time: ['pain', 'b8']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 18,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "Gen.G anuncia contratação de foxy9",
+        descricao: "Jogador chega após passar duas temporadas vestindo a camisa da DRX",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 9,
+        time: ['gen-g', 'drx']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 19,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "Less revela motivos da escolha pela Vitality: “criaram uma equipe muito legal”",
+        descricao: "Jogador brasileiro fala pela primeira vez como atleta da Vitality e demonstra empolgação com novo projeto",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 8,
+        time: ['vitality']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 20,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "Evil Geniuses comunica saída de apoth",
+        descricao: "Jogador permaneceu na organização por quase três anos",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 7,
+        time: ['eg']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 21,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "valorant",
+        gameLogo: "./games/valorant.png",
+        titulo: "MIBR fecha acordo com Leviatán para contratação de aspas, aponta site",
+        descricao: "Negociação entre MIBR e aspas está em andamento após aval da organização argentina",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 6,
+        time: ['mibr', 'leviatan']
+    },
 )
 adicionarElemento(
     listaDeNoticias,
     {
-        id: 22,
-        titulo: 'Três times para se observar na IEM Rio 2024',
-        descricao: 'Competição de $250 mil acontece a partir desta segunda-feira (7)',
-        autor: 'Dimi Martins',
-        data: '06/10/2024',
-        hora: '16:34',
-        tag: 'cs2',
-        tagLogo: '/cs2.png',
-        time: 'furia',
-        thumbnail: 'https://static.draft5.gg/news/2024/09/30112207/G2-NiKo-BLAST-Premier-Fall-Finals-2024-11.jpeg',
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "FalleN tem maior tempo médio de inimigos cegos por rodada em 2024",
+        descricao: "Astro da FURIA está à frente de nomes como Jame, apEX e device",
         conteudoDaMateria: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu fringilla sem, in mattis diam. Curabitur ut turpis rutrum, venenatis lacus interdum, tincidunt leo. Ut cursus bibendum nulla, a bibendum turpis dignissim id. Maecenas purus felis, tincidunt id leo ac, laoreet consectetur ligula. Duis ullamcorper mauris quis ante vehicula ornare at a ante. Aenean nec porttitor elit, vel viverra risus. Etiam congue dui vitae ex euismod ultricies. Suspendisse fermentum ante et justo convallis, quis suscipit magna efficitur. Integer ac diam eu metus vulputate porta ac sit amet orci. Curabitur auctor mollis mauris. Sed accumsan sollicitudin turpis, nec dapibus ligula mollis a. Cras facilisis aliquam justo, non porta leo consectetur commodo. Nam finibus lacinia nunc. Nullam placerat odio nec gravida posuere. Ut vel iaculis libero, rhoncus molestie sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eget ultrices enim, et rutrum tellus. Morbi id imperdiet ex. Sed id ligula a leo egestas elementum ac eu metus. Cras elementum tellus vitae sodales bibendum. Praesent id pulvinar lacus. Donec vel lacinia urna. Morbi fringilla risus nibh, a bibendum orci auctor et.',
-            'Nunc viverra diam sit amet dolor ultrices, a aliquam dolor venenatis. Pellentesque blandit ex non sapien gravida, sit amet molestie ligula faucibus. Duis laoreet malesuada nulla. Maecenas non dapibus dui, et porta enim. Donec nunc augue, aliquam nec ligula ac, pharetra rutrum odio. Nam hendrerit ut justo eget condimentum. Cras a tellus sed ex vestibulum vestibulum ac eu erat. Suspendisse et semper sem. Cras in venenatis felis. Mauris porta sem ac eros convallis feugiat. Aenean vehicula neque mollis mauris lacinia, ac blandit dolor rutrum. In imperdiet facilisis nulla a porttitor. Quisque placerat nisi quis lacus fermentum feugiat at id orci. Etiam bibendum luctus velit a tempor. Quisque sagittis pretium pellentesque.',
-            'Maecenas nec consectetur nulla. Sed metus neque, luctus vitae lobortis sed, dictum in magna. Maecenas convallis tincidunt fermentum. Cras metus lorem, euismod non lorem vel, eleifend scelerisque nibh. Praesent placerat arcu eget convallis commodo. Maecenas luctus feugiat dolor, sit amet pulvinar augue sollicitudin in. Nam iaculis semper urna, at iaculis sapien sagittis non. Proin nec nulla congue, pulvinar elit tincidunt, vulputate leo. Nam venenatis mi vel leo mollis mattis.',
-            'Nulla facilisi. Vestibulum ornare ultricies mi sed malesuada. Suspendisse potenti. Nulla varius hendrerit nibh ut semper. Donec venenatis rhoncus augue eu rhoncus. Pellentesque lobortis arcu turpis, vitae lacinia lectus aliquet ac. Aenean sed commodo felis. Sed ac commodo odio, in tempor risus. Donec tortor turpis, condimentum ultrices venenatis eu, viverra ultricies est. Proin consectetur libero id quam mollis eleifend. Phasellus aliquam, augue vel luctus lacinia, ipsum mi cursus risus, quis ultrices nibh sem sed erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a interdum nulla, a euismod dui. Cras nec condimentum turpis, quis varius felis.'
-        ]
-    }
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 5,
+        time: ['furia']
+    },
+)
+adicionarElemento(
+    listaDeNoticias,
+    {
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "Sharks e ODDIK farão grande final do CBCS Invitational 2024",
+        descricao: " Durante a tarde e noite desse sábado (26), a dupla desbancou Fluxo e inSanitY, respectivamente, para sacramentar suas vagas finalíssima da competição.",
+        conteudoDaMateria: [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 4,
+        time: ['sharks', 'oddik']
+    },
+)
+adicionarElemento(
+    listaDeNoticias,
+    {
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "Legacy luta até o fim, mas perde para Monte e é eliminada da ESL Challenger Katowice 2024",
+        descricao: "Time brasileiro sofreu 'apagão' no terceiro mapa e foi atropelado pelos poloneses",
+        conteudoDaMateria: [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 3,
+        time: ['legacy', 'monte']
+    },
+)
+adicionarElemento(
+    listaDeNoticias,
+    {
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "Imperial perde pra The Mongolz e está eliminada da Thunderpick World Championship 2024",
+        descricao: "Confronto entre brasileiros e chineses foi bastante disputado.",
+        conteudoDaMateria: [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 2,
+        time: ['imperial', 'the-mongolz']
+    },
+)
+adicionarElemento(
+    listaDeNoticias,
+    {
+        game: "CS2",
+        gameLogo: "./games/cs2.png",
+        titulo: "paiN perde para B8 na semifinal e se despede da ESL Challenger Katowice 2024",
+        descricao: "Confronto entre brasileiros e ucranianos foi bastante disputado.",
+        conteudoDaMateria: [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit sem, laoreet at tincidunt sit amet, scelerisque a diam. Aenean at massa vitae nisl gravida consectetur. Vivamus malesuada blandit est quis pulvinar. Nulla in odio vel sapien tempus hendrerit. Nullam nec luctus nulla, ut ultricies mi. Sed viverra scelerisque justo ut consequat. Donec sagittis purus quis dolor sollicitudin porta. Ut eros justo, ultricies in tristique ac, scelerisque nec nulla. Suspendisse vel nisi risus. Nulla id libero pulvinar neque porttitor consectetur. Ut id sodales elit. Cras pellentesque, tellus ac pellentesque mollis, ligula felis euismod lacus, vel mollis diam lectus condimentum justo.',
+            'Integer ullamcorper justo non ligula sodales egestas. Aenean venenatis enim vitae ullamcorper viverra. Mauris ultrices orci eget ipsum consequat, in tristique nibh suscipit. Integer porta pulvinar auctor. Maecenas at tincidunt sem. Quisque posuere arcu sed augue consectetur sagittis. Donec sed volutpat odio. Nunc viverra ut mauris ac sodales. Nullam augue nulla, pulvinar eu lorem et, mattis facilisis ante. Vivamus laoreet elit a sapien egestas porta. Praesent commodo lobortis risus, ut tempor mauris fermentum a. Aliquam tincidunt interdum risus eget sagittis. In dictum non sem eu laoreet. In laoreet, mi eu hendrerit dignissim, ex leo venenatis massa, et eleifend arcu nibh luctus nibh. In hac habitasse platea dictumst.',
+
+            'Cras semper mauris quis erat finibus, quis semper est sollicitudin. Aenean ullamcorper leo nec ex imperdiet, egestas condimentum mi ullamcorper. Vivamus viverra, quam a pellentesque pulvinar, libero diam condimentum felis, quis tincidunt nibh odio et ligula. Praesent vel ex nec sem ullamcorper rutrum. Vestibulum porta hendrerit efficitur. Donec eget enim convallis, convallis arcu sed, tincidunt augue. Vestibulum eu felis est. Mauris sagittis tincidunt eros. Sed consectetur dignissim metus eget lacinia. Sed sed metus ante. Suspendisse elementum, purus sit amet auctor interdum, ligula justo porta quam, eget suscipit nisi ligula eu sem. Proin laoreet porttitor nibh id scelerisque. Nam quis congue mi, quis lacinia tellus. Suspendisse in dui vitae arcu gravida elementum sit amet non orci. Suspendisse nunc diam, pellentesque vel orci et, tristique suscipit nunc.'
+        ],
+        autor: "João Silva",
+        data: "2024-10-27",
+        hora: "15:30",
+        thumbnail: "/wireframe-2.png",
+        id: 3,
+        time: ['pain', 'b8']
+    },
 )

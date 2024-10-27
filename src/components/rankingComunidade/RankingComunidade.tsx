@@ -31,8 +31,8 @@ export default function RankingComunidade() {
     };
 
     return (
-        <div className={`w-full flex-col teste`}>
-            <h2 className='bg-[--azul] uppercase text-center text-lg leading-5 py-2 border border-b'>Vote no Ranking da Comunidade</h2>
+        <div className='rankingComunidade'>
+            <h2 className='bg-[--azul] uppercase text-center text-lg leading-5 py-2 font-black border border-b'>Vote no Ranking da Comunidade</h2>
             <OrderList
                 value={items}
                 onChange={(e) => setItems(e.value)}
