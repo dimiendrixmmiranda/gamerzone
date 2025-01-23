@@ -6,6 +6,7 @@ import Jogos from '../jogos/Jogos';
 import listaDeNoticias from '@/core/constants/ListaDeNoticias';
 import Link from 'next/link';
 import { TiArrowSyncOutline } from 'react-icons/ti';
+import Image from 'next/image';
 
 export default function ClubeDoCoracao() {
     const listaDeClubes = Array.from({ length: 20 }, (_, i) => i + 1);
@@ -22,7 +23,9 @@ export default function ClubeDoCoracao() {
                         return (
                             <li key={i} className="flex justify-center items-center">
                                 <button className="flex flex-col justify-center items-center gap-1" onClick={() => setActive(true)}>
-                                    <div className="w-6 h-6 rounded-full bg-black sm:w-10 sm:h-10 lg:w-8 lg:h-8 xl:w-10 xl:h-10 xl:gap-2"></div>
+                                    <div className="relative w-6 h-6 rounded-full bg-black sm:w-10 sm:h-10 lg:w-8 lg:h-8 xl:w-10 xl:h-10 xl:gap-2">
+                                        <Image alt='image' src={'/default/escudo-default.png'} fill></Image>
+                                    </div>
                                     <p className="text-center font-bold text-sm">COR</p>
                                 </button>
                             </li>

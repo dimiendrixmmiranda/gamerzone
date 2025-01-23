@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import Image from "next/image";
 
 export default function Negociacoes() {
     const negociacoes = [1, 2, 3, 4]
@@ -30,7 +31,11 @@ export default function Negociacoes() {
                                     <li className="flex flex-col items-center gap-3 p-4 bg-[--preto-fosco] rounded-lg max-w-[320px] mx-auto relative">
                                         {/* e-sport */}
                                         <div className="w-7 h-7 rounded-full bg-orange-600 absolute top-2 right-2"></div>
-                                        <div className="w-36 h-40 bg-black"></div>
+                                        <div className="w-full h-40">
+                                            <div className="relative h-full w-36 mx-auto">
+                                                <Image alt="Jogador" src={'/default/default-negociacoes.png'} fill></Image>
+                                            </div>
+                                        </div>
                                         <div className="flex flex-col w-full">
                                             <h2 className="text-lg font-bold leading-6 overflow-hidden whitespace-nowrap text-ellipsis">Danil &quot;donk&quot; Kryshkovets</h2>
                                             <div className="flex items-center">

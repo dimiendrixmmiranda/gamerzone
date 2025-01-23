@@ -8,6 +8,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "João Silva",
         data: "2025-01-20",
         hora: "14:00",
+        game: "lol"
     },
     {
         titulo: "Time brasileiro avança nos playoffs do CS:GO Major",
@@ -16,6 +17,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Maria Oliveira",
         data: "2025-01-19",
         hora: "18:30",
+        game: "CS2"
     },
     {
         titulo: "Atualizações em Valorant trazem novo agente e mapa",
@@ -24,6 +26,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Carlos Mendes",
         data: "2025-01-18",
         hora: "12:45",
+        game: "Valorant"
     },
     {
         titulo: "Free Fire: Campeonato Nacional tem prêmio recorde",
@@ -32,6 +35,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Ana Costa",
         data: "2025-01-17",
         hora: "16:15",
+        game: "FreeFire"
     },
     {
         titulo: "Dota 2: TI atrai recorde de espectadores em 2025",
@@ -40,6 +44,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Luiz Souza",
         data: "2025-01-16",
         hora: "10:00",
+        game: "Dota2"
     },
     {
         titulo: "Rocket League terá crossover com famosa franquia de carros",
@@ -48,6 +53,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Beatriz Lima",
         data: "2025-01-15",
         hora: "15:20",
+        game: "RocketLeague"
     },
     {
         titulo: "Streamer quebra recorde mundial em maratona de Fortnite",
@@ -56,6 +62,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Ricardo Pereira",
         data: "2025-01-14",
         hora: "20:00",
+        game: "Fortnite"
     },
     {
         titulo: "PUBG anuncia torneio global com formato inovador",
@@ -64,6 +71,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Fernanda Alves",
         data: "2025-01-13",
         hora: "11:30",
+        game: "PUBG"
     },
     {
         titulo: "Overwatch 2: nova temporada traz eventos temáticos",
@@ -72,6 +80,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Gustavo Torres",
         data: "2025-01-12",
         hora: "13:45",
+        game: "Overwatch2"
     },
     {
         titulo: "Mobile Legends cresce no cenário competitivo brasileiro",
@@ -80,6 +89,7 @@ const listaDeNoticias: Noticia[] = [
         autor: "Paula Santos",
         data: "2025-01-11",
         hora: "17:10",
+        game: "MobileLegends"
     }
 ]
 

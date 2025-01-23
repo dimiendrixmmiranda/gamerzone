@@ -19,6 +19,18 @@
     transition: .8s ease;
 }
 
+.botaoFiltro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    padding: .5em 0;
+    transition: .6s ease;
+    margin: 0 auto;
+}
+
+
+
 @media screen and (min-width: 425px) {
     .containerNoticia {
         height: 150px;

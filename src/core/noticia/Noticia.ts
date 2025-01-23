@@ -5,4 +5,5 @@ export default interface Noticia{
     autor: string
     data: string
     hora: string
+    game: string
 }
