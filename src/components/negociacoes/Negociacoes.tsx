@@ -30,10 +30,12 @@ export default function Negociacoes() {
                                 <SwiperSlide>
                                     <li className="flex flex-col items-center gap-3 p-4 bg-[--preto-fosco] rounded-lg max-w-[320px] mx-auto relative">
                                         {/* e-sport */}
-                                        <div className="w-7 h-7 rounded-full bg-orange-600 absolute top-2 right-2"></div>
+                                        <div className="w-7 h-7 rounded-full absolute top-2 right-2">
+                                            <Image alt="game" src={'/icones/counter-strike.png'} fill className="object-contain"></Image>
+                                        </div>
                                         <div className="w-full h-40">
-                                            <div className="relative h-full w-36 mx-auto">
-                                                <Image alt="Jogador" src={'/default/default-negociacoes.png'} fill></Image>
+                                            <div className="relative h-full w-full mx-auto">
+                                                <Image alt="Jogador" src={'/default/default-negociacoes.png'} fill className="object-contain"></Image>
                                             </div>
                                         </div>
                                         <div className="flex flex-col w-full">
@@ -45,16 +47,20 @@ export default function Negociacoes() {
                                         </div>
                                         <div className="flex flex-col items-center w-full gap-2 sm:gap-4 xl:flex-row">
                                             <div className="flex">
-                                                <div className="w-12 h-12 rounded-full bg-black"></div>
+                                                <div className="w-12 h-12 rounded-full relative">
+                                                    <Image alt="org" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
+                                                </div>
                                                 <div className="flex justify-center items-center font-black text-2xl">
                                                     <MdOutlineArrowForwardIos />
                                                     <MdOutlineArrowForwardIos className="-ml-4 text-4xl" />
                                                     <MdOutlineArrowForwardIos className="-ml-4" />
                                                 </div>
-                                                <div className="w-12 h-12 rounded-full bg-black"></div>
+                                                <div className="w-12 h-12 rounded-full relative">
+                                                    <Image alt="org" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
+                                                </div>
                                             </div>
-                                            <div className="w-full h-[50px] flex justify-center items-center bg-[--amarelo] rounded-lg">
-                                                <h2 className="font-bold uppercase text-lg xl:text-[1em]">negociando</h2>
+                                            <div className="w-full h-[50px] flex justify-center items-center bg-[--amarelo] rounded-lg" style={{boxShadow: '0 0 2px 1px black'}}>
+                                                <h2 className="font-bold uppercase text-lg xl:text-[1em]" style={{textShadow: '1px 1px 2px black'}}>negociando</h2>
                                             </div>
                                         </div>
                                         <div className="w-full h-40 bg-black"></div>

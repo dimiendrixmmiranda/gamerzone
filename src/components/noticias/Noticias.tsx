@@ -18,7 +18,7 @@ export default function Noticias() {
     const [pageLinkSize,] = useState(2);
     const [gameSelecionado, setGameSelecionado] = useState<string>('geral')
 
-    const filtrarNoticias = gameSelecionado.toLowerCase() === 'Geral'.toLowerCase() ?
+    const filtrarNoticias = gameSelecionado.toLowerCase() === 'geral' ?
         listaDeNoticias :
         listaDeNoticias.filter((noticia) => noticia.game.toLowerCase() === gameSelecionado.toLowerCase())
 
@@ -40,8 +40,8 @@ export default function Noticias() {
             <div className="grid grid-cols-4 gap-4">
                 {/* Botões de filtro */}
                 <button
-                    className={`${style.botaoFiltro} ${gameSelecionado === "Geral" ? "opacity-100 text-white scale-[1.2]" : "opacity-50"}`}
-                    onClick={() => { setGameSelecionado("Geral"); setFirst(0); }}
+                    className={`${style.botaoFiltro} ${gameSelecionado === "geral" ? "opacity-100 text-white scale-[1.2]" : "opacity-50"}`}
+                    onClick={() => { setGameSelecionado("geral"); setFirst(0); }}
                 >
                     <div className="relative w-10 h-7 rounded-full">
                         <Image alt="Noticias de Games em Geral" src={'/icones/geral.png'} fill></Image>
@@ -52,7 +52,9 @@ export default function Noticias() {
                     className={`${style.botaoFiltro} ${gameSelecionado === "CS2" ? "opacity-100 text-white scale-[1.2]" : "opacity-50"}`}
                     onClick={() => { setGameSelecionado("CS2"); setFirst(0); }}
                 >
-                    <div className="w-8 h-8 bg-zinc-600 rounded-full md:w-6 md:h-6"></div>
+                    <div className="relative w-6 h-7 rounded-full">
+                        <Image alt="Noticias de Valorant" src={'/icones/counter-strike.png'} fill></Image>
+                    </div>
                     <h2 className="hidden md:block text-xl text-black font-bold">CS2</h2>
                 </button>
                 <button
@@ -79,7 +81,7 @@ export default function Noticias() {
                     noticiasDaPaginaAtual.map((noticia, i) => {
                         return (
                             <li key={i}>
-                                <CardNoticia game={noticia.game} autor={noticia.autor} data={noticia.data} hora={noticia.hora} imagem={noticia.imagem} subtitulo={noticia.subtitulo} titulo={noticia.titulo}></CardNoticia>
+                                <CardNoticia logoGame={noticia.logoGame} conteudoDaMateria={noticia.conteudoDaMateria} id={noticia.id} game={noticia.game} autor={noticia.autor} data={noticia.data} hora={noticia.hora} imagem={noticia.imagem} subtitulo={noticia.subtitulo} titulo={noticia.titulo}></CardNoticia>
                             </li>
                         );
                     })

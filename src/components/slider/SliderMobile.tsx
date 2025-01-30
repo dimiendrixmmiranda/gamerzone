@@ -1,10 +1,15 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
+import Noticia from '@/core/noticia/Noticia';
+import listaDeNoticias from '@/core/constants/ListaDeNoticias';
 
 export default function SliderMobile() {
+    const [noticias] = useState<Noticia[]>(listaDeNoticias.slice(0, 5))
+
     return (
         <div className='md:hidden'>
             <Swiper
@@ -18,26 +23,20 @@ export default function SliderMobile() {
                     disableOnInteraction: false,
                 }}
             >
-                <SwiperSlide>
-                    <div className='flex justify-center items-center bg-zinc-600 h-[100%]'>
-                        Slide 1
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='flex justify-center items-center bg-zinc-600 h-[100%]'>
-                        Slide 1
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='flex justify-center items-center bg-zinc-600 h-[100%]'>
-                        Slide 1
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='flex justify-center items-center bg-zinc-600 h-[100%]'>
-                        Slide 1
-                    </div>
-                </SwiperSlide>
+                {
+                    noticias.map((noticia, i) => {
+                        return (
+                            <SwiperSlide key={i}>
+                                <div className='flex justify-center items-center bg-zinc-600 h-[100%] relative'>
+                                    <div className='flex flex-col gap-2 absolute bottom-7 left-[50%] w-full max-w-[90%] text-center' style={{transform: 'translate(-50%)'}}>
+                                        <h1 className='text-2xl font-bold leading-6'>{noticia.titulo}</h1>
+                                        <h2 className='hidden sm:block'>{noticia.subtitulo}</h2>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })
+                }
             </Swiper>
         </div>
     );

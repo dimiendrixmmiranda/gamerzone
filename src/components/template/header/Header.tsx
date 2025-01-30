@@ -9,7 +9,7 @@ import Offcanvas from "@/components/offcanvas/Offcanvas";
 
 export default function Header() {
     return (
-        <header className={style.header}>
+        <header className={style.header} id="topo">
             <Link href={'/'}>
                 <div className="flex items-center justify-center">
                     <div className="w-[70px] h-[70px] relative">

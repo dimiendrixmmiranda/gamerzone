@@ -1,4 +1,5 @@
-export default interface Noticia{
+export default interface Noticia {
+    id: number
     titulo: string
     subtitulo: string
     imagem: string
@@ -6,4 +7,6 @@ export default interface Noticia{
     data: string
     hora: string
     game: string
+    logoGame: string
+    conteudoDaMateria: string[]
 }
