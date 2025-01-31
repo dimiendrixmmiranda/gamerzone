@@ -16,7 +16,7 @@
     .subContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 530px;
+        grid-template-rows: 490px;
         gap: 2em;
     }
 }
@@ -34,7 +34,7 @@
     .subContainer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 560px auto auto 1fr;
+        grid-template-rows: 500px auto auto 1fr;
         gap: 2em;
         padding-right: 1em;
     }

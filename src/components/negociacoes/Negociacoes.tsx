@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import Image from "next/image";
+import { listaDePaises } from "@/core/constants/listaDePaises";
 
 export default function Negociacoes() {
     const negociacoes = [1, 2, 3, 4]
@@ -19,7 +20,7 @@ export default function Negociacoes() {
                 slidesPerView={1}
                 className='w-[100%]'
                 autoplay={{
-                    delay: 4000,
+                    delay: 20000,
                     disableOnInteraction: false,
                 }}
             >
@@ -42,7 +43,10 @@ export default function Negociacoes() {
                                             <h2 className="text-lg font-bold leading-6 overflow-hidden whitespace-nowrap text-ellipsis">Danil &quot;donk&quot; Kryshkovets</h2>
                                             <div className="flex items-center">
                                                 <p>Posição: Rifler</p>
-                                                <div className="w-6 h-4 bg-black ml-auto"></div>
+                                                <div className="relative w-6 h-4 bg-black ml-auto">
+                                                    {/* Endereço vai mudar */}
+                                                    <Image alt={listaDePaises[0].nome} src={listaDePaises[0].imagem} fill className="object-contain"></Image>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="flex flex-col items-center w-full gap-2 sm:gap-4 xl:flex-row">
@@ -59,11 +63,20 @@ export default function Negociacoes() {
                                                     <Image alt="org" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                                 </div>
                                             </div>
-                                            <div className="w-full h-[50px] flex justify-center items-center bg-[--amarelo] rounded-lg" style={{boxShadow: '0 0 2px 1px black'}}>
-                                                <h2 className="font-bold uppercase text-lg xl:text-[1em]" style={{textShadow: '1px 1px 2px black'}}>negociando</h2>
+                                            <div className="w-full h-[50px] flex justify-center items-center bg-[--amarelo] rounded-lg" style={{ boxShadow: '0 0 2px 1px black' }}>
+                                                <h2 className="font-bold uppercase text-lg xl:text-[1em]" style={{ textShadow: '1px 1px 2px black' }}>negociando</h2>
                                             </div>
                                         </div>
-                                        <div className="w-full h-40 bg-black"></div>
+                                        <div className="w-full h-40 bg-black">
+                                            <iframe
+                                                className="w-full h-full"
+                                                src="https://www.youtube.com/embed/47oeB53AdKc"
+                                                title="YouTube video player"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
                                         <Link href={'/'}>Saiba mais!</Link>
                                     </li>
                                 </SwiperSlide>

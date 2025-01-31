@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react';
 import style from './style.module.css'
 import Jogos from '../jogos/Jogos';
@@ -7,6 +6,7 @@ import listaDeNoticias from '@/core/constants/ListaDeNoticias';
 import Link from 'next/link';
 import { TiArrowSyncOutline } from 'react-icons/ti';
 import Image from 'next/image';
+import { createSlugWithId } from '@/utils/createSlug';
 
 export default function ClubeDoCoracao() {
     const listaDeClubes = Array.from({ length: 20 }, (_, i) => i + 1);
@@ -16,36 +16,45 @@ export default function ClubeDoCoracao() {
 
     return (
         <div className={style.containerClube}>
-            <h2 className="text-center uppercase font-bold text-xl leading-6 xl:text-2xl">Escolha seu time do coração!</h2>
-            <ul className={`w-full h-full grid-cols-4 bg-[--preto-fosco] py-2 gap-4 ms:py-0 ${active ? 'hidden' : 'grid'}`} style={{ boxShadow: '0 0 3px 2px black' }}>
-                {
-                    listaDeClubes.map((clube, i) => {
-                        return (
-                            <li key={i} className="flex justify-center items-center">
-                                <button className="flex flex-col justify-center items-center gap-1" onClick={() => setActive(true)}>
-                                    <div className="relative w-6 h-6 rounded-full bg-black sm:w-10 sm:h-10 lg:w-8 lg:h-8 xl:w-10 xl:h-10 xl:gap-2">
-                                        <Image alt='image' src={'/default/escudo-default.png'} fill></Image>
-                                    </div>
-                                    <p className="text-center font-bold text-sm">COR</p>
-                                </button>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-            <div className={`w-full h-full bg-[--preto-fosco] flex-col overflow-hidden gap-2 ${active ? 'flex' : 'hidden'}`} style={{ boxShadow: '0 0 3px 2px black' }}>
-                <Jogos br425={1} br768={1} br1024={1} br1280={2}></Jogos>
-                <ul className='grid grid-rows-3 gap-[3px] w-full h-[300px] md:h-[340px] lg:h-[310px] xl:-mt-2'>
+            <div className={`flex justify-center items-center text-center row-start-1 row-end-2 ${active ? 'hidden' : 'flex'}`}>
+                <h2 className='uppercase font-bold text-2xl leading-7'>Escolha seu Clube do Coração</h2>
+            </div>
+            <div className={`row-start-2 row-end-4 h-full w-full ${active ? 'hidden' : 'flex'}`}>
+                <ul className='grid grid-cols-4 w-full md:gap-2'>
+                    {
+                        listaDeClubes.map((clube, i) => {
+                            return (
+                                <li key={i} className='flex flex-col justify-center items-center'>
+                                    <button className='relative w-10 h-10' onClick={() => setActive(true)}>
+                                        <Image alt='time' src={'/default/escudo-default.png'} fill className='object-contain'></Image>
+                                    </button>
+                                    <h2>COR</h2>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+            <div className={`row-start-1 row-end-4 gap-2 h-full ${active ? 'grid' : 'hidden'}`} style={{ gridTemplateRows: '80px 1fr 35px' }}>
+                <div className='row-start-1 row-end-2 overflow-hidden'>
+                    <Jogos br425={2} br768={2} br1024={2} br1280={2}></Jogos>
+                </div>
+                <ul className='self-center row-start-2 row-end-3'>
                     {
                         noticias.map((noticia, i) => {
                             return (
-                                <li key={i} className='w-full h-full overflow-hidden'>
-                                    <Link href={'/'}>
-                                        <div className={style.containerNoticiaClube}>
-                                            <div className='w-full h-full bg-black'></div>
-                                            <div className='flex flex-col gap-1'>
-                                                <h2 className="font-bold leading-4 text-sm flex-1 sm:text-lg sm:leading-5 lg:text-sm lg:leading-4 xl:text-lg xl:leading-5">{noticia.titulo}</h2>
-                                                <p className="text-[.4em] text-center sm:text-[.6em] md:text-start">Por {noticia.autor} - {noticia.data}, ás {noticia.hora}</p>
+                                <li key={i}>
+                                    <Link href={`/noticias/${createSlugWithId(noticia.titulo, noticia.id)}`}>
+                                        <div className={`${style.containerNoticiaClube}`}>
+                                            <div className="w-full h-full bg-zinc-900" style={{ boxShadow: '1px 1px 2px black' }}></div>
+                                            <div className='flex flex-col gap-2 xl:gap-1'>
+                                                <h2 className="font-bold leading-4 text-sm sm:text-lg md:text-sm lg:leading-5 xl:text-lg">{noticia.titulo}</h2>
+                                                <h3 className='hidden text-[.6em] md:block lg:hidden xl:block xl:text-[.7em]'>{noticia.subtitulo}</h3>
+                                                <p className="hidden text-[.5em] text-center">Por {noticia.autor} - {noticia.data}, ás {noticia.hora}</p>
+                                            </div>
+                                            {/* imagem */}
+                                            <div className="w-5 h-5 rounded-full absolute top-3 left-3">
+                                                <Image alt={`Logo do jogo ${noticia.game}`} src={noticia.logoGame} fill className="object-contain"></Image>
                                             </div>
                                         </div>
                                     </Link>
@@ -54,9 +63,9 @@ export default function ClubeDoCoracao() {
                         })
                     }
                 </ul>
-                <div className='grid mt-auto px-2 text-white flex-1' style={{gridTemplateColumns: '1fr 50px'}}>
-                    <Link href={'/'} className='text-center uppercase font-bold self-center justify-self-center'>Ver Página</Link>
-                    <button className='uppercase self-center justify-self-center' onClick={() => setActive(false)}><TiArrowSyncOutline /></button>
+                <div className='self-center justify-self-center w-full pl-2 row-start-3 row-end-4 md:-mt-4' style={{ display: 'grid', gridTemplateColumns: '1fr 40px' }}>
+                    <Link href={'/'} className='uppercase font-bold text-sm sm:text-md'>Ver Página Completa</Link>
+                    <button onClick={() => setActive(false)}><TiArrowSyncOutline /></button>
                 </div>
             </div>
         </div>

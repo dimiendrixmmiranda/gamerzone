@@ -27,6 +27,9 @@
 /* Menu Campeonatos */
 .menu .submenu {
     z-index: 10;
+    display: none;
+    padding: 1em;
+    color: black;
 }
 
 .menu:nth-child(3) div:hover .submenu {

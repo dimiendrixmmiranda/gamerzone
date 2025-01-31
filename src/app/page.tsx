@@ -10,20 +10,20 @@ import SliderWeb from '@/components/slider/SliderWeb';
 import Template from '@/components/template/Template'
 import style from './style.module.css'
 export default function App() {
-	return (
-		<Template>
-			<Jogos br425={2} br768={3} br1024={4} br1280={5}></Jogos>
-                <SliderMobile></SliderMobile>
-                <SliderWeb></SliderWeb>
-                <div className={style.container}>
-                    <Noticias></Noticias>
-                    <div className={style.subContainer}>
-                        <ClubeDoCoracao></ClubeDoCoracao>
-                        <Colunas></Colunas>
-                        <Negociacoes></Negociacoes>
-                    </div>
-                    <Replays></Replays>
+    return (
+        <Template>
+            <Jogos br425={2} br768={3} br1024={4} br1280={5}></Jogos>
+            <SliderMobile></SliderMobile>
+            <SliderWeb></SliderWeb>
+            <div className={style.container}>
+                <Noticias></Noticias>
+                <div className={style.subContainer}>
+                    <ClubeDoCoracao></ClubeDoCoracao>
+                    <Colunas></Colunas>
+                    <Negociacoes></Negociacoes>
                 </div>
-		</Template>
-	);
+                <Replays></Replays>
+            </div>
+        </Template>
+    );
 }

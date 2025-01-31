@@ -15,15 +15,33 @@ const listaDeMenus: Menu[] = [
         icone: <GiChampions />,
         submenu: [
             {
-                nome: 'Iem Cologne',
-                link: 'https://www.twitch.tv/gaules'
-            },
-            {
-                nome: 'Iem Cologne',
+                nome: 'ESL Challenger League',
+                imagem: '/camps/esl-challenger-league.png',
                 link: '/'
             },
             {
-                nome: 'Iem Cologne',
+                nome: 'ESL Challenger League',
+                imagem: '/camps/esl-challenger-league.png',
+                link: '/'
+            },
+            {
+                nome: 'ESL Challenger League',
+                imagem: '/camps/esl-challenger-league.png',
+                link: '/'
+            },
+            {
+                nome: 'ESL Challenger League',
+                imagem: '/camps/esl-challenger-league.png',
+                link: '/'
+            },
+            {
+                nome: 'ESL Challenger League',
+                imagem: '/camps/esl-challenger-league.png',
+                link: '/'
+            },
+            {
+                nome: 'ESL Challenger League',
+                imagem: '/camps/esl-challenger-league.png',
                 link: '/'
             },
         ]
