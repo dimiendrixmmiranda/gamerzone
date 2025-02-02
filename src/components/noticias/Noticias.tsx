@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Paginator } from 'primereact/paginator';
 import CardNoticia from "./CardNoticia";
 import listaDeNoticias from "@/core/constants/ListaDeNoticias";
 import style from './style.module.css'
 import Image from "next/image";
+import { useTamanhoTela } from "@/utils/useTamanhoTela";
+import Noticia from "@/core/noticia/Noticia";
 
 interface onPageChange {
     first: number;
@@ -17,10 +19,21 @@ export default function Noticias() {
     const [rows, setRows] = useState(7);
     const [pageLinkSize,] = useState(2);
     const [gameSelecionado, setGameSelecionado] = useState<string>('geral')
+    const [noticias, setNoticias] = useState<Noticia[]| []>([])
+    const { width } = useTamanhoTela()
+    
+    useEffect(() => {
+        if (width < 768) {
+            setNoticias(listaDeNoticias.slice(5));
+        } else {
+            setNoticias(listaDeNoticias.slice(9));
+        }
+    }, [width]);
+
 
     const filtrarNoticias = gameSelecionado.toLowerCase() === 'geral' ?
-        listaDeNoticias :
-        listaDeNoticias.filter((noticia) => noticia.game.toLowerCase() === gameSelecionado.toLowerCase())
+        noticias :
+        noticias.filter((noticia) => noticia.game.toLowerCase() === gameSelecionado.toLowerCase())
 
     const onPageChange = (event: onPageChange) => {
         setFirst(event.first);

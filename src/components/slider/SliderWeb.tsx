@@ -39,7 +39,8 @@ export default function SliderWeb() {
                         {grupo.map((noticia, noticiaIndex) => (
                             <div
                                 key={noticiaIndex}
-                                className="w-full h-full bg-black flex items-center justify-center text-white relative"
+                                className="w-full h-full bg-black flex items-center justify-center text-white relative hover:scale-[1.02]"
+                                style={{transition: '.6s ease'}}
                             >
                                 <Link href={`/noticias/${createSlugWithId(noticia.titulo, noticia.id)}`} className='w-full h-full'>
                                     <div className='flex flex-col absolute left-[50%] max-w-[90%] w-full text-center bottom-4 lg:bottom-6 xl:gap-3' style={{ transform: 'translate(-50%)' }}>

@@ -34,8 +34,10 @@ export default function Replays() {
                     className='w-full h-full'
                 >
                     <SwiperSlide className='max-w-[320px] cursor-pointer mx-auto xl:max-w-[400px]' onClick={() => setVisible(true)}>
-                        <div className='flex justify-center items-center bg-zinc-600 h-full w-full'>
-                            Slide 1
+                        <div className='flex justify-center items-center bg-zinc-600 h-full w-full relative'>
+                            <h2 className='uppercase font-black absolute bottom-2 text-xl w-full overflow-hidden whitespace-nowrap text-ellipsis text-center max-w-[90%] mx-auto'>
+                                G2 2 x 1 Falcons
+                            </h2>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='max-w-[320px] cursor-pointer mx-auto xl:max-w-[400px]' onClick={() => setVisible(true)}>
