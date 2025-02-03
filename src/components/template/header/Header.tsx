@@ -210,6 +210,11 @@ export default function Header() {
                                     <p className="leading-6">Ranking da LoL Esports Global Power Rankings</p>
                                 </Link>
                             </li>
+                            <li className="font-bold xl:text-lg">
+                                <Link href={'/'}>
+                                    <p className="leading-6">Ranking da Da Comunidade CS2</p>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </li>

@@ -46,5 +46,6 @@
         row-gap: 2em;
         grid-template-columns: 1fr 450px;
         padding: 1em 2em;
+        grid-template-rows: 1fr auto;
     }
 }
