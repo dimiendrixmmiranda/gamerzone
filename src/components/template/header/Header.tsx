@@ -8,6 +8,10 @@ import { GiChampions } from "react-icons/gi";
 import { PiRankingFill } from "react-icons/pi";
 import { FaGear } from "react-icons/fa6";
 import listaDeRedesSociais from "@/core/constants/ListaDeRedesSociais";
+import { listaDeCampeonatos } from "@/core/constants/ListaDeCampeonatos";
+import { listaDeRankings } from "@/core/constants/ListaDeRankings";
+import { listaDeCfgDosPro } from "@/core/constants/ListaDeCfgDosPro";
+import { listaDeMenusSkins } from "@/core/constants/ListaDeMenuSkins";
 
 export default function Header() {
     return (
@@ -26,7 +30,7 @@ export default function Header() {
             {/* Menus */}
             <ul className="items-center gap-2 hidden md:flex md:mx-auto lg:m-0 lg:ml-2 lg:gap-4 xl:gap-6 xl:ml-8">
                 <li className="cursor-pointer">
-                    <Link href={'/'} className="flex items-center gap-1 text-lg font-bold xl:text-xl">
+                    <Link href={'/'} className="flex items-center gap-1 text-lg font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
                         <MdScoreboard />
                         <p>
                             Resultados
@@ -35,7 +39,7 @@ export default function Header() {
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold xl:text-xl">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
                             <GiChampions />
                             <p>
                                 Campeonatos
@@ -45,48 +49,23 @@ export default function Header() {
                             <li className={style.cabecalhoMenuCampeonatos}>
                                 {/* Lista de Campeonatos */}
                                 <ul className="flex flex-col gap-1 lg:gap-2 lg:text-lg">
-                                    <li>
-                                        <Link href={'/'} className="flex items-center gap-1">
-                                            <div className="relative w-8 h-4 bg-orange-950"></div>
-                                            <p className="overflow-hidden whitespace-nowrap text-ellipsis font-bold">ESL One Cologne 2025</p>
-                                            <div className="relative w-8 h-4 bg-black"></div>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href={'/'} className="flex items-center gap-1">
-                                            <div className="relative w-8 h-4 bg-orange-950"></div>
-                                            <p className="overflow-hidden whitespace-nowrap text-ellipsis font-bold">ESL One Cologne 2025</p>
-                                            <div className="relative w-8 h-4 bg-black"></div>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href={'/'} className="flex items-center gap-1">
-                                            <div className="relative w-8 h-4 bg-orange-950"></div>
-                                            <p className="overflow-hidden whitespace-nowrap text-ellipsis font-bold">ESL One Cologne 2025</p>
-                                            <div className="relative w-8 h-4 bg-black"></div>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href={'/'} className="flex items-center gap-1">
-                                            <div className="relative w-8 h-4 bg-orange-950"></div>
-                                            <p className="overflow-hidden whitespace-nowrap text-ellipsis font-bold">ESL One Cologne 2025</p>
-                                            <div className="relative w-8 h-4 bg-black"></div>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href={'/'} className="flex items-center gap-1">
-                                            <div className="relative w-8 h-4 bg-orange-950"></div>
-                                            <p className="overflow-hidden whitespace-nowrap text-ellipsis font-bold">ESL One Cologne 2025</p>
-                                            <div className="relative w-8 h-4 bg-black"></div>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href={'/'} className="flex items-center gap-1">
-                                            <div className="relative w-8 h-4 bg-orange-950"></div>
-                                            <p className="overflow-hidden whitespace-nowrap text-ellipsis font-bold">ESL One Cologne 2025</p>
-                                            <div className="relative w-8 h-4 bg-black"></div>
-                                        </Link>
-                                    </li>
+                                    {
+                                        listaDeCampeonatos.map((camp, i) => {
+                                            return (
+                                                <li key={i}>
+                                                    <Link href={camp.link} className="items-center px-2" style={{ display: 'grid', gridTemplateColumns: '40px 1fr 20px' }}>
+                                                        <div className="relative w-8 h-4 bg-orange-950">
+                                                            <Image alt={camp.nome} src={camp.imagem} fill className="object-cover"></Image>
+                                                        </div>
+                                                        <p className="overflow-hidden whitespace-nowrap text-ellipsis font-bold">{camp.nome}</p>
+                                                        <div className="relative w-full h-full">
+                                                            <Image alt={camp.nome} src={camp.game} fill className="object-contain"></Image>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+                                            )
+                                        })
+                                    }
                                 </ul>
                                 {/* Lista de Times */}
                                 <ul className="grid grid-cols-4 gap-1 w-full h-full overflow-hidden">
@@ -171,109 +150,83 @@ export default function Header() {
                                         </Link>
                                     </li>
                                 </ul>
-                                <Link href={'/'} className="uppercase font-bold col-start-1 col-end-3 text-center mt-2">Ver Todos os Campeonatos</Link>
+                                <Link href={'/'} className="uppercase font-bold col-start-1 col-end-3 text-center mt-2 hover:bg-[--azul]">Ver Todos os Campeonatos</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold xl:text-xl">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
                             <PiRankingFill />
                             <p>
                                 Rankings
                             </p>
                         </div>
-                        <ul className="w-[200px] bg-red-500 absolute top-[125%] left-0 hidden z-10 p-4 gap-2 xl:gap-4">
-                            <li className="font-bold xl:text-lg">
-                                <Link href={'/'}>
-                                    <p className="leading-6">Ranking da ESL</p>
-                                </Link>
-                            </li>
-                            <li className="font-bold xl:text-lg">
-                                <Link href={'/'}>
-                                    <p className="leading-6">Ranking da HLTV</p>
-                                </Link>
-                            </li>
-                            <li className="font-bold xl:text-lg">
-                                <Link href={'/'}>
-                                    <p className="leading-6">Ranking da VLR.gg</p>
-                                </Link>
-                            </li>
-                            <li className="font-bold xl:text-lg">
-                                <Link href={'/'}>
-                                    <p className="leading-6">Ranking da Liquipedia</p>
-                                </Link>
-                            </li>
-                            <li className="font-bold xl:text-lg">
-                                <Link href={'/'}>
-                                    <p className="leading-6">Ranking da LoL Esports Global Power Rankings</p>
-                                </Link>
-                            </li>
-                            <li className="font-bold xl:text-lg">
-                                <Link href={'/'}>
-                                    <p className="leading-6">Ranking da Da Comunidade CS2</p>
-                                </Link>
-                            </li>
+                        <ul className="w-[200px] absolute top-[125%] left-0 hidden z-10 p-4 gap-2 xl:gap-4">
+                            {
+                                listaDeRankings.map((ranking, i) => {
+                                    return (
+                                        <li key={i} className="font-bold p-1 xl:text-lg hover:bg-[--azul]">
+                                            <Link href={ranking.link}>
+                                                <p className="leading-6">{ranking.nome}</p>
+                                            </Link>
+                                        </li>
+                                    )
+                                })
+                            }
                         </ul>
                     </div>
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold xl:text-xl">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
                             <FaGear />
                             <p>
                                 CFG dos Pro
                             </p>
                         </div>
-                        <ul className="w-[200px] absolute top-[125%] left-0 hidden z-10 p-4 gap-2 font-bold xl:gap-4">
-                            <li>
-                                <Link href={'/'}>
-                                    <p>Conter Strike</p>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={'/'}>
-                                    <p>Valorant</p>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={'/'}>
-                                    <p>Raimbow Six Siege</p>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={'/'}>
-                                    <p>League of Legends</p>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={'/'}>
-                                    <p>PUBG</p>
-                                </Link>
-                            </li>
+                        <ul className="w-[220px] absolute top-[125%] left-0 hidden z-10 p-4 gap-2 font-bold xl:gap-4">
+                            {
+                                listaDeCfgDosPro.map((cfg, i) => {
+                                    return (
+                                        <li key={i} className="hover:bg-[--azul]">
+                                            <Link href={cfg.link} className="items-center gap-1 p-1" style={{ display: 'grid', gridTemplateColumns: '20px 1fr' }}>
+                                                <div className="relative w-full h-full">
+                                                    <Image alt={cfg.nome} src={cfg.icone} fill className="object-contain"></Image>
+                                                </div>
+                                                <p>{cfg.nome}</p>
+                                            </Link>
+                                        </li>
+                                    )
+                                })
+                            }
                         </ul>
                     </div>
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold xl:text-xl">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
                             <FaGear />
                             <p>
                                 Skins
                             </p>
                         </div>
-                        <ul className="w-[200px] absolute top-[125%] left-0 hidden z-10 p-4 gap-2 font-bold xl:gap-4">
-                            <li>
-                                <Link href={'/'}>
-                                    <p>Conter Strike</p>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={'/'}>
-                                    <p>Valorant</p>
-                                </Link>
-                            </li>
+                        <ul className="w-[200px] absolute top-[125%] left-[-100px] hidden z-10 p-4 gap-2 font-bold xl:gap-4 xl:left-[-50px]">
+                            {
+                                listaDeMenusSkins.map((menu, i) => {
+                                    return (
+                                        <li key={i} className="p-1 transition-all hover:bg-[--azul] w-full h-full">
+                                            <Link className="w-full h-full gap-1 items-center" href={menu.link} style={{display: 'grid', gridTemplateColumns: '20px 1fr'}}>
+                                                <div className="relative w-full h-full">
+                                                    <Image alt={menu.nome} src={menu.game} fill className="object-contain"></Image>
+                                                </div>
+                                                <p>{menu.nome}</p>
+                                            </Link>
+                                        </li>
+                                    )
+                                })
+                            }
                         </ul>
                     </div>
                 </li>
@@ -284,7 +237,7 @@ export default function Header() {
                 {
                     listaDeRedesSociais.map((rede, i) => {
                         return (
-                            <li key={i}>
+                            <li key={i} className="hover:scale-[1.1] transition-all">
                                 <Link href={rede.link}>
                                     {rede.icone}
                                 </Link>

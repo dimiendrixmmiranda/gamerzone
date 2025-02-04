@@ -20,11 +20,11 @@ export default function ClubeDoCoracao() {
                 <h2 className='uppercase font-bold text-2xl leading-7'>Escolha seu Clube do Coração</h2>
             </div>
             <div className={`row-start-2 row-end-4 h-full w-full ${active ? 'hidden' : 'flex'}`}>
-                <ul className='grid grid-cols-4 w-full md:gap-2'>
+                <ul className='grid grid-cols-4 p-6 w-full md:gap-2'>
                     {
                         listaDeClubes.map((clube, i) => {
                             return (
-                                <li key={i} className='flex flex-col justify-center items-center'>
+                                <li key={i} className='flex flex-col justify-center items-center hover:scale-[1.15] transition-all'>
                                     <button className='relative w-10 h-10' onClick={() => setActive(true)}>
                                         <Image alt='time' src={'/default/escudo-default.png'} fill className='object-contain'></Image>
                                     </button>

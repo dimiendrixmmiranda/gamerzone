@@ -17,7 +17,7 @@
     content: '';
     position: absolute;
     top: 100%;
-    left: 60px;
+    left: calc(50% - 10px);
     z-index: 10;
     width: 0;
     height: 0;
@@ -36,12 +36,17 @@
     flex-direction: column;
 }
 
+
 .cabecalhoMenuCampeonatos {
     display: grid;
     grid-template-columns: 50% 1fr;
     column-gap: 1em;
     row-gap: .5em;
     width: 100%;
+}
+
+.cabecalhoMenu .cabecalhoMenuCampeonatos ul:nth-child(1) li:hover {
+    background-color: var(--azul);
 }
 
 @media screen and (min-width: 768px) {
