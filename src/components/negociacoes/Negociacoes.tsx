@@ -22,7 +22,7 @@ export default function Negociacoes() {
     }
 
     return (
-        <div className="bg-black p-4 flex flex-col gap-4 mb-6 overflow-hidden xl:py-8 xl:px-2" style={{ boxShadow: '0 0 2px 2px black' }}>
+        <div className="bg-black p-4 flex flex-col gap-4 mb-6 overflow-hidden md:col-start-1 md:col-end-3 lg:row-start-3 lg:row-end-4 lg:col-start-1 lg:col-end-2 xl:py-8 xl:px-2" style={{ boxShadow: '0 0 2px 2px black' }}>
             <h2 className="uppercase font-black leading-7 text-2xl text-center">Confira o Vai e Vem do Mundo dos E-sports</h2>
             <Swiper
                 modules={[Pagination, Autoplay, Navigation]}
@@ -34,6 +34,14 @@ export default function Negociacoes() {
                 autoplay={{
                     delay: 20000,
                     disableOnInteraction: false,
+                }}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 1,
+                    },
                 }}
             >
                 {

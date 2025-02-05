@@ -17,17 +17,24 @@ interface onPageChange {
 export default function Noticias() {
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(7);
-    const [pageLinkSize,] = useState(2);
+    const [pageLinkSize, setPageLinkSize] = useState(2);
     const [gameSelecionado, setGameSelecionado] = useState<string>('geral')
-    const [noticias, setNoticias] = useState<Noticia[]| []>([])
+    const [noticias, setNoticias] = useState<Noticia[] | []>([])
     const { width } = useTamanhoTela()
-    
+
     useEffect(() => {
         if (width < 768) {
             setNoticias(listaDeNoticias.slice(5));
         } else {
             setNoticias(listaDeNoticias.slice(9));
         }
+
+        if (width > 425) {
+            setPageLinkSize(3)
+        } else if (width > 768) {
+            setPageLinkSize(5)
+        }
+
     }, [width]);
 
 

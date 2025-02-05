@@ -20,7 +20,7 @@ export default function ClubeDoCoracao() {
                 <h2 className='uppercase font-bold text-2xl leading-7'>Escolha seu Clube do Coração</h2>
             </div>
             <div className={`row-start-2 row-end-4 h-full w-full ${active ? 'hidden' : 'flex'}`}>
-                <ul className='grid grid-cols-4 p-6 w-full md:gap-2'>
+                <ul className='grid grid-cols-4 w-full sm:p-6 md:gap-2 lg:p-2 xl:p-6'>
                     {
                         listaDeClubes.map((clube, i) => {
                             return (
