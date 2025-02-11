@@ -41,12 +41,12 @@ export default function Replays() {
                         listaDeJogos.map((jogo) => {
                             return (
                                 <div key={jogo.id} >
-                                    <SwiperSlide className='max-w-[320px] cursor-pointer mx-auto xl:max-w-[400px]' onClick={() => {
+                                    <SwiperSlide className='cursor-pointer mx-auto overflow-hidden' onClick={() => {
                                         setVisible(true)
                                         setJogo(jogo)
                                     }}>
-                                        <div className='flex flex-col justify-center items-center bg-zinc-600 h-full w-full relative overflow-hidden' style={{boxShadow: '0 0 3px 2px black'}}>
-                                            <div className='relative w-full h-full'>
+                                        <div className='flex flex-col justify-center items-center bg-zinc-600 h-full w-full relative overflow-hidden max-w-[320px] rounded-lg border-2 border-black xl:max-w-[400px]'>
+                                            <div className='relative w-full h-full rounded-lg'>
                                                 <Image
                                                     src={`https://img.youtube.com/vi/${jogo.idVideo}/hqdefault.jpg`}
                                                     alt="Thumbnail do vídeo"

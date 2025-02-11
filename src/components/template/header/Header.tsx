@@ -6,7 +6,7 @@ import style from './style.module.css'
 import { MdScoreboard } from "react-icons/md";
 import { GiChampions } from "react-icons/gi";
 import { PiRankingFill } from "react-icons/pi";
-import { FaGear } from "react-icons/fa6";
+import { FaGear, FaTrophy } from "react-icons/fa6";
 import listaDeRedesSociais from "@/core/constants/ListaDeRedesSociais";
 import { listaDeCampeonatos } from "@/core/constants/ListaDeCampeonatos";
 import { listaDeRankings } from "@/core/constants/ListaDeRankings";
@@ -30,7 +30,7 @@ export default function Header() {
             {/* Menus */}
             <ul className="items-center gap-2 hidden md:flex md:mx-auto lg:m-0 lg:ml-2 lg:gap-4 xl:gap-6 xl:ml-8">
                 <li className="cursor-pointer">
-                    <Link href={'/'} className="flex items-center gap-1 text-lg font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
+                    <Link href={'/'} className="flex items-center gap-1 text-lg font-bold p-1 xl:px-3 hover:bg-[--preto-fosco]">
                         <MdScoreboard />
                         <p>
                             Resultados
@@ -39,7 +39,7 @@ export default function Header() {
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:px-3 hover:bg-[--preto-fosco]">
                             <GiChampions />
                             <p>
                                 Campeonatos
@@ -69,95 +69,95 @@ export default function Header() {
                                 </ul>
                                 {/* Lista de Times */}
                                 <ul className="grid grid-cols-4 gap-1 w-full h-full overflow-hidden">
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
-                                    <li className="w-full h-full flex justify-center items-center">
+                                    <li className="w-full h-full flex justify-center items-center transition-all hover:scale-[1.1]">
                                         <Link href={'/'} className="relative w-8 h-8">
                                             <Image alt="Time" src={'/default/escudo-default.png'} fill className="object-contain"></Image>
                                         </Link>
                                     </li>
                                 </ul>
-                                <Link href={'/'} className="uppercase font-bold col-start-1 col-end-3 text-center mt-2 hover:bg-[--azul]">Ver Todos os Campeonatos</Link>
+                                <Link href={'/'} className="uppercase font-bold col-start-1 col-end-3 text-center mt-2 hover:bg-[--azul] py-2 flex justify-center items-center gap-2">Ver Todos os Campeonatos <FaTrophy className="mb-1"/></Link>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:px-3 hover:bg-[--preto-fosco]">
                             <PiRankingFill />
                             <p>
                                 Rankings
@@ -180,7 +180,7 @@ export default function Header() {
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:px-3 hover:bg-[--preto-fosco]">
                             <FaGear />
                             <p>
                                 CFG dos Pro
@@ -206,7 +206,7 @@ export default function Header() {
                 </li>
                 <li className="cursor-pointer">
                     <div className={style.cabecalhoMenu}>
-                        <div className="flex items-center gap-1 font-bold p-1 xl:text-xl hover:bg-[--preto-fosco]">
+                        <div className="flex items-center gap-1 font-bold p-1 xl:px-3 hover:bg-[--preto-fosco]">
                             <FaGear />
                             <p>
                                 Skins

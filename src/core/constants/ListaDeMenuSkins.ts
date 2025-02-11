@@ -3,7 +3,7 @@ import MenuSkins from "../menuSkins/MenuSkins";
 export const listaDeMenusSkins: MenuSkins[] = [
     {
         game: '/icones/counter-strike.png',
-        link: '/',
+        link: '/skins/cs2',
         nome: 'Counter Strike'
     },
     {

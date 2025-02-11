@@ -6,9 +6,14 @@ import 'swiper/css/pagination';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import Image from "next/image";
 import { listaDeNegociacoes } from "@/core/constants/ListaDeNegociacoes";
+import { FaPlay } from "react-icons/fa";
+import { Dialog } from "primereact/dialog";
+import { useState } from "react";
+import Negociacao from "@/core/negociacao/Negociacao";
 
 export default function Negociacoes() {
-
+    const [visible, setVisible] = useState(false);
+    const [negociacao, setNegociacao] = useState<Negociacao|null>(null)
     function identificarSituacaoCor(situacao: string) {
         if (situacao === 'negociando') {
             return 'bg-yellow-600'
@@ -49,7 +54,7 @@ export default function Negociacoes() {
                         return (
                             <div key={negociacao.id}>
                                 <SwiperSlide>
-                                    <li className="flex flex-col items-center gap-3 p-4 bg-[--preto-fosco] rounded-lg max-w-[320px] mx-auto relative">
+                                    <li className="flex flex-col items-center gap-3 p-4 pb-6 bg-[--preto-fosco] rounded-lg max-w-[320px] mx-auto relative">
                                         {/* e-sport */}
                                         <div className="w-7 h-7 rounded-full absolute top-2 right-2">
                                             <Image alt="game" src={negociacao.game} fill className="object-contain"></Image>
@@ -87,15 +92,15 @@ export default function Negociacoes() {
                                                 <h2 className="font-bold uppercase text-lg xl:text-[1em]" style={{ textShadow: '1px 1px 2px black' }}>{negociacao.situacao}</h2>
                                             </div>
                                         </div>
-                                        <div className="w-full h-40 bg-black">
-                                            <iframe
-                                                className="w-full h-full"
-                                                src={negociacao.videoHighlights}
-                                                title="YouTube video player"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen
-                                            ></iframe>
+                                        <div className="w-full h-40 bg-slate-900 border-2 border-black">
+                                            <div className="text-center flex flex-col gap-1 justify-center items-center w-full h-full">
+                                                <h2 className="text-2xl font-bold">Highlights</h2>
+                                                <h3>{negociacao.nome}</h3>
+                                                <button className="bg-blue-600 text-2xl p-3 rounded-full mt-2" onClick={() => {
+                                                    setVisible(true)
+                                                    setNegociacao(negociacao)
+                                                }}><FaPlay /></button>
+                                            </div>
                                         </div>
                                         <Link href={'/'}>Saiba mais!</Link>
                                     </li>
@@ -105,6 +110,22 @@ export default function Negociacoes() {
                     })
                 }
             </Swiper>
+            <div className="card flex justify-content-center">
+                <Dialog header={negociacao?.nome} visible={visible} className='w-[95%] h-[350px] max-w-[700px] md:h-[500px] xl:max-w-[900px] xl:h-[600px]' onHide={() => { if (!visible) return; setVisible(false); }}>
+                    <div>
+                        <div className="w-full h-60 bg-black md:h-[400px] xl:h-[480px]">
+                            <iframe
+                                className="w-full h-full"
+                                src={listaDeNegociacoes[0].videoHighlights}
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </div>
+                </Dialog>
+            </div>
         </div>
     )
 }
