@@ -49,7 +49,8 @@ const clubesDoCoracao = [
         id: 'imperial',
         regiao: 'br',
         abreviacao: 'imp',
-        enderecoImagem: 'https://img-cdn.hltv.org/teamlogo/WF5P55R5fxcmhoew6vHZQr.png?ixlib=java-2.1.0&w=50&s=ecc0a33173ed783477ab8be4cfa6e215',
+        enderecoImagem: 'https://img-cdn.hltv.org/teamlogo/WF5P55R5fxcmhoew6vHZQr.png?ixlib=java-2.1.0&w=100&s=69a1bfb54d6350db4a0b18ff87a96dcc',
+        
         elenco: [
             {
                 nome: 'Yuri Santos',
