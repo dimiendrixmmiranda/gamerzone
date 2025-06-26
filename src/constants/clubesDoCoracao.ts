@@ -50,7 +50,6 @@ const clubesDoCoracao = [
         regiao: 'br',
         abreviacao: 'imp',
         enderecoImagem: 'https://img-cdn.hltv.org/teamlogo/WF5P55R5fxcmhoew6vHZQr.png?ixlib=java-2.1.0&w=100&s=69a1bfb54d6350db4a0b18ff87a96dcc',
-        
         elenco: [
             {
                 nome: 'Yuri Santos',

@@ -47,7 +47,7 @@ export default function ClubeDoCoracao() {
             <li key={i} className="w-fit flex justify-center items-center justify-self-center transition-all duration-300 rounded-md hover:bg-azul-escuro hover:scale-110">
                 <button onClick={() => selecionarClube(clube)} className="flex flex-col items-center justify-center w-fit p-2">
                     <div className="relative w-8 h-8">
-                        <Image alt="logo-time" src={`${clube.enderecoImagem}`} fill className="object-contain" />
+                        <Image alt="logo-time" src={`${clube.enderecoImagem}`} fill className="object-contain" unoptimized/>
                     </div>
                     <p className="uppercase font-bold text-sm leading-4" style={{textShadow: '1px 1px 1px black'}}>{clube.abreviacao}</p>
                 </button>
@@ -81,7 +81,7 @@ export default function ClubeDoCoracao() {
                         <div>
                             <div className="absolute top-0 right-0">
                                 <div className="relative w-8 h-8 mb-2">
-                                    <Image alt="logo-time" src={clubeSelecionado.enderecoImagem} fill className="object-contain" />
+                                    <Image alt="logo-time" src={clubeSelecionado.enderecoImagem} fill className="object-contain" unoptimized/>
                                 </div>
                             </div>
                             <h2 className="text-2xl uppercase font-black" style={{textShadow: '1px 1px 1px black'}}>{clubeSelecionado.nome}</h2>
