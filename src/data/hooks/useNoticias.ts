@@ -22,7 +22,8 @@ export default function useNoticias() {
                         imagem: dados.imagem,
                         subtitulo: dados.subtitulo,
                         titulo: dados.titulo,
-                        tags: dados.tags
+                        tags: dados.tags,
+                        comentarios: dados.comentarios || []
                     };
                 });
 

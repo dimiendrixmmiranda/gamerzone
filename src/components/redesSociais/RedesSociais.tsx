@@ -5,34 +5,34 @@ import { FaThreads, FaXTwitter } from "react-icons/fa6";
 
 export default function RedesSociais() {
     return (
-        <nav className="hidden lg:flex">
-            <ul className="relative flex gap-1 xl:mr-4">
-                <li>
+        <nav className="hidden lg:flex h-[40px]">
+            <ul className="relative flex gap-1">
+                <li className="self-center duration-300 transition-all hover:mb-3">
                     <Link href={'/'} className="bg-blue-500 text-azul-escuro xl:text-lg 2xl:text-xl">
                         <FaFacebook />
                     </Link>
                 </li>
-                <li>
+                <li className="self-center duration-300 transition-all hover:mb-3">
                     <Link href={'/'} className="bg-blue-500 text-azul-escuro xl:text-lg 2xl:text-xl">
                         <AiFillInstagram />
                     </Link>
                 </li>
-                <li>
+                <li className="self-center duration-300 transition-all hover:mb-3">
                     <Link href={'/'} className="bg-blue-500 text-azul-escuro xl:text-lg 2xl:text-xl">
                         <FaXTwitter />
                     </Link>
                 </li>
-                <li>
+                <li className="self-center duration-300 transition-all hover:mb-3">
                     <Link href={'/'} className="bg-blue-500 text-azul-escuro xl:text-lg 2xl:text-xl">
                         <FaYoutube />
                     </Link>
                 </li>
-                <li>
+                <li className="self-center duration-300 transition-all hover:mb-3">
                     <Link href={'/'} className="bg-blue-500 text-azul-escuro xl:text-lg 2xl:text-xl">
                         <FaTiktok />
                     </Link>
                 </li>
-                <li>
+                <li className="self-center duration-300 transition-all hover:mb-3">
                     <Link href={'/'} className="bg-blue-500 text-azul-escuro xl:text-lg 2xl:text-xl">
                         <FaThreads />
                     </Link>

@@ -16,14 +16,14 @@ export default function Elenco({ elenco }: ElencoProps) {
         <div className="flex w-full p-2">
             <div className="flex flex-col gap-2 w-full max-w-[1120px] mx-auto">
                 <h2 className="uppercase font-bold text-2xl md:text-3xl">Elenco Atual:</h2>
-                <ul className="flex overflow-auto whitespace-nowrap gap-2">
+                <ul className="flex overflow-auto whitespace-nowrap gap-2 xl:overflow-visible xl:gap-4">
                     {/* Implementar em cada li um dialog para cada jogador */}
                     {
                         elenco && elenco.map((jogador, i) => {
                             return (
                                 <li
                                     key={i}
-                                    className="bg-zinc-700 w-[180px] h-[240px] grid grid-rows-[1fr_40px] shrink-0 cursor-pointer"
+                                    className="bg-zinc-700 w-[180px] h-[240px] grid grid-rows-[1fr_40px] shrink-0 cursor-pointer hover:scale-110 transition-all duration-300"
                                     onClick={() => {
                                         setJogadorSelecionado(jogador)
                                         setVisible(true)

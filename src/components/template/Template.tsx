@@ -7,12 +7,11 @@ interface TemplateProps {
     logo?: boolean
     textoLogo?: boolean
     clube?: Clube | null
-    menuSuperior?: boolean
-}
+    menuSuperior?: boolean}
 export default function Template({ children, logo, textoLogo, clube, menuSuperior }: TemplateProps) {
     return (
         <>
-            <Header logo={logo} textoLogo={textoLogo} textoClube={clube?.nome} logoClube={clube?.enderecoImagem} menuSuperior={menuSuperior}/>
+            <Header logo={logo} textoLogo={textoLogo} menuSuperior={menuSuperior} clube={clube}/>
             <main className="bg-zinc-200 text-black">
                 {
                     children

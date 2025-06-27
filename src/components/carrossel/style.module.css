@@ -40,11 +40,6 @@
 
 @media screen and (min-width: 1280px) {
     .containerSlider {
-        gap: 1em;
-    }
-
-    .containerSlider>div:nth-child(2) h2,
-    .containerSlider>div:nth-child(3) h2 {
-        display: block;
+        gap: 1.3em;
     }
 }

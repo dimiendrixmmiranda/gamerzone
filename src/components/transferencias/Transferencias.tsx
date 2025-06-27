@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
-import useTransferencias from "@/hooks/useTransferencias";
+import useTransferencias from "@/data/hooks/useTransferencias";
 import Image from "next/image";
 
 export default function Transferencias() {
@@ -34,7 +34,7 @@ export default function Transferencias() {
     }
 
     return (
-        <div className="w-full mx-auto p-2 mb-6 xl:col-start-5 xl:col-end-7">
+        <div className="w-full mx-auto p-2 mb-6 h-fit lg:row-start-2 lg:row-end-3 xl:col-start-5 xl:col-end-7">
             <h2 className="font-bold uppercase text-2xl text-center mb-2 leading-6 xl:text-3xl">Vai e vem da bala!</h2>
             <Swiper
                 modules={[Navigation, Pagination]}
@@ -60,7 +60,7 @@ export default function Transferencias() {
                                 <div className="bg-preto p-4 h-full w-full max-w-[280px] mx-auto flex flex-col gap-3 text-white pb-6">
                                     {/* Imagem do jogador */}
                                     <div className="w-32 h-40 self-center relative">
-                                        <Image alt="imagem do jogador" src={transferencia.fotoDoJogador} fill className="object-cover" />
+                                        <Image alt={transferencia.nome} src={transferencia.fotoDoJogador} fill className="object-cover" unoptimized/>
                                     </div>
                                     <div className="flex flex-col items-center">
                                         <h2 className="text-xl leading-5 text-center">{transferencia.nome}</h2>
@@ -70,7 +70,7 @@ export default function Transferencias() {
                                         <div className="flex items-center gap-2">
                                             <div className="flex flex-col justify-center items-center">
                                                 <div className="w-8 h-8 relative lg:w-6 lg:h-6 xl:w-8 xl:h-8">
-                                                    <Image alt="imagem do jogador" src={transferencia.timeAtual.escudo} fill className="object-cover" />
+                                                    <Image alt="imagem do jogador" src={transferencia.timeAtual.escudo} fill className="object-cover" unoptimized/>
                                                 </div>
                                                 <p className="uppercase font-bold text-sm">{pegarTresLetras(transferencia.timeAtual.nome)}</p>
                                             </div>
@@ -79,7 +79,7 @@ export default function Transferencias() {
                                             </div>
                                             <div className="flex flex-col justify-center items-center">
                                                 <div className="w-8 h-8 relative lg:w-6 lg:h-6 xl:w-8 xl:h-8">
-                                                    <Image alt="imagem do jogador" src={transferencia.novoTime.escudo} fill className="object-cover" />
+                                                    <Image alt="imagem do jogador" src={transferencia.novoTime.escudo} fill className="object-cover" unoptimized/>
                                                 </div>
                                                 <p className="uppercase font-bold text-sm">{pegarTresLetras(transferencia.novoTime.nome)}</p>
                                             </div>

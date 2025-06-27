@@ -1,6 +1,6 @@
 'use client'
 import clubesDoCoracao from "@/constants/clubesDoCoracao";
-import useNoticias from "@/hooks/useNoticias";
+import useNoticias from "@/data/hooks/useNoticias";
 import Clube from "@/interfaces/Clube";
 import Noticia from "@/interfaces/Noticia";
 import { createSlug } from "@/utils/createSlug";

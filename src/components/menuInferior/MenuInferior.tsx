@@ -6,7 +6,7 @@ import { GiTrophy } from "react-icons/gi";
 import Image from "next/image";
 import Clube from "@/interfaces/Clube";
 import { useEffect, useState } from "react";
-import useNoticias from "@/hooks/useNoticias";
+import useNoticias from "@/data/hooks/useNoticias";
 import Noticia from "@/interfaces/Noticia";
 import clubesDoCoracao from "@/constants/clubesDoCoracao";
 
@@ -35,7 +35,7 @@ export default function MenuInferior() {
             const filtradas = noticias.filter(noticia =>
                 noticia.tags?.includes(clubeSelecionado.id)
             )
-            setNoticiasClubeSelecionado(filtradas.slice(0, 3))
+            setNoticiasClubeSelecionado(filtradas.slice(0, 4))
         }
     }, [clubeSelecionado, noticias])
 
@@ -67,6 +67,29 @@ export default function MenuInferior() {
                 </Link>
                 <button className="flex flex-col justify-center items-center">
                     <SidebarComponent
+                        header={
+                            <div className="flex items-center gap-2">
+                                {
+                                    clubeSelecionado == null ? (
+                                        <>
+                                            <MdOutlineShield className="text-3xl" />
+                                            <span className="font-bold uppercase text-3xl text-black">Organização</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Image
+                                                alt="Time Selecionado"
+                                                src={clubeSelecionado.enderecoImagem}
+                                                width={30}
+                                                height={30}
+                                                className="rounded-full"
+                                            />
+                                            <span className="font-bold uppercase text-3xl text-black">{clubeSelecionado.nome}</span>
+                                        </>
+                                    )
+                                }
+                            </div>
+                        }
                         titulo={
                             <div className="justify-self-center flex flex-col justify-center items-center gap-1">
                                 {
@@ -92,13 +115,13 @@ export default function MenuInferior() {
                                         <h2 className="text-xl font-secundaria uppercase font-bold leading-5">Selecione seu clube do coração:</h2>
                                         <ul className="flex flex-col gap-4">
                                             <li className="flex flex-col gap-1">
-                                                <h3 className="font-semibold text-lg leading-4 ml-2">Orgs Brasileiras</h3>
+                                                <h3 className="font-semibold text-lg leading-4">Orgs Brasileiras</h3>
                                                 <ul className="grid grid-cols-4">
                                                     {orgsBr.map(renderItem)}
                                                 </ul>
                                             </li>
                                             <li className="flex flex-col gap-1">
-                                                <h3 className="font-semibold text-lg leading-4 ml-2">Orgs Europeias</h3>
+                                                <h3 className="font-semibold text-lg leading-4">Orgs Europeias</h3>
                                                 <ul className="grid grid-cols-4">
                                                     {orgsEu.map(renderItem)}
                                                 </ul>
@@ -109,14 +132,6 @@ export default function MenuInferior() {
                                     <div className={`w-full h-fit text-black p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "naoSelecionado" ? 'hidden' : 'flex'}`}>
                                         {clubeSelecionado ? (
                                             <div className="flex flex-col items-center relative">
-                                                <div>
-                                                    <div className="absolute top-0 right-0">
-                                                        <div className="relative w-8 h-8 mb-2">
-                                                            <Image alt="logo-time" src={clubeSelecionado.enderecoImagem} fill className="object-contain" />
-                                                        </div>
-                                                    </div>
-                                                    <h2 className="text-2xl uppercase font-black">{clubeSelecionado.nome}</h2>
-                                                </div>
                                                 {
                                                     noticiasClubeSelecionado.length > 0 ? (
                                                         noticiasClubeSelecionado.map((noticia, i) => {
@@ -139,7 +154,7 @@ export default function MenuInferior() {
                                                         </div>
                                                     )
                                                 }
-                                                <div className="flex flex-col gap-1 w-full mt-4 md:grid md:grid-cols-2 md:gap-3 lg:flex lg:gap-1 2xl:grid">
+                                                <div className="flex flex-col gap-1 w-full mt-4">
                                                     <button
                                                         className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition"
                                                     >

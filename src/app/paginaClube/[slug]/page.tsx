@@ -7,7 +7,7 @@ import MenuInferior from "@/components/menuInferior/MenuInferior";
 import Noticias from "@/components/noticias/Noticias";
 import Template from "@/components/template/Template";
 import clubesDoCoracao from "@/constants/clubesDoCoracao";
-import useNoticias from "@/hooks/useNoticias";
+import useNoticias from "@/data/hooks/useNoticias";
 import Clube from "@/interfaces/Clube";
 import Noticia from "@/interfaces/Noticia";
 import { useParams } from "next/navigation";

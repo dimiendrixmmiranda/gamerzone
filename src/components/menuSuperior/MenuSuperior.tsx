@@ -30,7 +30,7 @@ export default function MenuSuperior({ menuSuperior }: MenuSuperiorProps) {
                         <h2>CFG dos PRO</h2>
                     </Link>
                 </li>
-                <li className="grid bg-preto max-w-[200px] w-full overflow-hidden rounded-md xl:ml-[20px]" style={{ gridTemplateColumns: '1fr 30px' }}>
+                <li className="grid bg-preto max-w-[160px] w-full overflow-hidden rounded-md xl:ml-[10px] xl:max-w-[200px]" style={{ gridTemplateColumns: '1fr 30px' }}>
                     <input type="text" name="buscar" id="buscar" placeholder="Faça uma busca..." className="px-2 py-1 bg-preto w-full outline-none" />
                     <button className="text-2xl flex justify-center items-center">
                         <HiMagnifyingGlassCircle />

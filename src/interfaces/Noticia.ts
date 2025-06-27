@@ -1,4 +1,5 @@
 import { Timestamp } from "firebase/firestore";
+import Comentario from "./Comentario";
 
 export default interface Noticia {
     id: string
@@ -10,4 +11,5 @@ export default interface Noticia {
     subtitulo: string;
     titulo: string;
     tags: string[]
+    comentarios: Comentario[]
 }

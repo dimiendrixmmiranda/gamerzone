@@ -7,14 +7,19 @@ interface SidebarComponentProps {
     titulo: React.ReactElement
     styleTitulo?: string
     children?: React.ReactNode
+    header?: React.ReactNode
 }
 
-export default function SidebarComponent({ titulo, styleTitulo, children }: SidebarComponentProps) {
+export default function SidebarComponent({ titulo, styleTitulo, children, header }: SidebarComponentProps) {
     const [visibleRight, setVisibleRight] = useState(false);
 
     return (
         <div className="card flex justify-content-center">
-            <Sidebar visible={visibleRight} position="right" onHide={() => setVisibleRight(false)}>
+            <Sidebar
+                visible={visibleRight}
+                position="right" onHide={() => setVisibleRight(false)}
+                header={header}
+            >
                 {
                     children
                 }

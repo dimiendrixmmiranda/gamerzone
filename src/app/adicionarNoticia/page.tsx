@@ -34,7 +34,7 @@ export default function Page() {
                 esporte: esporte,
                 tags: tags,
                 imagem: imagemBase64,
-                data: Timestamp.now()
+                data: Timestamp.now(),
             }
             const docRef = await addDoc(collection(db, "noticias"), noticia)
             console.log("Pedido salvo com ID:", docRef.id)
