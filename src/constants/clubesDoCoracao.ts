@@ -94,7 +94,7 @@ const clubesDoCoracao = [
         id: 'mibr',
         regiao: 'br',
         abreviacao: 'mibr',
-        enderecoImagem: 'https://img-cdn.hltv.org/teamlogo/m_JQ624LNFHWiUY-25uuaE.png?ixlib=java-2.1.0&w=50&s=80a1e479dd1b15b974d3e2d5588763af',
+        enderecoImagem: 'https://img-cdn.hltv.org/teamlogo/m_JQ624LNFHWiUY-25uuaE.png?ixlib=java-2.1.0&w=100&s=bbcc329085294daa8e8a7111850b331b',
         elenco: [
             {
                 nome: 'Yuri Santos',

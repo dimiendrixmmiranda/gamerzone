@@ -50,7 +50,7 @@ export default function MenuInferior() {
             <li key={i} className="w-fit flex justify-center items-center justify-self-center hover:scale-110 transition-all duration-300">
                 <button onClick={() => selecionarClube(clube)} className="flex flex-col items-center justify-center w-fit p-2">
                     <div className="relative w-8 h-8">
-                        <Image alt="logo-time" src={`${clube.enderecoImagem}`} fill className="object-contain" unoptimized/>
+                        <Image alt="logo-time" src={`${clube.enderecoImagem}`} fill className="object-contain" unoptimized />
                     </div>
                     <p className="uppercase font-bold text-sm leading-4">{clube.abreviacao}</p>
                 </button>
@@ -73,7 +73,7 @@ export default function MenuInferior() {
                                     clubeSelecionado == null ? (
                                         <>
                                             <MdOutlineShield className="text-3xl" />
-                                            <span className="font-bold uppercase text-3xl text-black">Organização</span>
+                                            <span className="font-bold uppercase text-3xl text-white">Organização</span>
                                         </>
                                     ) : (
                                         <>
@@ -83,8 +83,9 @@ export default function MenuInferior() {
                                                 width={30}
                                                 height={30}
                                                 className="rounded-full"
+                                                unoptimized
                                             />
-                                            <span className="font-bold uppercase text-3xl text-black">{clubeSelecionado.nome}</span>
+                                            <span className="font-bold uppercase text-3xl text-white">{clubeSelecionado.nome}</span>
                                         </>
                                     )
                                 }
@@ -100,7 +101,7 @@ export default function MenuInferior() {
                                         </>
                                     ) : (
                                         <>
-                                            <Image alt="time Selecionado" src={clubeSelecionado.enderecoImagem} width={18} height={18} />
+                                            <Image alt="time Selecionado" src={clubeSelecionado.enderecoImagem} width={18} height={18} unoptimized/>
                                             <p className="text-center font-semibold leading-4 uppercase">{clubeSelecionado.abreviacao}</p>
                                         </>
                                     )
@@ -111,7 +112,7 @@ export default function MenuInferior() {
                         {
                             <div>
                                 <div className="flex flex-col p-2">
-                                    <div className={`w-full h-fit text-black p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "selecionado" ? 'hidden' : 'flex'}`}>
+                                    <div className={`w-full h-fit text-white p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "selecionado" ? 'hidden' : 'flex'}`}>
                                         <h2 className="text-xl font-secundaria uppercase font-bold leading-5">Selecione seu clube do coração:</h2>
                                         <ul className="flex flex-col gap-4">
                                             <li className="flex flex-col gap-1">
@@ -129,7 +130,7 @@ export default function MenuInferior() {
                                         </ul>
                                     </div>
 
-                                    <div className={`w-full h-fit text-black p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "naoSelecionado" ? 'hidden' : 'flex'}`}>
+                                    <div className={`w-full h-fit text-white p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "naoSelecionado" ? 'hidden' : 'flex'}`}>
                                         {clubeSelecionado ? (
                                             <div className="flex flex-col items-center relative">
                                                 {

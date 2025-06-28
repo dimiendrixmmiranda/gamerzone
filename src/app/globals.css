@@ -33,3 +33,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
+
+.p-sidebar{
+  background-color: rgb(137, 137, 141)!important;
+}
