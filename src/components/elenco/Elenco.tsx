@@ -29,7 +29,7 @@ export default function Elenco({ elenco }: ElencoProps) {
                                         setVisible(true)
                                     }}>
                                     <div className="relative w-full h-full flex">
-                                        <Image alt={jogador.nome} src={`${jogador.imagem}`} fill className="object-cover"></Image>
+                                        <Image alt={jogador.nome} src={`${jogador.imagem}`} fill className="object-cover" unoptimized></Image>
                                     </div>
                                     <h3 className="w-full h-full p-2 flex justify-center items-center uppercase font-bold bg-amarelo text-white" style={{ textShadow: '1px 1px 2px black' }}>{jogador.nick}</h3>
                                 </li>

@@ -59,6 +59,7 @@ export default function Page() {
             nome: usuarioIndentificado.nome,
             imagem: usuarioIndentificado.imagem,
             nick: usuarioIndentificado.nick,
+            nomeFormatado: `${usuarioIndentificado.nome.split(' ')[0]} "${usuarioIndentificado.nick}" ${usuarioIndentificado.nome.split(' ').at(-1)}` ,
             mensagem: comentario.trim(),
             data: Timestamp.fromDate(new Date())
         }
@@ -78,7 +79,7 @@ export default function Page() {
         }
     }
 
-
+    console.log(noticiaAtual)
 
     return (
         <Template logo={true} clube={clubeSelecionado} menuSuperior={false}>
@@ -121,7 +122,7 @@ export default function Page() {
                                 ) : (
                                     <div className="border-2 border-black p-4 flex flex-col gap-2 md:items-center">
                                         <span className="text-lg leading-5">Crie ou acesse sua conta para participar da conversa</span>
-                                        <Link href={'/cadastro'} className="text-2xl uppercase font-bold bg-azul-escuro text-white py-1 w-full max-w-[300px] mx-auto">
+                                        <Link href={'/cadastro'} className="text-2xl uppercase font-bold bg-azul-escuro text-white py-1 w-full max-w-[300px] mx-auto text-center">
                                             Participe!
                                         </Link>
                                     </div>
@@ -135,7 +136,7 @@ export default function Page() {
                                                 <Image alt="aqui" src={com.imagem} fill className="object-cover"></Image>
                                             </div>
                                             <div>
-                                                <h3 className="text-xl font-bold leading-5">{com.nome}</h3>
+                                                <h3 className="text-xl font-bold leading-5">{com.nomeFormatado}</h3>
                                                 <p className="text-xs leading-5">{com.data.toDate().toLocaleString('pt-BR')}</p>
                                             </div>
                                         </div>

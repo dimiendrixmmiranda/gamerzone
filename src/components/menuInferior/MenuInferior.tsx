@@ -50,7 +50,7 @@ export default function MenuInferior() {
             <li key={i} className="w-fit flex justify-center items-center justify-self-center hover:scale-110 transition-all duration-300">
                 <button onClick={() => selecionarClube(clube)} className="flex flex-col items-center justify-center w-fit p-2">
                     <div className="relative w-8 h-8">
-                        <Image alt="logo-time" src={`${clube.enderecoImagem}`} fill className="object-contain" />
+                        <Image alt="logo-time" src={`${clube.enderecoImagem}`} fill className="object-contain" unoptimized/>
                     </div>
                     <p className="uppercase font-bold text-sm leading-4">{clube.abreviacao}</p>
                 </button>
@@ -139,7 +139,7 @@ export default function MenuInferior() {
                                                                 <div key={i} className="w-full grid grid-cols-3 gap-1 mt-2 bg-azul-escuro text-white rounded-md overflow-hidden">
                                                                     {/* Imagem */}
                                                                     <div className="relative w-full h-[110px] bg-red-400 sm:h-[130px] lg:h-[110px] xl:h-[130px]">
-                                                                        <Image alt="imagem" src={noticia.imagem} fill className="object-cover"></Image>
+                                                                        <Image alt="imagem" src={noticia.imagem} fill className="object-cover" ></Image>
                                                                     </div>
                                                                     <div className="col-start-2 col-end-4 w-full p-2 flex flex-col gap-1">
                                                                         <h2 className="line-clamp-3 font-bold leading-5">{noticia.titulo}</h2>

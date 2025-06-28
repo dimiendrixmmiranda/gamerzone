@@ -13,7 +13,7 @@ interface AuthContextProps {
     children?: React.ReactNode;
     carregando?: boolean
     login?: (email: string, senha: string) => Promise<void>;
-    logout?: () => Promise<void>;
+    logout?: (encaminhamento: string) => Promise<void>;
     cadastrar?: (email: string, senha: string, nome: string, nick: string) => Promise<void>;
 }
 
@@ -59,13 +59,13 @@ export function AuthProvider({ children }: AuthContextProps) {
         }
     }
 
-    async function logout() {
+    async function logout(encaminhamento: string) {
         console.log('aq')
         try {
             setCarregando(true)
             await auth.signOut()
             await configurarSessao(null)
-            router.push('/cadastro')
+            router.push(`${encaminhamento}`)
         } finally {
             setCarregando(false)
         }
@@ -87,7 +87,7 @@ export function AuthProvider({ children }: AuthContextProps) {
                 if (tipo === "adm") {
                     router.push('/adm');
                 } else if (tipo === "usuario") {
-                    router.push('/usuario');
+                    router.push('/perfil');
                 } else {
                     console.error("Tipo de usuário desconhecido:", tipo);
                     // Redirecionar para uma página de erro ou página inicial padrão
@@ -139,7 +139,7 @@ export function AuthProvider({ children }: AuthContextProps) {
             });
 
             await configurarSessao(user);
-            router.push('/usuario'); // ou /adm dependendo do tipo
+            router.push('/perfil'); // ou /adm dependendo do tipo
         } catch (error) {
             console.error("Erro ao cadastrar:", error);
             throw error;
