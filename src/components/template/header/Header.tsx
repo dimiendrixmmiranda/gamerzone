@@ -1,3 +1,4 @@
+'use client'
 import MenuSuperior from "@/components/menuSuperior/MenuSuperior";
 import RedesSociais from "@/components/redesSociais/RedesSociais";
 import SidebarComponent from "@/components/sidebarComponent/SidebarComponente";
@@ -53,20 +54,20 @@ export default function Header({ logo, textoLogo, menuSuperior, clube }: HeaderP
                 titulo={<GiHamburgerMenu className='text-4xl' />}
                 styleTitulo="lg:hidden"
                 header={
-                    <h2 className="text-black uppercase font-bold text-3xl">Menu</h2>
+                    <h2 className="text-white uppercase font-bold text-3xl" style={{ textShadow: '1px 1px 2px black' }}>Menu</h2>
                 }
             >
                 <div className="flex flex-col gap-4 w-full h-full">
                     {
                         usuarioIdentificado ? (
                             <div className="flex items-center gap-2">
-                                <div className="relative w-8 h-8 rounded-full">
+                                <div className="relative w-8 h-8 rounded-full overflow-hidden">
                                     <Image alt={usuarioIdentificado.nome} src={usuarioIdentificado.imagem} fill className="object-cover" />
                                 </div>
-                                <p className="text-xl font-bold leading-4 text-black">Bem Vindo {usuarioIdentificado.nick}</p>
+                                <p className="text-xl font-bold leading-4 text-white" style={{ textShadow: '1px 1px 2px black' }}>Bem Vindo {usuarioIdentificado.nick}</p>
                                 <button
                                     className="text-2xl ml-auto"
-                                    onClick={(e) =>op.current?.toggle(e)}
+                                    onClick={(e) => op.current?.toggle(e)}
                                 >
                                     <CgMenuGridO />
                                 </button>
@@ -76,7 +77,7 @@ export default function Header({ logo, textoLogo, menuSuperior, clube }: HeaderP
                                 <div className="bg-zinc-600 text-white p-2 rounded-full">
                                     <FaUser />
                                 </div>
-                                <p className="text-xl font-bold leading-4 text-black">Entrar/Criar Conta</p>
+                                <p className="text-xl font-bold leading-4 text-white" style={{ textShadow: '1px 1px 2px black' }}>Entrar/Criar Conta</p>
                             </Link>
                         )
                     }
@@ -89,20 +90,20 @@ export default function Header({ logo, textoLogo, menuSuperior, clube }: HeaderP
                                 </button>
                             </li>
                             <li>
-                                <Link href={'/'} className="font-bold text-black flex items-center gap-1 text-lg p-2 rounded-md transition-all duration-300 hover:bg-azul-escuro hover:text-white">
-                                    <MdScoreboard className="text-2xl" />
+                                <Link href={'/'} className="font-bold text-white flex items-center gap-1 text-lg p-2 rounded-md transition-all duration-300 hover:bg-azul-escuro hover:text-white" style={{ textShadow: '1px 1px 2px black' }}>
+                                    <MdScoreboard className="text-2xl text-azul-escuro" />
                                     <h2>Jogos</h2>
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/'} className="font-bold text-black flex items-center gap-1 text-lg p-2 rounded-md transition-all duration-300 hover:bg-azul-escuro hover:text-white">
-                                    <GiTrophy className="text-2xl" />
+                                <Link href={'/'} className="font-bold text-white flex items-center gap-1 text-lg p-2 rounded-md transition-all duration-300 hover:bg-azul-escuro hover:text-white" style={{ textShadow: '1px 1px 2px black' }}>
+                                    <GiTrophy className="text-2xl text-azul-escuro" />
                                     <h2>Campeonatos</h2>
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/'} className="font-bold text-black flex items-center gap-1 text-lg p-2 rounded-md transition-all duration-300 hover:bg-azul-escuro hover:text-white">
-                                    <FaGears className="text-2xl" />
+                                <Link href={'/'} className="font-bold text-white flex items-center gap-1 text-lg p-2 rounded-md transition-all duration-300 hover:bg-azul-escuro hover:text-white" style={{ textShadow: '1px 1px 2px black' }}>
+                                    <FaGears className="text-2xl text-azul-escuro" />
                                     <h2>CFG dos PRO</h2>
                                 </Link>
                             </li>

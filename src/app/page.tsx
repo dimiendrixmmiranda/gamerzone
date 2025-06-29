@@ -17,10 +17,10 @@ export default function Home() {
 				<CarrosselMobile noticias={noticias} />
 				<CarrosselWeb noticias={noticias} />
 				<div className="lg:grid lg:grid-cols-4 lg:grid-rows-[640px_410px_1fr] xl:grid-cols-6 xl:grid-rows-[650px_420px_1fr] 2xl:grid-rows-[620px_420px_1fr]">
-					<Noticias noticias={noticias} filtroPorJogo={true} noticiasPorPagina={6}/>
+					<Noticias noticias={noticias} filtroPorJogo={true} noticiasPorPagina={6} />
 					<ClubeDoCoracao />
 					<Transferencias />
-					<Jogos/>
+					<Jogos />
 				</div>
 				<MenuInferior />
 			</Template>

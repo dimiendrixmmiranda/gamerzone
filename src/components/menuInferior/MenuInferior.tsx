@@ -52,7 +52,7 @@ export default function MenuInferior() {
                     <div className="relative w-8 h-8">
                         <Image alt="logo-time" src={`${clube.enderecoImagem}`} fill className="object-contain" unoptimized />
                     </div>
-                    <p className="uppercase font-bold text-sm leading-4">{clube.abreviacao}</p>
+                    <p className="uppercase font-bold text-sm leading-4" style={{ textShadow: '1px 1px 2px black' }}>{clube.abreviacao}</p>
                 </button>
             </li>
         );
@@ -73,7 +73,7 @@ export default function MenuInferior() {
                                     clubeSelecionado == null ? (
                                         <>
                                             <MdOutlineShield className="text-3xl" />
-                                            <span className="font-bold uppercase text-3xl text-white">Organização</span>
+                                            <span className="font-bold uppercase text-3xl text-white" style={{ textShadow: '1px 1px 2px black' }}>Organização</span>
                                         </>
                                     ) : (
                                         <>
@@ -85,7 +85,7 @@ export default function MenuInferior() {
                                                 className="rounded-full"
                                                 unoptimized
                                             />
-                                            <span className="font-bold uppercase text-3xl text-white">{clubeSelecionado.nome}</span>
+                                            <span className="font-bold uppercase text-3xl text-white" style={{ textShadow: '1px 1px 2px black' }}>{clubeSelecionado.nome}</span>
                                         </>
                                     )
                                 }
@@ -101,7 +101,7 @@ export default function MenuInferior() {
                                         </>
                                     ) : (
                                         <>
-                                            <Image alt="time Selecionado" src={clubeSelecionado.enderecoImagem} width={18} height={18} unoptimized/>
+                                            <Image alt="time Selecionado" src={clubeSelecionado.enderecoImagem} width={18} height={18} unoptimized />
                                             <p className="text-center font-semibold leading-4 uppercase">{clubeSelecionado.abreviacao}</p>
                                         </>
                                     )
@@ -110,73 +110,71 @@ export default function MenuInferior() {
                         }
                     >
                         {
-                            <div>
-                                <div className="flex flex-col p-2">
-                                    <div className={`w-full h-fit text-white p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "selecionado" ? 'hidden' : 'flex'}`}>
-                                        <h2 className="text-xl font-secundaria uppercase font-bold leading-5">Selecione seu clube do coração:</h2>
-                                        <ul className="flex flex-col gap-4">
-                                            <li className="flex flex-col gap-1">
-                                                <h3 className="font-semibold text-lg leading-4">Orgs Brasileiras</h3>
-                                                <ul className="grid grid-cols-4">
-                                                    {orgsBr.map(renderItem)}
-                                                </ul>
-                                            </li>
-                                            <li className="flex flex-col gap-1">
-                                                <h3 className="font-semibold text-lg leading-4">Orgs Europeias</h3>
-                                                <ul className="grid grid-cols-4">
-                                                    {orgsEu.map(renderItem)}
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div className="flex flex-col">
+                                <div className={`w-full h-fit text-white p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "selecionado" ? 'hidden' : 'flex'}`}>
+                                    <h2 className="text-xl font-secundaria uppercase font-bold leading-5" style={{ textShadow: '1px 1px 2px black' }}>Selecione seu clube do coração:</h2>
+                                    <ul className="flex flex-col gap-4">
+                                        <li className="flex flex-col gap-1">
+                                            <h3 className="font-semibold text-lg leading-4" style={{ textShadow: '1px 1px 2px black' }}>Orgs Brasileiras</h3>
+                                            <ul className="grid grid-cols-4">
+                                                {orgsBr.map(renderItem)}
+                                            </ul>
+                                        </li>
+                                        <li className="flex flex-col gap-1">
+                                            <h3 className="font-semibold text-lg leading-4" style={{ textShadow: '1px 1px 2px black' }}>Orgs Europeias</h3>
+                                            <ul className="grid grid-cols-4">
+                                                {orgsEu.map(renderItem)}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                    <div className={`w-full h-fit text-white p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "naoSelecionado" ? 'hidden' : 'flex'}`}>
-                                        {clubeSelecionado ? (
-                                            <div className="flex flex-col items-center relative">
-                                                {
-                                                    noticiasClubeSelecionado.length > 0 ? (
-                                                        noticiasClubeSelecionado.map((noticia, i) => {
-                                                            return (
-                                                                <div key={i} className="w-full grid grid-cols-3 gap-1 mt-2 bg-azul-escuro text-white rounded-md overflow-hidden">
-                                                                    {/* Imagem */}
-                                                                    <div className="relative w-full h-[110px] bg-red-400 sm:h-[130px] lg:h-[110px] xl:h-[130px]">
-                                                                        <Image alt="imagem" src={noticia.imagem} fill className="object-cover" ></Image>
-                                                                    </div>
-                                                                    <div className="col-start-2 col-end-4 w-full p-2 flex flex-col gap-1">
-                                                                        <h2 className="line-clamp-3 font-bold leading-5">{noticia.titulo}</h2>
-                                                                        <p className="line-clamp-2 leading-4 text-sm">{noticia.subtitulo}</p>
-                                                                    </div>
+                                <div className={`w-full h-fit text-white flex-col gap-5 ${visibleClubeSelecionado === "naoSelecionado" ? 'hidden' : 'flex'}`}>
+                                    {clubeSelecionado ? (
+                                        <div className="flex flex-col items-center relative">
+                                            {
+                                                noticiasClubeSelecionado.length > 0 ? (
+                                                    noticiasClubeSelecionado.map((noticia, i) => {
+                                                        return (
+                                                            <div key={i} className="w-full grid grid-cols-3 gap-1 mt-2 bg-azul-escuro text-white rounded-md overflow-hidden">
+                                                                {/* Imagem */}
+                                                                <div className="relative w-full h-[110px] bg-red-400 sm:h-[130px] lg:h-[110px] xl:h-[130px]">
+                                                                    <Image alt="imagem" src={noticia.imagem} fill className="object-cover" ></Image>
                                                                 </div>
-                                                            )
-                                                        })
-                                                    ) : (
-                                                        <div>
-                                                            Nenhuma noticia cadastrada!
-                                                        </div>
-                                                    )
-                                                }
-                                                <div className="flex flex-col gap-1 w-full mt-4">
-                                                    <button
-                                                        className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition"
-                                                    >
-                                                        Ir para página
-                                                    </button>
-                                                    <button
-                                                        onClick={() => {
-                                                            localStorage.removeItem("clubeDoCoracao");
-                                                            setClubeSelecionado(null);
-                                                            setVisibleClubeSelecionado("naoSelecionado");
-                                                        }}
-                                                        className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition"
-                                                    >
-                                                        Selecionar outra equipe
-                                                    </button>
-                                                </div>
+                                                                <div className="col-start-2 col-end-4 w-full p-2 flex flex-col gap-1">
+                                                                    <h2 className="line-clamp-3 font-bold leading-5">{noticia.titulo}</h2>
+                                                                    <p className="line-clamp-2 leading-4 text-sm">{noticia.subtitulo}</p>
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    })
+                                                ) : (
+                                                    <div>
+                                                        Nenhuma noticia cadastrada!
+                                                    </div>
+                                                )
+                                            }
+                                            <div className="flex flex-col gap-1 w-full mt-4">
+                                                <button
+                                                    className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition"
+                                                >
+                                                    Ir para página
+                                                </button>
+                                                <button
+                                                    onClick={() => {
+                                                        localStorage.removeItem("clubeDoCoracao");
+                                                        setClubeSelecionado(null);
+                                                        setVisibleClubeSelecionado("naoSelecionado");
+                                                    }}
+                                                    className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition"
+                                                >
+                                                    Selecionar outra equipe
+                                                </button>
                                             </div>
-                                        ) : (
-                                            <p>Carregando...</p>
-                                        )}
-                                    </div>
+                                        </div>
+                                    ) : (
+                                        <p>Carregando...</p>
+                                    )}
                                 </div>
                             </div>
                         }

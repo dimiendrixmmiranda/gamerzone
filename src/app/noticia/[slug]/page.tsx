@@ -13,6 +13,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { AiFillDislike, AiFillLike } from "react-icons/ai";
+import { FaExclamationCircle } from "react-icons/fa";
+import { RiQuestionAnswerFill } from "react-icons/ri";
 
 export default function Page() {
     const { usuario } = useAuth()
@@ -31,7 +34,8 @@ export default function Page() {
         const usuarioEncontrado = listaDeUsuarios.find(u => u.id === usuario.uid);
 
         if (usuarioEncontrado) {
-            setUsuarioIndentificado(usuarioEncontrado);        }
+            setUsuarioIndentificado(usuarioEncontrado);
+        }
     }, [usuario, listaDeUsuarios]);
 
     useEffect(() => {
@@ -59,7 +63,7 @@ export default function Page() {
             nome: usuarioIndentificado.nome,
             imagem: usuarioIndentificado.imagem,
             nick: usuarioIndentificado.nick,
-            nomeFormatado: `${usuarioIndentificado.nome.split(' ')[0]} "${usuarioIndentificado.nick}" ${usuarioIndentificado.nome.split(' ').at(-1)}` ,
+            nomeFormatado: `${usuarioIndentificado.nome.split(' ')[0]} "${usuarioIndentificado.nick}" ${usuarioIndentificado.nome.split(' ').at(-1)}`,
             mensagem: comentario.trim(),
             data: Timestamp.fromDate(new Date())
         }
@@ -140,8 +144,28 @@ export default function Page() {
                                                 <p className="text-xs leading-5">{com.data.toDate().toLocaleString('pt-BR')}</p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <p>{com.mensagem}</p>
+                                        <div className="p-2">
+                                            <p className="md:text-xl">{com.mensagem}</p>
+                                        </div>
+                                        <div className="w-full grid grid-cols-4">
+                                            <button className="relative flex items-center justify-self-center md:gap-1">
+                                                <AiFillLike className="text-2xl" />
+                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Like</p>
+                                                <p className="absolute -top-2 right-0 font-bold text-xs md:-left-7 md:-top-1">0</p>
+                                            </button>
+                                            <button className="relative flex items-center justify-self-center md:gap-1">
+                                                <AiFillDislike className="text-2xl" />
+                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Deslike</p>
+                                                <p className="absolute -top-2 -right-1 font-bold text-xs md:right-[78px] md:-top-1">0</p>
+                                            </button>
+                                            <button className="relative flex items-center justify-self-center md:gap-1">
+                                                <RiQuestionAnswerFill className="text-2xl" />
+                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Responder</p>
+                                            </button>
+                                            <button className="relative flex items-center justify-self-center md:gap-1">
+                                                <FaExclamationCircle className="text-2xl" />
+                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Denúnciar</p>
+                                            </button>
                                         </div>
                                     </li>
                                 ))}
