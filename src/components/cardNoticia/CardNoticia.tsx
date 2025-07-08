@@ -30,7 +30,7 @@ export default function CardNoticia({ noticia }: CardNoticiaProps) {
                         </div>
                     </div>
                     {/* IMG */}
-                    <div className="w-full h-full relative bg-orange-400 flex items-center justify-center">
+                    <div className="w-full h-full relative bg-zinc-500 flex items-center justify-center">
                         <Image src={noticia.imagem} alt="imagem da noticia" fill className="object-cover"></Image>
                     </div>
                 </div>

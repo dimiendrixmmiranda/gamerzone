@@ -26,7 +26,7 @@ export default function Noticias({ noticias, filtroPorJogo, noticiasPorPagina }:
     const noticiasPaginadas = noticiasFiltradas.slice(first, first + rows)
 
     return (
-        <div className="flex flex-col gap-2 p-2 sm:p-4 sm:gap-4 md:max-w-[800px] md:mx-auto lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-4 lg:max-w-[900px] xl:col-end-5">
+        <div className="flex flex-col gap-2 p-2 w-full sm:p-4 sm:gap-4 md:max-w-[800px] md:mx-auto lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-4 lg:max-w-[900px] xl:col-end-5">
             {/* Filtro de Notícias */}
             {
                 filtroPorJogo ? (
