@@ -3,4 +3,5 @@ export default interface Jogador{
     nick: string,
     nomeENick: string,
     imagem: string
+    posicoes?: string[]
 }

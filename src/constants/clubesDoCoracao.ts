@@ -11,6 +11,7 @@ const clubesDoCoracao = [
                 nick: 'yuurih',
                 imagem: 'https://img-cdn.hltv.org/playerbodyshot/tLPRhHe16F0Ujp5obg659F.png?ixlib=java-2.1.0&w=400&s=92ed522f480b8cba167e13025e6bb88b',
                 nomeENick: 'Yuri “yuurih” Santos',
+                posicoes: ['awp', 'rifler', 'ancora', 'igl'],
             },
             {
                 nome: 'Kaike Cerato',

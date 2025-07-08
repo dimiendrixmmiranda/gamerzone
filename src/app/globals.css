@@ -35,5 +35,5 @@ body {
 }
 
 .p-sidebar{
-  background-color: rgb(137, 137, 141)!important;
+  background-color: var(--amarelo)!important;
 }
