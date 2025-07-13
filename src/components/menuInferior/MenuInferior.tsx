@@ -65,7 +65,7 @@ export default function MenuInferior() {
                     <FaHome />
                     <p className="text-center font-semibold leading-4">Início</p>
                 </Link>
-                <button className="flex flex-col justify-center items-center">
+                <div className="flex flex-col justify-center items-center">
                     <SidebarComponent
                         header={
                             <div className="flex items-center gap-2">
@@ -155,18 +155,19 @@ export default function MenuInferior() {
                                                 )
                                             }
                                             <div className="flex flex-col gap-1 w-full mt-4">
-                                                <button
-                                                    className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition"
+                                                <Link
+                                                    href={`/paginaClube/${clubeSelecionado && clubeSelecionado.id}`}
+                                                    className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition text-center"
                                                 >
                                                     Ir para página
-                                                </button>
+                                                </Link>
                                                 <button
                                                     onClick={() => {
                                                         localStorage.removeItem("clubeDoCoracao");
                                                         setClubeSelecionado(null);
                                                         setVisibleClubeSelecionado("naoSelecionado");
                                                     }}
-                                                    className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition"
+                                                    className="w-full py-1 bg-azul-escuro text-white font-bold rounded hover:bg-azul-escuro transition text-center"
                                                 >
                                                     Selecionar outra equipe
                                                 </button>
@@ -179,20 +180,20 @@ export default function MenuInferior() {
                             </div>
                         }
                     </SidebarComponent>
-                </button>
-                <button className="flex flex-col justify-center items-center">
+                </div>
+                <div className="flex flex-col justify-center items-center">
                     <SidebarComponent titulo={<div className="justify-self-center flex flex-col justify-center items-center gap-1">
                         <MdScoreboard />
                         <p className="text-center font-semibold leading-4">Jogos</p>
                     </div>} />
-                </button>
-                <button className="flex flex-col justify-center items-center">
+                </div>
+                <div className="flex flex-col justify-center items-center">
                     <SidebarComponent titulo={<div className="justify-self-center flex flex-col justify-center items-center gap-1">
                         <GiTrophy />
                         <p className="text-center font-semibold leading-4 flex md:hidden">Camp</p>
                         <p className="text-center font-semibold leading-4 hidden md:flex">Camp</p>
                     </div>} />
-                </button>
+                </div>
             </nav>
         </div>
     )

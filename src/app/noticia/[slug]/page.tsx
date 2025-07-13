@@ -40,7 +40,10 @@ export default function Page() {
 
     useEffect(() => {
         const noticia = noticias.filter(not => not.id.toLowerCase() == id?.toLowerCase())[0]
-        if (noticia) setNoticiaAtual(noticia)
+        if (noticia) {
+            setNoticiaAtual(noticia)
+            console.log(noticiaAtual)
+        }
     }, [noticias])
 
     useEffect(() => {
@@ -65,7 +68,9 @@ export default function Page() {
             nick: usuarioIndentificado.nick,
             nomeFormatado: `${usuarioIndentificado.nome.split(' ')[0]} "${usuarioIndentificado.nick}" ${usuarioIndentificado.nome.split(' ').at(-1)}`,
             mensagem: comentario.trim(),
-            data: Timestamp.fromDate(new Date())
+            data: Timestamp.fromDate(new Date()),
+            likes: [],
+            deslikes: []
         }
 
         try {
@@ -83,7 +88,65 @@ export default function Page() {
         }
     }
 
-    console.log(noticiaAtual)
+    async function toggleLike(index: number) {
+        if (!usuario || !noticiaAtual) return;
+
+        const uid = usuario.uid;
+        const comentarios = [...noticiaAtual.comentarios];
+        const comentario = { ...comentarios[index] };
+
+        const curtiu = comentario.likes?.includes(uid) ?? false;
+        const descurtiu = comentario.deslikes?.includes(uid) ?? false;
+
+        comentario.likes = curtiu
+            ? comentario.likes.filter(id => id !== uid)
+            : [...(comentario.likes || []), uid];
+
+        if (descurtiu) {
+            comentario.deslikes = comentario.deslikes.filter(id => id !== uid);
+        }
+
+        comentarios[index] = comentario;
+
+        try {
+            const ref = doc(db, "noticias", noticiaAtual.id);
+            await updateDoc(ref, { comentarios });
+            setNoticiaAtual({ ...noticiaAtual, comentarios });
+        } catch (error) {
+            console.error("Erro ao curtir:", error);
+        }
+    }
+
+    async function toggleDeslike(index: number) {
+        if (!usuario || !noticiaAtual) return;
+
+        const uid = usuario.uid;
+        const comentarios = [...noticiaAtual.comentarios];
+        const comentario = { ...comentarios[index] };
+
+        const descurtiu = comentario.deslikes?.includes(uid) ?? false;
+        const curtiu = comentario.likes?.includes(uid) ?? false;
+
+        comentario.deslikes = descurtiu
+            ? comentario.deslikes.filter(id => id !== uid)
+            : [...(comentario.deslikes || []), uid];
+
+        if (curtiu) {
+            comentario.likes = comentario.likes.filter(id => id !== uid);
+        }
+
+        comentarios[index] = comentario;
+
+        try {
+            const ref = doc(db, "noticias", noticiaAtual.id);
+            await updateDoc(ref, { comentarios });
+            setNoticiaAtual({ ...noticiaAtual, comentarios });
+        } catch (error) {
+            console.error("Erro ao descurtir:", error);
+        }
+    }
+
+
 
     return (
         <Template logo={true} clube={clubeSelecionado} menuSuperior={false}>
@@ -133,42 +196,52 @@ export default function Page() {
                                 )
                             }
                             <ul className="flex flex-col gap-4 mt-4">
-                                {noticiaAtual.comentarios?.map((com, i) => (
-                                    <li key={i} className="flex flex-col gap-2 bg-zinc-100 p-2 rounded-md">
-                                        <div className="flex items-center gap-2">
-                                            <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                                                <Image alt="aqui" src={com.imagem} fill className="object-cover"></Image>
-                                            </div>
-                                            <div>
-                                                <h3 className="text-xl font-bold leading-5">{com.nomeFormatado}</h3>
-                                                <p className="text-xs leading-5">{com.data.toDate().toLocaleString('pt-BR')}</p>
-                                            </div>
-                                        </div>
-                                        <div className="p-2">
-                                            <p className="md:text-xl">{com.mensagem}</p>
-                                        </div>
-                                        <div className="w-full grid grid-cols-4">
-                                            <button className="relative flex items-center justify-self-center md:gap-1">
-                                                <AiFillLike className="text-2xl" />
-                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Like</p>
-                                                <p className="absolute -top-2 right-0 font-bold text-xs md:-left-7 md:-top-1">0</p>
-                                            </button>
-                                            <button className="relative flex items-center justify-self-center md:gap-1">
-                                                <AiFillDislike className="text-2xl" />
-                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Deslike</p>
-                                                <p className="absolute -top-2 -right-1 font-bold text-xs md:right-[78px] md:-top-1">0</p>
-                                            </button>
-                                            <button className="relative flex items-center justify-self-center md:gap-1">
-                                                <RiQuestionAnswerFill className="text-2xl" />
-                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Responder</p>
-                                            </button>
-                                            <button className="relative flex items-center justify-self-center md:gap-1">
-                                                <FaExclamationCircle className="text-2xl" />
-                                                <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Denúnciar</p>
-                                            </button>
-                                        </div>
-                                    </li>
-                                ))}
+                                {
+                                    noticiaAtual.comentarios.length > 0 ? noticiaAtual.comentarios
+                                        .sort((a, b) => b.data.toDate().getTime() - a.data.toDate().getTime())
+                                        .map((com, i) => (
+                                            <li key={i} className="flex flex-col gap-2 bg-zinc-100 p-2 rounded-md">
+                                                <div className="flex items-center gap-2">
+                                                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                                                        <Image alt="aqui" src={com.imagem} fill className="object-cover"></Image>
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-xl font-bold leading-5">{com.nomeFormatado}</h3>
+                                                        <p className="text-xs leading-5">{com.data.toDate().toLocaleString('pt-BR')}</p>
+                                                    </div>
+                                                </div>
+                                                <div className="p-2">
+                                                    <p className="md:text-xl">{com.mensagem}</p>
+                                                </div>
+                                                <div className="w-full grid grid-cols-4">
+                                                    <button onClick={() => toggleLike(i)} className="relative flex items-center justify-self-center md:gap-1">
+                                                        <AiFillLike className="text-2xl" />
+                                                        <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Like</p>
+                                                        <p className="absolute -top-2 right-0 font-bold text-xs md:-right-2">
+                                                            {com.likes?.length || 0}
+                                                        </p>
+                                                    </button>
+                                                    <button onClick={() => toggleDeslike(i)} className="relative flex items-center justify-self-center md:gap-1">
+                                                        <AiFillDislike className="text-2xl" />
+                                                        <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Deslike</p>
+                                                        <p className="absolute -top-2 -right-1 font-bold text-xs md:-right-2">
+                                                            {com.deslikes?.length || 0}
+                                                        </p>
+                                                    </button>
+
+                                                    <button className="relative flex items-center justify-self-center md:gap-1">
+                                                        <RiQuestionAnswerFill className="text-2xl" />
+                                                        <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Responder</p>
+                                                    </button>
+                                                    <button className="relative flex items-center justify-self-center md:gap-1">
+                                                        <FaExclamationCircle className="text-2xl" />
+                                                        <p className="hidden text-lg uppercase font-bold mt-[2px] md:block">Denúnciar</p>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        ))
+                                        :
+                                        ''}
                             </ul>
                         </div>
                     </div>

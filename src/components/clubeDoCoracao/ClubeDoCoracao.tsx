@@ -100,7 +100,7 @@ export default function ClubeDoCoracao() {
                                                     <div className="col-start-2 col-end-4 w-full p-2 flex flex-col gap-1">
                                                         <h2 className="line-clamp-3 font-bold leading-5">{noticia.titulo}</h2>
                                                         <p className="line-clamp-2 leading-4 text-sm">{noticia.subtitulo}</p>
-                                                        <span className="text-xs mt-auto">Por {noticia.autor}, {noticia.data.toDate().toLocaleString('pt-br')}</span>
+                                                        <span className="hidden text-xs mt-auto xl:flex">Por {noticia.autor}, {noticia.data.toDate().toLocaleString('pt-br')}</span>
                                                     </div>
                                                 </Link>
                                             </li>
@@ -116,7 +116,7 @@ export default function ClubeDoCoracao() {
                         <div className="flex flex-col gap-1 w-full mt-4 md:grid md:grid-cols-2 md:gap-3 lg:-mt-2 lg:flex lg:gap-1 2xl:grid">
                             {/* Tenho que mandar o objeto clube selecionado para a pagina paginaClube */}
                             <Link
-                                href={`/paginaClube/${createSlug(clubeSelecionado.id)}`}
+                                href={`/paginaClube/${clubeSelecionado && clubeSelecionado.id}`}
                                 className="w-full text-center py-1 bg-white text-orange-500 font-bold rounded transition duration-200 hover:bg-azul-escuro hover:text-white" style={{boxShadow: '0 0 2px 1px black', textShadow: '1px 1px 1px black'}}
                             >
                                 Ir para página

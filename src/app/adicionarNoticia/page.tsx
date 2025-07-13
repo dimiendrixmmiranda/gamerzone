@@ -20,6 +20,19 @@ export default function Page() {
     async function salvarNoticia(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
 
+        if (
+            !titulo.trim() ||
+            !subTitulo.trim() ||
+            !autor.trim() ||
+            !conteudoDaNoticia.trim() ||
+            !esporte ||
+            tags.length === 0 ||
+            !imagemBase64
+        ) {
+            alert("Preencha todos os campos obrigatórios antes de enviar a notícia.");
+            return;
+        }
+
         if (erroImagemTamanho) {
             alert(erroImagemTamanho)
             return
@@ -49,12 +62,24 @@ export default function Page() {
 
         if (!tag.trim()) return; // não adiciona se estiver vazio
 
-        if(tags != undefined){
+        if (tags != undefined) {
             // Evita tags duplicadas
             if (tags.includes(tag.trim())) return;
             setTags(prevTags => [...prevTags, tag.trim()]);
         }
         setTag('');
+    }
+
+    function limparCampos() {
+        setTitulo('')
+        setSubTitulo('')
+        setAutor('')
+        setConteudoDaNoticia('')
+        setEsporte('')
+        setTags([])
+        setImagemBase64('')
+        setImagemPreview('')
+        window.location.reload()
     }
     console.log(tags)
     return (
@@ -92,6 +117,15 @@ export default function Page() {
                         <input type="text" name="tags" id="tags" className="w-full h-[30px] text-black rounded-lg p-2 text-sm" value={tag} onChange={(e) => setTag(e.target.value)} />
                         <button onClick={(e) => adicionarTag(e)}>Adicionar</button>
                     </div>
+                    <div>
+                        {
+                            tags.map((tag, i) => {
+                                return (
+                                    <p key={i} className="text-sm">{tag}</p>
+                                )
+                            })
+                        }
+                    </div>
                 </fieldset>
                 <fieldset>
                     <label htmlFor="imagens">Imagem da Notícia</label>
@@ -103,7 +137,17 @@ export default function Page() {
                         </div>
                     )}
                 </fieldset>
-                <button className="bg-[--verde] py-1 text-2xl uppercase font-bold text-white" onClick={(e) => salvarNoticia(e)}>Enviar</button>
+                <button
+                    className="bg-[--verde] py-1 text-2xl uppercase font-bold text-white"
+                    onClick={(e) => {
+                        salvarNoticia(e)
+                        setTimeout(() => {
+                            limparCampos()
+                        }, 1000);
+                    }}
+                >
+                    Enviar
+                </button>
             </form>
         </div>
     )
