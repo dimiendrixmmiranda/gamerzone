@@ -13,6 +13,7 @@ interface MenuSuperiorProps {
 }
 
 export default function MenuSuperior({ menuSuperior }: MenuSuperiorProps) {
+    // busca pode virar função
     const [busca, setBusca] = useState('')
     const router = useRouter()
 

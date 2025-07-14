@@ -87,7 +87,7 @@ export function AuthProvider({ children }: AuthContextProps) {
                 if (tipo === "adm") {
                     router.push('/adm');
                 } else if (tipo === "usuario") {
-                    router.push('/perfil');
+                    router.push('/usuario/perfil');
                 } else {
                     console.error("Tipo de usuário desconhecido:", tipo);
                     // Redirecionar para uma página de erro ou página inicial padrão
@@ -139,7 +139,7 @@ export function AuthProvider({ children }: AuthContextProps) {
             });
 
             await configurarSessao(user);
-            router.push('/perfil'); // ou /adm dependendo do tipo
+            router.push('/usuario/perfil'); // ou /adm dependendo do tipo
         } catch (error) {
             console.error("Erro ao cadastrar:", error);
             throw error;

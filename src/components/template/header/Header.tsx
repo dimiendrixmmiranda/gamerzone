@@ -11,13 +11,14 @@ import { GiHamburgerMenu, GiTrophy } from "react-icons/gi";
 import { HiMagnifyingGlassCircle } from "react-icons/hi2";
 import { IoLogIn, IoLogOutSharp, IoSettings } from "react-icons/io5";
 import { MdScoreboard } from "react-icons/md";
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import type { OverlayPanel as OverlayPanelType } from 'primereact/overlaypanel';
 import { ImUser } from "react-icons/im";
 import useUsuarioIdentificado from "@/data/hooks/useUsuarioIndentificado";
 import { FaUser } from "react-icons/fa";
 import { CgMenuGridO } from "react-icons/cg";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
     logo?: boolean
@@ -30,6 +31,20 @@ export default function Header({ logo, textoLogo, menuSuperior, clube }: HeaderP
     const { usuario, logout } = useAuth()
     const op = useRef<OverlayPanelType>(null)
     const usuarioIdentificado = useUsuarioIdentificado()
+
+    // busca pode virar função
+    const [busca, setBusca] = useState('')
+    const router = useRouter()
+
+    const handleBuscar = () => {
+        if (busca.trim() !== '') {
+            router.push(`/buscar?query=${encodeURIComponent(busca)}`)
+        }
+    }
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') handleBuscar()
+    }
 
     return (
         <header className="bg-amarelo p-2 flex items-center lg:gap-3 xl:gap-5 2xl:gap-8">
@@ -84,8 +99,17 @@ export default function Header({ logo, textoLogo, menuSuperior, clube }: HeaderP
                     <nav>
                         <ul className="flex flex-col gap-2">
                             <li className="grid bg-preto w-full overflow-hidden rounded-md mb-4" style={{ gridTemplateColumns: '1fr 30px' }}>
-                                <input type="text" name="buscar" id="buscar" placeholder="Faça uma busca..." className="p-2 bg-preto w-full outline-none h-[40px] text-white" />
-                                <button className="text-4xl flex justify-center items-center">
+                                <input
+                                    type="text"
+                                    name="buscar"
+                                    id="buscar"
+                                    placeholder="Faça uma busca..."
+                                    className="px-2 py-1 bg-preto w-full outline-none text-white"
+                                    value={busca}
+                                    onChange={(e) => setBusca(e.target.value)}
+                                    onKeyDown={handleKeyDown}
+                                />
+                                <button className="text-4xl flex justify-center items-center text-white" onClick={() => handleBuscar()}>
                                     <HiMagnifyingGlassCircle />
                                 </button>
                             </li>
@@ -117,27 +141,28 @@ export default function Header({ logo, textoLogo, menuSuperior, clube }: HeaderP
 
             {/* Área de login, validação, se tiver logado quero que apareça algo, caso contrario apareça o trecho abaixo*/}
             {
-                usuario ? (
+                usuario && usuarioIdentificado ? (
                     <div className="text-black font-bold hidden lg:flex items-center gap-2 xl:mr-2 2xl:mr-6 relative">
-                        <Image
-                            src={'/default/user-default-men.png'}
-                            alt="Avatar"
-                            width={32}
-                            height={32}
-                            className="rounded-full cursor-pointer"
-                            onClick={(e) => op.current?.toggle(e)}
-                        />
+                        <div className="relative w-9 h-9 rounded-full overflow-hidden cursor-pointer">
+                            <Image
+                                src={usuarioIdentificado?.imagem || '/default/user-default-men.png'}
+                                alt="Avatar"
+                                fill
+                                className="object-cover"
+                                onClick={(e) => op.current?.toggle(e)}
+                            />
+                        </div>
                         <OverlayPanel ref={op}>
                             <nav>
                                 <ul>
                                     <li>
-                                        <Link href={'/'} className="flex items-center gap-1 py-1 text-lg text-black">
+                                        <Link href={'/usuario/perfil'} className="flex items-center gap-1 py-1 text-lg text-black">
                                             <ImUser />
                                             <p>Perfil</p>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href={'/'} className="flex items-center gap-1 py-1 text-lg text-black">
+                                        <Link href={'/usuario/configuracoes'} className="flex items-center gap-1 py-1 text-lg text-black">
                                             <IoSettings />
                                             <p>Configurações</p>
                                         </Link>
