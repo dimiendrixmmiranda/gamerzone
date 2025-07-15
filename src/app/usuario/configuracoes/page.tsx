@@ -4,9 +4,9 @@ import useUsuarioIdentificado from "@/data/hooks/useUsuarioIndentificado"
 import { db } from "@/lib/firebase"
 import handleImagemChange from "@/utils/handleImageChange"
 import { doc, updateDoc } from "firebase/firestore"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
-// ***Biografia ainda não foi implementado
 export default function Page() {
     const usuarioIdentificado = useUsuarioIdentificado()
     const [alterarNome, setAlterarNome] = useState<string>('')
@@ -19,13 +19,15 @@ export default function Page() {
     const [loading, setLoading] = useState(false)
     const [mensagem, setMensagem] = useState<string | null>(null)
 
+    console.log(usuarioIdentificado)
+
     useEffect(() => {
         if (usuarioIdentificado?.nome) {
             setAlterarNome(usuarioIdentificado.nome)
             setAlterarEmail(usuarioIdentificado.email)
             setAlterarNick(usuarioIdentificado.nick)
             setImagemPreview(usuarioIdentificado.imagem)
-            // setImagemPreview(usuarioIdentificado.biografia)
+            setAlterarBiografia(usuarioIdentificado.bio)
         }
     }, [usuarioIdentificado])
 
@@ -45,7 +47,8 @@ export default function Page() {
                 nome: alterarNome,
                 email: alterarEmail,
                 nick: alterarNick,
-                imagem: imagemBase64 || imagemPreview
+                bio: alterarBiografia,
+                imagem: imagemBase64 || imagemPreview,
             }
 
             await updateDoc(userRef, dadosAtualizados)
@@ -77,7 +80,7 @@ export default function Page() {
                             </fieldset>
                             <fieldset className="flex flex-col">
                                 <label htmlFor="alterarBio" className="uppercase font-bold text-xl">Alterar Biografia:</label>
-                                <textarea className="px-2 py-1 rounded-md bg-yellow-600 text-white h-[200px]" name="alterarBio" id="alterarBio" value={alterarBiografia} onChange={(e) => setAlterarBiografia(e.target.value)} />
+                                <textarea className="px-2 py-1 rounded-md bg-yellow-600 text-white h-[200px]" name="alterarBio" id="alterarBio" value={alterarBiografia} onChange={(e) => setAlterarBiografia(e.target.value)} maxLength={220} />
                             </fieldset>
                             <fieldset>
                                 <label htmlFor="imagens">Imagem do usuário</label>
@@ -99,7 +102,16 @@ export default function Page() {
                             <button type="submit" disabled={loading} className="p-2 bg-azul-escuro text-white rounded duration-300 transition-all uppercase font-bold hover:bg-amarelo">
                                 {loading ? "Atualizando..." : "Salvar alterações"}
                             </button>
-                            {mensagem && <p className="mt-2">{mensagem}</p>}
+                            {
+                                mensagem ? (
+                                    <div className="flex flex-col gap-2">
+                                        <p className="mt-2 text-center uppercase font-bold break-words text-xl leading-6">{mensagem}</p>
+                                        <Link href={'/usuario/perfil'} className="uppercase font-bold text-center bg-azul-escuro text-white py-2 cursor-pointer">
+                                            Ir para meu perfil
+                                        </Link>
+                                    </div>
+                                ) : ''
+                            }
                         </form>
                     </div>
                 ) : ''

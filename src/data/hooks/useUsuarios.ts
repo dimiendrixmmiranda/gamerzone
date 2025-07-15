@@ -19,9 +19,10 @@ export default function useUsuarios() {
                         email: dados.email,
                         nick: dados.nick,
                         tipo: dados.tipo,
-                        imagem: dados.imagem
-                    };
-                });
+                        imagem: dados.imagem,
+                        bio: dados.bio || ''
+                    }
+                })
 
 
                 setUsuarios(usuariosFirestore);

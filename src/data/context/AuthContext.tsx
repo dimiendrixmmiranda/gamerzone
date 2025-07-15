@@ -14,7 +14,7 @@ interface AuthContextProps {
     carregando?: boolean
     login?: (email: string, senha: string) => Promise<void>;
     logout?: (encaminhamento: string) => Promise<void>;
-    cadastrar?: (email: string, senha: string, nome: string, nick: string) => Promise<void>;
+    cadastrar?: (email: string, senha: string, nome: string, nick: string, bio: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextProps>({});
@@ -120,7 +120,7 @@ export function AuthProvider({ children }: AuthContextProps) {
     }
 
 
-    async function cadastrar(email: string, senha: string, nome: string, nick:string) {
+    async function cadastrar(email: string, senha: string, nome: string, nick:string, bio: string) {
         try {
             setCarregando(true);
             const result = await createUserWithEmailAndPassword(auth, email, senha);
@@ -135,7 +135,8 @@ export function AuthProvider({ children }: AuthContextProps) {
                 email,
                 nick,
                 tipo: "usuario", // ou "adm" dependendo do caso
-                imagem: '/default/user-default-men.png'
+                imagem: '/default/user-default-men.png',
+                bio,
             });
 
             await configurarSessao(user);

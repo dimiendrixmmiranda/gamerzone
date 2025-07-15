@@ -9,7 +9,8 @@ export default function Page() {
     const [nick, setNick] = useState('')
     const [senha, setSenha] = useState('')
     const [confirmeSenha, setConfirmeSenha] = useState('')
-
+    const [bio] = useState('')
+    
     const [emailLogin, setEmailLogin] = useState('')
     const [senhaLogin, setSenhaLogin] = useState('')
 
@@ -30,7 +31,7 @@ export default function Page() {
 
             try {
                 console.log("Tentando cadastrar...");
-                await cadastrar(email, senha, nome, nick);
+                await cadastrar(email, senha, nome, nick, bio);
                 console.log("Cadastro realizado com sucesso!");
             } catch (error) {
                 console.error("Erro ao cadastrar:", error);

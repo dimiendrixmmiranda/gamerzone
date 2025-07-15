@@ -5,4 +5,5 @@ export default interface UsuarioElemento{
     email: string
     tipo: string
     imagem: string
+    bio: string
 }

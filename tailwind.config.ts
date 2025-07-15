@@ -20,6 +20,7 @@ export default {
     fontFamily: {
       primaria: ['var(--fonte-primaria)', 'sans-serif'],
       secundaria: ['var(--fonte-secundaria)', 'sans-serif'],
+      cursiva: ['var(--fonte-cursiva)', 'sans-serif'],
     },
     screens: {
       'sm': '425px',
