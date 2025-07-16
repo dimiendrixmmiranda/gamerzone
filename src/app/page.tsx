@@ -50,4 +50,5 @@ export default function Home() {
  * 2º ==> Time da semana 
  * 3º ==> Colunas de autores falando de e-sports 
  * 4º ==> Reduzir o código (há muito código duplicado) 
+ * aqui
  */
