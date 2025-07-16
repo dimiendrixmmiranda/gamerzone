@@ -9,4 +9,5 @@ export default interface Comentario {
     data: Timestamp
     likes: string[]
     deslikes: string[]
+    respostas?: Comentario[]
 }
