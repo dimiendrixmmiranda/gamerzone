@@ -2,6 +2,7 @@
 import CarrosselMobile from "@/components/carrossel/CarrosselMobile";
 import CarrosselWeb from "@/components/carrossel/CarrosselWeb";
 import ClubeDoCoracao from "@/components/clubeDoCoracao/ClubeDoCoracao";
+import CraqueDaSemana from "@/components/craqueDaSemana/CraqueDaSemana";
 import Jogos from "@/components/jogos/Jogos";
 import MenuInferior from "@/components/menuInferior/MenuInferior";
 import Noticias from "@/components/noticias/Noticias";
@@ -33,11 +34,12 @@ export default function Home() {
 			<Template logo={true} textoLogo={true} menuSuperior={true}>
 				<CarrosselMobile noticias={noticiasFiltradasCarrossel} />
 				<CarrosselWeb noticias={noticiasFiltradasCarrossel} />
-				<div className="lg:grid lg:grid-cols-4 lg:grid-rows-[640px_410px_1fr] xl:grid-cols-6 xl:grid-rows-[650px_420px_1fr] 2xl:grid-rows-[620px_420px_1fr]">
+				<div className="lg:grid lg:grid-cols-4 lg:grid-rows-[620px_410px_1fr] xl:grid-cols-6 xl:grid-rows-[640px_420px_1fr] 2xl:grid-rows-[620px_420px_1fr]">
 					<Noticias noticias={noticiasFiltradasGeral} filtroPorJogo={true} noticiasPorPagina={6} />
 					<ClubeDoCoracao />
 					<Transferencias />
 					<Jogos />
+					<CraqueDaSemana />
 				</div>
 				<MenuInferior />
 			</Template>
@@ -47,7 +49,7 @@ export default function Home() {
 
 /*
  * 1º ==> Craque da semana 
- * 2º ==> Time da semana 
+ * 2º ==> Time do mes 
  * 3º ==> Colunas de autores falando de e-sports 
  * 4º ==> Reduzir o código (há muito código duplicado) 
  * aqui

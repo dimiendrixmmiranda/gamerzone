@@ -1,6 +1,7 @@
 'use client'
 import clubesDoCoracao from "@/constants/clubesDoCoracao";
 import useNoticias from "@/data/hooks/useNoticias";
+import useTamanhoDaTela from "@/data/hooks/useTamanhoDaTela";
 import Clube from "@/interfaces/Clube";
 import Noticia from "@/interfaces/Noticia";
 import { createSlug } from "@/utils/createSlug";
@@ -15,7 +16,7 @@ export default function ClubeDoCoracao() {
     const [noticiasClubeSelecionado, setNoticiasClubeSelecionado] = useState<Noticia[]>([])
     const [visibleClubeSelecionado, setVisibleClubeSelecionado] = useState<'selecionado' | 'naoSelecionado'>('naoSelecionado')
     const noticias = useNoticias()
-
+    const {width} = useTamanhoDaTela()
     useEffect(() => {
         setOrgsBr(clubesDoCoracao.filter(clube => clube.regiao === 'br'))
         setOrgsEu(clubesDoCoracao.filter(clube => clube.regiao === 'eu'))
@@ -32,7 +33,11 @@ export default function ClubeDoCoracao() {
             const filtradas = noticias.filter(noticia =>
                 noticia.tags?.includes(clubeSelecionado.id)
             )
-            setNoticiasClubeSelecionado(filtradas.slice(0, 3))
+            if(width > 1024 && width < 1280){
+                setNoticiasClubeSelecionado(filtradas.slice(0, 4))
+            }else{
+                setNoticiasClubeSelecionado(filtradas.slice(0, 3))
+            }
         }
     }, [clubeSelecionado, noticias])
 
@@ -56,9 +61,9 @@ export default function ClubeDoCoracao() {
     }
 
     return (
-        <div className="hidden flex-col p-2 row-start-1 row-end-2 col-start-4 col-end-5 md:p-4 lg:flex xl:col-start-5 xl:col-end-7 xl:max-w-[95%] xl:justify-self-end 2xl:justify-self-center">
-            <div className={`w-full h-fit bg-amarelo text-white p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "selecionado" ? 'hidden' : 'flex'}`}>
-                <h2 className="text-xl font-secundaria uppercase font-bold leading-5" style={{textShadow: '1px 1px 2px black'}}>Selecione seu clube do coração:</h2>
+        <div className="hidden h-full flex-col p-2 row-start-1 row-end-2 col-start-4 col-end-5 md:p-4 lg:flex xl:col-start-5 xl:col-end-7 xl:max-w-[95%] xl:justify-self-end 2xl:justify-self-center">
+            <div className={`w-full h-full bg-amarelo text-white p-2 flex-col gap-5 xl:p-4 ${visibleClubeSelecionado === "selecionado" ? 'hidden' : 'flex'}`}>
+                <h2 className="text-xl font-secundaria uppercase font-bold leading-6" style={{textShadow: '1px 1px 2px black'}}>Selecione seu clube do coração:</h2>
                 <ul className="flex flex-col gap-4">
                     <li className="flex flex-col gap-1">
                         <h3 className="font-semibold text-lg leading-4 ml-2 mb-1" style={{textShadow: '1px 1px 2px black'}}>Orgs Brasileiras</h3>
@@ -75,9 +80,9 @@ export default function ClubeDoCoracao() {
                 </ul>
             </div>
 
-            <div className={`w-full h-fit bg-amarelo text-white p-2 flex-col xl:p-4 ${visibleClubeSelecionado === "naoSelecionado" ? 'hidden' : 'flex'}`}>
+            <div className={`w-full h-full bg-amarelo text-white p-2 flex-col xl:p-4 ${visibleClubeSelecionado === "naoSelecionado" ? 'hidden' : 'flex'}`}>
                 {clubeSelecionado ? (
-                    <div className="flex flex-col gap-4 items-center relative">
+                    <div className="flex flex-col gap-2 relative h-full xl:gap-4">
                         <div>
                             <div className="absolute top-0 right-0">
                                 <div className="relative w-8 h-8 mb-2">
@@ -86,7 +91,7 @@ export default function ClubeDoCoracao() {
                             </div>
                             <h2 className="text-2xl uppercase font-black" style={{textShadow: '1px 1px 1px black'}}>{clubeSelecionado.nome}</h2>
                         </div>
-                        <ul className="flex flex-col gap-2">
+                        <ul className="flex flex-col gap-[6px] flex-1 xl:gap-3">
                             {
                                 noticiasClubeSelecionado.length > 0 ? (
                                     noticiasClubeSelecionado.map((noticia, i) => {
@@ -113,11 +118,11 @@ export default function ClubeDoCoracao() {
                                 )
                             }
                         </ul>
-                        <div className="flex flex-col gap-1 w-full mt-4 md:grid md:grid-cols-2 md:gap-3 lg:-mt-2 lg:flex lg:gap-1 2xl:grid">
+                        <div className="flex flex-col gap-1 w-full md:grid md:grid-cols-2 md:gap-3 lg:mt-auto">
                             {/* Tenho que mandar o objeto clube selecionado para a pagina paginaClube */}
                             <Link
                                 href={`/paginaClube/${clubeSelecionado && clubeSelecionado.id}`}
-                                className="w-full text-center py-1 bg-white text-orange-500 font-bold rounded transition duration-200 hover:bg-azul-escuro hover:text-white" style={{boxShadow: '0 0 2px 1px black', textShadow: '1px 1px 1px black'}}
+                                className="flex justify-center items-center w-full text-center py-1 bg-white text-orange-500 font-bold rounded transition duration-200 hover:bg-azul-escuro hover:text-white" style={{boxShadow: '0 0 2px 1px black', textShadow: '1px 1px 1px black'}}
                             >
                                 Ir para página
                             </Link>
@@ -127,7 +132,7 @@ export default function ClubeDoCoracao() {
                                     setClubeSelecionado(null);
                                     setVisibleClubeSelecionado("naoSelecionado");
                                 }}
-                                className="w-full py-1 bg-white text-orange-500 font-bold rounded transition duration-200 hover:bg-azul-escuro hover:text-white" style={{boxShadow: '0 0 2px 1px black', textShadow: '1px 1px 1px black'}}
+                                className="flex justify-center items-center leading-5 w-full py-1 bg-white text-orange-500 font-bold rounded transition duration-200 hover:bg-azul-escuro hover:text-white" style={{boxShadow: '0 0 2px 1px black', textShadow: '1px 1px 1px black'}}
                             >
                                 Selecionar outra equipe
                             </button>

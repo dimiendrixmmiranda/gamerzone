@@ -88,7 +88,7 @@ export default function Transferencias() {
                                             <h3 className="uppercase font-bold lg:text-sm xl:text-lg" style={{textShadow: '1px 1px 2px black'}}>{transferencia.situacao}</h3>
                                         </div>
                                     </div>
-                                    <div className="flex justify-center items-center bg-zinc-400 text-black font-semibold py-1 transition-all duration-300 hover:bg-blue-500 hover:text-white cursor-pointer">
+                                    <div className="flex justify-center items-center bg-zinc-400 text-white font-semibold py-1 transition-all duration-300 hover:bg-blue-500 hover:text-white cursor-pointer" style={{textShadow: '1px 1px 2px black'}}>
                                         <Link href={'/'}>Saiba mais!</Link>
                                     </div>
                                 </div>

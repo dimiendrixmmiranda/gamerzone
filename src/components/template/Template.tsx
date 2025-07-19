@@ -14,7 +14,7 @@ export default function Template({ children, logo, textoLogo, clube, menuSuperio
         <>
             <Header logo={logo} textoLogo={textoLogo} menuSuperior={menuSuperior} clube={clube} />
             <main className="bg-zinc-200 text-black">
-                <div className="max-w-[1440px] mx-auto">
+                <div className="max-w-[1440px] mx-auto flex flex-col">
                     {
                         children
                     }
