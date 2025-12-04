@@ -1,0 +1,44 @@
+.containerSlider {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+    gap: .5em;
+    padding: 1em;
+    width: 200%;
+    height: 100%;
+}
+
+.containerSlider > div{
+    box-shadow: 0 0 2px 2px black;
+}
+.containerSlider > div h1, .containerSlider > div h2{
+    background-color: black;
+    padding: .2em .2em;
+}
+
+.containerSlider>div:nth-child(1) {
+    grid-row: 1/3;
+}
+
+.containerSlider>div h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.containerSlider>div:nth-child(1) h1 {
+    font-size: 1.6em;
+}
+
+.containerSlider>div:nth-child(2) h2,
+.containerSlider>div:nth-child(3) h2 {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .containerSlider {
+        gap: 1.4em;
+    }
+}

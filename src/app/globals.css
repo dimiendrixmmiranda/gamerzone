@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  /* Fontes */
+  --fonte-primaria: "Open Sans", sans-serif;
+  --fonte-secundaria: "Lato", sans-serif;
+  --fonte-terciaria: "Inter", sans-serif;
+  --fonte-cursiva: "Parisienne", 'cursive';
+
+  /* Cores */
+  --azul-escuro: #07033b;
+  --azul-medio: #0a0370;
+  --laranja: #FE6A39;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.jogos .swiper-pagination{
+  position: absolute!important;
+  bottom: -5px!important;
+}
+
+.jogos .swiper-button-prev{
+  left: -5px!important;
+  opacity: .6!important;
+}
+.jogos .swiper-button-next{
+  right: -5px!important;
+  opacity: .6!important;
+}
+
+.jogos .swiper-button-prev::after,
+.jogos .swiper-button-next::after{
+  font-size: 1.6em!important;
+  color: var(--azul-escuro);
+}
+
+.p-menu{
+  margin-top: 6px!important;
+}
+.p-menuitem-link{
+  gap: 2px;
+}
