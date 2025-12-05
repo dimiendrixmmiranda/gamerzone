@@ -131,7 +131,7 @@ export function AuthProvider({ children }: AuthProps) {
             if (tipo === "administrador") {
                 router.push("/acesso/administrador")
             } else {
-                router.push("/acesso/usuario")
+                router.push("/perfil")
             }
         } catch (error) {
             console.error("Erro ao autenticar:", error)
@@ -172,7 +172,7 @@ export function AuthProvider({ children }: AuthProps) {
                 tipo: "usuario",
             })
             await configurarSessao(user)
-            router.push('/acesso/usuario')
+            router.push('/perfil')
         } catch (error) {
             console.error("Erro ao cadastrar:", error)
             throw error
