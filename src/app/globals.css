@@ -22,29 +22,31 @@ body {
   scroll-behavior: smooth;
 }
 
-.jogos .swiper-pagination{
-  position: absolute!important;
-  bottom: -5px!important;
+.jogos .swiper-pagination {
+  position: absolute !important;
+  bottom: -5px !important;
 }
 
-.jogos .swiper-button-prev{
-  left: -5px!important;
-  opacity: .6!important;
+.jogos .swiper-button-prev {
+  left: -5px !important;
+  opacity: .6 !important;
 }
-.jogos .swiper-button-next{
-  right: -5px!important;
-  opacity: .6!important;
+
+.jogos .swiper-button-next {
+  right: -5px !important;
+  opacity: .6 !important;
 }
 
 .jogos .swiper-button-prev::after,
-.jogos .swiper-button-next::after{
-  font-size: 1.6em!important;
+.jogos .swiper-button-next::after {
+  font-size: 1.6em !important;
   color: var(--azul-escuro);
 }
 
-.p-menu{
-  margin-top: 6px!important;
+.p-menu {
+  margin-top: 6px !important;
 }
-.p-menuitem-link{
+
+.p-menuitem-link {
   gap: 2px;
 }

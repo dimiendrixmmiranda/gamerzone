@@ -3,6 +3,7 @@ import { FaGamepad, FaHome, FaPlayCircle, FaTrophy } from "react-icons/fa";
 import { FaShieldHeart } from "react-icons/fa6";
 import OffcanvasReutilizavel from "../offcanvas/OffcanvasReutilizavel";
 import Videos from "../videosCurtos/Videos";
+import ClubeDoCoracao from "../clubeDoCoracao/ClubeDoCoracao";
 
 export default function MenuInferior() {
     return (
@@ -17,12 +18,13 @@ export default function MenuInferior() {
                 icone={
                     <div className="w-full h-full flex flex-col justify-center items-center p-2 gap-1 font-semibold">
                         <FaShieldHeart className="text-xl" />
-                        <p className="text-xs">Org</p>
+                          <p className="text-xs">Org</p>
                     </div>
                 }
                 tituloCabecalho={<h2 className="font-bold text-2xl">Escolha sua ORG!</h2>}
+                cor="bg-laranja text-white"
             >
-                <h2>Aqui</h2>
+                <ClubeDoCoracao estilo="" />
             </OffcanvasReutilizavel>
             <OffcanvasReutilizavel
                 icone={
@@ -33,8 +35,9 @@ export default function MenuInferior() {
                 }
                 tituloCabecalho={<h2 className="font-bold text-2xl">Vídeos da Comunidade</h2>}
             >
-                <Videos/>
+                <Videos />
             </OffcanvasReutilizavel>
+
             <OffcanvasReutilizavel
                 icone={
                     <div className="w-full h-full flex flex-col justify-center items-center p-2 gap-1 font-semibold">

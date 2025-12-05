@@ -38,6 +38,7 @@ export function AuthProvider({ children }: AuthProps) {
                     const token = await usuarioFirebase.getIdToken()
 
                     setUsuario({
+                        id: usuarioFirebase.uid,
                         uid: usuarioFirebase.uid,
                         email: dados.email || usuarioFirebase.email || "",
                         nome: dados.nome || usuarioFirebase.displayName || "",
@@ -160,6 +161,7 @@ export function AuthProvider({ children }: AuthProps) {
             await updateProfile(user, { displayName: nome })
 
             await setDoc(doc(db, "usuarios", user.uid), {
+                id: user.uid, 
                 nome,
                 email,
                 nick,

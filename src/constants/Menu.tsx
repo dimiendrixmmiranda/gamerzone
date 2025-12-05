@@ -19,7 +19,7 @@ export const listaDeMenu: Menu[] = [
     },
     {
         icone: <FaCog />,
-        label: 'Configurações',
+        label: 'Config Dos PRO',
         link: '/'
     },
 ];

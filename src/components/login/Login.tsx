@@ -8,7 +8,13 @@ import { useRouter } from 'next/navigation'
 import Auth from '@/lib/context/Auth';
 import { BsPersonSquare } from "react-icons/bs";
 
-export default function Login() {
+interface LoginProps {
+    estilo: string
+    larguraPerfil: string
+    visibilidadeLabel: string
+}
+
+export default function Login({ estilo, larguraPerfil, visibilidadeLabel }: LoginProps) {
     const menuLeft = useRef<Menu>(null);
     const toast = useRef<Toast>(null);
     const router = useRouter()
@@ -50,20 +56,20 @@ export default function Login() {
     ];
 
     return (
-        <div className='xl:w-[145px]'>
+        <div className={`${estilo}`}>
             {
                 usuario ? (
-                    <div className="card hidden w-full lg:flex items-center gap-2">
+                    <div className="card w-full items-center gap-2">
                         <Toast ref={toast} />
                         <Menu model={itemsUsuario} popup ref={menuLeft} id="popup_menu_left" />
                         <Button
                             label=""
                             icon={
-                                <div className='flex text-center gap-2'>
-                                    <div className="w-7 h-7 rounded-full overflow-hidden bg-zinc-900">
+                                <div className='flex text-center gap-2 w-full'>
+                                    <div className={`w-${larguraPerfil} h-${larguraPerfil} rounded-full overflow-hidden bg-zinc-900`}>
                                         <img src={usuario.imagemURL} alt="Usuário" className="w-full h-full object-cover" />
                                     </div>
-                                    <div className='hidden xl:flex flex-col'>
+                                    <div className={`${visibilidadeLabel} flex-col my-auto`}>
                                         <p className='text-[.5em] text-start'>Bem vindo</p>
                                         <h2 className="leading-4 truncate max-w-[9ch]">{usuario.nick}</h2>
                                     </div>
@@ -76,7 +82,7 @@ export default function Login() {
                         />
                     </div>
                 ) : (
-                    <div className="card justify-content-center hidden lg:flex items-center">
+                    <div className="card justify-content-center items-center">
                         <Toast ref={toast} />
                         <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                         <Button

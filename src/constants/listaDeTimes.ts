@@ -10,6 +10,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -20,6 +22,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -30,6 +34,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -40,6 +46,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -50,6 +58,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -60,6 +70,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -80,6 +92,8 @@ export const listaDeTimes = [
             {
                 nome: 'Gabriel Toledo',
                 nick: 'FalleN',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/zBNUQni.png',
                 nacionalidade: {
@@ -90,6 +104,8 @@ export const listaDeTimes = [
             {
                 nome: 'Yuri Santos',
                 nick: 'yuurih',
+                linkHLTV: '',
+                posicao: '',
                 idade: '25',
                 imagem: 'https://i.imgur.com/HiAYbww.png',
                 nacionalidade: {
@@ -100,6 +116,8 @@ export const listaDeTimes = [
             {
                 nome: 'Mareks Gaļinskis',
                 nick: 'YEKINDAR',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/ibGjNZs.png',
                 nacionalidade: {
@@ -110,6 +128,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaike Cerato',
                 nick: 'KSCERATO',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/oi2xaRw.png',
                 nacionalidade: {
@@ -120,6 +140,8 @@ export const listaDeTimes = [
             {
                 nome: 'Danil Golubenko',
                 nick: 'molodoy',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/318ZhPP.png',
                 nacionalidade: {
@@ -130,6 +152,8 @@ export const listaDeTimes = [
             {
                 nome: 'Sid Macedo',
                 nick: 'sidde',
+                linkHLTV: '',
+                posicao: '',
                 idade: '28',
                 imagem: 'https://i.imgur.com/XQtF7NE.png',
                 nacionalidade: {
@@ -150,6 +174,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -160,6 +186,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -170,6 +198,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -180,6 +210,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -190,6 +222,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -200,6 +234,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -220,6 +256,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -230,6 +268,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -240,6 +280,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -250,6 +292,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -260,6 +304,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -270,6 +316,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -290,6 +338,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -300,6 +350,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -310,6 +362,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -320,6 +374,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -330,6 +386,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -340,6 +398,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -360,6 +420,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -370,6 +432,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -380,6 +444,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -390,6 +456,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -400,6 +468,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -410,6 +480,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -430,6 +502,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -440,6 +514,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -450,6 +526,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -460,6 +538,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -470,6 +550,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -480,6 +562,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -500,6 +584,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -510,6 +596,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -520,6 +608,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -530,6 +620,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -540,6 +632,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -550,6 +644,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -570,6 +666,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -580,6 +678,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -590,6 +690,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -600,6 +702,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -610,6 +714,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -620,6 +726,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -640,6 +748,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -650,6 +760,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -660,6 +772,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -670,6 +784,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -680,6 +796,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -690,6 +808,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -710,6 +830,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -720,6 +842,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -730,6 +854,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -740,6 +866,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -750,6 +878,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -760,6 +890,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -780,6 +912,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -790,6 +924,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -800,6 +936,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -810,6 +948,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -820,6 +960,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -830,6 +972,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -850,6 +994,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -860,6 +1006,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -870,6 +1018,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -880,6 +1030,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -890,6 +1042,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -900,6 +1054,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -920,6 +1076,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -930,6 +1088,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -940,6 +1100,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -950,6 +1112,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -960,6 +1124,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -970,6 +1136,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -990,6 +1158,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -1000,6 +1170,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -1010,6 +1182,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -1020,6 +1194,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -1030,6 +1206,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -1040,6 +1218,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1060,6 +1240,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -1070,6 +1252,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -1080,6 +1264,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -1090,6 +1276,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -1100,6 +1288,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -1110,6 +1300,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1130,6 +1322,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -1140,6 +1334,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -1150,6 +1346,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -1160,6 +1358,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -1170,6 +1370,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -1180,6 +1382,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1200,6 +1404,8 @@ export const listaDeTimes = [
             {
                 nome: 'Marcelo Cespedes',
                 nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -1210,6 +1416,8 @@ export const listaDeTimes = [
             {
                 nome: 'Vinicius Figueiredo',
                 nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
@@ -1220,6 +1428,8 @@ export const listaDeTimes = [
             {
                 nome: 'Felipe Medeiros',
                 nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -1230,6 +1440,8 @@ export const listaDeTimes = [
             {
                 nome: 'Santino Rigal',
                 nick: 'try',
+                linkHLTV: '',
+                posicao: '',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -1240,6 +1452,8 @@ export const listaDeTimes = [
             {
                 nome: 'Kaiky Santos',
                 nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -1250,6 +1464,8 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {

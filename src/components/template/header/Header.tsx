@@ -26,9 +26,9 @@ export default function Header({ paginaClube }: HeaderProps) {
                         <Image alt="Texto GamerZone" src={'/logo/texto-gamer-zone.png'} fill className="object-cover" />
                     </div>
                 </Link>
-                <Menu estilo="flex items-center gap-3" visibilidade="hidden md:flex"/>
+                <Menu estilo="flex items-center gap-3" visibilidade="hidden md:flex flex-1"/>
                 <Redes estilo="hidden md:grid grid-cols-2 gap-2 text-2xl lg:grid-cols-4" visibilidadeLabel={false}/>
-                <Login />
+                <Login estilo="hidden lg:flex" larguraPerfil="7" visibilidadeLabel="hidden lg:flex"/>
                 <OffCanvas />
             </div>
             {

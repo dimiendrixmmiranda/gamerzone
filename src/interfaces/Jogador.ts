@@ -6,6 +6,8 @@ export interface Jogador {
     idade: string; // pode virar number se desejar
     imagem: string;
     nacionalidade: Nacionalidade;
+    linkHLTV: string
+    posicao: string
     votos?: number
     usuariosQueVotaram?: string[]
 }

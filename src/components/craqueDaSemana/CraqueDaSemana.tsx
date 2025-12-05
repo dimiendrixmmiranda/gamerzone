@@ -8,6 +8,7 @@ import { doc, Timestamp, updateDoc } from "firebase/firestore"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Dialog } from 'primereact/dialog';
+import CardJogador from "../cardJogador/CardJogador"
 
 export default function CraqueDaSemana() {
     const [jogadorAtual, setJogadorAtual] = useState<Jogador | null>(null)
@@ -116,32 +117,7 @@ export default function CraqueDaSemana() {
                         {
                             listaCraqueDaSemana?.listaDeCraquesDaSemana.map((jogador, i) => {
                                 return (
-                                    <li key={i} className={`group relative flex-shrink-0 w-[130px] h-[170px] sm:w-[150px] sm:h-[200px] lg:w-[170px] lg:h-[220px] xl:w-[200px] xl:h-[250px] overflow-hidden ${jogadorAtual === jogador ? 'border-4 border-laranja' : ''}`} onClick={() => setJogadorAtual(jogador)}>
-                                        {/* CARD PRINCIPAL */}
-                                        <div className="grid grid-rows-[1fr_35px] w-full h-full">
-                                            <div className="relative w-full h-full bg-zinc-800">
-                                                <Image alt={jogador.nome} src={jogador.imagem} fill className="object-cover" />
-                                            </div>
-                                            <div className="w-full h-full bg-zinc-950 text-white flex justify-center items-center font-bold">
-                                                <h2>{jogador.nick}</h2>
-                                            </div>
-                                        </div>
-
-                                        {/* INFO QUE SOBE NO HOVER */}
-                                        <div className="
-                                            absolute bottom-[-120%] left-0 
-                                            w-full h-full bg-black text-white p-4 text-sm flex flex-col gap-2
-                                            transition-all duration-700 ease-in-out
-                                            group-hover:bottom-0 opacity-90
-                                        ">
-                                            <p>Nome: {jogador.nome}</p>
-                                            <p>Nick: {jogador.nick}</p>
-                                            <p>Idade: {jogador.idade}</p>
-                                            <div className="flex items-center gap-1">
-                                                País: <div className="relative w-5 h-4"><Image alt="nacionalidade" src={jogador.nacionalidade.imagem} fill className="object-contain" /></div> {jogador.nacionalidade.pais}
-                                            </div>
-                                        </div>
-                                    </li>
+                                    <CardJogador key={i} jogador={jogador} jogadorAtual={jogadorAtual} setJogadorAtual={setJogadorAtual}/>
                                 )
                             })
                         }
