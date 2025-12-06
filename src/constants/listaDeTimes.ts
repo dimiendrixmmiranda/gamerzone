@@ -1230,12 +1230,12 @@ export const listaDeTimes = [
         ]
     },
     {
-        id: 'imperial',
-        time: 'Imperial',
-        abreviacao: 'IMP',
+        id: 'yawara',
+        time: 'Yawara',
+        abreviacao: 'YAW',
         regiao: 'am',
-        logo: 'https://i.imgur.com/CyDC6fn.png',
-        cor: '#088408',
+        logo: 'https://i.imgur.com/j9puOQq.png',
+        cor: '#a59d04',
         elenco: [
             {
                 nome: 'Marcelo Cespedes',

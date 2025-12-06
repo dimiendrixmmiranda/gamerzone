@@ -105,11 +105,11 @@ export default function CraqueDaSemana() {
     const maxVotos = Math.max(...votosArray, 1);
 
     return (
-        <div className="bg-azul-escuro text-white m-2 p-4 mb-6 h-[430px] lg:h-[450px] xl:h-[420px]">
+        <div className="bg-zinc-900 text-white m-2 p-4 mb-6 h-[430px] lg:h-[450px] xl:h-[420px]">
             <div className={`${visible ? 'hidden' : 'flex'} flex-col gap-4`}>
                 <div className="flex flex-col gap-4 items-center xl:flex-row xl:justify-around">
                     <h2 className="text-3xl font-bold text-center lg:text-5xl" style={{ textShadow: '1px 1px 2px black' }}>Vote no Craque da Semana</h2>
-                    <span className="text-xl lg:text-3xl">Votação encerra em {contador}</span>
+                    <span className="text-xl text-center lg:text-3xl">Votação encerra em {contador}</span>
                 </div>
                 <div className="overflow-x-auto scrollbar-none snap-x snap-mandatory">
                     <ul className="flex gap-4 w-max min-w-full items-start px-2 py-1 lg:justify-center"

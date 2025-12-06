@@ -14,6 +14,7 @@ import useNoticias from "@/lib/hooks/useNoticias"
 import CraqueDaSemana from "@/components/craqueDaSemana/CraqueDaSemana"
 import RankingORGComunidade from "@/components/rankingORGComunidade/RankingORGComunidade"
 import RankingORGComunidadeMobile from "@/components/rankingORGComunidade/RankingORGComunidadeMobile"
+import VaiEVemDaBala from "@/components/vaiEVemDaBala/VaiEVemDaBala"
 
 export default function Home() {
 	const { noticias } = useNoticias();
@@ -24,7 +25,7 @@ export default function Home() {
 			<CarrosselMobile noticias={noticias} />
 			<CarrosselWeb noticias={noticias} />
 			<ClubeDoCoracao estilo="p-4 md:h-[380px] xl:hidden" />
-			<div className="mt-4 xl:grid xl:grid-cols-3 xl:grid-rows-[auto_auto_1fr] xl:gap-4 xl:gap-y-8">
+			<div className="mt-4 xl:grid xl:grid-cols-3 xl:grid-rows-[auto_auto_auto_1fr] xl:gap-4 xl:gap-y-8">
 				<Noticias
 					noticias={noticias}
 					filtroPorJogo={true}
@@ -34,11 +35,12 @@ export default function Home() {
 				<div className="p-2 flex flex-col gap-4 md:p-0 md:grid md:grid-cols-2 md:gap-4 md:mx-4 xl:flex xl:flex-col xl:mx-0">
 					<Blogs />
 					<Jogos />
+					<VaiEVemDaBala />
 				</div>
 			</div>
 			<CraqueDaSemana />
 			<RankingORGComunidade />
-			<RankingORGComunidadeMobile/>
+			<RankingORGComunidadeMobile />
 			<VideosCurtos />
 			<MenuInferior />
 		</Template>
