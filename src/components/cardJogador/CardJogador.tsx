@@ -22,7 +22,7 @@ export default function CardJogador({ jogador, jogadorAtual, setJogadorAtual }: 
             </div>
 
             {/* INFO QUE SOBE NO HOVER */}
-            <div className="absolute bottom-[-120%] left-0w-full h-full bg-black text-white p-4 text-sm flex flex-col gap-2 transition-all duration-700 ease-in-out group-hover:bottom-0 opacity-90">
+            <div className="absolute bottom-[-120%] left-0 w-full h-full bg-black text-white p-4 text-sm flex flex-col gap-2 transition-all duration-700 ease-in-out group-hover:bottom-0 opacity-90">
                 <p>Nome: {jogador.nome}</p>
                 <p>Nick: {jogador.nick}</p>
                 <p>Idade: {jogador.idade}</p>

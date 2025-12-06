@@ -18,6 +18,8 @@ import Time from "@/interfaces/Time";
 import Image from "next/image";
 
 export default function RankingORGComunidadeSingleFile() {
+    const [contador,] = useState<string>("23:12:18");
+
     const sensors = useSensors(
         useSensor(PointerSensor),
         useSensor(TouchSensor, {
@@ -111,31 +113,34 @@ export default function RankingORGComunidadeSingleFile() {
     // }
 
     return (
-        <DndContext sensors={sensors} onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-            <div className="flex flex-col bg-zinc-900 m-2 p-4 gap-4">
-                <div>
-                    <h2 className="font-bold text-white text-4xl text-center" style={{ textShadow: '1px 1px 2px black' }}>Vote no Ranking da Comunidade!</h2>
-                </div>
-                <div className="w-full grid grid-cols-2">
-                    <TimesPanel teams={teams} />
-                    <RankingPanel ranking={ranking} removeFromRanking={removeFromRanking} />
-                </div>
-                <div className="flex justify-center items-center w-full px-4">
-                    <button className="text-2xl font-bold bg-laranja w-full py-2 text-white">Votar!</button>
-                </div>
-            </div>
-
-            <DragOverlay>
-                {dragging ? (
-                    <div className="flex items-center gap-2 bg-zinc-300 p-4">
-                        <div className="w-8 h-8 relative">
-                            <Image alt={dragging.time} src={dragging.logo} fill className="object-cover" />
-                        </div>
-                        <span className="text-lg font-bold line-clamp-1" style={{ textShadow: '1xp 1px 2px black' }}>{dragging.time}</span>
+        <div className="hidden xl:block">
+            <DndContext sensors={sensors} onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+                <div className="flex flex-col bg-zinc-900 m-2 p-4 gap-4">
+                    <div className="flex flex-col gap-4 items-center xl:flex-row xl:justify-around text-white">
+                        <h2 className="font-bold  text-4xl text-center" style={{ textShadow: '1px 1px 2px black' }}>Vote no Ranking da Comunidade!</h2>
+                        <span className="text-xl text-center lg:text-3xl">Votação encerra em {contador}</span>
                     </div>
-                ) : null}
-            </DragOverlay>
-        </DndContext>
+                    <div className="w-full grid grid-cols-2">
+                        <TimesPanel teams={teams} />
+                        <RankingPanel ranking={ranking} removeFromRanking={removeFromRanking} />
+                    </div>
+                    <div className="flex justify-center items-center w-full px-4">
+                        <button className="text-2xl font-bold bg-laranja w-full py-2 text-white">Votar!</button>
+                    </div>
+                </div>
+
+                <DragOverlay>
+                    {dragging ? (
+                        <div className="flex items-center gap-2 bg-zinc-300 p-4">
+                            <div className="w-8 h-8 relative">
+                                <Image alt={dragging.time} src={dragging.logo} fill className="object-cover" />
+                            </div>
+                            <span className="text-lg font-bold line-clamp-1" style={{ textShadow: '1xp 1px 2px black' }}>{dragging.time}</span>
+                        </div>
+                    ) : null}
+                </DragOverlay>
+            </DndContext>
+        </div>
     );
 }
 

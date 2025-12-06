@@ -13,6 +13,7 @@ import Jogos from "@/components/jogos/Jogos"
 import useNoticias from "@/lib/hooks/useNoticias"
 import CraqueDaSemana from "@/components/craqueDaSemana/CraqueDaSemana"
 import RankingORGComunidade from "@/components/rankingORGComunidade/RankingORGComunidade"
+import RankingORGComunidadeMobile from "@/components/rankingORGComunidade/RankingORGComunidadeMobile"
 
 export default function Home() {
 	const { noticias } = useNoticias();
@@ -37,6 +38,7 @@ export default function Home() {
 			</div>
 			<CraqueDaSemana />
 			<RankingORGComunidade />
+			<RankingORGComunidadeMobile/>
 			<VideosCurtos />
 			<MenuInferior />
 		</Template>
