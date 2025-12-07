@@ -1,6 +1,5 @@
 "use client";
 
-import { listaDeTimes } from "@/constants/listaDeTimes";
 import Time from "@/interfaces/Time";
 import { db } from "@/lib/firebase/firebase";
 import useContadorSemanal from "@/lib/hooks/useContadorSemanal";

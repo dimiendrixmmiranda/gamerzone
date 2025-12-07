@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/lib/firebase/firebase";
-import ListaDeCraques from "@/interfaces/ListaDeCraques";
 import ListaDeTimes from "@/interfaces/ListaDeTimes";
 
 export default function useListaTimesDaRodada() {
