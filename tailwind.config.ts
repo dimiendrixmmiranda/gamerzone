@@ -15,6 +15,9 @@ export default {
   			["azul-escuro"]: 'var(--azul-escuro)',
   			["azul-medio"]: 'var(--azul-medio)',
   			laranja: 'var(--laranja)',
+  			amarelo: 'var(--amarelo)',
+  			vermelho: 'var(--vermelho)',
+  			verder: 'var(--verde)',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
