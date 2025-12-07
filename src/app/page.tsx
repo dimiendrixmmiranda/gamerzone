@@ -12,9 +12,10 @@ import MenuSuperiorDeJogos from "@/components/menuSuperiorDeJogos/MenuSuperiorDe
 import Jogos from "@/components/jogos/Jogos"
 import useNoticias from "@/lib/hooks/useNoticias"
 import CraqueDaSemana from "@/components/craqueDaSemana/CraqueDaSemana"
-import RankingORGComunidade from "@/components/rankingORGComunidade/RankingORGComunidade"
+import RankingORGComunidade from "@/components/rankingORGComunidade/RankingORGComunidadeWeb"
 import RankingORGComunidadeMobile from "@/components/rankingORGComunidade/RankingORGComunidadeMobile"
 import VaiEVemDaBala from "@/components/vaiEVemDaBala/VaiEVemDaBala"
+import RankingORGComunidadeWeb from "@/components/rankingORGComunidade/RankingORGComunidadeWeb"
 
 export default function Home() {
 	const { noticias } = useNoticias();
@@ -39,7 +40,7 @@ export default function Home() {
 				</div>
 			</div>
 			<CraqueDaSemana />
-			<RankingORGComunidade />
+			<RankingORGComunidadeWeb />
 			<RankingORGComunidadeMobile />
 			<VideosCurtos />
 			<MenuInferior />

@@ -9,45 +9,20 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Dialog } from 'primereact/dialog';
 import CardJogador from "../cardJogador/CardJogador"
+import useContadorSemanal from "@/lib/hooks/useContadorSemanal"
 
 export default function CraqueDaSemana() {
     const [jogadorAtual, setJogadorAtual] = useState<Jogador | null>(null)
     const { listaCraqueDaSemana } = useListaCraquesDaSemana();
-    const [contador, setContador] = useState<string>("");
     const [visible, setVisible] = useState(false)
     const [visibleDialog, setVisibleDialog] = useState(false);
-
+    
+    const contador = useContadorSemanal(
+        listaCraqueDaSemana?.data,
+        listaCraqueDaSemana
+    );
     const auth = getAuth();
     const user = auth.currentUser;
-
-    function calcularTempoRestante(dataAlvo: Date) {
-        const agora = new Date().getTime();
-        const alvo = dataAlvo.getTime();
-        const diff = alvo - agora;
-
-        if (diff <= 0) return "Encerrado";
-
-        const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutos = Math.floor((diff / (1000 * 60)) % 60);
-        const segundos = Math.floor((diff / 1000) % 60);
-
-        return `${dias}d ${horas}h ${minutos}m ${segundos}s`;
-    }
-
-    useEffect(() => {
-        if (!listaCraqueDaSemana?.data) return;
-
-        const dataJS = new Date(
-            (listaCraqueDaSemana.data as Timestamp).toMillis() + 6 * 24 * 60 * 60 * 1000
-        )
-
-        const interval = setInterval(() => {
-            setContador(calcularTempoRestante(dataJS));
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, [listaCraqueDaSemana]);
 
     async function votar() {
         if (!user) {
@@ -98,9 +73,6 @@ export default function CraqueDaSemana() {
         alert("Voto computado!");
     }
 
-    // const maxVotos = Math.max(
-    //     ...(listaCraqueDaSemana?.listaDeCraquesDaSemana.map(j => j.votos ?? 0) ?? [0])
-    // );
     const votosArray = listaCraqueDaSemana?.listaDeCraquesDaSemana.map(j => j.votos ?? 0) ?? [0];
     const maxVotos = Math.max(...votosArray, 1);
 
@@ -117,7 +89,7 @@ export default function CraqueDaSemana() {
                         {
                             listaCraqueDaSemana?.listaDeCraquesDaSemana.map((jogador, i) => {
                                 return (
-                                    <CardJogador key={i} jogador={jogador} jogadorAtual={jogadorAtual} setJogadorAtual={setJogadorAtual}/>
+                                    <CardJogador key={i} jogador={jogador} jogadorAtual={jogadorAtual} setJogadorAtual={setJogadorAtual} />
                                 )
                             })
                         }
@@ -205,7 +177,7 @@ export default function CraqueDaSemana() {
                             <h2 className="text-2xl font-black">Maior ganhador:</h2>
                             <div className="bg-zinc-700 w-fit">
                                 <div className="relative w-[170px] h-[200px]">
-                                    <Image alt="noway" src={'/noway.webp'} fill className="object-cover"/>
+                                    <Image alt="noway" src={'/noway.webp'} fill className="object-cover" />
                                 </div>
                                 <div className="bg-zinc-950 text-white flex justify-center items-center py-1">
                                     <h3>noway</h3>

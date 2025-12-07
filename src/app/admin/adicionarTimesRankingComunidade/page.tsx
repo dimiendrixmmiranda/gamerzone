@@ -1,65 +1,68 @@
 'use client'
+
 import { listaDeTimes } from "@/constants/listaDeTimes"
-import { Jogador } from "@/interfaces/Jogador"
+import Time from "@/interfaces/Time"
 import { db } from "@/lib/firebase/firebase"
 import { addDoc, collection, Timestamp } from "firebase/firestore"
 import { useEffect, useState } from "react"
 
 export default function Page() {
-    const [listaDeJogadores, setListaDeJogadores] = useState<Jogador[]>([])
-    const [listaCraquesDaGalera, setListaCraquesDaGalera] = useState<Jogador[]>([])
+    const [times, setTimes] = useState<Time[]>([])
+    const [listaDeTimesDaRodada, setListaDeTimesDaRodada] = useState<Time[]>([])
     const [dataHora, setDataHora] = useState('')
 
     useEffect(() => {
-        const jogadores = listaDeTimes.map(time => time.elenco).flat()
-
-        const jogadoresUnicos = Array.from(
-            new Map(jogadores.map(j => [j.nick, j])).values()
-        )
-
-        setListaDeJogadores(jogadoresUnicos)
+        const timesBrs = listaDeTimes.filter(time => time.regiao == 'am')
+        setTimes(timesBrs)
+        setListaDeTimesDaRodada([])
     }, [])
 
-    const handleToggle = (jogador: Jogador) => {
-        setListaCraquesDaGalera(prev => {
 
-            // Se já está selecionado, REMOVE
-            if (prev.some(j => j.nick === jogador.nick)) {
-                return prev.filter(j => j.nick !== jogador.nick)
+    const handleToggle = (time: Time) => {
+        setListaDeTimesDaRodada(prev => {
+
+            if (prev.some(j => j.time === time.time)) {
+                return prev.filter(j => j.time !== time.time)
             }
 
-            // Se não está, ADICIONA
-            return [...prev, jogador]
+            // LIMITE
+            if (prev.length >= 10) {
+                alert("Você só pode selecionar 10 times da rodada!");
+                return prev
+            }
+
+            return [...prev, time]
         })
     }
+
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         // VALIDAÇÕES IMPORTANTES
-        if (!listaCraquesDaGalera) {
+        if (!listaDeTimesDaRodada) {
             alert("Preencha todos os campos!");
             return;
         }
 
         try {
             const timestampFirebase = Timestamp.fromDate(new Date(dataHora));
-            
-            const listaComVotos = listaCraquesDaGalera.map(jogador => ({
-                ...jogador,
+
+            const listaComVotos = listaDeTimesDaRodada.map(time => ({
+                ...time,
                 votos: 0
             }));
 
             // Criar objeto Notícia
             const semana = {
                 semanaCorrente: true,
-                listaDeCraquesDaSemana: listaComVotos,
+                listaDeTimesDaRodada: listaComVotos,
                 encerrado: false,
                 data: timestampFirebase
             };
 
             // Enviar para Firestore
-            await addDoc(collection(db, "listaDeCraquesDaSemana"), semana);
+            await addDoc(collection(db, "listaDeTimesDaRodada"), semana);
 
             alert("jogadores adicionada com sucesso!");
 
@@ -68,33 +71,30 @@ export default function Page() {
             alert("Erro ao salvar jogadores!");
         }
     }
-
     return (
         <div>
-            <h2>Adicione os craques da galera</h2>
-
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                 <fieldset className="flex flex-col gap-1 border p-4">
-                    <label className="font-medium">Jogadores</label>
+                    <label className="font-medium">Times da rodada</label>
 
-                    {listaDeJogadores.map((jogador) => {
-
-                        const checked = listaCraquesDaGalera.some(j => j.nick === jogador.nick)
+                    {times.map((time) => {
+                        const checked = listaDeTimesDaRodada.some(j => j.time === time.time)
 
                         return (
                             <label
-                                key={jogador.nick}
+                                key={time.time}
                                 className="flex items-center gap-2 cursor-pointer"
                             >
                                 <input
                                     type="checkbox"
-                                    checked={checked}          // ← controlado
-                                    onChange={() => handleToggle(jogador)}
+                                    checked={checked}
+                                    onChange={() => handleToggle(time)}
                                 />
-                                {jogador.nick}
+                                {time.time}
                             </label>
                         )
                     })}
+
                 </fieldset>
                 {/* DATA E HORA */}
                 <fieldset className="flex flex-col gap-1">

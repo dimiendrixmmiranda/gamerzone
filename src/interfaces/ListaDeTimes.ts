@@ -1,11 +1,11 @@
 import { Timestamp } from "firebase/firestore"
-import { Jogador } from "./Jogador"
+import Time from "./Time"
 
-export default interface ListaDeCraques {
+export default interface ListaDeTimes {
     id: string
     data: Timestamp | Date | null | undefined
     encerrado: boolean
-    listaDeCraquesDaSemana: Jogador[]
+    listaDeTimesDaRodada: Time[]
     semanaCorrente: boolean
     usuariosQueJaVotaram: string[]
 }

@@ -8,4 +8,5 @@ export default interface Time {
     logo: string
     cor: string
     elenco: Jogador[];
+    votos?:number
 }

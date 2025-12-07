@@ -19,7 +19,7 @@ export default function Login({ estilo, larguraPerfil, visibilidadeLabel }: Logi
     const toast = useRef<Toast>(null);
     const router = useRouter()
     const { usuario, logout } = useContext(Auth);
-    console.log(usuario)
+
     const items = [
         {
             label: 'Crie uma conta ou faça Login',
