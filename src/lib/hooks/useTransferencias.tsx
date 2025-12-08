@@ -37,5 +37,5 @@ export default function useTransferencias() {
         carregartransferencias();
     }, []);
 
-    return { transferencias, loading, error };
+    return { transferencias, setTransferencias, loading, error };
 }

@@ -15,7 +15,7 @@ interface AuthProps {
     carregando?: boolean
     login?: (email: string, senha: string) => Promise<void>
     logout?: (encaminhamento: string) => Promise<void>
-    cadastrar?: (email: string, senha: string, nome: string, nick: string, dataDeNascimento: string | Timestamp, telefone: string, sexo: string ) => Promise<void>
+    cadastrar?: (email: string, senha: string, nome: string, nick: string, dataDeNascimento: string | Timestamp, telefone: string, sexo: string) => Promise<void>
     loginGoogle?: () => Promise<void>
 }
 
@@ -52,18 +52,18 @@ export function AuthProvider({ children }: AuthProps) {
                         tipo: dados.tipo
                     });
 
-                    gerenciarCookie(true)
+                    Cookies.set("token", token, { expires: 7 });
+                    Cookies.set("tipo", dados.tipo || "usuario", { expires: 7 });
+
                     setCarregando(false)
                 } else {
                     setUsuario(null)
-                    gerenciarCookie(false)
                     setCarregando(false)
                 }
             })
 
             return () => unsubscribe()
         } else {
-            gerenciarCookie(false)
             setUsuario(null)
             setCarregando(false)
             return false
@@ -128,7 +128,7 @@ export function AuthProvider({ children }: AuthProps) {
             const dados = docSnap.data()
             const tipo = dados?.tipo || "usuario"
 
-            if (tipo === "administrador") {
+            if (tipo === "admin") {
                 router.push("/acesso/administrador")
             } else {
                 router.push("/perfil")
@@ -141,15 +141,15 @@ export function AuthProvider({ children }: AuthProps) {
         }
     }
 
-    function gerenciarCookie(logado: boolean) {
-        if (logado) {
-            Cookies.set('admin-auth', JSON.stringify(logado), {
-                expires: 7
-            })
-        } else {
-            Cookies.remove('admin-auth')
-        }
-    }
+    // function gerenciarCookie(logado: boolean) {
+    //     if (logado) {
+    //         Cookies.set('admin-auth', JSON.stringify(logado), {
+    //             expires: 7
+    //         })
+    //     } else {
+    //         Cookies.remove('admin-auth')
+    //     }
+    // }
 
 
     async function cadastrar(email: string, senha: string, nome: string, nick: string, dataDeNascimento: string | Timestamp, telefone: string, sexo: string) {
@@ -161,14 +161,14 @@ export function AuthProvider({ children }: AuthProps) {
             await updateProfile(user, { displayName: nome })
 
             await setDoc(doc(db, "usuarios", user.uid), {
-                id: user.uid, 
+                id: user.uid,
                 nome,
                 email,
                 nick,
                 dataDeNascimento,
                 telefone,
                 imagemURL: "/default/usuario-padrao.png",
-                sexo, 
+                sexo,
                 tipo: "usuario",
             })
             await configurarSessao(user)

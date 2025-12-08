@@ -11,4 +11,6 @@ export default interface Transferencia {
     timeAtual: Time
     timeDestino: Time
     valorDaTransferencia: string
+    likes: string[]
+    deslikes: string[]
 }
