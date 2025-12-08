@@ -6,7 +6,7 @@ import { db } from "@/lib/firebase/firebase";
 import ListaDeTimes from "@/interfaces/ListaDeTimes";
 
 export default function useListaTimesDaRodada() {
-    const [listaDeTimesDaRodada, setListaDeTimesDaRodada] = useState<ListaDeTimes | null>(null);
+    const [listaDeTimesDaRodada, setListaDeTimesDaRodada] = useState<ListaDeTimes[] | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -22,10 +22,8 @@ export default function useListaTimesDaRodada() {
                     ...(doc.data() as Omit<ListaDeTimes, "id">)
                 })) as ListaDeTimes[]
 
-                const listaAtual = lista.find(item => item.semanaCorrente);
-
-                if (listaAtual) {
-                    setListaDeTimesDaRodada(listaAtual)
+                if(lista){
+                    setListaDeTimesDaRodada(lista)
                 }
 
             } catch (err) {

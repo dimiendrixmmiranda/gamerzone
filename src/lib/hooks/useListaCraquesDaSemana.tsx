@@ -6,7 +6,7 @@ import { db } from "@/lib/firebase/firebase";
 import ListaDeCraques from "@/interfaces/ListaDeCraques";
 
 export default function useListaCraquesDaSemana() {
-    const [listaCraqueDaSemana, setlistaCraqueDaSemana] = useState<ListaDeCraques | null>(null);
+    const [listaCraqueDaSemana, setlistaCraqueDaSemana] = useState<ListaDeCraques[] | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -22,12 +22,9 @@ export default function useListaCraquesDaSemana() {
                     ...(doc.data() as Omit<ListaDeCraques, "id">)
                 })) as ListaDeCraques[]
 
-                const listaAtual = lista.find(item => item.semanaCorrente);
-
-                if (listaAtual) {
-                    setlistaCraqueDaSemana(listaAtual)
+                if(lista){
+                    setlistaCraqueDaSemana(lista)
                 }
-
             } catch (err) {
                 console.error("Erro ao carregar listaCraqueDaSemana:", err);
                 setError("Erro ao carregar listaCraqueDaSemana");

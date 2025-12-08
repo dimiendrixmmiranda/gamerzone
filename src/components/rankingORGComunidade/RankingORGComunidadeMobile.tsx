@@ -1,9 +1,11 @@
 "use client";
 
+import ListaDeTimes from "@/interfaces/ListaDeTimes";
 import Time from "@/interfaces/Time";
 import { db } from "@/lib/firebase/firebase";
 import useContadorSemanal from "@/lib/hooks/useContadorSemanal";
 import useListaTimesDaRodada from "@/lib/hooks/useListaTimesDaRodada";
+import { normalizarData } from "@/lib/utils/normalizarData";
 import { getAuth } from "firebase/auth";
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import Image from "next/image";
@@ -17,27 +19,67 @@ export default function RankingORGComunidadeMobile() {
     const user = auth.currentUser;
     const [usuarioAtualVotou, setUsuarioAtualVotou] = useState(false)
 
-    const contador = useContadorSemanal(
-        listaDeTimesDaRodada?.data, 
-        listaDeTimesDaRodada
-    )
-    
-    useEffect(() => {
-        if (user) {
-            const validacao = listaDeTimesDaRodada?.usuariosQueJaVotaram.includes(user.uid)
-            if (validacao) {
-                setUsuarioAtualVotou(true)
-            } else {
-                setUsuarioAtualVotou(false)
-            }
-        }
-    }, [listaDeTimesDaRodada, auth])
+    const [listaAtual, setListaAtual] = useState<ListaDeTimes | null>(null)
+    const [listaTimesGanhadoresOrdenado, setListaTimesGanhadoresOrdenado] = useState<Time[]>([]);
 
     useEffect(() => {
-        if (listaDeTimesDaRodada) {
-            setTimesDaRodada(listaDeTimesDaRodada.listaDeTimesDaRodada)
+        if (!listaAtual) return;
+
+        // Clonar array antes de ordenar (nunca dar sort diretamente no state)
+        const ordenado = [...listaAtual.listaDeTimesDaRodada].sort((a, b) => {
+            return (b.votos ?? 0) - (a.votos ?? 0);
+        });
+
+        setListaTimesGanhadoresOrdenado(ordenado);
+    }, [listaAtual])
+
+    const contador = useContadorSemanal(
+        listaAtual?.data,
+        listaAtual
+    )
+
+    useEffect(() => {
+        if (!listaDeTimesDaRodada || listaDeTimesDaRodada.length === 0) return;
+
+        // 1. lista aberta e atual
+        const aberta = listaDeTimesDaRodada
+            .filter(lista => lista.semanaCorrente === true && lista.encerrado === false)[0];
+
+        if (aberta) {
+            setListaAtual(aberta);
+            return;
         }
+
+        // 2. pegar a última encerrada pela data (ordem DESC)
+        const encerradasOrdenadas = [...listaDeTimesDaRodada]
+            .filter(l => l.encerrado === true)
+            .sort((a, b) => normalizarData(b.data) - normalizarData(a.data));
+
+        if (encerradasOrdenadas.length > 0) {
+            setListaAtual(encerradasOrdenadas[0]);
+            return;
+        }
+
+        // 3. fallback caso não tenha nada
+        setListaAtual(null);
+
     }, [listaDeTimesDaRodada]);
+
+    useEffect(() => {
+        if (user) {
+            const votantes = listaAtual?.usuariosQueJaVotaram ?? [];
+
+            const validacao = votantes.includes(user.uid);
+
+            setUsuarioAtualVotou(validacao);
+        }
+    }, [listaAtual, user]);
+
+    useEffect(() => {
+        if (listaAtual) {
+            setTimesDaRodada(listaAtual.listaDeTimesDaRodada)
+        }
+    }, [listaAtual]);
 
 
     async function votar() {
@@ -46,19 +88,19 @@ export default function RankingORGComunidadeMobile() {
             return;
         }
 
-        if (listaDeTimesDaRodada != null) {
+        if (listaAtual != null) {
 
-            const docRef = doc(db, "listaDeTimesDaRodada", String(listaDeTimesDaRodada.id));
+            const docRef = doc(db, "listaDeTimesDaRodada", String(listaAtual.id));
             const snap = await getDoc(docRef);
 
-            const votantes = listaDeTimesDaRodada.usuariosQueJaVotaram ?? [];
+            const votantes = listaAtual.usuariosQueJaVotaram ?? [];
 
             if (votantes.includes(user.uid)) {
                 alert("Você já votou!");
                 return;
             }
 
-            const novaLista = [...listaDeTimesDaRodada.listaDeTimesDaRodada];
+            const novaLista = [...listaAtual.listaDeTimesDaRodada];
 
             ranking.forEach((slot, idx) => {
                 if (!slot) return;
@@ -105,7 +147,7 @@ export default function RankingORGComunidadeMobile() {
 
     return (
         <div className="bg-zinc-800 m-2 p-4 text-white flex flex-col gap-4 xl:hidden">
-            <div className={`${usuarioAtualVotou ? 'hidden' : 'flex'} flex-col gap-4`}>
+            <div className={`${usuarioAtualVotou ? 'hidden' : 'flex'} ${listaAtual?.encerrado ? 'hidden' : 'flex'} flex-col gap-4`}>
                 <div className="flex flex-col gap-4 items-center xl:flex-row xl:justify-around text-white">
                     <h2 className="font-bold text-3xl text-center" style={{ textShadow: '1px 1px 2px black' }}>Vote no Ranking da Comunidade!</h2>
                     <span className="text-xl text-center lg:text-3xl">Votação encerra em {contador}</span>
@@ -180,7 +222,7 @@ export default function RankingORGComunidadeMobile() {
                     </button>
                 </div>
             </div>
-            <div className={`${usuarioAtualVotou ? 'flex' : 'hidden'} flex-col gap-4`}>
+            <div className={`${usuarioAtualVotou ? 'flex' : 'hidden'} ${listaAtual?.encerrado ? 'hidden' : 'flex'} flex-col gap-4`}>
                 <div className="flex flex-col gap-4 items-center xl:flex-row xl:justify-around text-white">
                     <h2 className="font-bold text-3xl text-center" style={{ textShadow: '1px 1px 2px black' }}>Vote no Ranking da Comunidade!</h2>
                     <span className="text-xl text-center lg:text-3xl">Votação encerra em {contador}</span>
@@ -217,6 +259,64 @@ export default function RankingORGComunidadeMobile() {
                             }
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className={`${listaAtual?.encerrado ? 'flex' : 'hidden'} flex-col justify-center text-white`}>
+                <h2 className="font-bold text-center text-2xl">Confira o resultado do ranking da comunidade</h2>
+                <div className="grid grid-rows-2 grid-cols- max-w-[450px] mx-auto w-full mt-4">
+                    <div className="col-start-2 col-end-3 row-start-1 row-end-2 flex flex-col justify-center items-center">
+                        <div className="relative w-[70px] h-[70px]">
+                            <Image
+                                alt="imga"
+                                src={listaTimesGanhadoresOrdenado[0]?.logo ?? "/fallback.png"}
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <h3 className="text-center text-2xl font-bold">
+                            {listaTimesGanhadoresOrdenado[0]?.time ?? ""}
+                        </h3>
+                    </div>
+                    <div className="col-start-1 col-end-2 row-start-2 row-end-3 flex flex-col justify-center items-center -mt-[80px]">
+                        <div className="relative w-[50px] h-[50px]">
+                            <Image
+                                alt="imga"
+                                src={listaTimesGanhadoresOrdenado[1]?.logo ?? "/fallback.png"}
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <h3 className="text-center text-2xl font-bold">
+                            {listaTimesGanhadoresOrdenado[1]?.time ?? ""}
+                        </h3>
+                    </div>
+                    <div className="col-start-3 col-end-4 row-start-2 row-end-3 flex flex-col justify-center items-center -ml-[20px]">
+                        <div className="relative w-[40px] h-[40px]">
+                            <Image
+                                alt="imga"
+                                src={listaTimesGanhadoresOrdenado[2]?.logo ?? "/fallback.png"}
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <h3 className="text-center text-2xl font-bold">
+                            {listaTimesGanhadoresOrdenado[2]?.time ?? ""}
+                        </h3>
+                    </div>
+                </div>
+                <div className="grid grid-cols-3 gap-y-4 md:grid-cols-4 lg:grid-cols-7">
+                    {
+                        listaTimesGanhadoresOrdenado.slice(3).map((time, i) => {
+                            return (
+                                <div key={i} className="flex flex-col justify-center items-center gap-1 flex-1">
+                                    <div key={i} className="relative w-[50px] h-[50px]">
+                                        <Image alt="imga" src={time.logo} fill className="object-contain" />
+                                    </div>
+                                    <span className="text-xl font-bold">{i + 4}º</span>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

@@ -35,7 +35,8 @@ export default function useContadorSemanal(
 
         // 🔥 Adiciona 6 dias (semanal)
         const dataLimite = new Date(
-            dataFinal.getTime() + 6 * 24 * 60 * 60 * 1000
+            dataFinal.getTime() + 4 * 24 * 60 * 60 * 1000
+            // dataFinal.getTime() + 0
         );
 
         setContador(calcularTempoRestante(dataLimite));
