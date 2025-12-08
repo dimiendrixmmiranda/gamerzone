@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { createSlug } from '@/lib/utils/createSlug';
 import Noticia from '@/interfaces/Noticia';
 import Image from 'next/image';
-import identificarEsporte from '@/lib/utils/identificarEsporte';
+import { identificarEsporte } from '@/lib/utils/identificarEsporte';
 
 interface CarrosselWebProps {
     noticias: Noticia[]
@@ -59,7 +59,7 @@ export default function CarrosselWeb({ noticias }: CarrosselWebProps) {
                                             </div>
                                             <div className="absolute top-2 right-2 w-6 h-6 bg-zinc-200 rounded-full flex justify-center items-center">
                                                 <div className="w-full h-full"></div>
-                                                <Image alt="logo" src={`${identificarEsporte(noticia.esporte)}`} width={20} height={20} />
+                                                <Image alt="logo" src={`${identificarEsporte(noticia.esporte).imagem}`} width={20} height={20} />
                                             </div>
                                         </Link>
                                     </div>

@@ -12,17 +12,17 @@ export default function CardNoticia({ noticia }: CardNoticiaProps) {
         switch (esporte) {
             case 'cs2':
                 return {
-                    imagem: '/esporte/cs2.png',
+                    imagem: '/esportes/cs2.png',
                     cor: 'bg-white'
                 }
             case 'valorant':
                 return {
-                    imagem: '/esporte/cs2.png',
+                    imagem: '/esportes/cs2.png',
                     cor: 'bg-blue-500'
                 }
             case 'raimbowSix':
                 return {
-                    imagem: '/esporte/cs2.png',
+                    imagem: '/esportes/cs2.png',
                     cor: 'bg-blue-500'
                 }
             default:
@@ -64,7 +64,7 @@ export default function CardNoticia({ noticia }: CardNoticiaProps) {
                     <p>Por {noticia.autor}, {noticia.data.toDate().toLocaleString('pt-br')}</p>
                 </div>
                 <div className={`absolute bottom-7 right-2 w-6 h-6 ${identificarEsporte(noticia.esporte).cor} rounded-full flex justify-center items-center opacity-70 md:bottom-2 md:right-2`}>
-                    <Image alt="logo" src={`${identificarEsporte(noticia.esporte).imagem}`} width={20} height={20} />
+                    <Image alt="logo" src={identificarEsporte(noticia.esporte).imagem} width={20} height={20} />
                 </div>
             </Link>
         </li>
