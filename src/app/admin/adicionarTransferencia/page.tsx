@@ -166,6 +166,7 @@ export default function Page() {
                         <option value="negociando">Negociando</option>
                         <option value="fechado">Fechado</option>
                         <option value="melou">Melou</option>
+                        <option value="de-saida">De Saída</option>
                     </select>
                 </fieldset>
 
@@ -249,6 +250,7 @@ export default function Page() {
                         <option value="negociando">Negociando</option>
                         <option value="fechado">Fechado</option>
                         <option value="melou">Melou</option>
+                        <option value="de-saida">De Saída</option>
                     </select>
                 </fieldset>
 

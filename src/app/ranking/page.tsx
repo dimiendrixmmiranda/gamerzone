@@ -20,13 +20,21 @@ export default function Page() {
     useEffect(() => {
         if (regiao === "wr") {
             // World Ranking → lista completa
-            setLista(listaDeTimes)
+            const listaTimesSemClubeDefault = listaDeTimes.filter(time => time.id != 'semclube')
+            const ordenado = [...listaTimesSemClubeDefault].sort((a, b) => {
+                return parseInt(a.colocacao) - parseInt(b.colocacao);
+            })
+            setLista(ordenado)
         } else {
+            const listaTimesSemClubeDefault = listaDeTimes.filter(time => time.id != 'semclube')
             // Demais regiões → filtra por regiao
-            const filtrados = listaDeTimes.filter(
+            const filtrados = listaTimesSemClubeDefault.filter(
                 (time) => time.regiao === regiao
             )
-            setLista(filtrados)
+            const ordenado = [...filtrados].sort((a, b) => {
+                return parseInt(a.colocacao) - parseInt(b.colocacao);
+            })
+            setLista(ordenado)
         }
     }, [regiao, listaDeTimes])
 
@@ -40,64 +48,42 @@ export default function Page() {
         }
     }
 
+    const renderizarBotaoFiltro = (regiao: 'am' | 'eu' | 'as' | 'wr', texto: string, icone: React.ReactElement, setRegiao: (regiao: 'am' | 'eu' | 'as' | 'wr') => void) => {
+        return (
+            <li className="flex justify-center items-center bg-laranja">
+                <button onClick={() => setRegiao(regiao)} className="w-full flex justify-center items-center text-lg font-bold py-1" style={{ textShadow: '1px 1px 2px black' }}>
+                    <span className="block md:hidden uppercase">
+                        {regiao}
+                    </span>
+                    <span className="hidden md:flex items-center gap-1">
+                        {icone}
+                        <p>
+                            {texto}
+                        </p>
+                    </span>
+                </button>
+            </li>
+        )
+    }
+
     return (
         <Template paginaClube={false} estiloContainer="max-w-full bg-zinc-900">
             <div className="w-full min-h-screen p-4 text-white flex flex-col gap-4 max-w-[1350px] mx-auto">
                 <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">Confira o ranking por equipes:</h2>
                 <h3 className="text-lg font-bold md:text-xl lg:text-2xl">Ranking de 1º de dezembro de 2025</h3>
                 <ul className="grid grid-cols-4 gap-1">
-                    <li className="flex justify-center items-center bg-laranja">
-                        <button onClick={() => setRegiao("wr")} className="text-lg font-bold py-1" style={{ textShadow: '1px 1px 2px black' }}>
-                            <span className="block md:hidden">
-                                WR
-                            </span>
-                            <span className="hidden md:flex items-center gap-1">
-                                <BiWorld />
-                                <p>
-                                    World Ranking
-                                </p>
-                            </span>
-                        </button>
-                    </li>
-                    <li className="flex justify-center items-center bg-laranja">
-                        <button onClick={() => setRegiao("am")} className="text-lg font-bold py-1" style={{ textShadow: '1px 1px 2px black' }}>
-                            <span className="block md:hidden">
-                                AM
-                            </span>
-                            <span className="hidden md:flex items-center gap-1">
-                                <FaGlobeAmericas />
-                                <p>
-                                    Américas
-                                </p>
-                            </span>
-                        </button>
-                    </li>
-                    <li className="flex justify-center items-center bg-laranja">
-                        <button onClick={() => setRegiao("eu")} className="text-lg font-bold py-1" style={{ textShadow: '1px 1px 2px black' }}>
-                            <span className="block md:hidden">
-                                EU
-                            </span>
-                            <span className="hidden md:flex items-center gap-1">
-                                <FaGlobeEurope />
-                                <p>
-                                    Europa
-                                </p>
-                            </span>
-                        </button>
-                    </li>
-                    <li className="flex justify-center items-center bg-laranja">
-                        <button onClick={() => setRegiao("as")} className="text-lg font-bold py-1" style={{ textShadow: '1px 1px 2px black' }}>
-                            <span className="block md:hidden">
-                                AS
-                            </span>
-                            <span className="hidden md:flex items-center gap-1">
-                                <FaGlobeAsia />
-                                <p>
-                                    Asia
-                                </p>
-                            </span>
-                        </button>
-                    </li>
+                    {
+                        renderizarBotaoFiltro('wr', 'World Ranking', <BiWorld />, () => setRegiao('wr'))
+                    }
+                    {
+                        renderizarBotaoFiltro('am', 'América', <FaGlobeAmericas />, () => setRegiao('am'))
+                    }
+                    {
+                        renderizarBotaoFiltro('eu', 'Europa', <FaGlobeEurope />, () => setRegiao('eu'))
+                    }
+                    {
+                        renderizarBotaoFiltro('as', 'Ásia', <FaGlobeAsia />, () => setRegiao('as'))
+                    }
                 </ul>
                 <ul>
                     {

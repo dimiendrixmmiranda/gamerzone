@@ -167,7 +167,7 @@ export function AuthProvider({ children }: AuthProps) {
                 nick,
                 dataDeNascimento,
                 telefone,
-                imagemURL: "/default/usuario-padrao.png",
+                imagemURL: sexo === 'masculino' ? '/default/default-masculino.png' : '/default/default-feminino.png',
                 sexo,
                 tipo: "usuario",
             })

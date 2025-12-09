@@ -10,6 +10,7 @@ import { getAuth } from "firebase/auth";
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import CaixaDeDialogo from "../caixaDeDialogo/CaixaDeDialogo";
 
 export default function RankingORGComunidadeMobile() {
     const { listaDeTimesDaRodada } = useListaTimesDaRodada()
@@ -21,6 +22,15 @@ export default function RankingORGComunidadeMobile() {
 
     const [listaAtual, setListaAtual] = useState<ListaDeTimes | null>(null)
     const [listaTimesGanhadoresOrdenado, setListaTimesGanhadoresOrdenado] = useState<Time[]>([]);
+
+    const [dialogVisible, setDialogVisible] = useState(false);
+    const [dialogMessage, setDialogMessage] = useState("");
+
+    function abrirDialogo(msg: string) {
+        setDialogMessage(msg);
+        setDialogVisible(true);
+        setTimeout(() => setDialogVisible(false), 2000);
+    }
 
     useEffect(() => {
         if (!listaAtual) return;
@@ -84,49 +94,62 @@ export default function RankingORGComunidadeMobile() {
 
     async function votar() {
         if (!user) {
-            alert("Você precisa estar logado para votar!");
+            abrirDialogo("Você precisa estar logado para votar!");
+            // alert("Você precisa estar logado para votar!");
             return;
         }
 
-        if (listaAtual != null) {
+        if (!listaAtual) return;
 
-            const docRef = doc(db, "listaDeTimesDaRodada", String(listaAtual.id));
-            const snap = await getDoc(docRef);
+        const docRef = doc(db, "listaDeTimesDaRodada", String(listaAtual.id));
+        const snap = await getDoc(docRef);
 
-            const votantes = listaAtual.usuariosQueJaVotaram ?? [];
+        const votantes = [...listaAtual.usuariosQueJaVotaram ?? []];
 
-            if (votantes.includes(user.uid)) {
-                alert("Você já votou!");
-                return;
-            }
-
-            const novaLista = [...listaAtual.listaDeTimesDaRodada];
-
-            ranking.forEach((slot, idx) => {
-                if (!slot) return;
-                const index = novaLista.findIndex(t => t.id === slot.id);
-                if (index === -1) return;
-
-                novaLista[index].votos = (novaLista[index].votos ?? 0) + (10 - idx);
-            });
-
-            votantes.push(user.uid);
-
-            const payload = {
-                listaDeTimesDaRodada: novaLista,
-                usuariosQueJaVotaram: votantes
-            };
-
-            if (!snap.exists()) {
-                await setDoc(docRef, payload);
-            } else {
-                await updateDoc(docRef, payload);
-            }
-
-            alert("Voto computado!");
+        if (votantes.includes(user.uid)) {
+            abrirDialogo("Você já votou!");
+            // alert("Você já votou!");
+            return;
         }
-    }
 
+        const novaLista = [...listaAtual.listaDeTimesDaRodada];
+
+        ranking.forEach((slot, idx) => {
+            if (!slot) return;
+            const index = novaLista.findIndex(t => t.id === slot.id);
+            if (index === -1) return;
+
+            novaLista[index] = {
+                ...novaLista[index],
+                votos: (novaLista[index].votos ?? 0) + (10 - idx)
+            };
+        });
+
+        const novosVotantes = [...votantes, user.uid];
+
+        const payload = {
+            listaDeTimesDaRodada: novaLista,
+            usuariosQueJaVotaram: novosVotantes
+        };
+
+        if (!snap.exists()) {
+            await setDoc(docRef, payload);
+        } else {
+            await updateDoc(docRef, payload);
+        }
+
+        // 🔥 ATUALIZA ESTADO LOCAL IMEDIATAMENTE
+        setListaAtual({
+            ...listaAtual,
+            listaDeTimesDaRodada: novaLista,
+            usuariosQueJaVotaram: novosVotantes
+        });
+
+        setTimesDaRodada(novaLista);
+        setUsuarioAtualVotou(true);
+        abrirDialogo("Você já votou!");
+        // alert("Voto computado!");
+    }
 
     function handleAdd(time: Time) {
         // impede mais de 10 posições
@@ -319,6 +342,7 @@ export default function RankingORGComunidadeMobile() {
                     }
                 </div>
             </div>
+            {dialogVisible && <CaixaDeDialogo frase={dialogMessage} />}
         </div>
     );
 }

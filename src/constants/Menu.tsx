@@ -20,6 +20,6 @@ export const listaDeMenu: Menu[] = [
     {
         icone: <FaCog />,
         label: 'Config Dos PRO',
-        link: '/'
+        link: '/configdospro'
     },
 ];

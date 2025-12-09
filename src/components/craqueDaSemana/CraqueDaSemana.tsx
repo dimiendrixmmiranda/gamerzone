@@ -13,6 +13,7 @@ import useContadorSemanal from "@/lib/hooks/useContadorSemanal"
 import ListaDeCraques from "@/interfaces/ListaDeCraques"
 import Link from "next/link"
 import { normalizarData } from "@/lib/utils/normalizarData"
+import CaixaDeDialogo from "../caixaDeDialogo/CaixaDeDialogo"
 
 export default function CraqueDaSemana() {
     const [jogadorAtual, setJogadorAtual] = useState<Jogador | null>(null)
@@ -22,9 +23,17 @@ export default function CraqueDaSemana() {
     const [usuarioAtualVotou, setUsuarioAtualVotou] = useState(false)
     const auth = getAuth();
     const user = auth.currentUser;
-    // console.log(craqueDaSemana)
+    const [dialogVisible, setDialogVisible] = useState(false);
+    const [dialogMessage, setDialogMessage] = useState("");
 
     const [ganhadorCraque, setGanhadorCraque] = useState<Jogador | null>(null);
+
+
+    function abrirDialogo(msg: string) {
+        setDialogMessage(msg);
+        setDialogVisible(true);
+        setTimeout(() => setDialogVisible(false), 2000);
+    }
 
     useEffect(() => {
         if (!craqueDaSemana) {
@@ -102,7 +111,8 @@ export default function CraqueDaSemana() {
 
     async function votar() {
         if (!user) {
-            alert("Você precisa estar logado para votar!");
+            abrirDialogo("Você precisa estar logado para votar!");
+            // alert("Você precisa estar logado para votar!");
             return;
         }
 
@@ -112,7 +122,8 @@ export default function CraqueDaSemana() {
 
         // 🔥 se já votou na semana → bloqueia
         if (votantes.includes(user.uid)) {
-            alert("Você já votou nesta semana!");
+            abrirDialogo("Você já votou nesta semana!");
+            // alert("Você já votou nesta semana!");
             return;
         }
 
@@ -140,11 +151,14 @@ export default function CraqueDaSemana() {
             listaDeCraquesDaSemana: novaLista,
             usuariosQueJaVotaram: votantes
         });
-        // atualiza estado local
-        craqueDaSemana.listaDeCraquesDaSemana = novaLista;
-        craqueDaSemana.usuariosQueJaVotaram = votantes;
-
-        alert("Voto computado!");
+        setCraquesDaSemana({
+            ...craqueDaSemana,
+            listaDeCraquesDaSemana: novaLista,
+            usuariosQueJaVotaram: votantes
+        });
+        setUsuarioAtualVotou(true);
+        abrirDialogo("Voto computado!");
+        // alert("Voto computado!");
     }
 
     const votosArray = craqueDaSemana?.listaDeCraquesDaSemana.map(j => j.votos ?? 0) ?? [0];
@@ -241,7 +255,7 @@ export default function CraqueDaSemana() {
                             </div>
 
                         </div>
-                        <div className="flex-col hidden md:flex bg-laranja p-4" style={{textShadow: '1px 1px 2px black'}}>
+                        <div className="flex-col hidden md:flex bg-laranja p-4" style={{ textShadow: '1px 1px 2px black' }}>
                             <span className="text-xl">Idade: {ganhadorCraque.idade}</span>
                             <div className="flex items-center gap-2">
                                 <span className="text-xl">Nacionalidade:</span>
@@ -289,6 +303,7 @@ export default function CraqueDaSemana() {
                     </div>
                 </Dialog>
             </div>
+            {dialogVisible && <CaixaDeDialogo frase={dialogMessage} />}
         </div>
     )
 }

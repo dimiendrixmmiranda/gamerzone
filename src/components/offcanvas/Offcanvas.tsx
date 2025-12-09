@@ -19,8 +19,10 @@ export default function OffCanvas() {
             </div>
             <Sidebar header={<h2 className="text-4xl text-black font-bold">Menu</h2>} visible={visibleRight} position="right" onHide={() => setVisibleRight(false)}>
                 <div className="w-full h-full flex flex-col gap-6 text-black">
-                    <Menu visibilidade="flex justify-start h-fit" estilo="flex flex-col w-full text-2xl gap-2"/>
-                    <Login estilo="flex w-full" larguraPerfil="10" visibilidadeLabel="flex"/>
+                    <Menu visibilidade="flex justify-start h-fit" estilo="flex flex-col w-full text-2xl gap-2" />
+                    <div className="bg-azul-escuro p-2 rounded-[8px] text-white">
+                        <Login estilo="flex w-full" larguraPerfil="10" visibilidadeLabel="flex" />
+                    </div>
                     <div className="mt-auto">
                         <Redes estilo="grid grid-cols-4 text-4xl" visibilidadeLabel={false} />
                     </div>
