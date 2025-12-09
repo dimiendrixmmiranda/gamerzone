@@ -5,7 +5,7 @@ export const listaDeMenu: Menu[] = [
     {
         icone: <FaMedal />,
         label: 'Rankings',
-        link: '/'
+        link: '/ranking'
     },
     {
         icone: <FaGamepad />,

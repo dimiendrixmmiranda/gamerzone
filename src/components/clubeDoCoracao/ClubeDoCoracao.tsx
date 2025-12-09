@@ -63,7 +63,7 @@ export default function ClubeDoCoracao({ estilo }: ClubeDoCoracaoProps) {
 
     return (
         <div className={`${estilo}`}>
-            <div className={`bg-laranja text-white p-2 flex-col gap-2 sm:p-4 md:grid-cols-2 xl:flex-col ${clube ? 'hidden' : 'flex md:grid xl:flex'}`} style={{textShadow: '1px 1px 2px black'}}>
+            <div className={`bg-zinc-800 text-white p-2 flex-col gap-2 sm:p-4 md:grid-cols-2 xl:flex-col ${clube ? 'hidden' : 'flex md:grid xl:flex'}`} style={{textShadow: '1px 1px 2px black'}}>
                 <div className="flex flex-col gap-2">
                     <h2 className="text-2xl font-bold leading-6">Selecione sua organização favorita!</h2>
                     <p>Escolha sua ORG favorita e fique por dentro de todas as notícias, próximos jogos e muito mais.</p>
@@ -165,7 +165,7 @@ export default function ClubeDoCoracao({ estilo }: ClubeDoCoracaoProps) {
                                                     <div className="relative w-full h-full">
                                                         <Image alt="imagem da noticia" src={noticia.imagem} fill className="object-cover" unoptimized/>
                                                     </div>
-                                                    <h2 className="absolute max-w-[90%] mx-auto text-center font-bold bottom-6 bg-black rounded-[8px] p-2 xl:text-2xl">{noticia.titulo}</h2>
+                                                    <h2 className="absolute max-w-[90%] mx-auto text-center font-bold bottom-6 bg-black rounded-[8px] line-clamp-3 p-2 xl:text-2xl">{noticia.titulo}</h2>
                                                 </div>
                                             </Link>
                                         ) : (

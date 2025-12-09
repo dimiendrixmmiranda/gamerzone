@@ -1475,4 +1475,1234 @@ export const listaDeTimes = [
             },
         ]
     },
+    {
+        id: 'vitality',
+        time: 'Vitality',
+        abreviacao: 'VIT',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/xSXYwyH.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'falcons',
+        time: 'Falcons',
+        abreviacao: 'FAL',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/L6slGyS.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'mouz',
+        time: 'Mouz',
+        abreviacao: 'MOUZ',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/E8novi3.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'spirit',
+        time: 'Spirit',
+        abreviacao: 'SPI',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/vvgjgi3.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'natusvincere',
+        time: 'Natus Vincere',
+        abreviacao: 'NAVI',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/VTDwUQi.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'g2',
+        time: 'G2',
+        abreviacao: 'G2',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/bnas4zJ.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'aurora',
+        time: 'Aurora',
+        abreviacao: 'AUR',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/9GpKiHd.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'astralis',
+        time: 'Astralis',
+        abreviacao: 'AST',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/2r0kooI.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'fazeclan',
+        time: 'Faze Clan',
+        abreviacao: 'FAZE',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/prEm4AW.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: '3dmax',
+        time: '3dMax',
+        abreviacao: '3DM',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/YrKf0Uz.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'b8',
+        time: 'B8',
+        abreviacao: 'B8',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/hwOxlly.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'gamerlegion',
+        time: 'Gamerlegion',
+        abreviacao: 'GL',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/gTWxynA.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'heroic',
+        time: 'Heroic',
+        abreviacao: 'HER',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/kpsDA1g.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'virtuspro',
+        time: 'Virtus Pro',
+        abreviacao: 'VP',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/nj18FsE.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
+    {
+        id: 'parivision',
+        time: 'Parivision',
+        abreviacao: 'PAR',
+        regiao: 'eu',
+        logo: 'https://i.imgur.com/MphI9C5.png',
+        cor: '#EEBD5D',
+        elenco: [
+            {
+                nome: 'Marcelo Cespedes',
+                nick: 'chelo',
+                linkHLTV: '',
+                posicao: '',
+                idade: '27',
+                imagem: 'https://i.imgur.com/oWtAaTx.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Vinicius Figueiredo',
+                nick: 'VINI',
+                linkHLTV: '',
+                posicao: '',
+                idade: '26',
+                imagem: 'https://i.imgur.com/edQvFhY.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Felipe Medeiros',
+                nick: 'skullz',
+                linkHLTV: '',
+                posicao: '',
+                idade: '23',
+                imagem: 'https://i.imgur.com/qE3jr6d.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Santino Rigal',
+                nick: 'try',
+                linkHLTV: '',
+                posicao: '',
+                idade: '21',
+                imagem: 'https://i.imgur.com/xeg94qQ.png',
+                nacionalidade: {
+                    pais: 'Argentina',
+                    imagem: 'https://i.imgur.com/XEZCrfG.png'
+                }
+            },
+            {
+                nome: 'Kaiky Santos',
+                nick: 'noway',
+                linkHLTV: '',
+                posicao: '',
+                idade: '20',
+                imagem: 'https://i.imgur.com/P6zBWyz.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+            {
+                nome: 'Rafael Fernandes',
+                nick: 'zakk',
+                linkHLTV: '',
+                posicao: '',
+                idade: '34',
+                imagem: 'https://i.imgur.com/XyE2XBh.png',
+                nacionalidade: {
+                    pais: 'Brasil',
+                    imagem: 'https://i.imgur.com/dGRGEY7.png'
+                }
+            },
+        ]
+    },
 ]
