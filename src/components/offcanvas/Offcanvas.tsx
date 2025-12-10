@@ -24,7 +24,14 @@ export default function OffCanvas() {
                         <Login estilo="flex w-full" larguraPerfil="10" visibilidadeLabel="flex" />
                     </div>
                     <div className="mt-auto">
-                        <Redes estilo="grid grid-cols-4 text-4xl" visibilidadeLabel={false} />
+                        <Redes
+                            estilo="grid grid-cols-4 text-4xl"
+                            visibilidadeLabel={false}
+                            linkInstagram="/"
+                            linkFacebook="/"
+                            linkEmail="/"
+                            linkTiktok="/"
+                        />
                     </div>
                 </div>
             </Sidebar>

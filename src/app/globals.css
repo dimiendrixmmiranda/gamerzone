@@ -53,3 +53,40 @@ body {
 .p-menuitem-link {
   gap: 2px;
 }
+
+/* #Estilo para dialogconfigdospro# */
+
+/* Aplica apenas dentro do Dialog */
+.dialogconfigdospro .p-dialog-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--laranja) #1a1a1a;
+  /* Firefox */
+}
+
+/* Chrome, Edge e Safari */
+.dialogconfigdospro .p-dialog-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dialogconfigdospro .p-dialog-content::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  /* Fundo */
+  border-radius: 10px;
+}
+
+.dialogconfigdospro .p-dialog-content::-webkit-scrollbar-thumb {
+  background: var(--laranja);
+  /* Cor da barra */
+  border-radius: 10px;
+}
+
+.dialogconfigdospro .p-dialog-content::-webkit-scrollbar-thumb:hover {
+  background: var(--laranja);
+  /* Hover mais escuro */
+}
+
+.dialogconfigdospro .p-dialog-header,
+.dialogconfigdospro .p-dialog-content {
+  background-color: #0D0D0D !important;
+  color: white !important;
+}

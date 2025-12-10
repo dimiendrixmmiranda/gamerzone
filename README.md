@@ -5,8 +5,7 @@
 
 > Projeto de uma interface web moderna e responsiva para uma plataforma de descoberta de jogos, permitindo aos usuários pesquisar, filtrar e ordenar um vasto catálogo de games.
 
-**Acesse a aplicação em produção:** [**GamerZone App**](https://gamerzone-dimiendrix.vercel.app/ ) - *Substitua este link pelo seu deploy na Vercel.*
-
+**Acesse a aplicação em produção:** [**GamerZone**](https://gamerzone-five.vercel.app/ )
 ---
 
 ## 🚀 Sobre o Projeto
@@ -28,16 +27,38 @@ O foco principal deste projeto é a **gestão de estado complexa** (filtros, ord
 
 ## 🛠️ Tecnologias Utilizadas
 
-Este projeto foi construído com um conjunto de ferramentas modernas e eficientes do ecossistema JavaScript/TypeScript:
+Este projeto foi desenvolvido utilizando ferramentas modernas do ecossistema JavaScript, React e Next.js:
 
-### **Frameworks e Bibliotecas Principais**
+### **Framework e Linguagem**
+- **[Next.js](https://nextjs.org/)** — Framework React full-stack com App Router.
+- **[React](https://react.dev/)** — Biblioteca principal da interface.
+- **[TypeScript](https://www.typescriptlang.org/)** — Tipagem estática para maior robustez.
 
-*   **[React](https://react.dev/ )** — Biblioteca para construção da interface de usuário.
-*   **[TypeScript](https://www.typescriptlang.org/ )** — Adiciona tipagem estática para maior segurança e escalabilidade.
-*   **[Vite](https://vitejs.dev/ )** — Ferramenta de build rápida e moderna.
-*   **[Chakra UI](https://chakra-ui.com/ )** — Biblioteca de componentes para UI acessível e estilização.
-*   **[Zustand](https://zustand-demo.pmnd.rs/ )** — Gerenciador de estado simples e poderoso.
-*   **[Axios](https://axios-http.com/ )** — Cliente HTTP para requisições à API.
+### **UI e Estilização**
+- **[Tailwind CSS](https://tailwindcss.com/)** — Utilitário de estilização altamente customizável.
+- **[tailwind-merge](https://github.com/dcastil/tailwind-merge)** — Resolve conflitos de classes do Tailwind.
+- **[tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate)** — Animações prontas para Tailwind.
+- **[lucide-react](https://lucide.dev/)** — Ícones leves e modernos.
+- **[react-icons](https://react-icons.github.io/react-icons/)** — Pacote de ícones adicionais.
+- **[aceternity-ui](https://ui.aceternity.com/)** — Componentes premium estilizados com Tailwind.
+- **[framer-motion](https://www.framer.com/motion/)** — Animações avançadas para React.
+
+### **Carrosséis e UI avançada**
+- **[Swiper](https://swiperjs.com/)** — Slider moderno e responsivo.
+- **[Primereact](https://primereact.org/)** — Componentes completos e profissionais.
+
+### **Firebase**
+- **[Firebase](https://firebase.google.com/)** — Autenticação, Firestore e serviços na nuvem.
+
+### **Utilidades**
+- **[js-cookie](https://github.com/js-cookie/js-cookie)** — Manipulação simplificada de cookies.
+- **[react-use](https://github.com/streamich/react-use)** — Coleção de hooks úteis.
+- **[@dnd-kit](https://dndkit.com/)** — Drag & Drop moderno e acessível.
+
+### **Ferramentas de Desenvolvimento**
+- **ESLint** + **eslint-config-next**
+- **PostCSS**
+- **TypeScript** (como dev dependency)
 
 ### **Integrações e Funcionalidades**
 
@@ -103,14 +124,22 @@ Este projeto foi construído com um conjunto de ferramentas modernas e eficiente
 
 A estrutura do projeto segue uma organização modular, focada na separação de responsabilidades:
 
-/src
-├── components/    # Componentes reutilizáveis de UI (Header, GameCard, etc.)
-├── hooks/         # Lógica de estado e requisição customizada (useGames, useGenres)
-├── services/      # Configuração do cliente Axios e API (api-client.ts)
-├── store/         # Gerenciamento de estado global com Zustand
-├── pages/         # Páginas principais da aplicação
-└── theme/         # Configurações de tema do Chakra UI
-
+/src  
+│  
+├── app/ # Rotas e páginas do Next.js (App Router)  
+│  
+├── components/ # Componentes reutilizáveis de UI (Header, Card, Tabela, etc.)  
+│  
+├── constants/ # Dados estáticos e listas mockadas (times, jogadores, configs...)  
+│  
+├── interfaces/ # Tipos e interfaces TypeScript (Jogador, Time, Configs...)  
+│  
+└── lib/ # Lógicas auxiliares e integrações (Firebase, hooks, contextos, utils)  
+│  
+├── context/ # Contextos globais (AuthContext, ConfigContext...)  
+├── firebase/ # Inicialização do Firebase + serviços  
+├── hooks/ # Hooks customizados (useListaTimesDaRodada, useContadorSemanal...)  
+└── utils/ # Funções utilitárias diversas (formatters, helpers)  
 
 ---
 
@@ -126,12 +155,28 @@ A estrutura do projeto segue uma organização modular, focada na separação de
 ## 📦 Dependências Principais
 
 | Categoria | Pacote | Descrição |
-| :--- | :--- | :--- |
-| Framework | `react`, `react-dom` | Biblioteca principal e DOM. |
-| Tipagem | `typescript` | Adiciona tipagem estática. |
-| Estilo/UI | `@chakra-ui/react`, `@chakra-ui/icons` | Componentes de UI e ícones. |
-| Requisições | `axios` | Cliente HTTP para API. |
-| Utilitários | `react-icons` | Biblioteca de ícones. |
+|----------|--------|-----------|
+| **Framework** | `next`, `react`, `react-dom` | Base da aplicação utilizando Next.js 15 e React 19. |
+| **Estado, Motion e Hooks** | `framer-motion`, `motion`, `react-use` | Animações, controles de movimento e hooks utilitários. |
+| **UI / Estilização** | `tailwindcss`, `tailwindcss-animate`, `tailwind-merge` | Estilização com Tailwind, animações e merge inteligente de classes. |
+|  | `lucide-react`, `react-icons` | Conjuntos de ícones para UI. |
+|  | `aceternity-ui` | Componentes estilizados adicionais. |
+| **Drag & Drop** | `@dnd-kit/core`, `@dnd-kit/modifiers`, `@dnd-kit/sortable` | Sistema de Drag & Drop moderno e flexível. |
+| **Firebase** | `firebase` | Autenticação, Firestore e serviços do Firebase. |
+| **Utilidades** | `clsx`, `class-variance-authority` | Manipulação e variação de classes CSS. |
+| **JS Cookie**  | `js-cookie` | Controle de cookies pelo cliente. |
+| **Swiper** | `swiper` | Carrosséis e sliders avançados. |
+
+---
+
+## 🛠️ Dependências de Desenvolvimento
+
+| Categoria | Pacote | Descrição |
+|----------|--------|-----------|
+| **TypeScript** | `typescript`, `@types/react`, `@types/react-dom`, `@types/node` | Suporte completo para tipagem. |
+| **Linting** | `eslint`, `eslint-config-next`, `@eslint/eslintrc` | Padronização e análise estática do código. |
+| **Build / CSS** | `postcss` | Processamento de CSS para Tailwind. |
+| **Types** | `@types/js-cookie`, `@types/leaflet` | Tipagem adicional para libs externas. |
 
 ---
 

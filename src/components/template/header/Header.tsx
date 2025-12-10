@@ -26,14 +26,21 @@ export default function Header({ paginaClube }: HeaderProps) {
                         <Image alt="Texto GamerZone" src={'/logo/texto-gamer-zone.png'} fill className="object-cover" />
                     </div>
                 </Link>
-                <Menu estilo="flex items-center gap-3" visibilidade="hidden md:flex flex-1"/>
-                <Redes estilo="hidden md:grid grid-cols-2 gap-2 text-2xl lg:grid-cols-4" visibilidadeLabel={false}/>
-                <Login estilo="hidden lg:flex" larguraPerfil="7" visibilidadeLabel="hidden lg:flex"/>
+                <Menu estilo="flex items-center gap-3" visibilidade="hidden md:flex flex-1" />
+                <Redes
+                    estilo="hidden md:grid grid-cols-2 gap-2 text-2xl lg:grid-cols-4"
+                    visibilidadeLabel={false}
+                    linkInstagram="/"
+                    linkFacebook="/"
+                    linkEmail="/"
+                    linkTiktok="/"
+                />
+                <Login estilo="hidden lg:flex" larguraPerfil="7" visibilidadeLabel="hidden lg:flex" />
                 <OffCanvas />
             </div>
             {
                 paginaClube && clube && (
-                    <Link href={`/paginaClube/${createSlug(clube.time)}`} className={`flex gap-2 items-center justify-center p-2 md:p-3 lg:px-4`} style={{backgroundColor: `${clube.cor}`}}>
+                    <Link href={`/paginaClube/${createSlug(clube.time)}`} className={`flex gap-2 items-center justify-center p-2 md:p-3 lg:px-4`} style={{ backgroundColor: `${clube.cor}` }}>
                         <div className="relative w-8 h-8 drop-shadow-[0_0_2px_rgba(0,0,0,0.8)]">
                             <Image alt="clube" src={clube.logo} fill className="object-contain" />
                         </div>

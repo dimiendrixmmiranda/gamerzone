@@ -20,33 +20,115 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'Rifler',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
                     pais: 'Brasil',
                     imagem: 'https://i.imgur.com/dGRGEY7.png'
+                },
+                configs: {
+                    mouse: {
+                        ['Nome']: 'Pulsar Xlite V3 Es Black',
+                        ['DPI']: '400',
+                        ['Sensitivity']: '4',
+                        ['eDPI']: '1600.00',
+                        ['Zoom Sensitivity']: '1.00',
+                        ['HZ']: '1000',
+                        ['Windows Sensitivity']: '6'
+                    },
+                    crosshair: {
+                        ['Style']: 'Classic Static',
+                        ['Follow Recoil']: 'No',
+                        ['Dot']: 'No',
+                        ['Length']: '3',
+                        ['Thickness']: '0.1',
+                        ['Gap']: '-3',
+                        ['Outline']: 'No',
+                        ['Color']: 'Custom',
+                        ['Red']: '0',
+                        ['Green']: '255',
+                        ['Blue']: '0',
+                        ['Alpha']: 'Yes',
+                        ['Alpha Value']: '255',
+                        ['T Style']: 'No',
+                        ['Deployed Weapon Gap']: 'No',
+                        ['Sniper Width']: '0',
+                        ['Código da Mira']: 'CSGO-qbtPc-D6heq-R7z58-CuJAf-LwAkE',
+                    },
+                    viewmodel: {
+                        ['FOV']: '60',
+                        ['Offset X']: '2.5',
+                        ['Offset Y']: '0',
+                        ['Offset Z']: '1.5',
+                        ['Presetpos']: '0',
+                        ['Código do Viewmodel']: 'viewmodel_fov 60; viewmodel_offset_x 2.5; viewmodel_offset_y 0; viewmodel_offset_z 1.5; viewmodel_presetpos 0;',
+                    },
+                    lauchOptions: {
+                        ['Código Launch Options']: '-tickrate 128 -freq 240 -novid -high -console -nojoy'
+                    },
+                    video: {
+                        ['Resolution']: '1280x960',
+                        ['Aspect Radio']: '5:4',
+                        ['Scaling Mode']: 'Black Bars',
+                        ['Brightness']: '93%',
+                        ['Display Mode']: 'Fullscreen',
+                    },
+                    advancedVideo: {
+                        ['Boost Player Contrast']: 'Enabled',
+                        ['V-Sync']: 'Disabled',
+                        ['NVIDIA Reflex Low Latency']: '',
+                        ['NVIDIA G-Sync']: '',
+                        ['Maximum FPS In Game']: '',
+                        ['Multisampling Anti-Aliasing Mode']: 'None',
+                        ['Global Shadow Quality']: '',
+                        ['Dynamic Shadows']: '',
+                        ['Model / Texture Detail']: 'Low',
+                        ['Texture Filtering Mode']: 'Bilinear',
+                        ['Shader Detail']: '',
+                        ['Particle Detail']: '',
+                        ['Ambient Occlusion']: '',
+                        ['High Dynamic Range']: '',
+                        ['FidelityFX Super Resolution']: '',
+                    },
+                    hud: {
+                        ['HUD Scale']: '0.85',
+                        ['HUD Color']: 'Team Color'
+                    },
+                    radar: {
+                        ['Radar Centers The Player']: 'No',
+                        ['Radar is Rotating']: 'Yes',
+                        ['Toggle Shape With Scoreboard']: 'Yes',
+                        ['Radar Hud Size']: '1.00',
+                        ['Radar Map Zoom']: '0.4',
+                    }
                 }
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Vinicius "VINI" Figueiredo tem 26 anos e atua como IGL na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'IGL',
                 idade: '26',
                 imagem: 'https://i.imgur.com/edQvFhY.png',
                 nacionalidade: {
                     pais: 'Brasil',
                     imagem: 'https://i.imgur.com/dGRGEY7.png'
-                }
+                },
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'Rifler',
                 idade: '23',
                 imagem: 'https://i.imgur.com/qE3jr6d.png',
                 nacionalidade: {
@@ -56,9 +138,11 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como Awper na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'Awper',
                 idade: '21',
                 imagem: 'https://i.imgur.com/xeg94qQ.png',
                 nacionalidade: {
@@ -68,9 +152,11 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'Rifler',
                 idade: '20',
                 imagem: 'https://i.imgur.com/P6zBWyz.png',
                 nacionalidade: {
@@ -81,8 +167,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Rafael "zakk" Fernandes tem 34 anos e atua como Coach na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -165,7 +252,7 @@ export const listaDeTimes = [
                 nome: 'Sid Macedo',
                 nick: 'sidde',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '28',
                 imagem: 'https://i.imgur.com/XQtF7NE.png',
                 nacionalidade: {
@@ -186,9 +273,11 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'Rifler',
                 idade: '27',
                 imagem: 'https://i.imgur.com/oWtAaTx.png',
                 nacionalidade: {
@@ -198,7 +287,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -210,7 +301,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -222,7 +315,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -234,7 +329,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -247,8 +344,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -269,7 +367,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -281,7 +381,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -293,7 +395,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -305,7 +409,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -317,7 +423,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -330,8 +438,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -352,7 +461,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -364,7 +475,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -376,7 +489,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -388,7 +503,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -400,7 +517,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -413,8 +532,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -435,7 +555,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -447,7 +569,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -459,7 +583,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -471,7 +597,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -483,7 +611,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -496,8 +626,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -518,7 +649,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -530,7 +663,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -542,7 +677,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -554,7 +691,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -566,7 +705,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -579,8 +720,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -601,7 +743,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -613,7 +757,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -625,7 +771,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -637,7 +785,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -649,7 +799,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -662,8 +814,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -684,7 +837,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -696,7 +851,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -708,7 +865,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -720,7 +879,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -732,7 +893,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -745,8 +908,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -767,7 +931,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -779,7 +945,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -791,7 +959,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -803,7 +973,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -815,7 +987,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -828,8 +1002,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -850,7 +1025,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -862,7 +1039,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -874,7 +1053,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -886,7 +1067,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -898,7 +1081,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -911,8 +1096,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -933,7 +1119,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -945,7 +1133,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -957,7 +1147,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -969,7 +1161,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -981,7 +1175,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -994,8 +1190,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1016,7 +1213,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1028,7 +1227,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1040,7 +1241,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1052,7 +1255,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1064,7 +1269,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1077,8 +1284,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1161,7 +1369,7 @@ export const listaDeTimes = [
                 nome: 'Iuri Gomes',
                 nick: 'RaaiiN',
                 linkHLTV: 'https://www.hltv.org/coach/24429/raaiin',
-                posicao: 'Coach',
+                posicao: 'coach',
                 idade: '28',
                 imagem: 'https://i.imgur.com/it4pAeJ.png',
                 nacionalidade: {
@@ -1182,7 +1390,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1194,7 +1404,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1206,7 +1418,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1218,7 +1432,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1230,7 +1446,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1243,8 +1461,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1265,7 +1484,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1277,7 +1498,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1289,7 +1512,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1301,7 +1526,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1313,7 +1540,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1326,8 +1555,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1348,7 +1578,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1360,7 +1592,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1372,7 +1606,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1384,7 +1620,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1396,7 +1634,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1409,8 +1649,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1431,7 +1672,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1443,7 +1686,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1455,7 +1700,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1467,7 +1714,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1479,7 +1728,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1492,8 +1743,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1514,7 +1766,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1526,7 +1780,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1538,7 +1794,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1550,7 +1808,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1562,7 +1822,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1575,8 +1837,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1597,7 +1860,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1609,7 +1874,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1621,7 +1888,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1633,7 +1902,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1645,7 +1916,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1658,8 +1931,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1680,7 +1954,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1692,7 +1968,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1704,7 +1982,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1716,7 +1996,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1728,7 +2010,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1741,8 +2025,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1763,7 +2048,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1775,7 +2062,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1787,7 +2076,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1799,7 +2090,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1811,7 +2104,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1824,8 +2119,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1846,7 +2142,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1858,7 +2156,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1870,7 +2170,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1882,7 +2184,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1894,7 +2198,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1907,8 +2213,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -1929,7 +2236,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -1941,7 +2250,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -1953,7 +2264,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -1965,7 +2278,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -1977,7 +2292,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -1990,8 +2307,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2012,7 +2330,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2024,7 +2344,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2036,7 +2358,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2048,7 +2372,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2060,7 +2386,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2073,8 +2401,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2095,7 +2424,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2107,7 +2438,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2119,7 +2452,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2131,7 +2466,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2143,7 +2480,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2156,8 +2495,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2178,7 +2518,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2190,7 +2532,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2202,7 +2546,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2214,7 +2560,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2226,7 +2574,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2239,8 +2589,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2261,7 +2612,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2273,7 +2626,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2285,7 +2640,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2297,7 +2654,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2309,7 +2668,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2322,8 +2683,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2344,7 +2706,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2356,7 +2720,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2368,7 +2734,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2380,7 +2748,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2392,7 +2762,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2405,8 +2777,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2427,7 +2800,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2439,7 +2814,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2451,7 +2828,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2463,7 +2842,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2475,7 +2856,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2488,8 +2871,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2510,7 +2894,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2522,7 +2908,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2534,7 +2922,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2546,7 +2936,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2558,7 +2950,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2571,8 +2965,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2593,7 +2988,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2605,7 +3002,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2617,7 +3016,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2629,7 +3030,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2641,7 +3044,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2654,8 +3059,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2676,7 +3082,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2688,7 +3096,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2700,7 +3110,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2712,7 +3124,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2724,7 +3138,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2737,8 +3153,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2759,7 +3176,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2771,7 +3190,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2783,7 +3204,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2795,7 +3218,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2807,7 +3232,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2820,8 +3247,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2842,7 +3270,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2854,7 +3284,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2866,7 +3298,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2878,7 +3312,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2890,7 +3326,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2903,8 +3341,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {
@@ -2925,7 +3364,9 @@ export const listaDeTimes = [
         elenco: [
             {
                 nome: 'Marcelo Cespedes',
+                time: 'imperial',
                 nick: 'chelo',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '27',
@@ -2937,7 +3378,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Vinicius Figueiredo',
+                time: 'imperial',
                 nick: 'VINI',
+                descricao: 'Marcelo "chelo" Cespedes tem 27 anos e atua como rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '26',
@@ -2949,7 +3392,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Felipe Medeiros',
+                time: 'imperial',
                 nick: 'skullz',
+                descricao: 'Felipe "skullz" Medeiros tem 23 anos e atua como IGL na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '23',
@@ -2961,7 +3406,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Santino Rigal',
+                time: 'imperial',
                 nick: 'try',
+                descricao: 'Santino "try" Rigal tem 21 anos e atua como AWP na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '21',
@@ -2973,7 +3420,9 @@ export const listaDeTimes = [
             },
             {
                 nome: 'Kaiky Santos',
+                time: 'imperial',
                 nick: 'noway',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
                 posicao: '',
                 idade: '20',
@@ -2986,8 +3435,9 @@ export const listaDeTimes = [
             {
                 nome: 'Rafael Fernandes',
                 nick: 'zakk',
+                descricao: 'Kaiky "noway" Santos tem 20 anos e atua como Rifler na Imperial',
                 linkHLTV: '',
-                posicao: '',
+                posicao: 'coach',
                 idade: '34',
                 imagem: 'https://i.imgur.com/XyE2XBh.png',
                 nacionalidade: {

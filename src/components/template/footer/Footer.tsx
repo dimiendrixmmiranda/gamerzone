@@ -28,7 +28,14 @@ export default function Footer() {
                         <p>Anuncie no site</p>
                     </div>
                     <div className="w-full md:col-start-1 md:col-end-4 lg:col-start-4 lg:col-end-5">
-                        <Redes estilo="grid grid-cols-2 text-lg font-bold md:grid-cols-4 lg:grid-cols-2 lg:gap-4" visibilidadeLabel={true}/>
+                        <Redes
+                            estilo="grid grid-cols-2 text-lg font-bold md:grid-cols-4 lg:grid-cols-2 lg:gap-4"
+                            visibilidadeLabel={true}
+                            linkInstagram="/"
+                            linkFacebook="/"
+                            linkEmail="/"
+                            linkTiktok="/"
+                        />
                     </div>
                     <div className="col-start-1 col-end-3 flex justify-center items-center mt-2 text-center md:col-end-4 lg:col-end-5 xl:col-end-6">
                         <span>© 2025 • Todos os direitos reservados</span>
