@@ -15,7 +15,7 @@ export const listaDeMenu: Menu[] = [
     {
         icone: <FaTrophy />,
         label: 'Campeonatos',
-        link: '/'
+        link: '/campeonatos'
     },
     {
         icone: <FaCog />,

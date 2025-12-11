@@ -11,7 +11,7 @@ interface CardJogadorProps {
 
 export default function CardJogador({ jogador, jogadorAtual, setJogadorAtual, onclick }: CardJogadorProps) {
     return (
-        <li className={`group cursor-pointer relative flex-shrink-0 w-[130px] h-[170px] sm:w-[150px] sm:h-[200px] lg:w-[170px] lg:h-[220px] xl:w-[200px] xl:h-[250px] overflow-hidden ${jogadorAtual === jogador ? 'border-4 border-laranja' : ''}`} onClick={() => {
+        <li className={`border-2 border-black group cursor-pointer relative flex-shrink-0 w-[130px] h-[170px] sm:w-[150px] sm:h-[200px] lg:w-[170px] lg:h-[220px] xl:w-[200px] xl:h-[250px] overflow-hidden ${jogadorAtual === jogador ? 'border-4 border-laranja' : ''}`} onClick={() => {
             if (setJogadorAtual) {
                 setJogadorAtual(jogador)
             }

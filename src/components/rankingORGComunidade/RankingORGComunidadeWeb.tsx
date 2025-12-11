@@ -429,6 +429,7 @@ export default function RankingORGComunidadeWeb() {
                 <h2 className="font-bold text-center text-2xl">Confira o resultado do ranking da comunidade</h2>
                 <div className="grid grid-rows-2 grid-cols- max-w-[450px] mx-auto w-full mt-4">
                     <div className="col-start-2 col-end-3 row-start-1 row-end-2 flex flex-col justify-center items-center">
+                        <h2 className="text-4xl font-bold mb-2">1º</h2>
                         <div className="relative w-[100px] h-[100px]">
                             <Image
                                 alt="imga"
@@ -441,7 +442,8 @@ export default function RankingORGComunidadeWeb() {
                             {listaTimesGanhadoresOrdenado[0]?.time ?? ""}
                         </h3>
                     </div>
-                    <div className="col-start-1 col-end-2 row-start-2 row-end-3 flex flex-col justify-center items-center -mt-[80px]">
+                    <div className="col-start-1 col-end-2 row-start-2 row-end-3 flex flex-col justify-center items-center -mt-[120px]">
+                        <h2 className="text-4xl font-bold mb-2">2º</h2>
                         <div className="relative w-[80px] h-[80px]">
                             <Image
                                 alt="imga"
@@ -454,7 +456,8 @@ export default function RankingORGComunidadeWeb() {
                             {listaTimesGanhadoresOrdenado[1]?.time ?? ""}
                         </h3>
                     </div>
-                    <div className="col-start-3 col-end-4 row-start-2 row-end-3 flex flex-col justify-center items-center -ml-[20px]">
+                    <div className="col-start-3 col-end-4 row-start-2 row-end-3 flex flex-col justify-center items-center -ml-[20px] -mt-[60px]">
+                        <h2 className="text-4xl font-bold mb-2">3º</h2>
                         <div className="relative w-[60px] h-[60px]">
                             <Image
                                 alt="imga"
@@ -468,7 +471,7 @@ export default function RankingORGComunidadeWeb() {
                         </h3>
                     </div>
                 </div>
-                <div className="flex">
+                <div className="flex -mt-8">
                     {
                         listaTimesGanhadoresOrdenado.slice(3).map((time, i) => {
                             return (

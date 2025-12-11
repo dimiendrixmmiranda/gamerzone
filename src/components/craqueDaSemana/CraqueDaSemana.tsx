@@ -246,14 +246,13 @@ export default function CraqueDaSemana() {
                     ganhadorCraque &&
                     <div className="flex flex-col md:grid md:grid-cols-2 md:max-w-[500px] md:w-full md:mx-auto">
                         <div className="w-full flex flex-col justify-center items-center">
-                            <div className="relative w-[220px] h-[250px]">
+                            <div className="relative w-[220px] h-[220px] md:w-[260px] md:h-[260px]">
                                 <Image alt={ganhadorCraque.nome} src={ganhadorCraque.imagem} fill className="object-contain" />
                             </div>
                             <div className="flex flex-col justify-center items-center text-center">
                                 <h2 className="font-bold text-2xl">{ganhadorCraque.nick}</h2>
                                 <h3 className="font-semibold text-lg">{ganhadorCraque.nome}</h3>
                             </div>
-
                         </div>
                         <div className="flex-col hidden md:flex bg-laranja p-4" style={{ textShadow: '1px 1px 2px black' }}>
                             <span className="text-xl">Idade: {ganhadorCraque.idade}</span>
