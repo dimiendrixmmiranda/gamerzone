@@ -2,7 +2,6 @@
 
 import Blogs from "@/components/blogs/Blogs"
 import ClubeDoCoracao from "@/components/clubeDoCoracao/ClubeDoCoracao"
-import MenuInferior from "@/components/menuInferior/MenuInferior"
 import Noticias from "@/components/noticias/Noticias"
 import CarrosselMobile from "@/components/slider/CarrosselMobile"
 import CarrosselWeb from "@/components/slider/CarrosselWeb"
@@ -42,7 +41,6 @@ export default function Home() {
 			<RankingORGComunidadeWeb />
 			<RankingORGComunidadeMobile />
 			<VideosCurtos />
-			<MenuInferior />
 		</Template>
 	)
 }

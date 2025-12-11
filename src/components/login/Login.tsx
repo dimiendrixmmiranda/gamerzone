@@ -59,7 +59,7 @@ export default function Login({ estilo, larguraPerfil, visibilidadeLabel }: Logi
         <div className={`${estilo}`}>
             {
                 usuario ? (
-                    <div className="card w-full items-center gap-2">
+                    <div className="card w-full items-center gap-2 p-1 rounded-[8px] hover:bg-white transition-all duration-300 hover:text-azul-escuro">
                         <Toast ref={toast} />
                         <Menu model={itemsUsuario} popup ref={menuLeft} id="popup_menu_left" />
                         <Button
@@ -70,8 +70,8 @@ export default function Login({ estilo, larguraPerfil, visibilidadeLabel }: Logi
                                         <img src={usuario.imagemURL} alt="Usuário" className="w-full h-full object-cover" />
                                     </div>
                                     <div className={`${visibilidadeLabel} flex-col my-auto`}>
-                                        <p className='text-[.5em] text-start'>Bem vindo</p>
-                                        <h2 className="leading-4 truncate max-w-[9ch]">{usuario.nick}</h2>
+                                        <p className='text-[.5em] text-center'>Bem vindo</p>
+                                        <h2 className="leading-4 truncate max-w-[9ch] text-start">{usuario.nick}</h2>
                                     </div>
                                 </div>
                             }
@@ -82,7 +82,7 @@ export default function Login({ estilo, larguraPerfil, visibilidadeLabel }: Logi
                         />
                     </div>
                 ) : (
-                    <div className="card justify-content-center items-center">
+                    <div className="card justify-content-center items-center p-1 rounded-[8px] hover:bg-white transition-all duration-300 hover:text-azul-escuro">
                         <Toast ref={toast} />
                         <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                         <Button

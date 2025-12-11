@@ -12,25 +12,40 @@ interface CardJogadorProps {
 export default function CardJogador({ jogador, jogadorAtual, setJogadorAtual, onclick }: CardJogadorProps) {
     return (
         <li className={`group cursor-pointer relative flex-shrink-0 w-[130px] h-[170px] sm:w-[150px] sm:h-[200px] lg:w-[170px] lg:h-[220px] xl:w-[200px] xl:h-[250px] overflow-hidden ${jogadorAtual === jogador ? 'border-4 border-laranja' : ''}`} onClick={() => {
-            if(setJogadorAtual){
+            if (setJogadorAtual) {
                 setJogadorAtual(jogador)
             }
-            if(onclick){
+            if (onclick) {
                 onclick()
             }
         }}>
             {/* CARD PRINCIPAL */}
             <div className="grid grid-rows-[1fr_35px] w-full h-full">
-                <div className="relative w-full h-full bg-zinc-800">
-                    <Image alt={jogador.nome} src={jogador.imagem} fill className="object-cover" />
+                <div className="relative bg-zinc-800">
+                    <div className="absolute inset-0 z-0 opacity-40">
+                        <Image
+                            alt={jogador.time}
+                            src={jogador.imagemTime}
+                            fill
+                            className="object-contain"
+                        />
+                    </div>
+                    <div className="relative w-full h-full z-10">
+                        <Image
+                            alt={jogador.nome}
+                            src={jogador.imagem}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
                 </div>
-                <div className="w-full h-full bg-zinc-950 text-white flex justify-center items-center font-bold">
+                <div className="w-full h-full bg-zinc-900 text-white flex justify-center items-center font-bold">
                     <h2>{jogador.nick}</h2>
                 </div>
             </div>
 
             {/* INFO QUE SOBE NO HOVER */}
-            <div className="absolute bottom-[-120%] left-0 w-full h-full bg-black text-white p-4 text-sm flex flex-col gap-2 transition-all duration-700 ease-in-out group-hover:bottom-0 opacity-90">
+            <div className="absolute bottom-[-120%] left-0 w-full h-full bg-black text-white p-4 text-sm flex flex-col gap-2 transition-all duration-700 ease-in-out group-hover:bottom-0 opacity-90 z-30">
                 <p>Nome: {jogador.nome}</p>
                 <p>Nick: {jogador.nick}</p>
                 <p>Idade: {jogador.idade}</p>

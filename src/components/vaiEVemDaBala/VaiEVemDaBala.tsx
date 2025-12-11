@@ -101,7 +101,7 @@ export default function VaiEVemDaBala() {
 
 
     return (
-        <div className="bg-zinc-900 text-white p-4 xl:mr-4">
+        <div className="bg-zinc-800 text-white p-4 xl:mr-4">
             <h2 className="text-2xl text-center font-bold">Vai e vem da bala</h2>
 
             <Swiper
@@ -125,7 +125,7 @@ export default function VaiEVemDaBala() {
                                                 <Image alt={transferencia.jogadorAtual.nick} src={transferencia.jogadorAtual.imagem} fill className="object-contain" />
                                             </div>
                                         </div>
-                                        <div className="w-full h-6 absolute bottom-0 left-0 z-30 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                                        <div className="w-full h-6 absolute bottom-0 left-0 z-30 bg-gradient-to-t from-zinc-800 to-transparent"></div>
                                     </div>
                                     <div className="grid grid-cols-2 gap-2">
                                         {/* Transferência */}

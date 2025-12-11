@@ -13,10 +13,11 @@ import { useContext, useEffect, useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
 import { RiQuestionAnswerFill } from "react-icons/ri";
-import { FaExclamationCircle } from "react-icons/fa";
+import { FaExclamationCircle, FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { createSlug } from "@/lib/utils/createSlug";
 import { FaInstagram, FaFacebook, FaTiktok, FaEnvelope } from "react-icons/fa";
 import MenuInferior from "@/components/menuInferior/MenuInferior";
+import Botao from "@/components/botao/Botao";
 
 export default function Page() {
     const params = useParams();
@@ -184,28 +185,28 @@ export default function Page() {
                             <li>
                                 <Link href={'/'}>
                                     <div>
-                                        <FaFacebook/>
+                                        <FaFacebook />
                                     </div>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={'/'}>
                                     <div>
-                                        <FaInstagram/>
+                                        <FaInstagram />
                                     </div>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={'/'}>
                                     <div>
-                                        <FaTiktok/>
+                                        <FaTiktok />
                                     </div>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={'/'}>
                                     <div>
-                                        <FaEnvelope/>
+                                        <FaEnvelope />
                                     </div>
                                 </Link>
                             </li>
@@ -246,9 +247,7 @@ export default function Page() {
                     </ul>
                 </div>
 
-                <Link href={'/'} className="font-bold text-2xl p-2 text-center bg-azul-escuro text-white px-8 rounded-[12px] md:ml-auto">
-                    Voltar
-                </Link>
+                <Botao label="Voltar" icone={<FaRegArrowAltCircleLeft />} link="/" />
 
                 {/* Seção de comentários */}
                 <div className="flex flex-col gap-2">
@@ -386,7 +385,7 @@ export default function Page() {
                     </ul>
                 </div>
             </div>
-            <MenuInferior/>
+            <MenuInferior />
         </Template>
     )
 }

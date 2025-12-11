@@ -10,8 +10,11 @@ export interface Jogador {
     nacionalidade: Nacionalidade;
     linkHLTV: string
     posicao: string
+    imagemTime: string
+    time: string
     descricao?: string
     votos?: number
     usuariosQueVotaram?: string[]
     configs?: any
+    redes?: any
 }

@@ -5,7 +5,7 @@ import { listaDeTimes } from "@/constants/listaDeTimes";
 import Time from "@/interfaces/Time";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { FaCopy } from "react-icons/fa";
+import { FaCopy, FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { Dialog } from 'primereact/dialog';
 import { Jogador } from "@/interfaces/Jogador";
 import Link from "next/link";
@@ -14,6 +14,8 @@ import nomePersonalizado from "@/lib/utils/nomePersonalizado";
 import { copiar } from "@/lib/utils/copiar";
 import CaixaDeDialogo from "@/components/caixaDeDialogo/CaixaDeDialogo";
 import { PiMagnifyingGlassFill } from "react-icons/pi";
+import { Paginator } from "primereact/paginator";
+import Botao from "@/components/botao/Botao";
 
 export default function Page() {
     const [equipes, setEquipes] = useState<Time[]>([])
@@ -26,6 +28,8 @@ export default function Page() {
     const [busca, setBusca] = useState("");
     const [sugestoes, setSugestoes] = useState<Jogador[]>([]);
 
+    const [first, setFirst] = useState(0);
+    const rows = 5;
 
     const copiarComAviso = (texto: string) => {
         copiar(texto);
@@ -39,9 +43,9 @@ export default function Page() {
         }, 1500);
     };
 
-
     useEffect(() => {
-        setEquipes([listaDeTimes[1], listaDeTimes[2]])
+        const filtro = listaDeTimes.filter(time => time.id != 'semclube')
+        setEquipes(filtro)
     }, [listaDeTimes])
 
     const celularTabela = (cabecalho: string, conteudo: string) => {
@@ -70,6 +74,7 @@ export default function Page() {
     const hud = jogadorAtual?.configs?.hud;
     const radar = jogadorAtual?.configs?.radar;
 
+    const equipesPaginadas = equipes.slice(first, first + rows);
 
     return (
         <Template estiloContainer="max-w-full" paginaClube={false}>
@@ -142,7 +147,7 @@ export default function Page() {
                         </div>
                         <div className="flex flex-col gap-4">
                             {
-                                equipes.map((time, i) => {
+                                equipesPaginadas.map((time, i) => {
                                     const jogadores = time.elenco.filter(jogador => jogador.posicao != 'coach')
                                     return (
                                         <div key={i} className="bg-zinc-950 w-full p-2 flex flex-col gap-4 md:p-4">
@@ -175,6 +180,19 @@ export default function Page() {
                                 })
                             }
                         </div>
+                        <Paginator
+                            first={first}
+                            rows={rows}
+                            totalRecords={equipes.length}
+                            onPageChange={(e) => {
+                                setFirst(e.first);
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}
+                            template="PrevPageLink PageLinks NextPageLink"
+                            pageLinkSize={3}
+                            className="bg-zinc-900 text-white border-none flex justify-center py-3"
+                        />
+                        <Botao label="Voltar" icone={<FaRegArrowAltCircleLeft />} link="/"/>
                     </div>
                 </div>
 
@@ -183,8 +201,15 @@ export default function Page() {
                         <Dialog className="dialogconfigdospro" header={nomePersonalizado(jogadorAtual)} visible={visible} style={{ width: '95%', maxWidth: '1000px' }} onHide={() => { if (!visible) return; setVisible(false); }}>
                             <div className="flex flex-col gap-4">
                                 <div className="bg-zinc-700 flex flex-col justify-center items-center p-2 gap-4 rounded-[6px] md:grid md:grid-cols-[auto_1fr_40px] md:gap-6 md:p-4">
-                                    <div className="relative w-[180px] h-[180px]  bg-zinc-500 p-2 rounded-full overflow-hidden md:w-[220px] md:h-[220px]">
-                                        <Image alt={jogadorAtual.nome} src={jogadorAtual.imagem} fill className="object-contain" />
+                                    <div className="relative flex justify-center overflow-hidden bg-zinc-500 rounded-full">
+                                        <div className="relative z-20 w-[180px] h-[180px] p-2 overflow-hidden md:w-[220px] md:h-[220px]">
+                                            <Image alt={jogadorAtual.nome} src={jogadorAtual.imagem} fill className="object-contain" />
+                                        </div>
+                                        <div className="absolute left-[50%] opacity-70" style={{ transform: 'translate(-50%)' }}>
+                                            <div className="relative w-[180px] h-[180px] z-10 md:w-[220px] md:h-[220px]">
+                                                <Image alt={jogadorAtual.time} src={jogadorAtual.imagemTime} fill className="object-contain" />
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="flex flex-col gap-1 w-full">
                                         <span>Nome: {jogadorAtual.nome}</span>
@@ -282,6 +307,7 @@ export default function Page() {
                         </Dialog>
                     )
                 }
+
                 {mostrarCaixa && <CaixaDeDialogo frase={mensagemCaixa} />}
             </div>
         </Template>

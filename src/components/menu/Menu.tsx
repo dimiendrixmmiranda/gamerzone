@@ -8,12 +8,12 @@ interface MenuProps {
 
 export default function Menu({ visibilidade, estilo }: MenuProps) {
     return (
-        <nav className={`${visibilidade} justify-center lg:flex-none lg:mr-auto lg:text-lg`}>
+        <nav className={`${visibilidade} justify-center lg:flex-none lg:mr-auto`}>
             <ul className={estilo}>
                 {
                     listaDeMenu.map((menu, i) => {
                         return (
-                            <li key={i}>
+                            <li key={i} className="p-1 transition-all duration-300 rounded-[6px] hover:bg-white hover:text-azul-escuro hover:mb-2">
                                 <Link href={menu.link} className="flex items-center gap-1 font-bold">
                                     <div>
                                         {menu.icone}
