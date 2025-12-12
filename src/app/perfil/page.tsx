@@ -30,6 +30,7 @@ export default function Page() {
     const [imagemPreview, setImagemPreview] = useState<string>('');
     const [, setErroImagemTamanho] = useState<string | null>(null);
 
+    console.log(usuarioAtual)
 
     useEffect(() => {
         setUsuarioAtual(usuario)
@@ -189,119 +190,53 @@ export default function Page() {
                         </fieldset>
                     </div>
                 </div>
-                <div>
-                    <h3 className="text-2xl font-bold">Lista dos seus comentários</h3>
-                    <Swiper
-                        modules={[Navigation, Pagination]}
-                        spaceBetween={10}
-                        slidesPerView={1}
-                        navigation
-                        pagination={{ clickable: true }}
-                        loop={true}
-                        breakpoints={{
-                            768: {
-                                slidesPerView: 2,
-                            },
-                            1024: {
-                                slidesPerView: 3,
-                            },
-                            1440: {
-                                slidesPerView: 4,
-                            }
-                        }}
-                        className="w-full"
-                    >
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={``}>
-                                <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
-                                    <p className="line-clamp-2 text-black font-semibold" >
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    </p>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                    </Swiper>
+                <div className="flex flex-col gap-4">
+                    <h3 className="text-2xl font-bold leading-6">Lista dos seus comentários</h3>
+                    {
+                        usuarioAtual?.comentarios != undefined && usuarioAtual?.comentarios?.length > 0 ? (
+                            <Swiper
+                                modules={[Navigation, Pagination]}
+                                spaceBetween={10}
+                                slidesPerView={1}
+                                navigation
+                                pagination={{ clickable: true }}
+                                loop={true}
+                                breakpoints={{
+                                    768: {
+                                        slidesPerView: 2,
+                                    },
+                                    1024: {
+                                        slidesPerView: 3,
+                                    },
+                                    1440: {
+                                        slidesPerView: 4,
+                                    }
+                                }}
+                                className="w-full"
+                            >
+                                {
+                                    usuarioAtual.comentarios.map((comentario, i) => {
+                                        return (
+                                            <SwiperSlide key={i}>
+                                                <Link href={comentario.linkDaNoticia}>
+                                                    <div className="p-4 bg-white rounded-[12px] m-2" style={{ boxShadow: '0 0 2px 1px black' }}>
+                                                        <span className="text-sm">{comentario.data.toDate().toLocaleDateString()}</span>
+                                                        <p className="line-clamp-2 text-black font-semibold" >
+                                                            {comentario.texto}
+                                                        </p>
+                                                    </div>
+                                                </Link>
+                                            </SwiperSlide>
+                                        )
+                                    })
+                                }
+                            </Swiper>
+                        ) : (
+                            <div>
+                                <h2 className="leading-5">Você ainda não fez nenhum comentário</h2>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </Template >

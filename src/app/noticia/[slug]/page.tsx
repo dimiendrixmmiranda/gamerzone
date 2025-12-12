@@ -18,6 +18,7 @@ import { createSlug } from "@/lib/utils/createSlug";
 import { FaInstagram, FaFacebook, FaTiktok, FaEnvelope } from "react-icons/fa";
 import MenuInferior from "@/components/menuInferior/MenuInferior";
 import Botao from "@/components/botao/Botao";
+import LerPorVoz from "@/components/lerPorVoz/LerPorVoz";
 
 export default function Page() {
     const params = useParams();
@@ -30,6 +31,20 @@ export default function Page() {
     const [responderComentario, setResponderComentario] = useState('');
     const [comentarioIndexRespondido, setComentarioIndexRespondido] = useState<number | null>(null);
     const [visibleResponderComentario, setVisibleResponderComentario] = useState<'visivel' | 'nao-visivel'>('nao-visivel');
+
+    const [textoPorVoz, setTextoPorVoz] = useState('')
+
+    useEffect(() => {
+        if (!noticiaAtual) return;
+
+        const texto = `
+        ${noticiaAtual.titulo || ""}
+        ${noticiaAtual.subtitulo || ""}
+        ${(noticiaAtual.conteudoDaNoticia || []).join(" ")}
+    `;
+
+        setTextoPorVoz(texto.trim());
+    }, [noticiaAtual]);
 
     console.log(noticiaAtual)
 
@@ -69,6 +84,17 @@ export default function Page() {
             setNoticiaAtual({
                 ...noticiaAtual,
                 comentarios: [...(noticiaAtual.comentarios ?? []), comentarioObj]
+            });
+
+            // Adicionar comentario na lista de usuário
+            const userRef = doc(db, "usuarios", usuario.uid);
+
+            await updateDoc(userRef, {
+                comentarios: arrayUnion({
+                    linkDaNoticia: `/noticia/${createSlug(noticiaAtual.titulo, noticiaAtual.id)}`,
+                    texto: comentario.trim(),
+                    data: Timestamp.fromDate(new Date())
+                })
             });
             setComentario('');
         } catch (error) {
@@ -163,6 +189,18 @@ export default function Page() {
         try {
             const ref = doc(db, "listaDeNoticias", noticiaAtual.id);
             await updateDoc(ref, { comentarios });
+
+            // Adicionar comentario na lista de usuário
+            const userRef = doc(db, "usuarios", usuario.uid);
+
+            await updateDoc(userRef, {
+                comentario: arrayUnion({
+                    linkDaNoticia: `/noticia/${createSlug(noticiaAtual.titulo, noticiaAtual.id)}`,
+                    texto: comentario.trim(),
+                    data: Timestamp.fromDate(new Date())
+                })
+            });
+
             setNoticiaAtual({ ...noticiaAtual, comentarios });
             setResponderComentario('');
             setVisibleResponderComentario('nao-visivel');
@@ -178,6 +216,9 @@ export default function Page() {
             <div className="w-full max-w-[1440px] p-4 flex flex-col gap-2 lg:gap-4">
                 <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl">{noticiaAtual?.titulo}</h1>
                 <h2 className="text-lg md:text-xl lg:text-2xl">{noticiaAtual?.subtitulo}</h2>
+                {
+                    noticiaAtual && <span><LerPorVoz texto={textoPorVoz} /></span>
+                }
                 <div className="flex flex-wrap items-center gap-2">
                     <p>{noticiaAtual?.autor}, {noticiaAtual?.data.toDate().toLocaleDateString('pt-br')}</p>
                     <div>
@@ -341,7 +382,7 @@ export default function Page() {
                                                     <div key={rIdx} className="bg-white border p-2 rounded-md mb-2">
                                                         <div className="flex items-center gap-2">
                                                             <div className="relative w-8 h-8 rounded-full overflow-hidden">
-                                                                <Image alt={resposta.nome} src={resposta.imagem} className="object-cover" />
+                                                                <Image alt={resposta.nome} src={resposta.imagem} fill className="object-cover" />
                                                             </div>
                                                             <div>
                                                                 <p className="font-bold text-sm">{resposta.nome}</p>

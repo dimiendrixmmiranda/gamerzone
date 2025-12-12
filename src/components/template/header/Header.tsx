@@ -7,6 +7,9 @@ import { useClubeSelecionado } from "@/lib/hooks/useClubeSelecionado";
 import { createSlug } from "@/lib/utils/createSlug";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { PiMagnifyingGlassFill } from "react-icons/pi";
 
 interface HeaderProps {
     paginaClube: boolean
@@ -14,10 +17,19 @@ interface HeaderProps {
 
 export default function Header({ paginaClube }: HeaderProps) {
     const { clube } = useClubeSelecionado();
+    const router = useRouter();
+
+    const [textoBusca, setTextoBusca] = useState("");
+
+    function handleSubmit(e: React.FormEvent) {
+        e.preventDefault();
+        if (!textoBusca.trim()) return;
+        router.push(`/busca?q=${encodeURIComponent(textoBusca)}`);
+    }
 
     return (
         <header className="bg-azul-escuro text-white flex flex-col">
-            <div className="grid grid-cols-[220px_1fr] lg:grid-cols-[220px_1fr_auto_100px] xl:grid-cols-[250px_1fr_auto_100px]">
+            <div className="grid grid-cols-[220px_1fr] lg:grid-cols-[220px_1fr_auto_100px] xl:grid-cols-[250px_1fr_auto_100px] 2xl:grid-cols-[250px_auto_1fr_auto_140px] 2xl:gap-4">
                 <div className="relative">
                     <div className="barraDiagonal"></div>
                     <OffCanvas />
@@ -33,6 +45,27 @@ export default function Header({ paginaClube }: HeaderProps) {
                 <div className="flex items-center">
                     <Menu estilo="flex items-center gap-3 text-sm lg:text-base 2xl:text-lg" visibilidade="hidden md:flex" />
                 </div>
+
+                <div className="hidden 2xl:flex w-full items-center px-6 text-black relative">
+                    <form onSubmit={handleSubmit} className="w-full relative">
+                        <input
+                            type="text"
+                            value={textoBusca}
+                            onChange={(e) => setTextoBusca(e.target.value)}
+                            placeholder="Buscar..."
+                            className="h-[40px] w-full rounded-[12px] p-2 outline-none"
+                        />
+
+                        <button
+                            type="submit"
+                            className="absolute -right-1 top-1/2 bg-laranja h-[40px] px-2 rounded-r-[12px] text-white"
+                            style={{ transform: 'translateY(-50%)' }}
+                        >
+                            <PiMagnifyingGlassFill />
+                        </button>
+                    </form>
+                </div>
+
                 <div className="flex items-center mr-5">
                     <Redes
                         estilo="hidden lg:grid grid-cols-2 gap-2 text-2xl lg:grid-cols-4"

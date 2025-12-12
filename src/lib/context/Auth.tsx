@@ -49,7 +49,8 @@ export function AuthProvider({ children }: AuthProps) {
                         dataNascimento: dados.data || "",
                         telefone: dados.telefone || "",
                         sexo: dados.sexo,
-                        tipo: dados.tipo
+                        tipo: dados.tipo,
+                        comentarios: dados.comentarios || []
                     });
 
                     Cookies.set("token", token, { expires: 7 });
@@ -170,6 +171,7 @@ export function AuthProvider({ children }: AuthProps) {
                 imagemURL: sexo === 'masculino' ? '/default/default-masculino.png' : '/default/default-feminino.png',
                 sexo,
                 tipo: "usuario",
+                comentario:[]
             })
             await configurarSessao(user)
             router.push('/perfil')

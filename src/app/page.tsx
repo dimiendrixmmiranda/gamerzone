@@ -14,19 +14,36 @@ import CraqueDaSemana from "@/components/craqueDaSemana/CraqueDaSemana"
 import RankingORGComunidadeMobile from "@/components/rankingORGComunidade/RankingORGComunidadeMobile"
 import VaiEVemDaBala from "@/components/vaiEVemDaBala/VaiEVemDaBala"
 import RankingORGComunidadeWeb from "@/components/rankingORGComunidade/RankingORGComunidadeWeb"
+import { useEffect, useState } from "react"
+import Noticia from "@/interfaces/Noticia"
+import useLarguraDaTela from "@/lib/hooks/useLarguraDaTela"
 
 export default function Home() {
 	const { noticias } = useNoticias();
+	const [noticiasCarrosselMobile, setNoticiasCarrosselMobile] = useState<Noticia[]>([])
+	const [noticiasCarrosselWeb, setNoticiasCarrosselWeb] = useState<Noticia[]>([])
+	const [noticiasCards, setNoticiasCards] = useState<Noticia[]>([])
+	const { width } = useLarguraDaTela()
+
+	useEffect(() => {
+		setNoticiasCarrosselMobile(noticias.slice(0, 5))
+		setNoticiasCarrosselWeb(noticias.slice(0, 9))
+		if (width <= 768) {
+			setNoticiasCards(noticias.slice(5))
+		} else {
+			setNoticiasCards(noticias.slice(9))
+		}
+	}, [noticias, width])
 
 	return (
 		<Template paginaClube={false}>
 			<MenuSuperiorDeJogos />
-			<CarrosselMobile noticias={noticias} />
-			<CarrosselWeb noticias={noticias} />
+			<CarrosselMobile noticias={noticiasCarrosselMobile} />
+			<CarrosselWeb noticias={noticiasCarrosselWeb} />
 			<ClubeDoCoracao estilo="p-4 md:h-[380px] xl:hidden" />
 			<div className="mt-4 xl:grid xl:grid-cols-3 xl:grid-rows-[auto_auto_auto_1fr] xl:gap-4 xl:gap-y-8">
 				<Noticias
-					noticias={noticias}
+					noticias={noticiasCards}
 					filtroPorJogo={true}
 					noticiasPorPagina={8}
 				/>

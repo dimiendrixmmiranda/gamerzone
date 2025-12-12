@@ -13,4 +13,9 @@ export type Usuario = {
     telefone: string
     sexo: string
     tipo: 'usuario' | 'adm'
+    comentarios?: {
+        linkDaNoticia: string,
+        texto: string
+        data:Timestamp
+    }[]
 }
