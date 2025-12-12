@@ -15,7 +15,7 @@
   /* Cores */
   --azul-escuro: #07033b;
   --azul-medio: #0a0370;
-  --laranja: #FE6A39;
+  --laranja: #f84c13;
   --amarelo: #F6BC2B;
   --verde: #007C00;
   --vermelho: #F60002;
@@ -89,4 +89,23 @@ body {
 .dialogconfigdospro .p-dialog-content {
   background-color: #0D0D0D !important;
   color: white !important;
+}
+
+/* barra diagonal */
+.barraDiagonal {
+    width: 340px;
+    height: 63px;
+    background: var(--laranja);
+    clip-path: polygon(0 0, 63% 0, 55% 100%, 0 100%);
+}
+
+@media screen and (min-width: 1024px){
+    .barraDiagonal{
+      height: 72px;
+    }
+}
+@media screen and (min-width: 1280px){
+    .barraDiagonal{
+      width: 370px;
+    }
 }

@@ -1,5 +1,6 @@
 export interface Campeonato {
     nome: string;
+    id: string
     imagem: string; // URL da imagem
     dataDeInicio: string; // Formato DD/MM/AA
     dataDeFim: string; // Formato DD/MM/AA

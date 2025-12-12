@@ -182,19 +182,13 @@ export function AuthProvider({ children }: AuthProps) {
     }
 
     useEffect(() => {
-        const usuarioAuth = Cookies.get('admin-auth');
-        if (usuarioAuth) {
-            auth.onIdTokenChanged((user) => {
-                if (user) {
-                    configurarSessao(user)
-                } else {
-                    setCarregando(false)
-                }
-            })
-        } else {
-            setCarregando(false)
-        }
-    }, [])
+        const unsubscribe = auth.onIdTokenChanged(async (user) => {
+            await configurarSessao(user);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
 
     return (
         <Auth.Provider

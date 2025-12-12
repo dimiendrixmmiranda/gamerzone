@@ -9,9 +9,9 @@ import Auth from '@/lib/context/Auth';
 import { BsPersonSquare } from "react-icons/bs";
 
 interface LoginProps {
-    estilo: string
     larguraPerfil: string
-    visibilidadeLabel: string
+    estilo?: string
+    visibilidadeLabel?: string
 }
 
 export default function Login({ estilo, larguraPerfil, visibilidadeLabel }: LoginProps) {

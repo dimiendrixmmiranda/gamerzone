@@ -17,26 +17,35 @@ export default function Header({ paginaClube }: HeaderProps) {
 
     return (
         <header className="bg-azul-escuro text-white flex flex-col">
-            <div className="flex items-center p-2 md:gap-2 lg:gap-6 md:p-3 lg:px-4">
-                <Link href={'/'} className="flex items-center">
-                    <div className="relative w-12 h-12 md:w-14 md:h-14">
-                        <Image alt="Logo GamerZone" src={'/logo/logo-gamer-zone.png'} fill className="object-cover" />
-                    </div>
-                    <div className="relative w-24 h-12 md:h-14 md:w-28">
-                        <Image alt="Texto GamerZone" src={'/logo/texto-gamer-zone.png'} fill className="object-cover" />
-                    </div>
-                </Link>
-                <Menu estilo="flex items-center gap-3" visibilidade="hidden md:flex flex-1" />
-                <Redes
-                    estilo="hidden md:grid grid-cols-2 gap-2 text-2xl lg:grid-cols-4"
-                    visibilidadeLabel={false}
-                    linkInstagram="/"
-                    linkFacebook="/"
-                    linkEmail="/"
-                    linkTiktok="/"
-                />
-                <Login estilo="hidden lg:flex" larguraPerfil="7" visibilidadeLabel="hidden lg:flex" />
-                <OffCanvas />
+            <div className="grid grid-cols-[220px_1fr] lg:grid-cols-[220px_1fr_auto_100px] xl:grid-cols-[250px_1fr_auto_100px]">
+                <div className="relative">
+                    <div className="barraDiagonal"></div>
+                    <OffCanvas />
+                    <Link href={'/'} className="flex items-center absolute top-[50%] left-12 md:left-3" style={{ transform: 'translate(0,-50%)' }}>
+                        <div className="relative w-12 h-12 md:w-14 md:h-14">
+                            <Image alt="Logo GamerZone" src={'/logo/logo-gamer-zone.png'} fill className="object-cover" />
+                        </div>
+                        <div className="relative w-24 h-12 md:h-14 md:w-28">
+                            <Image alt="Texto GamerZone" src={'/logo/texto-gamer-zone.png'} fill className="object-cover" />
+                        </div>
+                    </Link>
+                </div>
+                <div className="flex items-center">
+                    <Menu estilo="flex items-center gap-3 text-sm lg:text-base 2xl:text-lg" visibilidade="hidden md:flex" />
+                </div>
+                <div className="flex items-center mr-5">
+                    <Redes
+                        estilo="hidden lg:grid grid-cols-2 gap-2 text-2xl lg:grid-cols-4"
+                        visibilidadeLabel={false}
+                        linkInstagram="/"
+                        linkFacebook="/"
+                        linkEmail="/"
+                        linkTiktok="/"
+                    />
+                </div>
+                <div className="my-auto ml-auto mr-2 row-start-1 row-end-2 col-start-2 col-end-3 md:col-start-3 md:col-end-4 lg:col-start-4 lg:col-end-5">
+                    <Login estilo="lg:flex" larguraPerfil="7" />
+                </div>
             </div>
             {
                 paginaClube && clube && (

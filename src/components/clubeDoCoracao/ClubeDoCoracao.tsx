@@ -63,7 +63,7 @@ export default function ClubeDoCoracao({ estilo }: ClubeDoCoracaoProps) {
 
     return (
         <div className={`${estilo}`}>
-            <div className={`bg-zinc-800 h-full text-white p-2 flex-col gap-2 sm:p-4 md:grid-cols-2 xl:flex-col ${clube ? 'hidden' : 'flex md:grid xl:flex'}`} style={{textShadow: '1px 1px 2px black'}}>
+            <div className={`bg-zinc-800 h-full text-white p-2 flex-col gap-2 sm:p-4 md:grid-cols-2 xl:flex-col ${clube ? 'hidden' : 'flex md:grid xl:flex'}`} style={{ textShadow: '1px 1px 2px black' }}>
                 <div className="flex flex-col gap-2">
                     <h2 className="text-2xl font-bold leading-6">Selecione sua organização favorita!</h2>
                     <p>Escolha sua ORG favorita e fique por dentro de todas as notícias, próximos jogos e muito mais.</p>
@@ -111,14 +111,8 @@ export default function ClubeDoCoracao({ estilo }: ClubeDoCoracaoProps) {
                     </ul>
                 </div>
             </div>
-            <div className={`${clube ? 'flex' : 'hidden'} w-full h-full flex-col`} style={{ boxShadow: '0 0 2px 1px black' }}>
+            <div className={`${clube ? 'flex' : 'hidden'} w-full h-full flex-col relative`} style={{ boxShadow: '0 0 2px 1px black' }}>
                 <div className="h-[60px] w-full grid grid-rows-3 relative">
-                    <button
-                        className="absolute top-[295px] left-2 text-2xl hover:bg-azul-escuro hover:text-white transition-all duration-300 p-1 rounded-[6px] sm:top-[290px] md:text-3xl md:top-[300px] z-30 xl:top-2 xl:left-[90%]"
-                        onClick={() => removerClube()}
-                    >
-                        <LuShieldOff />
-                    </button>
                     <div className={`w-full h-full block row-start-1 row-end-3 md:p-4`} style={{ backgroundColor: `${clube?.cor}` }}></div>
                     <div className="w-full h-full block row-start-3 row-end-4 bg-white md:p-4"></div>
                     <div className="absolute top-[50%] flex items-center gap-2 p-2" style={{ transform: 'translate(0,-50%)' }}>
@@ -163,7 +157,7 @@ export default function ClubeDoCoracao({ estilo }: ClubeDoCoracaoProps) {
                                             <Link href={`/noticia/${createSlug(noticia.titulo, noticia.id)}`}>
                                                 <div className="w-full relative bg-black/50 text-white flex items-center justify-center rounded-[12px] h-[220px] overflow-hidden xl:h-[320px]">
                                                     <div className="relative w-full h-full">
-                                                        <Image alt="imagem da noticia" src={noticia.imagem} fill className="object-cover" unoptimized/>
+                                                        <Image alt="imagem da noticia" src={noticia.imagem} fill className="object-cover" unoptimized />
                                                     </div>
                                                     <h2 className="absolute max-w-[90%] mx-auto text-center font-bold bottom-6 bg-black rounded-[8px] line-clamp-3 p-2 xl:text-2xl">{noticia.titulo}</h2>
                                                 </div>
@@ -231,12 +225,20 @@ export default function ClubeDoCoracao({ estilo }: ClubeDoCoracaoProps) {
                         </Swiper>
                     </div>
                     {clube && (
-                        <Link
-                            href={`/paginaClube/${createSlug(clube.id)}`}
-                            className="flex justify-end items-center gap-1"
-                        >
-                            Mais sobre {clube.time} <FaArrowRight />
-                        </Link>
+                        <div className="flex justify-between">
+                            <button
+                                className="text-xl sm:text-2xl"
+                                onClick={() => removerClube()}
+                            >
+                                <LuShieldOff />
+                            </button>
+                            <Link
+                                href={`/paginaClube/${createSlug(clube.id)}`}
+                                className="flex justify-end items-center gap-1"
+                            >
+                                Mais sobre {clube.time} <FaArrowRight />
+                            </Link>
+                        </div>
                     )}
                 </div>
             </div>

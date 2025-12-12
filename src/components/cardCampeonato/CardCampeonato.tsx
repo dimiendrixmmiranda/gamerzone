@@ -1,4 +1,6 @@
+
 import { Campeonato } from "@/interfaces/Campeonato";
+import { createSlug } from "@/lib/utils/createSlug";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegCalendarAlt } from "react-icons/fa";
@@ -16,7 +18,7 @@ interface CardCampeonatoProps {
 export default function CardCampeonato({ estilo, estiloImagem, estiloTitulo, estiloData, campeonato }: CardCampeonatoProps) {
     return (
         <li className={`${estilo}`}>
-            <Link href={'/'} className="w-full h-full flex flex-col gap-4 relative">
+            <Link href={`/campeonatos/${createSlug(campeonato.id)}`} className="w-full h-full flex flex-col gap-4 relative">
                 <div className={estiloImagem}>
                     <Image alt={campeonato?.nome} src={campeonato?.imagem} fill className="object-cover" />
                 </div>

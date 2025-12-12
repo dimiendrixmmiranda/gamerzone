@@ -8,7 +8,7 @@ interface MenuProps {
 
 export default function Menu({ visibilidade, estilo }: MenuProps) {
     return (
-        <nav className={`${visibilidade} justify-center lg:flex-none lg:mr-auto`}>
+        <nav className={`${visibilidade} justify-center my-auto lg:flex-none lg:mr-auto`}>
             <ul className={estilo}>
                 {
                     listaDeMenu.map((menu, i) => {

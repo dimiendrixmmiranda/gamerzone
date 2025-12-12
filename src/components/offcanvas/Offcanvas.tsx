@@ -11,7 +11,7 @@ export default function OffCanvas() {
     const [visibleRight, setVisibleRight] = useState(false);
 
     return (
-        <div className="card ml-auto md:hidden">
+        <div className="card absolute top-[50%] left-2 md:hidden" style={{transform: 'translate(0,-50%)'}}>
             <div className="flex gap-2 justify-content-center text-3xl">
                 <Button onClick={() => setVisibleRight(true)}>
                     <FaBars />
